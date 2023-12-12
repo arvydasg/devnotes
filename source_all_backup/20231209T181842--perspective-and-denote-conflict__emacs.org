@@ -1,0 +1,38 @@
+#+title:      perspective and denote conflict
+#+date:       [2023-12-09 Sat 18:18]
+#+filetags:   :emacs:
+#+identifier: 20231209T181842
+#+STARTUP:    overview
+
+I just figured out projectile and how cool is it, I can have a similar behavior
+like tmux or default window os window management.
+
+But the problem is when I create perspective frames and in those frames there
+is at least one denote file. That frame does not get saved. Why? Because denote
+purposfully by default renames it's buffers not to contain all the jibberish
+like date when it was created, tag names and so on with this function -
+=denote-rename-buffer-mode=.
+
+Instead of such filename:
+
+- 20231209T181842--perspective-and-denote-conflict__emacs.org
+
+it renames it to:
+
+- perspective and denote conflict
+
+And when you save in perspective the name of the buffer, it gets saved as this
+short version which AFTER we try to open the saved perspective - it does not
+find such filename, because it simply does not exist.
+
+Nice I am happy that I could figure this out.
+
+Let's try to change that variable and see if it helps.
+
+Denote docs - [[https://protesilaos.com/emacs/denote#h:3ca4db16-8f26-4d7d-b748-bac48ae32d69][10. Automatically rename Denote buffers]]
+
+#+begin_src emacs-lisp
+(denote-rename-buffer-mode -1)
+#+end_src
+
+It did help!!! I am a magician!!

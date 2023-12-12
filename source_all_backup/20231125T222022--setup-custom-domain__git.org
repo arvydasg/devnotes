@@ -1,0 +1,8 @@
+#+title:      setup custom domain
+#+date:       [2023-11-25 Sat 22:20]
+#+filetags:   :git:
+#+identifier: 20231125T222022
+
+This video below:
+
+https://www.youtube.com/watch?v=rKz6kIW4Uos&ab_channel=MichaelSolorio

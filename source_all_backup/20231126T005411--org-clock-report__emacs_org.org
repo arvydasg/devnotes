@@ -1,0 +1,18 @@
+#+title:      org clock report
+#+date:       [2023-11-26 Sun 00:54]
+#+filetags:   :emacs:org:
+#+identifier: 20231126T005411
+
+Was useful in obelsdumas times when I wanted to track how much time I
+used on building and working on obelsdumas page. Padaryti isklotines
+su laiku kiek dirbau prie ko.
+
+Link to the docs of [[id:a68c63d5-c33e-4bfd-a183-eb3abd2af6a7][clock_report]] - https://orgmode.org/manual/The-clock-table.html
+
+# CLOCK REPORT EXAMPLE
+
+[2022-04-10 Sun] Daily org-diary file report BY TAG
+#+BEGIN: clocktable :maxlevel 3 :scope file :tags t :sort (1 . ?a) :emphasize t :narrow 100! :match "emacs"
+
+[2022-04-10 Sun] Daily org-diary file report without tag, show all tasks
+#+BEGIN: clocktable :maxlevel 3 :scope file :tags t :sort (1 . ?a) :emphasize t :narrow 100!

@@ -1,0 +1,61 @@
+#+title:      how devnotes blog is made
+#+date:       [2023-12-12 Tue 17:50]
+#+filetags:   :blog:denote:emacs:
+#+identifier: 20231212T175042
+#+STARTUP:    overview
+
+* Why write in org mode and emacs
+* How to version control the things
+
+I will push to git, I will fetch/pull from another machine. update, push,
+fetch/pull - easy
+
+* How I am using denote
+
+Denote allows me to generate blog files quick and easy. They are all in the
+same structure, do not require databse. I can link between them.
+
+maybe silo could be a separate note?
+
+Default denote dir is Documents/org, but my denote dir is ~/GIT/notes. This is
+where ALL my notes used to lie. When I decided to move the programming/work
+related notes to a different directory, I had to make a "silo" in denote
+terms - as described in https://protesilaos.com/emacs/denote.
+
+instead of denote looking at my default denote dir when I create and manage
+denote files, I had to specify another directory. I could do that by simply
+creating a =.dir-locals.el= file in my new directory and add such content to
+it:
+
+#+begin_src emacs-lisp
+  ;;; Directory Local Variables.  For more information evaluate:
+  ;;;
+  ;;;     (info "(emacs) Directory Variables")
+
+  ((nil . ((denote-directory . default-directory))))
+#+end_src
+
+so now when denote is launched from THAT particular folder in which there is
+this dir-locals.el file, it will know that It has to create notes in that
+directory and not the default directory which I have specified in my init file,
+which contains all my personal files.
+
+* how to then org publish the pages
+
+org-static-blog-publish - could be a separate page on how to use org-static-blog-publish
+* push to git
+* preview
+
+link to how to setup with org bla
+
+link to a [[denote:20231129T002500][paperclip maximizer]] does it work?
+
+[[denote:20231212T102719][blog with built in org export]]
+
+[[denote:20231128T133020][blog with hugo]]
+
+nope, links do not work, asked prot for help.
+
+David also faced this problem -
+https://www.youtube.com/watch?v=5R7ad5xz5wo&t=5746s&ab_channel=SystemCrafters,
+could not figure it out.

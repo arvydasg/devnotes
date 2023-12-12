@@ -1,0 +1,14 @@
+#+title:      reset changes on server
+#+date:       [2023-11-25 Sat 22:16]
+#+filetags:   :git:
+#+identifier: 20231125T221653
+
+Useful to know these commands when you are on a production server for
+example, not having magit or Git desktop thing.
+
+# removes new files
+git clean -nd  #tells what it will remove
+git clean -fd  #remove what it said it will remove
+
+# resets everything
+git reset --hard HEAD

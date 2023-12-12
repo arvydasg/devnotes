@@ -1,0 +1,41 @@
+#+title:      images in org files
+#+date:       [2023-11-26 Sun 00:37]
+#+filetags:   :emacs:
+#+identifier: 20231126T003746
+
+Okay, so to display inline images you can click 'C-c C-x C-v'
+
+*If you have the image with you:*
+
+To insert an image, do C-u then C-c C-l. easy. if you add a
+description, it won't show the image, but rather the description with
+an indication of a link.
+
+*If you don't have - use org-download*
+
+M-x org-download-screenshot
+
+then make sure in init file you have specified the directory. If not,
+it will save images in your current org file directory. It is good if
+you want to export the file to html later and then maybe even send to
+someone.
+*** resizing images in emacs and html
+
+first of all, add an image as in [[id:7a6e1069-5a0d-4099-9148-9f8d47e863f4][images in emacs]]
+
+then to resize an image, add this to your init:
+
+#+begin_src emacs-lisp
+  (setq org-image-actual-width nil)
+#+end_src
+
+then, above EACH and EVERY image add such thingies:
+
+#+begin_src org
+#+attr_html: :width 900px
+#+ATTR_ORG: :width 600
+[[file:images/smutifruti.png]]
+#+end_src
+
+and now after C-c C-x C-v - images will display nicely, as per your
+request. beautiful

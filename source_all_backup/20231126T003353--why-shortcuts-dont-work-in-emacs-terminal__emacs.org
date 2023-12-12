@@ -1,0 +1,19 @@
+#+title:      why shortcuts dont work in emacs terminal
+#+date:       [2023-11-26 Sun 00:33]
+#+filetags:   :emacs:
+#+identifier: 20231126T003353
+
+https://emacs.stackexchange.com/questions/75347/problem-with-key-bindings-in-emacs-in-the-terminal-on-wsl/75349#75349
+
+You’re using Emacs inside of a terminal, and terminals have a much
+more limited set of keystrokes that they can communicate. This is
+because historically terminals simply had fewer keys on their
+keyboards, and because not all combinations of keys were thought to be
+useful.
+
+Some terminal emulators, starting with XTerm, have added new escape
+sequences that are capable of communicating the full range of key
+combinations possible on modern keyboards. Emacs will automatically
+recognize these escape sequences, so if your terminal emulator
+supports them then you have a solution. If it doesn’t perhaps you can
+use XTerm instead.

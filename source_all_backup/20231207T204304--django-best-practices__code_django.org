@@ -1,0 +1,28 @@
+#+title:      django best practices
+#+date:       [2023-12-07 Thu 20:43]
+#+filetags:   :code:django:
+#+identifier: 20231207T204304
+#+STARTUP:    overview
+
+Here I will write the tips that I found and that I use when building a django
+project.
+
+* Instead of /admin change to smth else URL django
+for security. Everyone knows that if its a django project, it will have an
+admin page
+
+* use environment variables
+- for secret key
+- for database name/location
+- api keys
+- other things if needed
+
+* use postgres db
+
+kind of default ageed db to use with django
+
+* use two different settings files
+
+one for prod another for acc(test) environment
+
+like described in here [[denote:20231125T223516][split django settings into multiple files]]

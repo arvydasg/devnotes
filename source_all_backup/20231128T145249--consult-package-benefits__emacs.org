@@ -1,0 +1,51 @@
+#+title:      consult package benefits
+#+date:       [2023-11-28 Tue 14:52]
+#+filetags:   :emacs:
+#+identifier: 20231128T145249
+
+Tu juokauji gal :)
+
+Bemegindamas irasti denote radau sita package.
+
+Cia intro video -
+https://www.youtube.com/watch?v=HwBHBwYgs2g&ab_channel=EmacsElements
+
+Galiu paturbinti C-x b, kad rodytu man buffer contenta. Nice.
+labas
+Consult-grep - find what ever in a current PROJECT(git project).
+
+consul-man - look for ANYTHING in LINUX MANUAL PAGE. WTF.
+labas
+consult-info - find ANYTHING in your installed packages manuals...
+
+consult-bookmark - set a bookmark in a location and then easily jump
+to it later... almost like my org find agenda file.
+
+consult-theme - change and try themes on the fly. wtf.
+
+consult-flymake???????????????????? Labadiena
+
+consult-goto-line - cool
+
+consult-outline/consult-org-headings - look through ORG file outlines. Through all the
+headings. Thats cool when in a large document! That's like a table of
+contents for you.
+
+consult-org-agenda??? msut try that out
+
+consult-project-buffer - look only through opened files in the
+project.
+
+bookmarks is another cool thing.. can set them and then later jump to
+them with c-x b and pressing m then SPACE and you will have a list of
+bookmarks!!
+
+M-s is a big one!
+
+M-s e for example shows you all the search functions you previously
+typed for. Nice.
+
+M-g i - look for functions inside the file!!!
+
+C-u M-s g - first specify the directory and then do the search. Great,
+works like regular RG.

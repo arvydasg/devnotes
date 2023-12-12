@@ -1,0 +1,67 @@
+#+title:      fetch and pull automatically
+#+date:       [2023-11-30 Thu 06:53]
+#+filetags:   :freshsetup:git:wsl:
+#+identifier: 20231130T065309
+#+STARTUP:    overview
+
+After doing [[denote:20231126T012052][make denote faster on wsl]], I realized that I could
+actually preview my note files at work(or anywhere else). It would be
+frustrating to see the notes while at work and not be able to edit
+them to fix a possible mistake or add something. I can edit the files
+directly in github, BUT now when I come back home I might forget to
+`git fetch && git pull` and make a mess in a github repo.
+
+This is the reason I am creating this script that will automatically
+run that command for me whenever I turn on the wsl.
+
+The script:
+
+#+begin_src bash
+  #!/bin/bash
+
+  #[[denote:20231130T065309][fetch and pull automatically]]
+
+  REPO_DIR="$HOME/GIT/notes/"
+
+  function auto-fetch-pull() {
+      if [ -d "$1" ]; then
+          cd "$1" || exit
+          echo "Fetching latest changes..."
+          git fetch
+          echo "Pulling changes into your branch..."
+          git pull
+      else
+          echo "Directory '$1' not found."
+      fi
+  }
+
+  auto-fetch-pull "$REPO_DIR"
+#+end_src
+
+Ensure the script has execute permissions:
+
+#+begin_src bash
+  chmod +x auto_fetch_pull.sh
+#+end_src
+
+Then, try running the script:
+
+#+begin_src bash
+  ./auto_fetch_pull.sh
+#+end_src
+
+Add the script execution to your .bashrc
+
+#+begin_src bash
+  echo '~/.emacs.d/MISC/auto_fetch_pull.sh' >> ~/.bashrc
+#+end_src
+
+Now the script will be run with ~source .bashrc~ AKA with each launch
+of wsl.
+
+I can not modify the file on github at anytime, read it at any time
+and be able to see the latest version of the file when I am back at
+home and I turn on wsl and emacs. Amazing!
+
+[2023-12-09 Sat] automizing the setup of this on new machines - [[denote:20231209T093750][new machine
+setup]].
