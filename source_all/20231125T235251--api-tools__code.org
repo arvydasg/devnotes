@@ -1,0 +1,36 @@
+#+title:      api tools
+#+date:       [2023-11-25 Sat 23:52]
+#+filetags:   :code:
+#+identifier: 20231125T235251
+
+* Karinos ismintis apie API ir restapi
+
+dabar kyla naujas dalykas - GraphQL, bet nežinau, ar jis pilnai pakeis
+REST, gal tik eis šalia, ir vienur bus vienas, kitur kitas naudojamas
+
+kitas dalykas - REST API paslepia duomenų bazę ir Backend logic. Tai
+nors su kai kuriomis DB galima rašyti backend logic irgi, pavyzdžiui
+su Oracle, naudojant jų PL/SQL programavimo kalbą, dažnai kalbą nori
+rinktis pagal kitus kriterijus
+
+taip pat dėl saugumo, kodas, kuris yra už REST API paslepia visokius
+slaptažodžius, keys. Tarkim, jei turi frontend framework iš kurio
+jungiesi į DB, tai tu negali ten įdėt duomenų bazęs prisijungimų
+
+nes tai iš karto nesaugu
+
+tu tikrai nenori, kad kiekvienas tavo vartotojas būtų ir duomenų bazės
+vartotojas
+
+taigi, taip apibendrintai, tai dėl patogumo ir saugumo
+
+* [[https://fakestoreapi.com/][fakestoreapi.com]]
+* https://api.vilnius.lt/
+* https://data.gov.lt/public/api/1
+* https://github.com/public-apis/public-apis
+* [[https://www.programmableweb.com/][lots of free apis]]
+* [[https://www.youtube.com/watch?v=7YcW25PHnAA&ab_channel=WebConcepts][api example facebook/instagram/twitter]]
+
+* https://hoppscotch.io/
+* https://www.postman.com/
+* thunder client vscode

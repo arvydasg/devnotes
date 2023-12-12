@@ -1,0 +1,507 @@
+#+title:      basic django workflow
+#+date:       [2023-11-28 Tue 13:26]
+#+filetags:   :code:django:
+#+identifier: 20231128T132642
+
+* Django workflow
+
+Update django every major version once every 9 months Python -wd
+runserver depreciation warnings
+
+** Starting a new project
+*** create a git repo on the web (readme + ignore)
+*** git clone the repo
+*** open repo in emacs, create virtualenv
+
+#+begin_src shell
+  sudo apt install python3.8-venv
+  M-x pyvenv-create
+  pip list
+#+end_src
+
+*** pip install django
+*** django-admin startproject <project_name>
+*** enter <project_name>, do django-admin startapp <project_name>
+*** settings.py
+
+<app name> - apps.py take out name of the app and put in settings.py installed
+apps like so - 'base.apps.BaseConfig',
+
+*** github push
+** testing views
+
+Just making sure everything works with HttpResponse
+
+*** python manage.py runserver
+*** create HttpResponse views(temporarily)
+
+  #+BEGIN_SRC python
+    from django.shortcuts import render
+    from django.http import HttpResponse
+
+    # Create your views here.
+
+
+    def home(request):
+        return HttpResponse('<h2>Home</h2>')
+
+
+    def posts(request):
+        return HttpResponse('<h2>Posts</h2>')
+
+
+    def post(request):
+        return HttpResponse('<h2>Post</h2>')
+  #+END_SRC
+
+*** create urls.#+begin_src python
+
+#+end_src in app folder and put this in
+
+  #+BEGIN_SRC python
+    from django.urls import path
+    from . import views
+
+    urlpatterns = [
+        path('', views.home, name="home"),
+        path('posts/', views.posts, name="posts"),
+        path('post/', views.post, name="post"),
+    ]
+  #+END_SRC
+
+*** go to <project_name> urls.py and put in this
+
+  #+BEGIN_SRC python
+    from django.urls import path, include  # include is important!
+
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', include('base.urls')),
+    ]
+  #+END_SRC
+
+*** check if responses work by going to the site and trying out urls
+*** github push
+** Templates
+
+Need views to return back a template.
+
+*** create 'templates' folder
+
+Inside app folder, create 'templates' folder and <app name> folder
+inside of that one. Inside, put all the templates, like base, home,
+etc.html
+
+*** replace httpresponse with render
+
+Go to views.py and replace HttpResponse with render and template, like
+so:
+  #+BEGIN_SRC python
+    # old looks like that:
+    def home(request):
+        return HttpResponse('<h2>Home</h2>')
+
+    # New looks like that
+    def home(request):
+        return render(request, 'base/home.html')
+  #+END_SRC
+
+*** Create main.html and inside of it put this:
+
+  #+BEGIN_SRC html
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8"/>
+        <title>Arvydas</title>
+      </head>
+      <body>
+
+        {% include 'base/navbar.html' %}
+
+        {% block content %}
+        <!-- Content goes in here -->
+        {% endblock content %}
+
+      </body>
+    </html>
+  #+END_SRC
+
+*** Create navbar.html and put navbar in there
+
+    #+begin_src html
+      <h2>Navbar placeholder</h2>
+      <hr/>
+    #+end_src
+
+*** Inside every template add block content/endblock like so:
+
+    #+begin_src html
+      {% extends 'base/main.html' %}
+
+      {% block content %}
+          <p>Post title</p>
+      {% endblock content %}
+    #+end_src
+
+*** Create a static folder and add style.css
+
+  same place as 'templates' folder. then inside <name of the app>
+  folder and inside of it - style.css. Then add this in main.html
+  #+begin_src html
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+  #+end_src
+
+*** Images
+
+If you simply want to serve an image in an html template, such as
+nav.html, then all you have to add is this:
+#+begin_src html
+  {% load static %}
+
+  <img alt="" src="{% static 'base/images/python.jpg' %}"/>
+#+end_src
+And in settings.py have only this specified:
+#+begin_src python
+  STATIC_URL = 'static/'
+#+end_src
+Nothing else is needed. Just create a folder
+'/home/arvydas/Dropbox/src/portfolio/base/static/base/images/' and
+place images there. They WILL be rendered in your html template
+
+*** Images for production
+
+go add this to your settings.py and when it's done run python
+manage.py [[id:84c88f8c-f415-41c8-a6f5-ab9994ffca6c][django_collectstatic]]. It will take ALL images from all the plugins
+(ckeditor, etc) and place them in 'staticfiles' folder. Images that I
+have placed in html will be there also. Can also go to
+'http://127.0.0.1:8000/static/images/python.jpg' and check if it works.
+#+begin_src python
+  import os
+
+  STATIC_URL = '/static/'
+  MEDIA_URL = '/images/'
+
+  STATICFILES_DIRS = [
+      os.path.join(BASE_DIR, 'static')
+  ]
+
+  MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+  STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # whitenoise looks here for static files
+#+end_src
+Django doesn't want to serve [[id:d7b05c0a-8e8c-48a8-b8ac-50068524a23a][django_static_files]] for us, it wants us to find
+another way, that is why
+Set [[id:820d8de0-b71f-4605-a895-6a25881f23ef][django_allowed_hosts]] to 'ALLOWED_HOSTS = ['*']'
+pip install [[id:e6b77bc9-7a39-4fc4-b746-7fa65801d1e8][django_whitenoise]], add it to requirements.txt and follow [[http://whitenoise.evans.io/en/stable/][this
+whitenoise tutorial]]
+
+*** If want to link to admin from navbar, use this
+
+#+begin_src html
+  <li><a href="{% url 'admin:index' %}">link to admin panel</a></li>
+#+end_src
+
+** Models
+*** Little cheat before making models
+
+so what we can do is create a fake list with data, right, then output
+the values of that list into our view (html files).
+
+for example, my post view will look like this now
+#+begin_src python
+
+def blog(request):
+
+    posts = [
+        {
+            'headline':'Facebook django automation',
+            'sub_headline':'Designed this app to help business automate tasks bla etc'
+        },
+        {
+            'headline':'iv backup stuff',
+            'sub_headline':'Designed this to help myself you know what I am saying'
+        },
+        {
+            'headline':'obelsdumas',
+            'sub_headline':'My first ever wordpress site - eshop selling sausages'
+        },
+    ]
+
+    context = {'posts':posts}
+    return render(request, 'base/blog.html', context)
+
+#+end_src
+and inside blog.html I will have a for loop that loops through the
+info above. Great! So now I know the looping works.
+#+begin_src html
+{% extends 'base/main.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <h2>{{post.headline}}</h2>
+        <h6>{{post.sub_headline}}</h6>
+    {% endfor  %}
+{% endblock content %}
+#+end_src
+
+*** Creating database models
+**** Make migrations/migrate
+
+$ python manage.py makemigrations
+$ python manage.py migrate
+# Check database entries with:
+$ python manage.py inspectdb
+
+**** Create superuser and add some data
+
+$ python manage.py createsuperuser
+usually writing project name and password - kk
+$ python manage.py runserver
+
+**** Creating model itself
+
+#+begin_src python
+from django.db import models
+
+# Create your models here.
+
+
+class Blog_post(models.Model):
+    title = models.CharField(max_length=200)
+    sub_title = models.CharField(max_length=200, null=True, blank=True)
+    content = models.TextField(null=True, blank=True)
+    active = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.title
+#+end_src
+
+**** Make migrations/migrate
+
+$ python manage.py makemigrations
+$ python manage.py migrate
+# Check database entries with:
+$ python manage.py inspectdb
+
+**** Link new model to admin panel in admin.py
+
+#+begin_src python
+from django.contrib import admin
+
+# Register your models here.
+
+from .models import Blog_post
+
+admin.site.register(Blog_post)
+#+end_src
+
+**** views.py - replace list of dictionaries with a query
+
+#+begin_src python
+  from .models import Blog_post
+
+    def blog(request):
+
+        # posts = Blog_post.objects.all()
+        posts = Blog_post.objects.filter(active=True)
+
+        context = {'posts': posts}
+        return render(request, 'base/blog.html', context)
+#+end_src
+
+**** update blog.html
+
+#+begin_src python
+{% extends 'base/main.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <h2>{{post.title}}</h2>
+        <h6>{{post.sub_title}}</h6>
+    {% empty %}
+        <h3>no posts found...</h3>
+    {% endfor  %}
+{% endblock content %}
+#+end_src
+
+**** catch single posts
+
+inside of urls.py add str:pk like so
+#+begin_src python
+    path('blog_post/<str:pk>', views.blog_post, name="blog_post"),
+#+end_src
+Then modify views to this:
+Pay attention to pk
+#+begin_src python
+def blog_post(request, pk):
+    post = Blog_post.objects.get(id=pk)
+
+    context = {'post': post}
+    return render(request, 'base/blog_post.html', context)
+#+end_src
+
+replace all the dynamic data with {{post.headline}} etc, and go to
+'blog_post/1 and check if the template works
+
+**** Add line breaks to body model
+
+#+begin_src html
+    <p>{{post.content|linebreaks}}</p>
+#+end_src
+
+**** add link from blog to single post
+
+#+begin_src html
+  <a href="{% url 'blog_post' post.id %}">Read more</a>
+#+end_src
+
+*** Add CKEditor - rich text field
+
+- [ ] pip install django-ckeditor
+- [ ] add this inside models.py
+  #+begin_src python
+    from ckeditor.fields import RichTextField
+
+    content = RichTextField(null=True, blank=True)  # add this
+    # content = models.TextField(null=True, blank=True) # instead of this
+  #+end_src
+- [ ] python manage.py makemigrations
+- [ ] python manage.py migrate
+- [ ] add 'ckeditor' to settings.py installed apps
+- [ ] add some config to give the editor more functionality. Inside settings.py
+  #+begin_src python
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': '100%',
+        'skin': 'moono',
+        'extraPlugins': ','.join(
+            [
+                'codesnippet',
+            ]),
+    },
+}
+  #+end_src
+- [ ] All blocks where Richtextfield was used, add |safe at the end,
+  like so:
+  #+begin_src html
+    <p>{{project.content|safe}}</p>
+  #+end_src
+  Now go to base.html (head section) and add this to get syntax
+  highlighting in the browser. using [[https://highlightjs.org/][highlight.js]] learned from
+  [[https://www.youtube.com/watch?v=L6y6cn1XUfw&t=450s][this - Django - CKEditor Tutorial (+ CodeSnippet)]] video
+  #+begin_src html
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/base16/zenburn.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+  #+end_src
+
+** postgrsql db instead of sqlite
+
+[[https://stackpython.medium.com/how-to-start-django-project-with-a-database-postgresql-aaa1d74659d8][Karina's tutorial of how to conenct sqlite to postgresql]]
+
+If you use SQLite, you can immediately connect Django with this
+database after migrating process without installing any tools or
+software because SQLite stores data into a single file, no server
+required.
+
+But not what I’m looking for, the professional one I need is
+PostgreSQL “The most recommended database for Django”
+
+- [[https://www.postgresql.org/download/linux/ubuntu/][install postgresql]]
+- [[https://www.pgadmin.org/download/pgadmin-4-apt/][download and install PGADMIN 4]]
+- ls /etc/postgresql/15/main/
+- service posgreslq
+- service postgresql status
+- sudo -i -u postgres
+- psql
+- \
+- \l
+- \du
+- CREATE database pagalbaGyvunams;
+- [[https://www.youtube.com/watch?v=CaxpuKwOs2w&ab_channel=AnalyzingAlpha][explains users and rights]]
+- display your newly created db in pgadmin4 [[https://www.youtube.com/watch?v=7tfPKDba1Jo&ab_channel=TechLearning][end of this video]]
+- man psql
+
+** deploying
+
+if deploying with nginx, make sure to do server_tokens = off ([[https://www.youtube.com/watch?v=-1xPfxtt0SY&ab_channel=AndreyIvanov%7CPython][why is
+here]]). Mask response header so hackers wouldn't know your server and
+version of it.
+
+Don't be opening random ports!! dont increase ways to attack your
+server.
+
+CLOSE ADMIN PANEL to everyone except me!!!!
+
+- preview local deployment on your phone localhost
+  #+begin_src bash
+    # be connected to the same wifi!!!
+    # add the local ip to allowed hosts
+    # ALLOWED_HOSTS = ["192.168.1.177"]
+    python manage.py runserver 192.168.1.177:8000
+  #+end_src
+- [[https://dev.to/mr_destructive/django-postgresql-deployment-on-railway-app-d54][tutorial reploy with railway]]
+- [[https://mattsegal.dev/simple-django-deployment.html][digitalocean tutorial]]
+- [[https://github.com/batpad/railways][django project about Indian trains - just for reference]]
+- [[https://tutorial.djangogirls.org/en/deploy/][deploy with pythonanywhere]]
+- dennis have tutorial also
+- psycopg2 for postgresql db
+- whitenoise for images
+- railway quick deployment
+- csfr token for apps(including django admin) (CSRF_TRUSTED_ORIGINS)
+- pythonanywhere for quick deployment
+- [[https://tutorial.djangogirls.org/en/deploy/][djangogirls turorial how to launch and deploy]]
+- digitalocean production proper do everything yourself solution
+  komandos ir pan
+- GUI for sqlite browser in local app - "DB browser for sqlite" super
+  fun pazaist ir parasyt queries paciam
+- dont need to push db file
+- runtime.txt
+- [[id:38be0c6f-d6f7-498d-8ffd-d5818bc67159][requiremenets.txt]]
+- allowed hosts
+- pillow for images
+- change db in settings.py
+  DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+        # "ENGINE": "django.db.backends.sqlite3",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'gT0TDKJM2K5N6F9QAkqi',
+        'HOST': 'containers-us-west-105.railway.app',
+        'PORT': '8014',
+    }
+   }
+- specify collecstatic location in settings.py
+- PYTHON DECOUPLING
+  for hiding variables store parameters in ini or .
+  env files; define comprehensive default values; properly convert
+  values to the correct data type; have only one configuration module
+  to rule all your instances.
+- [[https://help.pythonanywhere.com/pages/environment-variables-for-web-apps][How to set environment variables for your web apps (for SECRET_KEY etc)]]
+- [[https://djangostars.com/blog/configuring-django-settings-best-practices/][Configuring Django Settings: Best Practices]]
+- can deploy on [[id:a9b5dc76-659e-4194-9203-a664db9706e7][raspberry pi]]
+- Why do some people use AWS for their media files?
+- [[https://www.reddit.com/r/django/comments/sr21h2/comment/hwtgrpb/][labai gera diskusija on reddit cia zmogus klausineja apie security
+  dalykus]]
+
+*** railway
+
+- make sure the environmetn variables are properly set up
+- need cli or terminal for migrate, createsuperuser, collectstatic
+- variables should be the same in local and remote
+- visa info here kaip padaryti superuser yra [[https://stackoverflow.com/questions/73843151/how-to-run-commands-in-cli-with-railway-app][here]]
+- PROCEDURA:
+  - npm i -g @railway/cli
+  - railway login
+  - railway list
+  - railway logs
+  - railway vars
+  - railway help
+  - (in main branch!!!)railway run python manage.py collectstatic

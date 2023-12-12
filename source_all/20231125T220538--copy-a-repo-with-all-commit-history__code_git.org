@@ -1,0 +1,34 @@
+#+title:      copy a repo with all commit history
+#+date:       [2023-11-25 Sat 22:05]
+#+filetags:   :code:git:
+#+identifier: 20231125T220538
+
+The commands you've provided are used to push all local branches,
+tags, and commits from one Git repository to another
+repository.
+
+For instance, if the new repository is located in a directory named
+new_repo, you'd execute:
+
+#+begin_src bash
+  cd /path/to/new_repo
+#+end_src
+
+git push --mirror <url of old repo>: This Git command pushes all
+branches, tags, and commits from the current repository (in the
+changed directory) to another repository specified by <url of old
+repo>. The --mirror flag is used to ensure that all references
+(branches and tags) and associated objects are pushed to the remote
+repository.
+
+Replace <url of old repo> with the URL or remote repository location
+of the old repository.
+
+For example:
+
+git push --mirror https://github.com/old_username/old_repo.git
+
+This sequence of commands, after changing the directory to the new
+repository, essentially mirrors the content of the old repository,
+including all branches, tags, commits, and their associated history,
+to the new repository specified by <url of old repo>.

@@ -1,0 +1,59 @@
+#+title:      why I am using emacs
+#+date:       [2023-11-26 Sun 00:30]
+#+filetags:   :emacs:
+#+identifier: 20231126T003030
+
+- According to Zygimantas, most developers WILL be running linux at
+  work, so dont fall for windows os
+- FOREVER notes, simple org files, text, so notes will forever be
+  there(<2023-11-26 Sun> started using denote. [[denote:20231125T211812][Why I use denote]])
+- Torstein - The drive you have to always improve your tools and
+  workflow will take you and your career great places
+- I guess in some older companies where security (of all kinds) is an
+  actual issue, they mandate that everyone works through a VM, hosted
+  remotely. And when whatever you’re using to visually connect to the
+  VM lags, and the VM itself is pretty slow, and you have 10 people
+  near you connecting to the same router, it becomes a ridiculous pain
+  to use an IDE.
+- Most flexible and configurable editor in the multiverse. I’m not
+  even close to joking
+- [[https://www.reddit.com/r/emacs/comments/z9u6c1/my_experience_with_emacs_and_the_eventual/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=1&utm_content=share_button][emacs till the day I die due to magit]]
+
+
+Why I should not use emacs:
+
+Dienoraščio tiesiog rašymas: Užima daug laiko, bet naudos nedaug
+long-term. Visą gyvenimą greičiausiai nenaudociau jo vis tiek, o ir po
+10 metu kas iš to, kad galėsiu paskaityti ką šiandien veikiau.. tam
+yra memories, atmintis, fotkes ir pan. Geriau tegul tavo darbai šneka
+jei dienorastukas. Ir realiai, beveik niekados aš to dienoraščio
+neatsidarau. O jeigu ir atsidarau, nelabai ten ką skaitau... Kasdien
+galvoti, kad reikia prisėsti, reikia užsirašyti notes I žurnalą.. ne
+ačiū.
+
+Coding environment - geras ir pycharm. Su emacs kad keybindijgs ir
+nice, užima daug laiko, kol susisetupini. Ir susisetupinus - mėgini
+vėliau daugiau tweakinti tą environment nei koduoti.. imk įrankį,
+naudok koks jis yra ir tiek. Va kaip vim kelis bindings pasidariau,
+kad būtų patogu naršyti - to ir užtenka +-, ne?
+
+Agenda - labai retai naudoju. Useful nebent susirasyti ko žmonėm
+reikia, ką jiem pirkti ir pan. Bet ne pati agenda.. retai ją sekų.
+
+Gal būt po GitHub repositorijomis viską rašytis. Ir docs ir rodos ir
+pan?
+
+Nu kadangi org mode galima turėti export to md ar tiesiog rašyti
+tiesiogiai su org mode - tai proves, jog tai yra populiaru among
+developers. Tai gal 100% neatsisakyk emacs,bet pasiribok. Jokių todos,
+jokių epics. Tik notes? Idk blt.
+
+Emacs configuration only once a week. Tam tikrą dieną, tam tikrą kiekį
+valandų. Ir psio.
+
+Vim + tmux?
+
+
+Emacs and being able to change/modify/tweak things to be like I want,
+create the functionality that I want - is of the reason is why I
+became a programmer.

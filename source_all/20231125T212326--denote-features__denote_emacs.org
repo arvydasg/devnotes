@@ -1,0 +1,23 @@
+#+title:      denote features
+#+date:       [2023-11-25 Sat 21:23]
+#+filetags:   :denote:emacs:
+#+identifier: 20231125T212326
+
+Some features not to forget.
+
+- Rename the files.
+- Take pdf or any other file, rename it denote style - search for it later
+- use m% to search for notes with regular expressions
+
+  U - unmark all selections in dired
+
+  %m
+
+  t - toggle the mark
+  k - kill unecessary
+  g - close this
+  v - view file quick
+  q - quit
+
+- have a list of "backlinks" that link to your current note
+- sad you can not go to a note by clicking enter on it

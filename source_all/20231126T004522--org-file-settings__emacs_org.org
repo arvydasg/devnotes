@@ -1,0 +1,6 @@
+#+title:      org file settings
+#+date:       [2023-11-26 Sun 00:45]
+#+filetags:   :emacs:org:
+#+identifier: 20231126T004522
+
+In buffer settings - https://orgmode.org/manual/In_002dbuffer-Settings.html
