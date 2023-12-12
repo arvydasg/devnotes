@@ -1,6 +1,0 @@
-#+title: naujas postas
-#+date: <2023-12-12 11:10>
-#+description:
-#+filetags: emacs nixos
-
-Hello this is a new blogpost. Just checking it out you know.
