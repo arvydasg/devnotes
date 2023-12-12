@@ -3,8 +3,76 @@
 <channel>
 <title><![CDATA[arvydasg.github.io]]></title>
 <description><![CDATA[arvydasg.github.io]]></description>
-<link>https://arvydasg.github.io/devnotes/</link>
-<lastBuildDate>Tue, 12 Dec 2023 14:19:21 +0000</lastBuildDate>
+<link>https://arvydasg.github.io/</link>
+<lastBuildDate>Tue, 12 Dec 2023 17:34:18 +0000</lastBuildDate>
+<item>
+  <title><![CDATA[one more note about emacs]]></title>
+  <description><![CDATA[
+<p>
+This is a very serious short note you know.
+</p>
+<div class="taglist"><a href="https://arvydasg.github.io/tags.html">Tags</a>: <a href="https://arvydasg.github.io/tag-emacs.html">emacs</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <link>https://arvydasg.github.io/20231212T151753--one-more-note-about-emacs__emacs.html</link>
+  <guid>https://arvydasg.github.io/20231212T151753--one-more-note-about-emacs__emacs.html</guid>
+  <pubDate>Tue, 12 Dec 2023 17:34:18 +0000</pubDate>
+</item>
+<item>
+  <title><![CDATA[how this blog is made]]></title>
+  <description><![CDATA[
+
+<div id="outline-container-org78d2b34" class="outline-2">
+<h2 id="org78d2b34">Why write in org mode and emacs</h2>
+</div>
+<div id="outline-container-org538e910" class="outline-2">
+<h2 id="org538e910">How to version control the things</h2>
+</div>
+<div id="outline-container-org0360f07" class="outline-2">
+<h2 id="org0360f07">How I am using denote</h2>
+<div class="outline-text-2" id="text-org0360f07">
+<p>
+why use denote over simple bla
+</p>
+
+
+<p>
+Hello,
+</p>
+
+<p>
+So using denote, created a separate silo - as described in
+<a href="https://protesilaos.com/emacs/denote">https://protesilaos.com/emacs/denote</a>.
+</p>
+
+<p>
+I hav
+</p>
+</div>
+</div>
+<div id="outline-container-org600d230" class="outline-2">
+<h2 id="org600d230">how to then org publish the pages</h2>
+</div>
+<div id="outline-container-org3fc2a39" class="outline-2">
+<h2 id="org3fc2a39">push to git</h2>
+</div>
+<div id="outline-container-orgc24225c" class="outline-2">
+<h2 id="orgc24225c">preview</h2>
+<div class="outline-text-2" id="text-orgc24225c">
+<p>
+link to how to setup with org bla
+</p>
+
+<p>
+link to a [[<a href="nil.html">denote:20231129T002500</a>][paperclip maximizer] does it work?
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/tags.html">Tags</a>: <a href="https://arvydasg.github.io/tag-emacs.html">emacs</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <link>https://arvydasg.github.io/20231212T151434--how-this-blog-is-made__emacs.html</link>
+  <guid>https://arvydasg.github.io/20231212T151434--how-this-blog-is-made__emacs.html</guid>
+  <pubDate>Tue, 12 Dec 2023 17:34:18 +0000</pubDate>
+</item>
 <item>
   <title><![CDATA[paperclip maximizer]]></title>
   <description><![CDATA[
@@ -18,9 +86,9 @@ Short intro - <a href="https://www.youtube.com/watch?v=YxwsV88BNfE&amp;ab_channe
 </p>
 <div class="taglist"><a href="https://arvydasg.github.io/devnotes/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/tag-ai.html">ai</a> </div>]]></description>
   <category><![CDATA[ai]]></category>
-  <link>https://arvydasg.github.io/devnotes/20231129T002500--paperclip-maximizer__ai.html</link>
-  <guid>https://arvydasg.github.io/devnotes/20231129T002500--paperclip-maximizer__ai.html</guid>
-  <pubDate>Tue, 12 Dec 2023 14:19:21 +0000</pubDate>
+  <link>https://arvydasg.github.io/20231129T002500--paperclip-maximizer__ai.html</link>
+  <guid>https://arvydasg.github.io/20231129T002500--paperclip-maximizer__ai.html</guid>
+  <pubDate>Tue, 12 Dec 2023 17:34:18 +0000</pubDate>
 </item>
 </channel>
 </rss>
