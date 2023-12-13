@@ -1,9 +1,0 @@
-#+title:      can not see branches
-#+date:       [2023-11-25 Sat 22:19]
-#+filetags:   :git:
-#+identifier: 20231125T221917
-
-if after a fresh clone you can not see branches - do git checkout
-<branchname>
-
-arba in magit, to see all the branches - do y(magit-show-refs)

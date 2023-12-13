@@ -1,8 +1,0 @@
-#+title:      raspberrypi shops
-#+date:       [2023-11-26 Sun 00:18]
-#+filetags:   :raspberrypi:
-#+identifier: 20231126T001818
-
-- https://www.anodas.lt/en/raspberry-pi-en
-- https://www.distrelec.lt/
-- https://www.elfadistrelec.lv/

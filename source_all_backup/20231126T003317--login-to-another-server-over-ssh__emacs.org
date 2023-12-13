@@ -1,8 +1,0 @@
-#+title:      login to another server over ssh
-#+date:       [2023-11-26 Sun 00:33]
-#+filetags:   :emacs:
-#+identifier: 20231126T003317
-
-/ssh:remote-user@remote.box:/path/to/my/file
-
-will be prompted for password n stuff

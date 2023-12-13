@@ -1,8 +1,0 @@
-#+title:      seq keep error message
-#+date:       [2023-11-25 Sat 22:09]
-#+filetags:   :code:git:
-#+identifier: 20231125T220943
-
-https://emacs.stackexchange.com/questions/78977/seq-keep-is-void-when-installing-magit-through-use-package
-
-should install emacs 29 bla

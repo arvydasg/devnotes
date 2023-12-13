@@ -1,9 +1,0 @@
-#+title:      test note
-#+date:       [2023-12-12 Tue 18:37]
-#+filetags:   :economics:emacs:
-#+identifier: 20231212T183755
-#+STARTUP:    overview
-
-Hello this is another test note.
-
-[[denote:20231129T002500][paperclip maximizer]]

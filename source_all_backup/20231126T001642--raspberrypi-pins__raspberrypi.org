@@ -1,6 +1,0 @@
-#+title:      raspberrypi pins
-#+date:       [2023-11-26 Sun 00:16]
-#+filetags:   :raspberrypi:
-#+identifier: 20231126T001642
-
-https://forums.raspberrypi.com/viewtopic.php?t=216884#:~:text=If%20you%20really%20want%20to,or%20any%20other%20ground%20pin).&text=Some%2012V%20DC%20fans%20will,CFM%2C%20and%20with%20less%20noise.
