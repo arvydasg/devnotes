@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>why shortcuts dont work in emacs terminal</title>
+<meta name="generator" content="Org Mode" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">why shortcuts dont work in emacs terminal</h1>
+<p>
+<a href="https://emacs.stackexchange.com/questions/75347/problem-with-key-bindings-in-emacs-in-the-terminal-on-wsl/75349#75349">https://emacs.stackexchange.com/questions/75347/problem-with-key-bindings-in-emacs-in-the-terminal-on-wsl/75349#75349</a>
+</p>
+
+<p>
+You’re using Emacs inside of a terminal, and terminals have a much
+more limited set of keystrokes that they can communicate. This is
+because historically terminals simply had fewer keys on their
+keyboards, and because not all combinations of keys were thought to be
+useful.
+</p>
+
+<p>
+Some terminal emulators, starting with XTerm, have added new escape
+sequences that are capable of communicating the full range of key
+combinations possible on modern keyboards. Emacs will automatically
+recognize these escape sequences, so if your terminal emulator
+supports them then you have a solution. If it doesn’t perhaps you can
+use XTerm instead.
+</p>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2023-11-26 Sun 00:33</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.1 (<a href="https://orgmode.org">Org</a> mode 9.6.6)</p>
+</div>
+</body>
+</html>

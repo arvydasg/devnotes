@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>dockerfile</title>
+<meta name="generator" content="Org Mode" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">dockerfile</h1>
+<p>
+PERFECT DOCS/REFERECE -
+<a href="https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index">https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index</a>
+</p>
+
+
+<p>
+Dockerfile best practices -
+<a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">https://docs.docker.com/develop/develop-images/dockerfile_best-practices/</a>
+</p>
+
+<p>
+Dockerfile example used to generate emacs image:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"># The emacs installation phase itself takes aroun 7 minutes to complete
+# for the first time after we change something in the initial or second
+# stage - everything under them will have to be rerun... meaning another
+# 7 minutes of your life. Not cool.
+
+# so what I found is that you can split the Dockerfile into stages. I
+# will put the steps that might change frequently towards the end of
+# the Dockerfile to maximize caching. By separating the stages in this
+# manner, Docker will reuse the intermediate images created in each
+# stage, utilizing the cache for the unchanged layers. When changes
+# occur, only the steps AFTER THE MODIFICATION will be re-executed.
+
+# -----------------------------------------------------------
+# INITIAL STAGE: Installing essential packages and tools
+FROM ubuntu:latest AS base
+
+RUN apt update &amp;&amp; apt upgrade -y \
+    &amp;&amp; apt install sudo make wget -y
+
+# -----------------------------------------------------------
+# SECOND STAGE: Installing Git and cloning the repository
+FROM base AS gitclone
+
+RUN apt-get install -y git \
+    &amp;&amp; git clone https://github.com/arvydasg/dotfiles.git /root/dotfiles
+
+# -----------------------------------------------------------
+# THIRD STAGE: Emacs installation
+FROM gitclone AS emacs
+
+WORKDIR /root
+COPY compile-install-emacs.sh compile-install-emacs.sh
+RUN chmod +x compile-install-emacs.sh
+RUN sh compile-install-emacs.sh
+
+# -----------------------------------------------------------
+# FOURTH STAGE: Random stuff
+# since emacs has been installed(heaviest process), we can do any
+# random installs and actions here now, so only the steps under would
+# be rerun and not the whole container including the emacs compilation
+# stage(Third stage)
+RUN apt install vim htop tmux -y
+
+# -----------------------------------------------------------
+# FINAL STAGE
+FROM emacs AS final
+
+ENTRYPOINT ["emacs"]
+</pre>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2023-11-28 Tue 17:56</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.1 (<a href="https://orgmode.org">Org</a> mode 9.6.6)</p>
+</div>
+</body>
+</html>

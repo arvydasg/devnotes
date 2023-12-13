@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>revert a branch to the main branch</title>
+<meta name="generator" content="Org Mode" />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">revert a branch to the main branch</h1>
+<p>
+Make sure everything is pushed up to your remote repository (GitHub):
+</p>
+
+<p>
+<code>git checkout main</code>
+</p>
+
+<p>
+Overwrite "main" with "better<sub>branch</sub>":
+</p>
+
+<p>
+<code>git reset --hard better_branch</code>
+</p>
+
+<p>
+Force the push to your remote repository:
+</p>
+
+<p>
+<code>git push -f origin main</code>
+</p>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2023-11-25 Sat 21:40</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.1 (<a href="https://orgmode.org">Org</a> mode 9.6.6)</p>
+</div>
+</body>
+</html>
