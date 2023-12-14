@@ -4,7 +4,8 @@
 #+identifier: 20231211T151427
 #+STARTUP:    overview
 
-* Why NixOS
+* TODO Why NixOS
+
 AFTER you reinstall your computer - to install the DEV environment, all you
 have to take with you is =/etc/nixos/configuration.nix= file, everything is
 described in it. Amazing!
