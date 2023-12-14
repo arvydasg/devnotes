@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>copy a repo with all commit history</title>
+header - stylesheets and stuff here</head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br?</div>
+<div id="content">
+<div class="post-date">14 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231125T220538--copy-a-repo-with-all-commit-history__git.html">copy a repo with all commit history</a></h1>
+<p>
+The commands provided below are used to push all local branches, tags, and
+commits from one Git repository to another repository.
+</p>
+
+<p>
+For instance, if the new repository is located in a directory named new<sub>repo</sub>,
+you'd execute:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">cd /path/to/new_repo
+</pre>
+</div>
+
+<p>
+<code>git push --mirror &lt;url of old repo&gt;</code>: This Git command pushes all branches,
+tags, and commits from the current repository (in the changed directory) to
+another repository specified by &lt;url of old repo&gt;. The <code>--mirror</code> flag is used
+to ensure that all references (branches and tags) and associated objects are
+pushed to the remote repository.
+</p>
+
+<p>
+Replace <code>&lt;url of old repo&gt;</code> with the URL or remote repository location of the
+old repository.
+</p>
+
+<p>
+For example:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">git push --mirror https://github.com/old_username/old_repo.git
+</pre>
+</div>
+
+<p>
+This sequence of commands, after changing the directory to the new repository,
+essentially mirrors the content of the old repository, including all branches,
+tags, commits, and their associated history, to the new repository specified by
+<code>&lt;url of old repo&gt;</code>.
+</p>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-git.html">git</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>
