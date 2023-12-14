@@ -1,7 +1,0 @@
-#+title:      split repo into multiple
-#+date:       [2023-11-25 Sat 19:06]
-#+filetags:   :code:git:
-#+identifier: 20231125T190641
-
-* split repo into multiple repos(with commit history)
-https://www.youtube.com/watch?v=HV8hfmwDlPY&ab_channel=CraigDavison
