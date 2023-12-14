@@ -1,7 +1,7 @@
-#+title:      split repo into multiple
+#+title:      split a github repository into multiple
 #+date:       [2023-11-25 Sat 19:06]
-#+filetags:   :code:git:
+#+filetags:   :git:
 #+identifier: 20231125T190641
 
-* split repo into multiple repos(with commit history)
+Can do that with commit history like so -
 https://www.youtube.com/watch?v=HV8hfmwDlPY&ab_channel=CraigDavison
