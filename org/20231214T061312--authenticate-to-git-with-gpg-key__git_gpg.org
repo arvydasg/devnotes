@@ -1,0 +1,9 @@
+#+title:      authenticate to git with gpg key
+#+date:       [2023-12-14 Thu 06:13]
+#+filetags:   :git:gpg:
+#+identifier: 20231214T061312
+#+STARTUP:    overview
+
+* TODO gpg key method
+
+Colleague gave some tutorials in work notes.

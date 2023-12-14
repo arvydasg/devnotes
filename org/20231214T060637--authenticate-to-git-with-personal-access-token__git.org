@@ -1,0 +1,35 @@
+#+title:      authenticate to git with personal access token
+#+date:       [2023-12-14 Thu 06:06]
+#+filetags:   :git:
+#+identifier: 20231214T060637
+#+STARTUP:    overview
+
+* Personal access token
+
+After you have [[file:20231211T161252--introduce-yourself-to-git__git.org][introduced yourself to git]].
+
+When you do a git operation(with magit or just from the terminal) you will be
+prompted for password. One way is to get with a generated =personal access
+token= in github developer settings.
+
+Go generate that token, save it somewhere safe.
+
+Then in the terminal do:
+
+#+begin_src bash
+  git config --global --replace-all credential.helper cache
+  git config --global credential.helper store
+#+end_src
+
+Now try to push the code, enter your git username as username and enter the
+token that you have generated as password.
+
+Git will remember your credentials for future git operations.
+
+* Misc info
+
+Changing the token - [[https://stackoverflow.com/questions/46645843/where-to-store-my-git-personal-access-token][Explanation here]].
+
+#+begin_src bash
+  git config --list (some info about you)
+#+end_src

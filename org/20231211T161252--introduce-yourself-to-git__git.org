@@ -1,0 +1,35 @@
+#+title:      introduce yourself to git
+#+date:       [2023-12-11 Mon 16:12]
+#+filetags:   :git:
+#+identifier: 20231211T161252
+#+STARTUP:    overview
+
+When on new system, you might get such message when trying to perform a
+push/pull git command:
+
+#+begin_quote
+  Author identity unknown
+
+  Please tell me who you are.
+
+  Run
+
+  git config --global user.email "you@example.com"
+
+  git config --global user.name "Your Name"
+#+end_quote
+
+In my case that would be:
+
+#+begin_src bash
+  git config --global user.email "azegaspa@gmail.com"
+  git config --global user.name "arvydasg"
+#+end_src
+
+You will get prompted for a password.
+
+There are multiple ways to get that password:
+- write your git password manually each time
+- [[file:20231214T060637--authenticate-to-git-with-personal-access-token__git.org][authenticate with personal access token]]
+- [[file:20231214T060558--authenticate-to-git-with-ssh__git_ssh.org][authenticate with ssh]]
+- [[file:20231214T061312--authenticate-to-git-with-gpg-key__git_gpg.org][authenticate with gpg]]

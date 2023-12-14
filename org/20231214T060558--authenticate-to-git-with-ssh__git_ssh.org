@@ -1,0 +1,9 @@
+#+title:      authenticate to git with ssh
+#+date:       [2023-12-14 Thu 06:05]
+#+filetags:   :git:ssh:
+#+identifier: 20231214T060558
+#+STARTUP:    overview
+
+* TODO ssh key method
+
+I have described it in work notes.
