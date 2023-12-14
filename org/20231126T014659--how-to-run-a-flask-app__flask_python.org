@@ -1,0 +1,23 @@
+#+title:      how to run a flask app
+#+date:       [2023-11-26 Sun 01:46]
+#+filetags:   :flask:python:
+#+identifier: 20231126T014659
+
+If you have someting like this in =app.py=:
+#+begin_src python
+if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+    app.run(host="0.0.0.0", debug=True)
+#+end_src
+
+Run the app with:
+#+begin_src python
+  python3 app.py
+#+end_src
+
+The app should run.
+
+NOTe: If you try to run with =flask run= - changes might not automatically
+refresh in the browser. You might have to restart the server each time you make
+a change.

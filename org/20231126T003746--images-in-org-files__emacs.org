@@ -1,0 +1,58 @@
+#+title:      images in org files
+#+date:       [2023-11-26 Sun 00:37]
+#+filetags:   :emacs:
+#+identifier: 20231126T003746
+
+#+attr_html: :width 800px
+#+ATTR_ORG: :width 600
+[[../media/water.jpg]]
+
+* Display images in org files
+
+To display inline images in org buffer after you have placed some, click =C-c
+C-x C-v=.
+
+* If you have the image with you
+
+To insert an image, do C-u then C-c C-l. easy. if you add a
+description, it won't show the image, but rather the description with
+an indication of a link.
+
+[2023-12-14 Thu] or what I use now is yasnippet that looks like such, that is
+the yasnippet template:
+
+#+begin_src emacs-lisp
+  #+attr_html: :width 800px
+  #+ATTR_ORG: :width 600
+  [[./static/images/.png]]
+#+end_src
+
+Simply modify the path of the image and it will display it.
+
+* If you don't have an image and want to insert a screenshot
+
+Use ~org-download~ package. After you install it, run =M-x
+org-download-screenshot=.
+
+Then make sure in init file you have specified the directory. If not, it will
+save images in your current org file directory. It is good if you want to
+export the file to html later and then maybe even send to someone.
+
+* Resizing images in emacs and html
+
+To resize an image, add this to your init:
+
+#+begin_src emacs-lisp
+  (setq org-image-actual-width nil)
+#+end_src
+
+Then, above EACH and EVERY image add such lines:
+
+#+begin_src org
+#+attr_html: :width 900px
+#+ATTR_ORG: :width 600
+[[file:images/smutifruti.png]]
+#+end_src
+
+and now after C-c C-x C-v - images will display nicely, as per your request.
+Beautiful.

@@ -8,5 +8,5 @@ download the file, install it
 
 wsl has to be enabled I guess also on your windows machine
 
-after it's installed - run it. Login. Should be able to see your
-docker images from your dockerhub.
+after it's installed - run it. Login. Should be able to see your docker images
+from your dockerhub.

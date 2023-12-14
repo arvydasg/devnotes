@@ -7,10 +7,12 @@
 [[https://www.youtube.com/watch?v=9i_9hse_Y08&t=492s][How to Cut Emacs Start Up Time in Half! - Emacs From Scratch #12]]
 
 * use-package-report
+
 [2022-04-10 Sun] allows to invoke and use use-package-report
 #+begin_src emacs-lisp
 (setq use-package-compute-statistics t)
 #+end_src
+
 * Show startup time on emacs-load
 #+BEGIN_SRC emacs-lisp
   (defun efs/display-startup-time ()
@@ -22,9 +24,16 @@
 
   (add-hook 'emacs-startup-hook #'efs/display-startup-time)
 #+END_SRC
+
 * Message
 Add such message in the package and then look at *messages* buffer on startup
+to find which one has failed.
+
 #+begin_src emacs-lisp
   :config
   (message "Org-roam got loaded!")
 #+end_src
+
+* TODO now these message are not needed anymore, since I compile emacs at each config change
+
+link to a post where I describe that

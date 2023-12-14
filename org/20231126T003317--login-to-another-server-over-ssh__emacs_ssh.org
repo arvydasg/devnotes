@@ -1,0 +1,12 @@
+#+title:      login to another server over ssh
+#+date:       [2023-11-26 Sun 00:33]
+#+filetags:   :emacs:ssh:
+#+identifier: 20231126T003317
+
+Over emacs do:
+
+#+begin_src bash
+  /ssh:remote-user@remote.box:/path/to/my/file
+#+end_src
+
+will be prompted for password n stuff.

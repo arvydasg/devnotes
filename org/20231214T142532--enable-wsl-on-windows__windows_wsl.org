@@ -1,0 +1,12 @@
+#+title:      enable wsl on windows
+#+date:       [2023-12-14 Thu 14:25]
+#+filetags:   :windows:wsl:
+#+identifier: 20231214T142532
+#+STARTUP:    overview
+
+https://web02.gonzaga.edu/faculty/talarico/vlsi/wsl.html
+
+Then you have to install an image, whether its ubuntu, nixos, alpine or
+anything else.
+
+Guide how to do that here - [[file:20231128T165324--install-linux-distro-over-wsl__windows_wsl.org][install wsl repo on windows]].

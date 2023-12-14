@@ -3,6 +3,8 @@
 #+filetags:   :wsl:
 #+identifier: 20231128T172125
 
+perdek i emacs note sita - https://superuser.com/questions/1126721/rebooting-ubuntu-on-windows-without-rebooting-windows
+
 
 #+begin_src bash
   # View the list of distros and their current state:

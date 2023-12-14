@@ -1,0 +1,38 @@
+#+title:      wsl glitches in gui applications
+#+date:       [2023-11-28 Tue 16:43]
+#+filetags:   :wsl:
+#+identifier: 20231128T164359
+
+Registered a bug in WSLg - https://github.com/microsoft/wslg/issues/1148
+
+Some more notes below here. From when I was debugging this issue.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Or here with gui - https://web02.gonzaga.edu/faculty/talarico/vlsi/wsl.html
+
+po visu situ zingsniu install wsl 2 kernel thing from here - https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+
+first do the wsl kernel update only then isntall wsl , since we have installed wsl 2 - needed for gui apps
+
+wsl --update
+wsl --shutdown
+wsl --install
+wsl.exe --list --online to choose a distro
+
+Linux GUI apps are only supported with WSL 2 and will not work with a Linux
+distribution configured for WSL 1. Read about how to change your distribution
+from WSL 1 to WSL 2.
+
+sudo apt-get update && sudo apt-get upgrade -y
+
+https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+https://web02.gonzaga.edu/faculty/talarico/vlsi/wsl.html
+https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps
+https://superuser.com/questions/1126721/rebooting-ubuntu-on-windows-without-rebooting-windows
+https://emacsredux.com/blog/2021/12/19/using-emacs-on-windows-11-with-wsl2/
+
+research wslg:
+
+https://www.reddit.com/r/bashonubuntuonwindows/comments/wezwhi/bug_with_gui_apps/

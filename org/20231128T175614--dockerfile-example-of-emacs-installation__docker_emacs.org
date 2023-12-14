@@ -1,11 +1,10 @@
-#+title:      dockerfile
+#+title:      dockerfile example of emacs installation
 #+date:       [2023-11-28 Tue 17:56]
-#+filetags:   :docker:
+#+filetags:   :docker:emacs:
 #+identifier: 20231128T175614
 
 PERFECT DOCS/REFERECE -
 https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index
-
 
 Dockerfile best practices -
 https://docs.docker.com/develop/develop-images/dockerfile_best-practices/

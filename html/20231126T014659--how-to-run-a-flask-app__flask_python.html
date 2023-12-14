@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>how to run a flask app</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">14 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231126T014659--how-to-run-a-flask-app__flask_python.html">how to run a flask app</a></h1>
+<p>
+If you have someting like this in <code>app.py</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-python">if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+    app.run(host="0.0.0.0", debug=True)
+</pre>
+</div>
+
+<p>
+Run the app with:
+</p>
+<div class="org-src-container">
+<pre class="src src-python">python3 app.py
+</pre>
+</div>
+
+<p>
+The app should run.
+</p>
+
+<p>
+NOTe: If you try to run with <code>flask run</code> - changes might not automatically
+refresh in the browser. You might have to restart the server each time you make
+a change.
+</p>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-flask.html">flask</a> <a href="https://arvydasg.github.io/devnotes/html/tag-python.html">python</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

@@ -1,16 +1,13 @@
-#+title:      blog with hugo
+#+title:      create a blog with hugo
 #+date:       [2023-11-28 Tue 13:30]
-#+filetags:   :blog:
+#+filetags:   :hugo:websites:
 #+identifier: 20231128T133020
-
-* blog with hugo
-** blog with hugo
 
 get started video - https://www.youtube.com/watch?v=LIFvgrRxdt4&ab_channel=RyanSchachte
 
 second video - https://www.youtube.com/watch?v=hjD9jTi_DQ4&t=2225s&ab_channel=EnvatoTuts%2B
 
-** commands
+* commands
 - hugo new site nameofthesite
 - cd themes git clone theme
 - change config.toml to config.yml

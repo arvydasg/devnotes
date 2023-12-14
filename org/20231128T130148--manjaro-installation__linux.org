@@ -3,12 +3,11 @@
 #+filetags:   :linux:
 #+identifier: 20231128T130148
 
-first of all - choose non free drivers, cuz of nividia drivers that I
-have. hope it will solve the problem with the dwm and random screen
-freezes + tags not working...
+First of all - choose non free drivers, cuz of nividia drivers that I have.
+hope it will solve the problem with the dwm and random screen freezes + tags
+not working...
 
 IMMEADITELY AFTER INSTALL
-
 
 htop check - 650M/7.60G 73tasks 143thr
 sensors check 54
@@ -186,8 +185,8 @@ go to .dwm
 vim autostart.sh
 then add
 while true; do
-	xsetroot -name "$(date)
-	sleep 1s
+        xsetroot -name "$(date)
+        sleep 1s
 done
 
 set up aliases for terminal cd .. some cool things, just like the hobyist

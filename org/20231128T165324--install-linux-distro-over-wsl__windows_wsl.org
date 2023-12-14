@@ -1,0 +1,58 @@
+#+title:      install linux distro over wsl
+#+date:       [2023-11-28 Tue 16:53]
+#+filetags:   :windows:wsl:
+#+identifier: 20231128T165324
+
+Ok so at <2023-11-26 Sun> I was very much getting to know to wsl and how to
+install it properly.
+
+First reason - I finally decided to use emacs more so I could use denote TODO -
+add a link. For that of course I did not want to override my already custom
+emacs config and notes file structure, wanted to create a NEW WSL UBUNTU
+instance where I could experiment.
+
+Second reason - I was [[file:20231128T164359--wsl-glitches-in-gui-applications__wsl.org][getting gliches in my wsl]].
+
+So while I was trying to solve the first thing, I found out about the second
+thing and that led me to all this documentation below.
+
+* Installation instructions
+
+After you have [[file:20231214T142532--enable-wsl-on-windows__windows_wsl.org][enabled wsl on windows]], you can do these steps:
+
+in cmd/powershell run:
+
+#+begin_src shell
+  # see all repos available
+  wsl --list
+  # install the default repo(or any other)
+  wsl --install ubuntu
+  # install a custom repo version(can have multiple different versions installed)
+  wsl --install -d Ubuntu-20.04
+#+end_src
+
+After your distro is installed, login to it:
+
+#+begin_src bash
+  # View the list of distros and their current state:
+  wsl.exe -l -v
+   # Boot up a specific distro:
+  wsl.exe -d <DistroName>
+#+end_src
+
+And confirm the version number:
+#+begin_src bash
+  lsb_release -a
+#+end_src
+
+Now check "add remove programs" if your wsl instance is listed there.
+
+* Setup terminal
+
+Setup terminal to be ubuntu. So when you open cmd you would also see
+the ubuntu terminal.
+
+After the installation ubuntu wsl make ubuntu profile in cmd -> settings ->
+profiles - > new profile -> duplicate ubuntu profile
+
+to install emacs now, follow - TODO

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>wsl glitches in gui applications</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">14 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231128T164359--wsl-glitches-in-gui-applications__wsl.html">wsl glitches in gui applications</a></h1>
+<p>
+Registered a bug in WSLg - <a href="https://github.com/microsoft/wslg/issues/1148">https://github.com/microsoft/wslg/issues/1148</a>
+</p>
+
+<p>
+Some more notes below here. From when I was debugging this issue.
+</p>
+
+<hr>
+
+<p>
+Or here with gui - <a href="https://web02.gonzaga.edu/faculty/talarico/vlsi/wsl.html">https://web02.gonzaga.edu/faculty/talarico/vlsi/wsl.html</a>
+</p>
+
+<p>
+po visu situ zingsniu install wsl 2 kernel thing from here - <a href="https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package">https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package</a>
+</p>
+
+<p>
+first do the wsl kernel update only then isntall wsl , since we have installed wsl 2 - needed for gui apps
+</p>
+
+<p>
+wsl &#x2013;update
+wsl &#x2013;shutdown
+wsl &#x2013;install
+wsl.exe &#x2013;list &#x2013;online to choose a distro
+</p>
+
+<p>
+Linux GUI apps are only supported with WSL 2 and will not work with a Linux
+distribution configured for WSL 1. Read about how to change your distribution
+from WSL 1 to WSL 2.
+</p>
+
+<p>
+sudo apt-get update &amp;&amp; sudo apt-get upgrade -y
+</p>
+
+<p>
+<a href="https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package">https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package</a>
+<a href="https://web02.gonzaga.edu/faculty/talarico/vlsi/wsl.html">https://web02.gonzaga.edu/faculty/talarico/vlsi/wsl.html</a>
+<a href="https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package">https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package</a>
+<a href="https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps">https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps</a>
+<a href="https://superuser.com/questions/1126721/rebooting-ubuntu-on-windows-without-rebooting-windows">https://superuser.com/questions/1126721/rebooting-ubuntu-on-windows-without-rebooting-windows</a>
+<a href="https://emacsredux.com/blog/2021/12/19/using-emacs-on-windows-11-with-wsl2/">https://emacsredux.com/blog/2021/12/19/using-emacs-on-windows-11-with-wsl2/</a>
+</p>
+
+<p>
+research wslg:
+</p>
+
+<p>
+<a href="https://www.reddit.com/r/bashonubuntuonwindows/comments/wezwhi/bug_with_gui_apps/">https://www.reddit.com/r/bashonubuntuonwindows/comments/wezwhi/bug_with_gui_apps/</a>
+</p>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-wsl.html">wsl</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>
