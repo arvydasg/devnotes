@@ -7,9 +7,9 @@
 So today [2023-12-09 Sat] is a morning for configs.
 
 Shell is not working properly(wrong time in wsl). I use tmux sometimes, I use
-fish now(config will come also probably), I use vim sometimes, I want my bashrc
-to look certain way... many config files and they are now all over the place on
-different machines.
+fish now(config will come also probably), I use vim sometimes, I want my
+.bashrc file to look certain way... many config files and they are now all over
+the place on different machines.
 
 I need to have one repo for this.
 
@@ -29,6 +29,6 @@ and now when I launch emacs from anywhere inside my wsl, it looks into
 
 Now in that =dotfiles= folder I can start putting other config files.
 
-[2023-12-09 Sat 09:40] I have also created a [[denote:20231209T093750][new machine setup]] file in dotfiles
-folder which will automatically allow you to configure the new machine. Great!
-xoxo
+[2023-12-09 Sat 09:40] I have also created a (new machine setup)TODO file in
+dotfiles folder which will automatically allow you to configure the new
+machine. Great! xoxo

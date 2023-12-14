@@ -3,6 +3,8 @@
 #+filetags:   :emacs:
 #+identifier: 20231126T003030
 
+- think about using emacs + angular, bent jau prisirasyk cia kaip option
+
 - According to Zygimantas, most developers WILL be running linux at
   work, so dont fall for windows os
 - FOREVER notes, simple org files, text, so notes will forever be

@@ -63,3 +63,7 @@ so we need to tell NVM once again to use node lt's:
 #+end_src
 
 After this do node -v and npm -v - it should work once again.
+
+* Use emacs together with vscode to write angular code?
+
+[[file:20231214T171810--using-emacs-together-with-vscode__emacs_vscode.org][using emacs together with vscode to build angular projects]]

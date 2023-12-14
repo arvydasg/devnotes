@@ -22,14 +22,14 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb01fe9a">1. My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</a></li>
-<li><a href="#org103fcf7">2. Solution not worth considering</a></li>
-<li><a href="#orgfd32b0f">3. Temporary working solution</a></li>
-<li><a href="#org27e0f12">4. Permanent working solution</a>
+<li><a href="#orgf998e05">1. My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</a></li>
+<li><a href="#org6edf0ea">2. Solution not worth considering</a></li>
+<li><a href="#orgfb350af">3. Temporary working solution</a></li>
+<li><a href="#org05f7798">4. Permanent working solution</a>
 <ul>
-<li><a href="#org7463531">4.1. Option 1 - use <code>cp</code> command to copy</a></li>
-<li><a href="#org669128c">4.2. Option 2(final) - Use <code>rsync</code> command</a></li>
-<li><a href="#org49aa605">4.3. Update <code>.bashrc</code> file to copy automatically</a></li>
+<li><a href="#org427303a">4.1. Option 1 - use <code>cp</code> command to copy</a></li>
+<li><a href="#org2d746b7">4.2. Option 2(final) - Use <code>rsync</code> command</a></li>
+<li><a href="#org8949645">4.3. Update <code>.bashrc</code> file to copy automatically</a></li>
 </ul>
 </li>
 </ul>
@@ -50,8 +50,8 @@ I forget to commit my notes to git and my machine dies. I will still have a
 quite recent copy of the notes in OneDrive.
 </p>
 
-<div id="outline-container-orgb01fe9a" class="outline-2">
-<h2 id="orgb01fe9a"><span class="section-number-2">1.</span> My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</h2>
+<div id="outline-container-orgf998e05" class="outline-2">
+<h2 id="orgf998e05"><span class="section-number-2">1.</span> My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</h2>
 <div class="outline-text-2" id="text-1">
 <blockquote>
 <p>
@@ -78,8 +78,8 @@ wsl AND have those files in google cloud?
 </div>
 </div>
 
-<div id="outline-container-org103fcf7" class="outline-2">
-<h2 id="org103fcf7"><span class="section-number-2">2.</span> Solution not worth considering</h2>
+<div id="outline-container-org6edf0ea" class="outline-2">
+<h2 id="org6edf0ea"><span class="section-number-2">2.</span> Solution not worth considering</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 I heard that you can create a symlink from windows to wsl. I tried doing that:
@@ -100,8 +100,8 @@ will point to nowhere. Not good. Ditched this idea.
 </div>
 </div>
 
-<div id="outline-container-orgfd32b0f" class="outline-2">
-<h2 id="orgfd32b0f"><span class="section-number-2">3.</span> Temporary working solution</h2>
+<div id="outline-container-orgfb350af" class="outline-2">
+<h2 id="orgfb350af"><span class="section-number-2">3.</span> Temporary working solution</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Create a symbolic link within WSL that points directly to your
@@ -124,8 +124,8 @@ Yes, I think it is faster. Notes are created and opened faster.
 </div>
 </div>
 
-<div id="outline-container-org27e0f12" class="outline-2">
-<h2 id="org27e0f12"><span class="section-number-2">4.</span> Permanent working solution</h2>
+<div id="outline-container-org05f7798" class="outline-2">
+<h2 id="org05f7798"><span class="section-number-2">4.</span> Permanent working solution</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 What I will do is create a shell script that will automatically run on each wsl
@@ -137,8 +137,8 @@ commit - 2ba4f55
 </p>
 </div>
 
-<div id="outline-container-org7463531" class="outline-3">
-<h3 id="org7463531"><span class="section-number-3">4.1.</span> Option 1 - use <code>cp</code> command to copy</h3>
+<div id="outline-container-org427303a" class="outline-3">
+<h3 id="org427303a"><span class="section-number-3">4.1.</span> Option 1 - use <code>cp</code> command to copy</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Shell script lies in:
@@ -167,8 +167,8 @@ Can use a simple copy method to copy the files:
 </div>
 </div>
 
-<div id="outline-container-org669128c" class="outline-3">
-<h3 id="org669128c"><span class="section-number-3">4.2.</span> Option 2(final) - Use <code>rsync</code> command</h3>
+<div id="outline-container-org2d746b7" class="outline-3">
+<h3 id="org2d746b7"><span class="section-number-3">4.2.</span> Option 2(final) - Use <code>rsync</code> command</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Or can use <code>Rsycn</code> - it performs synchronization between source and
@@ -193,8 +193,8 @@ Then make this file executable:
 </div>
 </div>
 
-<div id="outline-container-org49aa605" class="outline-3">
-<h3 id="org49aa605"><span class="section-number-3">4.3.</span> Update <code>.bashrc</code> file to copy automatically</h3>
+<div id="outline-container-org8949645" class="outline-3">
+<h3 id="org8949645"><span class="section-number-3">4.3.</span> Update <code>.bashrc</code> file to copy automatically</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 Add the script execution to your .bashrc

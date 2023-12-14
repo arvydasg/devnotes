@@ -1,10 +1,15 @@
 #+title:      vim
 #+date:       [2023-11-25 Sat 18:09]
-#+filetags:   :code:
+#+filetags:   :vim:
 #+identifier: 20231125T180911
 
-* Vim
-** Vim bindings in evil
+Tried Vim in the beginning of my coding journey back in 2021. Liked it. Then
+found Emacs. Found org mode. Could not go back.
+
+Tried a few times as you can see below, but still, I am writing this from Emacs
+in [2023-12-14 Thu].
+
+* Vim bindings in evil
 
 Well, I'm not sure how relevant my experience is to your case.
 Originally i used Emacs in favor of Vim. Evil just makes Emacs a
@@ -29,7 +34,8 @@ hell you can't get LSP support or completions to work. It Just Works™.
 
 That said I still miss a lot of things, and it regularly gets on my
 nerves. But it definitely makes me more productive.
-** [2022-12-03 Sat] I tried!!
+* [2022-12-03 Sat] I tried!!
+
 isirasiau evil emacse
 org mode neveikia tab vscode.. tingejau ieskotis. + blet nebus ten
 agenda, tai koks tolkas daryti kazka su datomis.. zodziu.. aciu, ne.
@@ -43,7 +49,7 @@ jog evil yra nice. Ne aciu.
 Kai tikrai pamatysiu, jog man reikia, tuo met ir ismoksiu visus
 dalykys. O, geras, isjungiau company mode ir org major mode - nebemeta
 tu damn suggestions. Gal ir gerai.
-** Vim bindings in evil
+* Vim bindings in evil
 
 Well, I'm not sure how relevant my experience is to your case.
 Originally i used Emacs in favor of Vim. Evil just makes Emacs a
@@ -68,9 +74,10 @@ hell you can't get LSP support or completions to work. It Just Works™.
 
 That said I still miss a lot of things, and it regularly gets on my
 nerves. But it definitely makes me more productive.
-** [[https://github.com/noctuid/evil-guide][Emacs/Evil for vim users didelis gidas apie evil]]
-** [[https://evil.readthedocs.io/en/latest/overview.html][evil mode documentation]]
-** old .vimrcp
+* [[https://github.com/noctuid/evil-guide][Emacs/Evil for vim users didelis gidas apie evil]]
+* [[https://evil.readthedocs.io/en/latest/overview.html][evil mode documentation]]
+* old .vimrc
+
 #+begin_src bash
 " -----------------------------------------------------------------------------
 " Plugins

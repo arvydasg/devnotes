@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>django best practices</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">14 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231207T204304--django-best-practices__django_python.html">django best practices</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge4280bd">1. Instead of /admin change to smth else URL Django</a></li>
+<li><a href="#org3ba22e1">2. Use environment variables</a></li>
+<li><a href="#org36744c2">3. Use postgres db</a></li>
+<li><a href="#org42f9c66">4. Use two different settings files</a></li>
+</ul>
+</div>
+</nav>
+<p>
+Here I will write the tips that I found and that I use when building a Django
+project.
+</p>
+
+<div id="outline-container-orge4280bd" class="outline-2">
+<h2 id="orge4280bd"><span class="section-number-2">1.</span> Instead of /admin change to smth else URL Django</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+For security. Everyone knows that if its a django project, it will have an
+admin page
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3ba22e1" class="outline-2">
+<h2 id="org3ba22e1"><span class="section-number-2">2.</span> Use environment variables</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>for secret key</li>
+<li>for database name/location</li>
+<li>api keys</li>
+<li>other things if needed</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org36744c2" class="outline-2">
+<h2 id="org36744c2"><span class="section-number-2">3.</span> Use postgres db</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Kind of default ageed db to use with Django
+</p>
+</div>
+</div>
+
+<div id="outline-container-org42f9c66" class="outline-2">
+<h2 id="org42f9c66"><span class="section-number-2">4.</span> Use two different settings files</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+One for prod another for acc(test) environment
+</p>
+
+<p>
+Like described in here TODO split django settings into multiple files(TODO - add
+from notes)
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-django.html">django</a> <a href="https://arvydasg.github.io/devnotes/html/tag-python.html">python</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

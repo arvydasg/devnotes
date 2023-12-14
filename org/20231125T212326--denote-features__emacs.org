@@ -1,14 +1,20 @@
 #+title:      denote features
 #+date:       [2023-11-25 Sat 21:23]
-#+filetags:   :denote:emacs:
+#+filetags:   :emacs:
 #+identifier: 20231125T212326
 
-Some features not to forget.
+[[file:20231125T211812--why-i-use-denote__emacs.org][Why I use Denote.]]
 
-- Rename the files.
+* Some features not to forget.
+
+- Rename the files(denote-rename)
 - Take pdf or any other file, rename it denote style - search for it later
+- remove/add keywords
+- quickly create notes
+- modify the font matter to your liking
 - use m% to search for notes with regular expressions
 
+#+begin_src bash
   U - unmark all selections in dired
 
   %m
@@ -18,6 +24,6 @@ Some features not to forget.
   g - close this
   v - view file quick
   q - quit
+#+end_src
 
 - have a list of "backlinks" that link to your current note
-- sad you can not go to a note by clicking enter on it

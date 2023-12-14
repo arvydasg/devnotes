@@ -1,51 +1,16 @@
 #+title:      vscode
 #+date:       [2023-11-25 Sat 18:10]
-#+filetags:   :code:
+#+filetags:   :vscode:
 #+identifier: 20231125T181008
 
 * vscode
 ** vscode vs vim vs emacs lex fridman inspired
 ** try out evil mode...
-it might be more practical to learn to use it instead of emacs
-bindings. when you are in shell or when you are in vscode with vim
-plugin or when talking to other programmers and when you are in a
-browser with vim extension for example.
-** Macro for opening same file in vscode
 
-I use Emacs for writing prose and general computing.
+it might be more practical to learn to use it instead of emacs bindings. when
+you are in shell or when you are in vscode with vim plugin or when talking to
+other programmers and when you are in a browser with vim extension for example.
 
-But, with respect to programming, I now use both Emacs and VSCode *at the same time for the same files/projects*. (Although predominantly Emacs).
-
-I have been in Academia for years and I have always used Emacs for writing prose and programming (which has been a hobby on the side).
-
-Some months ago, I started working professionally on a Typescript/Angular project. And my co-workers, of course, use VSCode.
-
-Initially, I kept using Emacs. After a while, seeing the several ide features (go to definition, show documentation, etc.) that my colleagues were using, I decided to give VSCode a serious try and I used it to write Typescript/Angular for a whole month or so.
-
-After that, I tried to see whether I could get similar functionalities in Emacs. I tried both LSP Mode and Eglot. After some fighting, I had a quite usable LSP Mode with the ide features I wanted. Not as polished as VSCode, but totally usable. (Eglot was very nice, but I wanted to try ESLint and it looks like with Eglot, atm, you cannot have multiple LSP servers running for the same buffer.)
-
-Instead of going back to Emacs 100%, I decided to try a hybrid approach, which has been very pleasant so far. I use emacs most of the time, but when I feel that VSCode can offer some additional help I turn to it and then go back to Emacs. To make the process smooth I wrote some lines of elisp that make VSCode open the same file I am currently editing, at the same line and the same column. I have it bound to C-Caps (Actually it's C-Escape, because I have Escape remapped to Caps systemwise). When I want, then, I hit a key, VSCode appears, with the cursor placed exactly where Emacs cursor was, I do what I want to do, save if necessary, and switch back to Emacs. I usually keep VSCode already open in the same project, to allow things to be faster. Here is the elisp:
-
-```
-(defun gp/vscode-current-buffer-file-at-point ()
-  (interactive)
-  (start-process-shell-command "code"
-			       nil
-			       (concat "code --goto "
-				       (buffer-file-name)
-				       ":"
-				       (number-to-string (1+ (current-line))) ;; +1 who knows why
-				       ":"
-				       (number-to-string (current-column)))))
-
-(define-key global-map (kbd "C-<escape>") 'gp/vscode-current-buffer-file-at-point)
-```
-
-&#x200B;
-
-I would also like to able to open Emacs from VSCode, remaining in the same file, same line and column, too. Does anyone know how to do that?  I couldn't be bothered, so far...
-
-Assuming that Emacs is better than VSCode at certain things (say, text-editing, keyboard-macros, extensibility on the fly) and VSCode is better than Emacs (at least, non-relevantly extended Emacs) at other things (say, code navigation/visualization and certain code-completions), using both at the same time is, I think, an approach that deserves some thought.
 ** vscode shortcuts
 - ~c-k c-t~ - choose theme
 - syncing to other devices with github login in vs code...

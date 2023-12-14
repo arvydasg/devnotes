@@ -1,0 +1,23 @@
+#+title:      Why I use denote
+#+date:       [2023-11-25 Sat 21:18]
+#+filetags:   :emacs:
+#+identifier: 20231125T211812
+
+So last week I have decided to get to know to Denote package. Having lots of
+free time, I realized that I do not like my notes structure. Maybe Denote will
+help with that.
+
+This whole Denote setup has taken way more time and effort than I expected.
+Reinstalling Emacs to a newer version, fixing wsl, [[file:20231128T164359--wsl-glitches-in-gui-applications__wsl.org][reporting bugs to
+Microsoft's wslg team]], [[file:20231211T151427--first-nixos-installation__nixos.org][remaking my emacs configuration with nixos]], [[file:20231126T012052--make-denote-faster-on-wsl__emacs_rsync_scripting_wsl.org][making
+denote run quick]], transporting all my notes to denote style notes(is what I
+am doing right now, for the last couple of days)... TODO - pridek ir kaip
+daryti website ir kad as ji darau lol.
+
+I can say that the best introduction to Denote is here -
+https://protesilaos.com/codelog/2022-06-18-denote-demo/
+
+By the author himself. It is nice to use the tool that was created by the
+person I "know".
+
+So yeah, intro above, docs here - https://protesilaos.com/emacs/denote

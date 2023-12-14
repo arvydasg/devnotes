@@ -3,6 +3,19 @@
 #+filetags:   :linux:
 #+identifier: 20231128T130237
 
+Back in the days when I used to install Linux as a main OS and had to install
+all the packages one by one.
+
+Before I knew that I can create scripts that do that for me with one click.
+TODO add freshsetup things and scripts.
+
+Before I knew about [[file:20231211T151427--first-nixos-installation__nixos.org][nixos]].
+
+All this knowledge has paid off of course, it lead me to my second IT related
+job :)
+
+Here are the steps anyway:
+
 * Linux install 2022-03-06
 - [ ] install normal + updates - 3rd party packages
 - [ ] after install - sudo apt upgrade (daug)
