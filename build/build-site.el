@@ -34,7 +34,7 @@
 ;; (setq org-export-with-toc nil)            ;can add in individual file with #+OPTIONS: toc:1/nil
 ;; (setq org-export-with-section-numbers nil) ;can add in individual file with
 ;; #+OPTIONS: num:nil
-(setq org-static-blog-page-header "header - stylesheets and stuff here")
+(setq org-static-blog-page-header "<link rel=\"stylesheet\" href=\"../css/style.css\"/>")
 (setq org-static-blog-page-preamble "<br>preamble here yo</br>")
 (setq org-static-blog-page-postamble "<br>postamble in he house</br>")
 
