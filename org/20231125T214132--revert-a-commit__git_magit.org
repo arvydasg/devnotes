@@ -1,0 +1,17 @@
+#+title:      revert a commit with magit
+#+date:       [2023-11-25 Sat 21:41]
+#+filetags:   :git:magit:
+#+identifier: 20231125T214132
+
+[[https://www.youtube.com/watch?v=7D4cV0aodGw&ab_channel=whatacold][best explanation]] at 3:55
+
+#+begin_src bash
+  # open magit
+  C-x g -
+  # open log
+  l l
+  # select the commits
+  C-space n/p
+  # revert the commits
+  V V
+#+end_src
