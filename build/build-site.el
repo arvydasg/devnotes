@@ -17,6 +17,9 @@
 (package-install 'org-static-blog)
 (message "Package installation complete!")
 
+;; stop making ~ files
+(setq make-backup-files nil)
+
 ;; directories and urls
 (setq org-static-blog-publish-title "arvydasg.github.io")
 (setq org-static-blog-publish-url "https://arvydasg.github.io/devnotes/html")

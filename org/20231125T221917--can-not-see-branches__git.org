@@ -1,0 +1,11 @@
+#+title:      can not see branches
+#+date:       [2023-11-25 Sat 22:19]
+#+filetags:   :git:
+#+identifier: 20231125T221917
+
+If after a fresh repo clone you can not see other git branches besides the main
+one - do:
+
+=git checkout <branchname>=
+
+Or in magit, to see all the branches - do y(magit-show-refs)

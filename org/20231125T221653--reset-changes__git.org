@@ -1,0 +1,67 @@
+#+title:      reset changes
+#+date:       [2023-11-25 Sat 22:16]
+#+filetags:   :git:
+#+identifier: 20231125T221653
+
+Useful to know these commands when you are on a production server for
+example, not having magit or Git desktop thing.
+
+* git clean -nd
+
+#+begin_src bash
+  git clean -nd
+#+end_src
+
+This command is a dry run of the git clean command. It's used to preview what
+files will be removed from the working directory. The flags used here are:
+
+=-n=: Performs a dry run, which means it shows what files would be deleted
+without actually deleting them.
+
+=-d=: Tells Git to also remove untracked directories along with untracked
+files.
+
+Running =git clean -nd= will display a list of files and directories that are
+currently untracked in the repository and would be removed if the command were
+executed without the =-n= flag.
+
+* git clean -fd
+
+#+begin_src bash
+  git clean -fd
+#+end_src
+
+=git clean -fd=: This command is used to forcefully remove untracked files and
+directories from the working directory. The flags used here are:
+
+=-f=: Stands for "force" and is used to perform the clean operation without
+prompting for confirmation.
+
+=-d=: Tells Git to also remove untracked directories along with untracked
+files.
+
+Running =git clean -fd= will permanently delete all untracked files and
+directories in the repository. Be cautious while using this command as it
+irreversibly removes files and directories that are not tracked by Git.
+
+* git reset --hard HEAD
+
+#+begin_src bash
+  git reset --hard HEAD
+#+end_src
+
+=git reset --hard HEAD=: This command resets the current branch to the state of
+the HEAD commit. Here's what each part does:
+
+git reset: Resets the current HEAD to the specified state.
+
+=--hard=: Indicates a hard reset, which means it not only changes the HEAD to
+the specified commit but also resets the index and working directory to match
+that commit.
+
+=HEAD=: Refers to the latest commit of the current branch.
+
+Running =git reset --hard HEAD= will discard all changes in the working
+directory and index, reverting them to the state of the latest commit on the
+current branch. Be careful when using git reset --hard as it can discard all
+uncommitted changes irretrievably.

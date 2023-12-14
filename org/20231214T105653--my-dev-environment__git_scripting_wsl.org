@@ -1,0 +1,14 @@
+#+title:      my dev environment
+#+date:       [2023-12-14 Thu 10:56]
+#+filetags:   :git:scripting:wsl:
+#+identifier: 20231214T105653
+#+STARTUP:    overview
+
+* TODO apie my computer setup
+- windows
+- wsl nixos
+- etc
+- [[file:20231130T065309--fetch-and-pull-changes-automatically__git_wsl.org][kokie scriptai runina automatically]]
+- kaip darau savo bloga ir pan(yep)
+- kaip takinu notes(denote)
+- kaip codinu(vscode or emacs?)

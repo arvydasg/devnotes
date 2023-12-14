@@ -1,0 +1,56 @@
+#+title:      fetch and pull changes automatically
+#+date:       [2023-11-30 Thu 06:53]
+#+filetags:   :git:wsl:
+#+identifier: 20231130T065309
+#+STARTUP:    overview
+
+This is mainly important when you are working ont he same repo on two different
+machines. You make changes on one, then login to another one - you must always
+rememebr to pull those changes, otherwise if you make your own - you will get
+into merge conflicst. And as of [2023-12-14 Thu] I am not so good at solving
+those. So I try to avoid them as much as possible.
+
+This is the reason I am creating this script that will automatically run =git
+fetch && git pull= that command for me whenever I turn on the WSL.
+
+The script example:
+
+#+begin_src bash
+  #!/bin/bash
+  REPO_DIR="$HOME/GIT/notes/"
+
+  function auto-fetch-pull() {
+      if [ -d "$1" ]; then
+          cd "$1" || exit
+          echo "Fetching latest changes..."
+          git fetch
+          echo "Pulling changes into your branch..."
+          git pull
+      else
+          echo "Directory '$1' not found."
+      fi
+  }
+
+  auto-fetch-pull "$REPO_DIR"
+#+end_src
+
+Ensure the script has execute permissions:
+#+begin_src bash
+  chmod +x auto_fetch_pull.sh
+#+end_src
+
+Then, try running the script:
+#+begin_src bash
+  ./auto_fetch_pull.sh
+#+end_src
+
+Add the script execution to your .bashrc
+#+begin_src bash
+  echo '~/.emacs.d/MISC/auto_fetch_pull.sh' >> ~/.bashrc
+#+end_src
+
+Each time WSL (or any other linux distribution launches) launches, one of the
+thing it does that concern us in this case, is it runs ~source .bashrc~.
+Basically evaluates and applies everything that it sees in =.bashrc= file. And
+since we have conveniently placed our script into .bashrc with the last
+command - it will run the script each time WSL is launched.
