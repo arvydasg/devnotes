@@ -5,6 +5,28 @@
 #+STARTUP:    overview
 #+OPTIONS: toc:t num:nil ^:nil ':t
 
+* two blog examples
+
+This way of creating a blog, unlike
+https://github.com/arvydasg/org-static-blog, does not have a possibility to do
+anything with tags. It does not generate separate pages for tags. In theory it
+could be custom made with html/javascript, but if org-static-blog is there and
+you need tags, use it instead.
+
+This is good if you have a few org files that contain ALL the information a
+bout a certain topic. For example - about Emacs, you have one file called
+"emacs.org" and in it you have tens or hundreds of subheadings. You open one
+file - search - find what you need. This is how I built codeacademy page.
+
+what https://github.com/arvydasg/org-static-blog does is splits that 1
+"emacs.org" file in to 100 small files(if you had 100 headlines as an example)
+and creates separate blog post(html page) out of it, which can also be tagged
+and later sorted by tags. This way you are closer to creating a network of
+thoughts where you link one with another by using links. This blog is built
+using denote notes, but linking wiht simple org-insert-link because as of
+[2023-12-14 Thu], denote links do not work and are not being onderstood by
+emacs html backend engine. This is how my arvydas.dev page is built.
+
 * multiple ways to blog with emacs
 
 In all ways - to deploy to github, must have index.html in the directory! Other
