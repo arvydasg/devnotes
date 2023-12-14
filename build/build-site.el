@@ -32,7 +32,7 @@
 ;; (setq org-export-with-section-numbers nil) ;can add in individual file with
 ;; #+OPTIONS: num:nil
 (setq org-static-blog-page-header "header - stylesheets and stuff here")
-(setq org-static-blog-page-preamble "<br>preamble here yo</br?")
+(setq org-static-blog-page-preamble "<br>preamble here yo</br>")
 (setq org-static-blog-page-postamble "<br>postamble in he house</br>")
 
 (org-static-blog-publish t)
