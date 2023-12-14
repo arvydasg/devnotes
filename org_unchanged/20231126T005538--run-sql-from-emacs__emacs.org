@@ -1,0 +1,16 @@
+#+title:      run sql from emacs
+#+date:       [2023-11-26 Sun 00:55]
+#+filetags:   :emacs:
+#+identifier: 20231126T005538
+
+- sudo apt-get install sqlite3
+- have an sqlite db ready
+- create org file and follow [[https://orgmode.org/worg/org-contrib/babel/languages/ob-doc-sqlite.html][these instructions]] to connect to the db
+- I also have this in my emacs config
+#+begin_src elisp
+  (org-babel-do-load-languages
+   'org-babel-load-languages (quote ((emacs-lisp . t)
+				     (sqlite . t)
+				     (R . t)
+				     (python . t))))
+#+end_src

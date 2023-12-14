@@ -1,0 +1,69 @@
+#+title:      docker commands
+#+date:       [2023-11-28 Tue 17:29]
+#+filetags:   :docker:
+#+identifier: 20231128T172943
+
+
+#+begin_src bash
+  # --------------------------------------------------------------------
+  # STATS
+  # active and running containers
+  docker ps
+  # previously ran images, you can start them and connect to them again
+  docker ps -a
+  # docker stats
+  docker stats
+  # list docker images available
+  docker images
+
+  # --------------------------------------------------------------------
+  # BUILD/RUN
+  # build an image with Dockerfile in the current dir
+  docker build .
+
+  # run the docker image
+  docker run <image_id/name>
+
+  # Run the container with --rm flag to automatically remove the container
+  # that was created when the container EXITS. Good for testing.
+  docker run --rm b3e0903d079d
+
+  # something
+  docker run -rm -it b3e0903d079d /bin/bash
+
+  # --------------------------------------------------------------------
+  # CONNECT TO THE DOCKER
+  # run in interactive mode, connect to it
+  docker run -ti ubuntu /bin/bash
+  docker run -ti ubuntu /bin/bash -c "apt update && apt upgrade -y"
+
+  # run in interactive mode, connect to it, will be deleted after
+  # disconnect
+  docker run -ti --rm ubuntu /bin/bash
+
+  # attach to already created container!!!!
+  docker attach <id>
+
+  # --------------------------------------------------------------------
+  # CLEANUP
+
+  # remove docker containers from ps -a
+  docker rm -f <id>
+  # remove docker image
+  docker rmi <image_name>
+  # delete or remove all docker data like containers, images and volumes
+  # delete all containers
+  docker rm --force `docker ps -qa`
+  # delte all images
+  docker rmi --force `docker images -aq`
+  # idk prune smth
+  docker volume prune
+
+  # --------------------------------------------------------------------
+  # SAVE
+
+  # save an image of container. A commit is only necessary after each
+  # run if you want to make a snapshot there for future use, otherwise
+  # the container itself will stick around for you to keep using.
+  docker commit <id> new_name
+#+end_src

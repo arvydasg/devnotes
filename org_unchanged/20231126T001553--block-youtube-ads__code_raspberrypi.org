@@ -1,0 +1,10 @@
+#+title:      block youtube ads
+#+date:       [2023-11-26 Sun 00:15]
+#+filetags:   :code:raspberrypi:
+#+identifier: 20231126T001553
+
+KRC negali blokuoti youtube ads, nes reiketu kartu ir YouTube
+blokuoti, kad ads uzsiblokuotu.. vienintelis variantas to stop YT
+ads - pay youtube monthly fee. krc.
+
+shows how to block the ads on [[https://www.youtube.com/watch?v=KBXTnrD_Zs4&t=271s&ab_channel=LinusTechTips][individual devices]]

@@ -1,0 +1,24 @@
+#+title:      run flask app
+#+date:       [2023-11-26 Sun 01:46]
+#+filetags:   :code:flask:py:
+#+identifier: 20231126T014659
+
+jeigu flask runnini per "flask run", turedamas tik app.py -
+nesiupdeitina browseryje po refresho, reikia restartint serveri
+
+jeigu turi kazka tokio
+
+#+begin_src python
+if __name__ == "__main__":
+    with app.app_context():  # kad db sesiju dalykai nesusipintu
+	db.create_all()  # creates db if the db doesn't already exist
+    app.run(host="0.0.0.0", debug=True)
+#+end_src
+
+ir paleidi appsa su
+
+#+begin_src pythona
+python3 app.py
+#+end_src
+
+tuomet refreshinimasis veikia

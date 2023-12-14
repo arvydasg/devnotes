@@ -1,0 +1,9 @@
+#+title:      windows keybindings
+#+date:       [2023-11-28 Tue 13:29]
+#+filetags:   :windows:
+#+identifier: 20231128T132920
+
+win + ctrl + t - always on top window
+alt + space - look for programs
+win + shift + / - ALL SHORTCUTS
+win+shift+T - TEXT EXTRACTOR WTF

@@ -1,0 +1,15 @@
+#+title:      swap ctrl with capslock
+#+date:       [2023-11-26 Sun 00:43]
+#+filetags:   :emacs:
+#+identifier: 20231126T004316
+
+Doing this mainly for emacs.
+
+
+I guess this in linux:
+
+#+BEGIN_SRC bash
+   /usr/bin/setxkbmap -option "ctrl:swapcaps"
+#+END_SRC
+
+and I use powertoys windows app for windows.

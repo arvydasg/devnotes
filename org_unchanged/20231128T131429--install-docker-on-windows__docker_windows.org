@@ -1,0 +1,12 @@
+#+title:      install docker on windows
+#+date:       [2023-11-28 Tue 13:14]
+#+filetags:   :docker:windows:
+#+identifier: 20231128T131429
+
+Come here - https://docs.docker.com/desktop/install/windows-install/
+download the file, install it
+
+wsl has to be enabled I guess also on your windows machine
+
+after it's installed - run it. Login. Should be able to see your
+docker images from your dockerhub.

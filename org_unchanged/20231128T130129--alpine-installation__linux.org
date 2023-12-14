@@ -1,0 +1,18 @@
+#+title:      alpine installation
+#+date:       [2023-11-28 Tue 13:01]
+#+filetags:   :linux:
+#+identifier: 20231128T130129
+
+decided to install alpine(again) and see what it's all about. Started
+with [[https://www.youtube.com/watch?v=E7zJTzf0pWA&ab_channel=ProgrammerGuide][this]] tutorial. Shows how to connect through ssh with [[id:a99cdae3-50d7-43e7-9d6c-c0d7985ffd7b][putty]].
+quite cool.
+
+INSTALLATION GUIDE
+
+- install virtual machine with 1gb and 10gb
+- ping google.com for internet connection
+- apk add sudo (might not need this, just enable community first)
+- sudo apk add htop
+- vi /etc/apk/repositories - enable community one
+- apk update
+- sudo apk add emacs

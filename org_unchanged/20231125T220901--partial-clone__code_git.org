@@ -1,0 +1,21 @@
+#+title:      partial clone
+#+date:       [2023-11-25 Sat 22:09]
+#+filetags:   :code:git:
+#+identifier: 20231125T220901
+
+https://magit.vc/manual/magit/Sparse-checkouts.html
+
+Useful when I wanted to clone only one dir at work from my personal
+org notes directory.
+
+- go to src folder and do ~m-x magit-clone-sparse~
+- investigate the .git folder, see the content and watch how it
+  updates in next steps
+- ~m-x magit sparse checkout enable~ (see the changes)
+  - inside info folder sparse-checkout appeared
+  - config and index also changed
+- ~c-x g~ - go to magit interface
+- do ~>~
+- ~s~ to set directories(tab to select)
+- needed directory is fetched. MAGIC!
+- if you do ~s~ again to change dirs - old dir gets removed :o
