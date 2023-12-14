@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>first nixos installation</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">14 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231211T151427--first-nixos-installation__nixos.html">first nixos installation</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgede4a2b">1. Why NixOS</a></li>
+<li><a href="#orgbda533e">2. Why NixOS by others</a></li>
+<li><a href="#org82b53bf">3. Documentation</a></li>
+<li><a href="#orgf3efa1e">4. Installation on WSL</a></li>
+<li><a href="#orgad7b021">5. Configure the installation over emacs</a></li>
+<li><a href="#orga959bd3">6. Using your own custom nixos configuration file</a></li>
+<li><a href="#org66eaa5f">7. Setting up git</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-orgede4a2b" class="outline-2">
+<h2 id="orgede4a2b"><span class="section-number-2">1.</span> Why NixOS</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+AFTER you reinstall your computer - to install the DEV environment, all you
+have to take with you is <code>/etc/nixos/configuration.nix</code> file, everything is
+described in it. Amazing!
+</p>
+
+<p>
+Avoid long reinstall &amp; config process
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbda533e" class="outline-2">
+<h2 id="orgbda533e"><span class="section-number-2">2.</span> Why NixOS by others</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li><a href="https://github.com/hlissner/dotfiles">https://github.com/hlissner/dotfiles</a></li>
+<li><a href="https://github.com/terlar/nix-config">https://github.com/terlar/nix-config</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org82b53bf" class="outline-2">
+<h2 id="org82b53bf"><span class="section-number-2">3.</span> Documentation</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>nixos github repo - <a href="https://github.com/nix-community/NixOS-WSL">https://github.com/nix-community/NixOS-WSL</a></li>
+<li>nixos manual - <a href="https://nixos.org/manual/nix/stable/">https://nixos.org/manual/nix/stable/</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf3efa1e" class="outline-2">
+<h2 id="orgf3efa1e"><span class="section-number-2">4.</span> Installation on WSL</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Steps described here:
+</p>
+
+<p>
+<a href="https://github.com/nix-community/NixOS-WSL">https://github.com/nix-community/NixOS-WSL</a>
+</p>
+
+<p>
+But basically download nixos-wsl.tar.gz into your windows /Download folder
+</p>
+
+<p>
+Then in CMD run(while in /Downloads folder):
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">wsl --import NixOS .\NixOS\ nixos-wsl.tar.gz --version 2
+</pre>
+</div>
+
+<p>
+check if it was really installed:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">wsl -l -v
+</pre>
+</div>
+
+<p>
+You should see NixOS listed. Now we can run nixos:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">wsl -d NixOS
+</pre>
+</div>
+
+<p>
+After the initial installation, you need to update your channels once, to be
+able to use <code>nixos-rebuild</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo nix-channel --add https://nixos.org/channels/nixos-23.11 nixos
+sudo nix-channel --update
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgad7b021" class="outline-2">
+<h2 id="orgad7b021"><span class="section-number-2">5.</span> Configure the installation over emacs</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Enter nix-shell to use emacs(it does not get installed on the system, just
+<a href="https://nix.dev/tutorials/first-steps/ad-hoc-shell-environments">TEMPORARILY</a> FROM NIXOS CACHE?). So I can then modify the
+<code>/etc/nixos/configuration.nix</code> file.
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">nix-shell -p emacs29
+</pre>
+</div>
+
+<p>
+Then let's run emacs in nix-shell(run with sudo)
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo emacs
+</pre>
+</div>
+
+<p>
+Ok now you are in emacs, but in nix-shell. If we turn off nixos now, when we
+launch it again, emacs will not be available. Only after you run <code>nix-shell -p
+emacs</code>. Let's install emacs permanetely:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo emacs /etc/nixos/configuration.nix
+</pre>
+</div>
+
+<p>
+add these lines:
+</p>
+<div class="org-src-container">
+<pre class="src src-nix">environment.systemPackages = with pkgs; [
+  emacs29
+  git
+];
+</pre>
+</div>
+
+<p>
+we Install emacs29 because of <a href="20231125T220943--seq-keep-error-message-in-emacs__emacs_magit.html">seq error message</a>.
+</p>
+
+<p>
+after you do that, <code>C-d</code> to go back to nixos@nixos(out of nix-shell) and BUILD
+the nixos with the new changes(emacs installation).
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo nixos-rebuild switch
+</pre>
+</div>
+
+<p>
+After this runs, you should be able to use Emacs and use git!
+</p>
+
+<p>
+Clone the dotfiles repo:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">mkdir ~/GIT
+cd ~/GIT
+git clone https://github.com/arvydasg/dotfiles
+ln -s GIT/dotfiles/.emacs.d/ ~/.emacs.d
+cd ~/.emacs.d
+git update-index --assume-unchanged init.el
+</pre>
+</div>
+
+<p>
+Try to launch emacs for all the packages to be installed.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga959bd3" class="outline-2">
+<h2 id="orga959bd3"><span class="section-number-2">6.</span> Using your own custom nixos configuration file</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+It suchs to not be able to edit the <code>/etc/nixos/configuration.nix</code> file over
+emacs as nixos default user. I want this file to not be owned by root, but bu
+nixos user. So what we will do is we will:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"># delete current nixos directory
+sudo rm -rf /etc/nixos
+# put our config folder instead of the default one
+sudo ln -s ~/GIT/dotfiles/nixos/ /etc/nixos
+</pre>
+</div>
+
+<p>
+You are done. Should be able to edit <code>configuration.nix</code> file now.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org66eaa5f" class="outline-2">
+<h2 id="org66eaa5f"><span class="section-number-2">7.</span> Setting up git</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+First try <a href="20231211T161252--introduce-yourself-to-git__git.html">this</a>, then one of these:
+</p>
+
+<ul class="org-ul">
+<li><a href="20231214T060637--authenticate-to-git-with-personal-access-token__git.html">authenticate with personal access token</a></li>
+<li><a href="20231214T060558--authenticate-to-git-with-ssh__git_ssh.html">authenticate with ssh</a></li>
+<li><a href="20231214T061312--authenticate-to-git-with-gpg-key__git_gpg.html">authenticate with gpg</a></li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-nixos.html">nixos</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

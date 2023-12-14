@@ -1,9 +1,8 @@
-#+title:      nixos installation
+#+title:      first nixos installation
 #+date:       [2023-12-11 Mon 15:14]
 #+filetags:   :nixos:
 #+identifier: 20231211T151427
 #+STARTUP:    overview
-
 
 * Why NixOS
 AFTER you reinstall your computer - to install the DEV environment, all you
@@ -81,7 +80,7 @@ add these lines:
   ];
 #+end_src
 
-we Install emacs29 because of [[denote:20231125T220943][seq keep error message]]
+we Install emacs29 because of [[file:20231125T220943--seq-keep-error-message-in-emacs__emacs_magit.org][seq error message]].
 
 after you do that, =C-d= to go back to nixos@nixos(out of nix-shell) and BUILD
 the nixos with the new changes(emacs installation).
@@ -120,5 +119,8 @@ You are done. Should be able to edit =configuration.nix= file now.
 
 * Setting up git
 
-[[denote:20231211T161252][Introduce yourself to git]]. Any of those methods. Will go the personal access
-token route this time.
+First try [[file:20231211T161252--introduce-yourself-to-git__git.org][this]], then one of these:
+
+- [[file:20231214T060637--authenticate-to-git-with-personal-access-token__git.org][authenticate with personal access token]]
+- [[file:20231214T060558--authenticate-to-git-with-ssh__git_ssh.org][authenticate with ssh]]
+- [[file:20231214T061312--authenticate-to-git-with-gpg-key__git_gpg.org][authenticate with gpg]]
