@@ -3,10 +3,13 @@
 #+filetags:   :wsl:
 #+identifier: 20231128T172125
 
-perdek i emacs note sita - https://superuser.com/questions/1126721/rebooting-ubuntu-on-windows-without-rebooting-windows
-
+https://learn.microsoft.com/en-us/windows/wsl/basic-commands
 
 #+begin_src bash
+  # list available linux distros
+  wsl --list --online
+  # install a default distro(which is ubuntu)
+  wsl --install
   # View the list of distros and their current state:
   wsl.exe -l -v
   # Shutdown everything:
@@ -17,4 +20,12 @@ perdek i emacs note sita - https://superuser.com/questions/1126721/rebooting-ubu
   wsl.exe
   # Boot up a specific distro:
   wsl.exe -d <DistroName>
+  # update wsl
+  wsl --update
+  # check wsl status
+  wsl --status
+  # check wsl version
+  wsl --version
+  # wsl help
+  wsl --help
 #+end_src

@@ -4,7 +4,7 @@
 <title><![CDATA[arvydasg.github.io]]></title>
 <description><![CDATA[arvydasg.github.io]]></description>
 <link>https://arvydasg.github.io/devnotes/html</link>
-<lastBuildDate>Thu, 14 Dec 2023 14:35:34 +0000</lastBuildDate>
+<lastBuildDate>Thu, 14 Dec 2023 14:42:47 +0000</lastBuildDate>
 <item>
   <title><![CDATA[enable wsl on windows]]></title>
   <description><![CDATA[
@@ -25,7 +25,7 @@ Guide how to do that here - <a href="20231128T165324--install-linux-distro-over-
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T142532--enable-wsl-on-windows__windows_wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T142532--enable-wsl-on-windows__windows_wsl.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[my dev environment]]></title>
@@ -34,18 +34,18 @@ Guide how to do that here - <a href="20231128T165324--install-linux-distro-over-
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org62bd2b1">1. <span class="todo TODO">TODO</span> apie my computer setup</a></li>
+<li><a href="#orgee9d655">1. <span class="todo TODO">TODO</span> apie my computer setup</a></li>
 </ul>
 </div>
 </nav>
 
-<figure id="org2220f21">
+<figure id="org78bf5ea">
 <img src="../media/Screenshot 2023-11-17 163344 - very quaint.png" alt="Screenshot 2023-11-17 163344 - very quaint.png" width="400px">
 
 </figure>
 
-<div id="outline-container-org62bd2b1" class="outline-2">
-<h2 id="org62bd2b1"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> apie my computer setup</h2>
+<div id="outline-container-orgee9d655" class="outline-2">
+<h2 id="orgee9d655"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> apie my computer setup</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>windows</li>
@@ -64,7 +64,7 @@ Guide how to do that here - <a href="20231128T165324--install-linux-distro-over-
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T105653--my-dev-environment__git_scripting_wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T105653--my-dev-environment__git_scripting_wsl.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[setup custom domain for github pages]]></title>
@@ -77,7 +77,7 @@ This video below has a good explanation - <a href="https://www.youtube.com/watch
   <category><![CDATA[websites]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T094426--setup-custom-domain-for-github-pages__git_websites.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T094426--setup-custom-domain-for-github-pages__git_websites.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[authenticate to git with gpg key]]></title>
@@ -86,13 +86,13 @@ This video below has a good explanation - <a href="https://www.youtube.com/watch
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgfb8047c">1. <span class="todo TODO">TODO</span> gpg key method</a></li>
+<li><a href="#org917dd27">1. <span class="todo TODO">TODO</span> gpg key method</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgfb8047c" class="outline-2">
-<h2 id="orgfb8047c"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> gpg key method</h2>
+<div id="outline-container-org917dd27" class="outline-2">
+<h2 id="org917dd27"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> gpg key method</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Colleague gave some tutorials in work notes.
@@ -104,7 +104,7 @@ Colleague gave some tutorials in work notes.
   <category><![CDATA[gpg]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T061312--authenticate-to-git-with-gpg-key__git_gpg.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T061312--authenticate-to-git-with-gpg-key__git_gpg.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[authenticate to git with personal access token]]></title>
@@ -113,14 +113,14 @@ Colleague gave some tutorials in work notes.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9ac219a">1. Personal access token</a></li>
-<li><a href="#orgdaa3fac">2. Misc info</a></li>
+<li><a href="#orgefb4fb9">1. Personal access token</a></li>
+<li><a href="#orgc9a9b2d">2. Misc info</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org9ac219a" class="outline-2">
-<h2 id="org9ac219a"><span class="section-number-2">1.</span> Personal access token</h2>
+<div id="outline-container-orgefb4fb9" class="outline-2">
+<h2 id="orgefb4fb9"><span class="section-number-2">1.</span> Personal access token</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 After you have <a href="20231211T161252--introduce-yourself-to-git__git.html">introduced yourself to git</a>.
@@ -157,8 +157,8 @@ Git will remember your credentials for future git operations.
 </div>
 </div>
 
-<div id="outline-container-orgdaa3fac" class="outline-2">
-<h2 id="orgdaa3fac"><span class="section-number-2">2.</span> Misc info</h2>
+<div id="outline-container-orgc9a9b2d" class="outline-2">
+<h2 id="orgc9a9b2d"><span class="section-number-2">2.</span> Misc info</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Changing the token - <a href="https://stackoverflow.com/questions/46645843/where-to-store-my-git-personal-access-token">Explanation here</a>.
@@ -174,7 +174,7 @@ Changing the token - <a href="https://stackoverflow.com/questions/46645843/where
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T060637--authenticate-to-git-with-personal-access-token__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T060637--authenticate-to-git-with-personal-access-token__git.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[authenticate to git with ssh]]></title>
@@ -183,13 +183,13 @@ Changing the token - <a href="https://stackoverflow.com/questions/46645843/where
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orge5accf1">1. <span class="todo TODO">TODO</span> ssh key method</a></li>
+<li><a href="#orgbd7ca6e">1. <span class="todo TODO">TODO</span> ssh key method</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orge5accf1" class="outline-2">
-<h2 id="orge5accf1"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> ssh key method</h2>
+<div id="outline-container-orgbd7ca6e" class="outline-2">
+<h2 id="orgbd7ca6e"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> ssh key method</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 I have described it in work notes.
@@ -201,7 +201,7 @@ I have described it in work notes.
   <category><![CDATA[ssh]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T060558--authenticate-to-git-with-ssh__git_ssh.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T060558--authenticate-to-git-with-ssh__git_ssh.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[deploy a static website with github pages]]></title>
@@ -210,14 +210,14 @@ I have described it in work notes.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8aa897e">1. Create the main <code>username.github.io</code> page</a></li>
-<li><a href="#org57424a9">2. Create <code>subpages</code> for <code>username.github.io</code></a></li>
+<li><a href="#orgccfbee8">1. Create the main <code>username.github.io</code> page</a></li>
+<li><a href="#orgb6a86f7">2. Create <code>subpages</code> for <code>username.github.io</code></a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org8aa897e" class="outline-2">
-<h2 id="org8aa897e"><span class="section-number-2">1.</span> Create the main <code>username.github.io</code> page</h2>
+<div id="outline-container-orgccfbee8" class="outline-2">
+<h2 id="orgccfbee8"><span class="section-number-2">1.</span> Create the main <code>username.github.io</code> page</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 The idea is - you have lot's of html pages(or a single html page).
@@ -244,8 +244,8 @@ side also to link to github. Probably <a href="https://docs.github.com/en/pages/
 </div>
 </div>
 
-<div id="outline-container-org57424a9" class="outline-2">
-<h2 id="org57424a9"><span class="section-number-2">2.</span> Create <code>subpages</code> for <code>username.github.io</code></h2>
+<div id="outline-container-orgb6a86f7" class="outline-2">
+<h2 id="orgb6a86f7"><span class="section-number-2">2.</span> Create <code>subpages</code> for <code>username.github.io</code></h2>
 <div class="outline-text-2" id="text-2">
 <p>
 So you have <code>&lt;yourgithubusername@github.io&gt;</code> website up and running. But you
@@ -267,7 +267,7 @@ Also devnotes - <a href="https://arvydas.dev/devnotes/html">https://arvydas.dev/
   <category><![CDATA[websites]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231212T123552--deploy-a-static-website-with-github-pages__git_websites.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231212T123552--deploy-a-static-website-with-github-pages__git_websites.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[introduce yourself to git]]></title>
@@ -326,7 +326,7 @@ There are multiple ways to get that password:
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231211T161252--introduce-yourself-to-git__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231211T161252--introduce-yourself-to-git__git.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[first nixos installation]]></title>
@@ -335,19 +335,19 @@ There are multiple ways to get that password:
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org299b80b">1. <span class="todo TODO">TODO</span> Why NixOS</a></li>
-<li><a href="#org2f7711a">2. Why NixOS by others</a></li>
-<li><a href="#orgc867e40">3. Documentation</a></li>
-<li><a href="#org5c218a1">4. Installation on WSL</a></li>
-<li><a href="#orgf385b6d">5. Configure the installation over emacs</a></li>
-<li><a href="#org6ff06e0">6. Using your own custom nixos configuration file</a></li>
-<li><a href="#orga19fef0">7. Setting up git</a></li>
+<li><a href="#org32840b2">1. <span class="todo TODO">TODO</span> Why NixOS</a></li>
+<li><a href="#org89de734">2. Why NixOS by others</a></li>
+<li><a href="#org50460d7">3. Documentation</a></li>
+<li><a href="#org4eff4eb">4. Installation on WSL</a></li>
+<li><a href="#orga433ac4">5. Configure the installation over emacs</a></li>
+<li><a href="#org51dfc37">6. Using your own custom nixos configuration file</a></li>
+<li><a href="#orgcca0804">7. Setting up git</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org299b80b" class="outline-2">
-<h2 id="org299b80b"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> Why NixOS</h2>
+<div id="outline-container-org32840b2" class="outline-2">
+<h2 id="org32840b2"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> Why NixOS</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 AFTER you reinstall your computer - to install the DEV environment, all you
@@ -361,8 +361,8 @@ Avoid long reinstall &amp; config process
 </div>
 </div>
 
-<div id="outline-container-org2f7711a" class="outline-2">
-<h2 id="org2f7711a"><span class="section-number-2">2.</span> Why NixOS by others</h2>
+<div id="outline-container-org89de734" class="outline-2">
+<h2 id="org89de734"><span class="section-number-2">2.</span> Why NixOS by others</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li><a href="https://github.com/hlissner/dotfiles">https://github.com/hlissner/dotfiles</a></li>
@@ -371,8 +371,8 @@ Avoid long reinstall &amp; config process
 </div>
 </div>
 
-<div id="outline-container-orgc867e40" class="outline-2">
-<h2 id="orgc867e40"><span class="section-number-2">3.</span> Documentation</h2>
+<div id="outline-container-org50460d7" class="outline-2">
+<h2 id="org50460d7"><span class="section-number-2">3.</span> Documentation</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>nixos github repo - <a href="https://github.com/nix-community/NixOS-WSL">https://github.com/nix-community/NixOS-WSL</a></li>
@@ -381,8 +381,8 @@ Avoid long reinstall &amp; config process
 </div>
 </div>
 
-<div id="outline-container-org5c218a1" class="outline-2">
-<h2 id="org5c218a1"><span class="section-number-2">4.</span> Installation on WSL</h2>
+<div id="outline-container-org4eff4eb" class="outline-2">
+<h2 id="org4eff4eb"><span class="section-number-2">4.</span> Installation on WSL</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Steps described here:
@@ -432,8 +432,8 @@ sudo nix-channel --update
 </div>
 </div>
 
-<div id="outline-container-orgf385b6d" class="outline-2">
-<h2 id="orgf385b6d"><span class="section-number-2">5.</span> Configure the installation over emacs</h2>
+<div id="outline-container-orga433ac4" class="outline-2">
+<h2 id="orga433ac4"><span class="section-number-2">5.</span> Configure the installation over emacs</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Enter nix-shell to use emacs(it does not get installed on the system, just
@@ -510,8 +510,8 @@ Try to launch emacs for all the packages to be installed.
 </div>
 </div>
 
-<div id="outline-container-org6ff06e0" class="outline-2">
-<h2 id="org6ff06e0"><span class="section-number-2">6.</span> Using your own custom nixos configuration file</h2>
+<div id="outline-container-org51dfc37" class="outline-2">
+<h2 id="org51dfc37"><span class="section-number-2">6.</span> Using your own custom nixos configuration file</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 It suchs to not be able to edit the <code>/etc/nixos/configuration.nix</code> file over
@@ -533,8 +533,8 @@ You are done. Should be able to edit <code>configuration.nix</code> file now.
 </div>
 </div>
 
-<div id="outline-container-orga19fef0" class="outline-2">
-<h2 id="orga19fef0"><span class="section-number-2">7.</span> Setting up git</h2>
+<div id="outline-container-orgcca0804" class="outline-2">
+<h2 id="orgcca0804"><span class="section-number-2">7.</span> Setting up git</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 First try <a href="20231211T161252--introduce-yourself-to-git__git.html">this</a>, then one of these:
@@ -551,7 +551,7 @@ First try <a href="20231211T161252--introduce-yourself-to-git__git.html">this</a
   <category><![CDATA[nixos]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231211T151427--first-nixos-installation__nixos.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231211T151427--first-nixos-installation__nixos.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[fetch and pull changes automatically]]></title>
@@ -629,7 +629,7 @@ command - it will run the script each time WSL is launched.
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231130T065309--fetch-and-pull-changes-automatically__git_wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231130T065309--fetch-and-pull-changes-automatically__git_wsl.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[dockerfile example of emacs installation]]></title>
@@ -704,7 +704,118 @@ ENTRYPOINT ["emacs"]
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T175614--dockerfile-example-of-emacs-installation__docker_emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T175614--dockerfile-example-of-emacs-installation__docker_emacs.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
+</item>
+<item>
+  <title><![CDATA[docker commands]]></title>
+  <description><![CDATA[
+<div class="org-src-container">
+<pre class="src src-bash"># --------------------------------------------------------------------
+# STATS
+# active and running containers
+docker ps
+# previously ran images, you can start them and connect to them again
+docker ps -a
+# docker stats
+docker stats
+# list docker images available
+docker images
+
+# --------------------------------------------------------------------
+# BUILD/RUN
+# build an image with Dockerfile in the current dir
+docker build .
+
+# run the docker image
+docker run &lt;image_id/name&gt;
+
+# Run the container with --rm flag to automatically remove the container
+# that was created when the container EXITS. Good for testing.
+docker run --rm b3e0903d079d
+
+# something
+docker run -rm -it b3e0903d079d /bin/bash
+
+# --------------------------------------------------------------------
+# CONNECT TO THE DOCKER
+# run in interactive mode, connect to it
+docker run -ti ubuntu /bin/bash
+docker run -ti ubuntu /bin/bash -c "apt update &amp;&amp; apt upgrade -y"
+
+# run in interactive mode, connect to it, will be deleted after
+# disconnect
+docker run -ti --rm ubuntu /bin/bash
+
+# attach to already created container!!!!
+docker attach &lt;id&gt;
+
+# --------------------------------------------------------------------
+# CLEANUP
+
+# remove docker containers from ps -a
+docker rm -f &lt;id&gt;
+# remove docker image
+docker rmi &lt;image_name&gt;
+# delete or remove all docker data like containers, images and volumes
+# delete all containers
+docker rm --force `docker ps -qa`
+# delte all images
+docker rmi --force `docker images -aq`
+# idk prune smth
+docker volume prune
+
+# --------------------------------------------------------------------
+# SAVE
+
+# save an image of container. A commit is only necessary after each
+# run if you want to make a snapshot there for future use, otherwise
+# the container itself will stick around for you to keep using.
+docker commit &lt;id&gt; new_name
+</pre>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-docker.html">docker</a> </div>]]></description>
+  <category><![CDATA[docker]]></category>
+  <link>https://arvydasg.github.io/devnotes/html/20231128T172943--docker-commands__docker.html</link>
+  <guid>https://arvydasg.github.io/devnotes/html/20231128T172943--docker-commands__docker.html</guid>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
+</item>
+<item>
+  <title><![CDATA[wsl commands]]></title>
+  <description><![CDATA[
+<p>
+<a href="https://learn.microsoft.com/en-us/windows/wsl/basic-commands">https://learn.microsoft.com/en-us/windows/wsl/basic-commands</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"># list available linux distros
+wsl --list --online
+# install a default distro(which is ubuntu)
+wsl --install
+# View the list of distros and their current state:
+wsl.exe -l -v
+# Shutdown everything:
+wsl.exe --shutdown
+# Terminate a specific distro:
+wsl.exe -t &lt;DistroName&gt;
+# Boot up the default distro (marked with *):
+wsl.exe
+# Boot up a specific distro:
+wsl.exe -d &lt;DistroName&gt;
+# update wsl
+wsl --update
+# check wsl status
+wsl --status
+# check wsl version
+wsl --version
+# wsl help
+wsl --help
+</pre>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-wsl.html">wsl</a> </div>]]></description>
+  <category><![CDATA[wsl]]></category>
+  <link>https://arvydasg.github.io/devnotes/html/20231128T172125--wsl-commands__wsl.html</link>
+  <guid>https://arvydasg.github.io/devnotes/html/20231128T172125--wsl-commands__wsl.html</guid>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[install linux distro over wsl]]></title>
@@ -713,8 +824,8 @@ ENTRYPOINT ["emacs"]
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgd24ae39">1. Installation instructions</a></li>
-<li><a href="#orgc1a6280">2. Setup terminal</a></li>
+<li><a href="#orgd6f94ad">1. Installation instructions</a></li>
+<li><a href="#org42ef1eb">2. Setup terminal</a></li>
 </ul>
 </div>
 </nav>
@@ -739,8 +850,8 @@ So while I was trying to solve the first thing, I found out about the second
 thing and that led me to all this documentation below.
 </p>
 
-<div id="outline-container-orgd24ae39" class="outline-2">
-<h2 id="orgd24ae39"><span class="section-number-2">1.</span> Installation instructions</h2>
+<div id="outline-container-orgd6f94ad" class="outline-2">
+<h2 id="orgd6f94ad"><span class="section-number-2">1.</span> Installation instructions</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 After you have <a href="20231214T142532--enable-wsl-on-windows__windows_wsl.html">enabled wsl on windows</a>, you can do these steps:
@@ -786,8 +897,8 @@ Now check "add remove programs" if your wsl instance is listed there.
 </div>
 </div>
 
-<div id="outline-container-orgc1a6280" class="outline-2">
-<h2 id="orgc1a6280"><span class="section-number-2">2.</span> Setup terminal</h2>
+<div id="outline-container-org42ef1eb" class="outline-2">
+<h2 id="org42ef1eb"><span class="section-number-2">2.</span> Setup terminal</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Setup terminal to be ubuntu. So when you open cmd you would also see
@@ -809,7 +920,7 @@ to install emacs now, follow - TODO
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T165324--install-linux-distro-over-wsl__windows_wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T165324--install-linux-distro-over-wsl__windows_wsl.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[wsl glitches in gui applications]]></title>
@@ -873,7 +984,7 @@ research wslg:
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T164359--wsl-glitches-in-gui-applications__wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T164359--wsl-glitches-in-gui-applications__wsl.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[create a blog with hugo]]></title>
@@ -882,7 +993,7 @@ research wslg:
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org174dfc8">1. commands</a></li>
+<li><a href="#org560eaf5">1. commands</a></li>
 </ul>
 </div>
 </nav>
@@ -894,8 +1005,8 @@ get started video - <a href="https://www.youtube.com/watch?v=LIFvgrRxdt4&amp;ab_
 second video - <a href="https://www.youtube.com/watch?v=hjD9jTi_DQ4&amp;t=2225s&amp;ab_channel=EnvatoTuts%2B">https://www.youtube.com/watch?v=hjD9jTi_DQ4&amp;t=2225s&amp;ab_channel=EnvatoTuts%2B</a>
 </p>
 
-<div id="outline-container-org174dfc8" class="outline-2">
-<h2 id="org174dfc8"><span class="section-number-2">1.</span> commands</h2>
+<div id="outline-container-org560eaf5" class="outline-2">
+<h2 id="org560eaf5"><span class="section-number-2">1.</span> commands</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>hugo new site nameofthesite</li>
@@ -917,7 +1028,7 @@ public (public where file will be stored)</li>
   <category><![CDATA[websites]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T133020--create-a-blog-with-hugo__hugo_websites.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T133020--create-a-blog-with-hugo__hugo_websites.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[windows keybindings]]></title>
@@ -941,7 +1052,7 @@ Install <code>powertoys</code> app in windows for rebinding various keys, especi
   <category><![CDATA[windows]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T132920--windows-keybindings__windows.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T132920--windows-keybindings__windows.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[install docker on windows]]></title>
@@ -964,7 +1075,7 @@ from your dockerhub.
   <category><![CDATA[windows]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T131429--install-docker-on-windows__docker_windows.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T131429--install-docker-on-windows__docker_windows.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[printing with cups in ubuntu]]></title>
@@ -992,7 +1103,7 @@ series (en)</li>
   <category><![CDATA[linux]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T130210--printing-with-cups-in-ubuntu__linux.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T130210--printing-with-cups-in-ubuntu__linux.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[manjaro installation]]></title>
@@ -1296,7 +1407,7 @@ set up aliases for terminal cd .. some cool things, just like the hobyist
   <category><![CDATA[linux]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T130148--manjaro-installation__linux.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T130148--manjaro-installation__linux.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[alpine installation]]></title>
@@ -1324,7 +1435,7 @@ INSTALLATION GUIDE
   <category><![CDATA[linux]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T130129--alpine-installation__alpine_linux.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T130129--alpine-installation__alpine_linux.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[how to run a flask app]]></title>
@@ -1362,7 +1473,7 @@ a change.
   <category><![CDATA[python]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T014659--how-to-run-a-flask-app__flask_python.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T014659--how-to-run-a-flask-app__flask_python.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[run sql from emacs]]></title>
@@ -1395,7 +1506,7 @@ If on Ubuntu:
   <category><![CDATA[sql]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T005538--run-sql-from-emacs__emacs_sql.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T005538--run-sql-from-emacs__emacs_sql.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[emacs init time]]></title>
@@ -1404,17 +1515,17 @@ If on Ubuntu:
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgf335d1a">1. emacs init time</a></li>
-<li><a href="#orge5aa43b">2. use-package-report</a></li>
-<li><a href="#org4413738">3. Show startup time on emacs-load</a></li>
-<li><a href="#orgf4797d9">4. Message</a></li>
-<li><a href="#org5b55f19">5. <span class="todo TODO">TODO</span> now these message are not needed anymore, since I compile emacs at each config change</a></li>
+<li><a href="#org6eb6f12">1. emacs init time</a></li>
+<li><a href="#orgeb26a44">2. use-package-report</a></li>
+<li><a href="#org9a55d8c">3. Show startup time on emacs-load</a></li>
+<li><a href="#orgd126d84">4. Message</a></li>
+<li><a href="#orga621b2c">5. <span class="todo TODO">TODO</span> now these message are not needed anymore, since I compile emacs at each config change</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgf335d1a" class="outline-2">
-<h2 id="orgf335d1a"><span class="section-number-2">1.</span> emacs init time</h2>
+<div id="outline-container-org6eb6f12" class="outline-2">
+<h2 id="org6eb6f12"><span class="section-number-2">1.</span> emacs init time</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="https://www.youtube.com/watch?v=9i_9hse_Y08&amp;t=492s">How to Cut Emacs Start Up Time in Half! - Emacs From Scratch #12</a>
@@ -1422,8 +1533,8 @@ If on Ubuntu:
 </div>
 </div>
 
-<div id="outline-container-orge5aa43b" class="outline-2">
-<h2 id="orge5aa43b"><span class="section-number-2">2.</span> use-package-report</h2>
+<div id="outline-container-orgeb26a44" class="outline-2">
+<h2 id="orgeb26a44"><span class="section-number-2">2.</span> use-package-report</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2022-04-10 Sun] </span></span> allows to invoke and use use-package-report
@@ -1435,8 +1546,8 @@ If on Ubuntu:
 </div>
 </div>
 
-<div id="outline-container-org4413738" class="outline-2">
-<h2 id="org4413738"><span class="section-number-2">3.</span> Show startup time on emacs-load</h2>
+<div id="outline-container-org9a55d8c" class="outline-2">
+<h2 id="org9a55d8c"><span class="section-number-2">3.</span> Show startup time on emacs-load</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(defun efs/display-startup-time ()
@@ -1452,8 +1563,8 @@ If on Ubuntu:
 </div>
 </div>
 
-<div id="outline-container-orgf4797d9" class="outline-2">
-<h2 id="orgf4797d9"><span class="section-number-2">4.</span> Message</h2>
+<div id="outline-container-orgd126d84" class="outline-2">
+<h2 id="orgd126d84"><span class="section-number-2">4.</span> Message</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Add such message in the package and then look at <b>messages</b> buffer on startup
@@ -1468,8 +1579,8 @@ to find which one has failed.
 </div>
 </div>
 
-<div id="outline-container-org5b55f19" class="outline-2">
-<h2 id="org5b55f19"><span class="section-number-2">5.</span> <span class="todo TODO">TODO</span> now these message are not needed anymore, since I compile emacs at each config change</h2>
+<div id="outline-container-orga621b2c" class="outline-2">
+<h2 id="orga621b2c"><span class="section-number-2">5.</span> <span class="todo TODO">TODO</span> now these message are not needed anymore, since I compile emacs at each config change</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 link to a post where I describe that
@@ -1480,7 +1591,7 @@ link to a post where I describe that
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T003911--emacs-init-time__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T003911--emacs-init-time__emacs.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[images in org files]]></title>
@@ -1489,21 +1600,21 @@ link to a post where I describe that
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgca08443">1. Display images in org files</a></li>
-<li><a href="#org26635af">2. If you have the image with you</a></li>
-<li><a href="#org0dd1fc6">3. If you don't have an image and want to insert a screenshot</a></li>
-<li><a href="#org019dec4">4. Resizing images in emacs and html</a></li>
+<li><a href="#orgee8362b">1. Display images in org files</a></li>
+<li><a href="#orged4ea1d">2. If you have the image with you</a></li>
+<li><a href="#org866ca28">3. If you don't have an image and want to insert a screenshot</a></li>
+<li><a href="#org55721ca">4. Resizing images in emacs and html</a></li>
 </ul>
 </div>
 </nav>
 
-<figure id="orgdbf9d39">
+<figure id="org00e1483">
 <img src="../media/water.jpg" alt="water.jpg" width="800px">
 
 </figure>
 
-<div id="outline-container-orgca08443" class="outline-2">
-<h2 id="orgca08443"><span class="section-number-2">1.</span> Display images in org files</h2>
+<div id="outline-container-orgee8362b" class="outline-2">
+<h2 id="orgee8362b"><span class="section-number-2">1.</span> Display images in org files</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 To display inline images in org buffer after you have placed some, click <code>C-c
@@ -1512,8 +1623,8 @@ C-x C-v</code>.
 </div>
 </div>
 
-<div id="outline-container-org26635af" class="outline-2">
-<h2 id="org26635af"><span class="section-number-2">2.</span> If you have the image with you</h2>
+<div id="outline-container-orged4ea1d" class="outline-2">
+<h2 id="orged4ea1d"><span class="section-number-2">2.</span> If you have the image with you</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 To insert an image, do C-u then C-c C-l. easy. if you add a
@@ -1539,8 +1650,8 @@ Simply modify the path of the image and it will display it.
 </div>
 </div>
 
-<div id="outline-container-org0dd1fc6" class="outline-2">
-<h2 id="org0dd1fc6"><span class="section-number-2">3.</span> If you don't have an image and want to insert a screenshot</h2>
+<div id="outline-container-org866ca28" class="outline-2">
+<h2 id="org866ca28"><span class="section-number-2">3.</span> If you don't have an image and want to insert a screenshot</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Use <code>org-download</code> package. After you install it, run <code>M-x
@@ -1555,8 +1666,8 @@ export the file to html later and then maybe even send to someone.
 </div>
 </div>
 
-<div id="outline-container-org019dec4" class="outline-2">
-<h2 id="org019dec4"><span class="section-number-2">4.</span> Resizing images in emacs and html</h2>
+<div id="outline-container-org55721ca" class="outline-2">
+<h2 id="org55721ca"><span class="section-number-2">4.</span> Resizing images in emacs and html</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 To resize an image, add this to your init:
@@ -1588,7 +1699,7 @@ Beautiful.
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T003746--images-in-org-files__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T003746--images-in-org-files__emacs.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[login to another server over ssh]]></title>
@@ -1610,7 +1721,7 @@ will be prompted for password n stuff.
   <category><![CDATA[ssh]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T003317--login-to-another-server-over-ssh__emacs_ssh.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T003317--login-to-another-server-over-ssh__emacs_ssh.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[can not see branches]]></title>
@@ -1631,7 +1742,7 @@ Or in magit, to see all the branches - do y(magit-show-refs)
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T221917--can-not-see-branches__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T221917--can-not-see-branches__git.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[reset changes]]></title>
@@ -1640,9 +1751,9 @@ Or in magit, to see all the branches - do y(magit-show-refs)
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgff2ce58">1. git clean -nd</a></li>
-<li><a href="#org765ae12">2. git clean -fd</a></li>
-<li><a href="#org78968a4">3. git reset &#x2013;hard HEAD</a></li>
+<li><a href="#org74e98cc">1. git clean -nd</a></li>
+<li><a href="#org60d0b32">2. git clean -fd</a></li>
+<li><a href="#orgb248a3a">3. git reset &#x2013;hard HEAD</a></li>
 </ul>
 </div>
 </nav>
@@ -1651,8 +1762,8 @@ Useful to know these commands when you are on a production server for
 example, not having magit or Git desktop thing.
 </p>
 
-<div id="outline-container-orgff2ce58" class="outline-2">
-<h2 id="orgff2ce58"><span class="section-number-2">1.</span> git clean -nd</h2>
+<div id="outline-container-org74e98cc" class="outline-2">
+<h2 id="org74e98cc"><span class="section-number-2">1.</span> git clean -nd</h2>
 <div class="outline-text-2" id="text-1">
 <div class="org-src-container">
 <pre class="src src-bash">git clean -nd
@@ -1682,8 +1793,8 @@ executed without the <code>-n</code> flag.
 </div>
 </div>
 
-<div id="outline-container-org765ae12" class="outline-2">
-<h2 id="org765ae12"><span class="section-number-2">2.</span> git clean -fd</h2>
+<div id="outline-container-org60d0b32" class="outline-2">
+<h2 id="org60d0b32"><span class="section-number-2">2.</span> git clean -fd</h2>
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 <pre class="src src-bash">git clean -fd
@@ -1713,8 +1824,8 @@ irreversibly removes files and directories that are not tracked by Git.
 </div>
 </div>
 
-<div id="outline-container-org78968a4" class="outline-2">
-<h2 id="org78968a4"><span class="section-number-2">3.</span> git reset &#x2013;hard HEAD</h2>
+<div id="outline-container-orgb248a3a" class="outline-2">
+<h2 id="orgb248a3a"><span class="section-number-2">3.</span> git reset &#x2013;hard HEAD</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <pre class="src src-bash">git reset --hard HEAD
@@ -1752,7 +1863,7 @@ uncommitted changes irretrievably.
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T221653--reset-changes__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T221653--reset-changes__git.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[seq keep error message in emacs]]></title>
@@ -1769,7 +1880,7 @@ should install emacs 29 bla
   <category><![CDATA[magit]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T220943--seq-keep-error-message-in-emacs__emacs_magit.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T220943--seq-keep-error-message-in-emacs__emacs_magit.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[partial clone]]></title>
@@ -1801,7 +1912,7 @@ steps</li>
   <category><![CDATA[magit]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T220901--partial-clone__git_magit.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T220901--partial-clone__git_magit.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[copy a repo with all commit history]]></title>
@@ -1853,7 +1964,7 @@ tags, commits, and their associated history, to the new repository specified by
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T220538--copy-a-repo-with-all-commit-history__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T220538--copy-a-repo-with-all-commit-history__git.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[revert a commit with magit]]></title>
@@ -1878,7 +1989,7 @@ V V
   <category><![CDATA[magit]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T214132--revert-a-commit__git_magit.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T214132--revert-a-commit__git_magit.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[split a github repository into multiple]]></title>
@@ -1891,7 +2002,7 @@ Can do that with commit history like so -
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T190641--split-a-github-repository-into-multiple__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T190641--split-a-github-repository-into-multiple__git.html</guid>
-  <pubDate>Thu, 14 Dec 2023 14:35:34 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 14:42:47 +0000</pubDate>
 </item>
 </channel>
 </rss>
