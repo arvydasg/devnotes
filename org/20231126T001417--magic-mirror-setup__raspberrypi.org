@@ -1,0 +1,21 @@
+#+title:      magic mirror setup
+#+date:       [2023-11-26 Sun 00:14]
+#+filetags:   :raspberrypi:
+#+identifier: 20231126T001417
+
+irasyk ir setup raspberry pi kaip cia - [[file:20231126T001334--raspberrypi-first-setup__raspberrypi.org][raspberry pi first setup]]
+
+third party modules -
+https://github.com/MichMich/MagicMirror/wiki/3rd-Party-Modules
+
+#+begin_src bash
+  # quit
+  Ctrl + q
+  # start (while inside MagicMirror folder on desktop to start the app)
+  npm start
+#+end_src
+
+- [[https://www.youtube.com/watch?v=-cJdwlDPqYM][pamatuok kiek telikas energijos ims naudojamas visa diena, per metus]]
+- [[https://www.instructables.com/Gesture-Controlled-Smart-Mirror/][control with gesture]]
+- [[https://www.youtube.com/watch?v=Zo1WT2LoaUg][temperature/humidity sensor]]
+- ismanioji rozete

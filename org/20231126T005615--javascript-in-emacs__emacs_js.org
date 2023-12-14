@@ -1,0 +1,99 @@
+#+title:      javascript in emacs
+#+date:       [2023-11-26 Sun 00:56]
+#+filetags:   :emacs:js:
+#+identifier: 20231126T005615
+
+* dap mode debugger for javacript
+
+docs - https://emacs-lsp.github.io/dap-mode/page/configuration/#javascript
+
+- download zip file from [[https://emacs-lsp.github.io/dap-mode/page/configuration/#javascript][here]].
+- create two folders ~/.emacs.d/.extension/vscode
+- only extract it like described [[https://github.com/emacs-lsp/dap-mode/issues/554#issuecomment-1171256089][here]].
+- jeigu sako jog file location not found (buffer chrome browser
+  stderr) - perkelk parsisiustus files ten kur jis iesko
+- M-x dap-chrome-setup (while in .js window)
+- M-x dap-debug and choose THE SAME url as live server - f.x react runs
+  on this http://localhost:3000/
+- Or choose file - M-x dap-debug and choose file option
+- then it works boyyyy
+- dap-debug-last to repeat the last debug command, no need to
+  respecify stuff
+- Download the React DevTools for a better development experience:
+  https://reactjs.org/link/react-devtools - components and profiler
+  thingies will apper in developer toolbar
+- right click on debug  sessions to delete all old sessions
+- double click on the session to navigate there
+- dap-switch-stack-frame - same jump, just without a mouse
+- dap-disconnect - stops debugging
+- dap-debug-recent - see all the recent sessions
+- dap-ui-sessions to jump to sessions and then D to delete sessions
+- dap-debug-edit-template
+- and ofc some thoughts from [[https://www.youtube.com/watch?v=0bilcQVSlbM&ab_channel=SystemCrafters][System Crafters]].
+
+* run js files in emacs
+
+have node installed
+
+can do node testfile.js
+ir kaskart sita runinant - pakalkuluos tau dalykus. Aisku su python
+patogiau, gali line by line evaluate, bet vis sis tas.
+
+arba gali naudoti javascript repl(M-x run-js), bus toks pat dalykas kaip ir
+browserio consoleje - tik naudok sita[[https://github.com/redguardtoo/js-comint][ js-comint]] package
+
+js-run
+js-send-region
+
+** javascript and emacs
+
+today installed javascript syntax highlighting for emacs - js2-mode.
+Love it. Here are some more ideas:
+
+https://github.com/howardabrams/dot-files/blob/master/emacs-javascript.org
+** skewer mode - live javascipt in browser
+- run skewer in javascript file
+- c-c c-k load javascipt buffer to skewer
+- ctrl+alt+x to reflect changes in browser
+** live js editing in emacs with skewer mode
+
+1. open a js file
+2. Enable JS2-mode (a dependency of skewer)
+3. Enable skewer-mode
+4. M-xrun-skewer (a browser opens, go back to myskewer.js)
+5. open buffer called *http* to check if skewer is running, refresh
+   browser page to confirm
+6. Type alert("hello"); and hit C-xC-e at the end of that line
+7. Go back to the browser.
+8. put in THIS (below) head tag - try to reload index.html window in browser - *http*
+   should reflect that
+   #+begin_src html
+     <script src="http://localhost:8080/skewer"></script>
+   #+end_src
+9. load whole buffer if something
+
+   realiai cia geriausias example -
+   https://emacs.stackexchange.com/questions/2376/how-to-use-skewer-mode
+
+   bet still man nepatinka, neloadina modules...
+
+** emacs live javascript editing lsp mode
+- pirma properly install node
+- basically sitas video - https://www.youtube.com/watch?v=E-NAM9U5JYE&ab_channel=SystemCrafters
+- install lsp
+- install needed lsp-language server M-x lsp-install-server(ts-ls in
+  javascript case)
+p- write lsp in opened js buffer - choose location
+- lsp works. autocompletion, suggestion (m-x completion-at-point) if
+  it does not
+- REFERENCE FIND - C-c l g r - find by reference(show in other files) (with evil mode
+  jump back with c-o)
+- DEFINITION FIND - C-c l g g - go to definition!!!
+- RENAME - C-c l r r
+- green underline - lightbulb to fix the error (flymake enabled) (let
+  un = undefined;)
+- lsp format buffer (other packages can do a better job)
+- lsp-ui-workspace-symbol - nusoks i definition, nebutinai ant jos
+  hoverint - kazkoks sudas
+- lsp-ivy-workspace-symbol - nusoks i definition, gali is uzpakalio
+***  traukti fn name - megins surasti vistiek. Labai pravartu

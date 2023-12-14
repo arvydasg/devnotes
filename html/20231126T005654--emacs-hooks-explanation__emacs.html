@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>emacs hooks explanation</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">14 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231126T005654--emacs-hooks-explanation__emacs.html">emacs hooks explanation</a></h1>
+<p>
+Amazing tutorial here at 1:13:40 -
+<a href="https://www.youtube.com/watch?v=gfZDwYeBlO4&amp;t=2637s">https://www.youtube.com/watch?v=gfZDwYeBlO4&amp;t=2637s</a> All of this is done in
+scratch buffer.
+</p>
+
+<p>
+First, lets find what kind of function we want to add our code to. Let's say
+<code>org-clock-in</code>. When I do org-clock-in command, I want my piece of code to run.
+Okay. Let's find the "org-clock-in" source code. Press C-h k - this will ask us
+to input a command. We input the command we are curious about. It is
+"org-clock-in" command, which is C-c C-x C-i. As we write that command and
+press enter, we get the following result:
+</p>
+
+<p>
+C-c C-x TAB runs the command org-clock-in (found in org-mode-map), which is an
+interactive autoloaded compiled Lisp function in ‘org-clock.el’.
+</p>
+
+<p>
+Aha! Function in 'org-clock.el'. Okay, we click on that and it leads us to the
+source code of "org-clock-in". We look for a hook function in there. We do C-s
+to find work, find the "org-clock-in-hook" function and now we are ready to
+write our little piece of code, since we know a hook for it exists.
+</p>
+
+<p>
+And that would be the little piece of code. We are adding a hook, and after
+lambda inputting our function. Great.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(add-hook 'org-clock-in-hook '(lambda () (message "this works")))
+</pre>
+</div>
+
+<p>
+We then evaluate that function by C-c C-e with our cursor at the last ) and
+then we can go to an .org file and call "org-clock-in" function and watch our
+message bar. The message will show up there.
+</p>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

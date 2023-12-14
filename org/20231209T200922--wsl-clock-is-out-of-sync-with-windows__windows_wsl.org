@@ -1,0 +1,33 @@
+#+title:      wsl clock is out of sync with windows
+#+date:       [2023-12-09 Sat 20:09]
+#+filetags:   :windows:wsl:
+#+identifier: 20231209T200922
+#+STARTUP:    overview
+
+* The problem
+Having this problem -
+https://stackoverflow.com/questions/65086856/wsl2-clock-is-out-of-sync-with-windows
+
+run this in powershell to confirm it:
+
+#+begin_src bash
+  Get-Date; wsl date
+#+end_src
+
+You will notice two different times. They should be the same.
+
+* Possible solution
+
+Solution is to run =sudo hwclock -s= command. It will sync the time. For that
+moment. But time will shift again when I put the laptop to sleep.
+
+I don want to run the command manually each time. I will make a script that
+runs this command and put it in =.bashrc= so it automatically runs the script
+each time I launch wsl. Should be enough?
+
+[2023-12-10 Sun] sudo hwclock -s is not an option.. it does not always work
+when I run it.
+
+* Solution that works best for me now
+
+https://github.com/microsoft/WSL/issues/8204#issuecomment-1338334154

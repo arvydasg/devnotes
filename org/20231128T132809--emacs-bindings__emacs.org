@@ -1,0 +1,328 @@
+#+title:      emacs bindings
+#+date:       [2023-11-28 Tue 13:28]
+#+filetags:   :emacs:
+#+identifier: 20231128T132809
+
+OLD document from when I was still trying to write down the useful emacs
+shortcuts.
+
+Now I know where to look for what I am looking for even if I don't remember
+what keybinding it is assigned to :) C-h f basically and M-x.
+
+* Shortcuts
+
+| Key Binding               | Function                                                                     | Mode       |
+|---------------------------+------------------------------------------------------------------------------+------------|
+| p                         | Forward one indentation block                                                | Elpy       |
+| C-up                      | Backward one indentation block                                               | Elpy       |
+| C-left                    | Backward one indentation level                                               | Elpy       |
+| C-right                   | Forward one indentation level                                                | Elpy       |
+| M-down                    | Move line or region down                                                     |            |
+| M-up                      | Move line or region up                                                       |            |
+| M-left                    | Move line or indentation block left                                          |            |
+| M-right                   | Move line or indentation block right                                         |            |
+| M-x elpy-set-project-root | Set the root directory of the python project                                 |            |
+| C-c C-f                   | Find file in project                                                         |            |
+| C-c C-s                   | Regular expression match in project                                          |            |
+| M-TAB                     | Complete current statement                                                   |            |
+| M-.                       | Goto defition                                                                |            |
+| M-*                       | Return to position from last definition lookup                               |            |
+| C-c C-z                   | Switch to python shell                                                       |            |
+| C-c C-c                   | Send python code to shell (active region or complete buffer)                 |            |
+| C-c RET                   | Send current line to python shell                                            |            |
+| C-M-x                     | Sends code of current top level function to python shell                     |            |
+| C-c C-v                   | Syntax check with flake8                                                     |            |
+| C-c C-n                   | Next flake8 error                                                            |            |
+| C-c C-p                   | Previous flake8 error                                                        |            |
+| C-c C-t                   | Start tests                                                                  |            |
+| C-c C-e                   | Edit all occurrences of the symbol at point at once                          |            |
+| C-c C-r f                 | Format code using the available formatter                                    |            |
+| C-c C-r i                 | Query for new imports of unresolved symbols, and remove unreferenced imports |            |
+| C-c C-r r                 | Run the Elpy refactoring interface for Python code                           | Elpy       |
+| C-u C-c C-x C-i           | See all recently clocked in tasks                                            | Org-clock  |
+| M-x Customize group       | See ALL the configurable lines of a mode/package - GREAT!!!                  |            |
+| C-c /                     | Org sparse tree - filter org file for TODO entries and such, to exit -       | Org        |
+| org-sort-entries          | sort entries by TODO keyword                                                 | Org        |
+| run-python                | can not find module named... python error. Run run-python in the buffer      | elpy       |
+| dired-git-info-mode       | shows the commit history of a directory                                      | dired      |
+| org-agenda-archives-mode  | shows all the archived tasks in the agenda.                                  | org agenda |
+| c-u m-x shell             | open another shell instance, give it a name                                  |            |
+| c-c c-d                   | Helpful at point                                                             | Docs       |
+| C-h b                     | all shortcuts in of current buffer modes                                     | Docs       |
+| M-x where is              | which key shortcut is bound to                                               | Docs       |
+| C-h r                     | docs                                                                         | Docs       |
+| C-h i                     | info                                                                         | Docs       |
+| C-h ?                     | Other + other choose!                                                        |            |
+
+** Shortcuts
+Sasha - http://emacslife.com/read-lisp-tweak-emacs/beginner-3-make-things-more-convenient.html
+*** network
+- traceroute delfi.lt
+- ipconfig
+- gpupdate /force
+- gpresult /r
+n- ping
+*** emacs
+1) M-g j     = Dumb jump
+2) M-%       = Query replace
+3) C-M i     = FLYSPELL step on a word and correct it's
+   spelling. multiple presses for different words
+4) C-;       = flyspell auto correct previous word
+5) F5        = turn on flyspell mode
+6) C-c C-p I = open buffers OF THE CURRENT PROJECT
+7) M-,       = Go back one step
+8) C-h i     = info about your whole linux system and programs installed
+9) C-h r     = info manual emacs
+10) C-h m     = describe mode
+11) C-h k    = describe key
+12) C-x n s  = narrow down to one headline in org mode
+13) C-x n w  = widden back to all headings
+14) C-x n w  = widen back to normal
+15) C-c u    = undo tree visualize
+16) M-x highlight-regexp = highlights word occurences in the buffer
+17) C-x h    = mark buffer
+18) C-x SPC  = rectangle mode
+19) C-u c-u c-u . = enter current date timestamp - this puts to agenda
+20) C-u C-c . = inactive timestamp with hour and minutes
+21) C-c .    = enter current date timestamp same
+22) C-c !    = enter current date timestamp BUT no agenda entry
+23) C-x ( OR F3    = define macro - do a sequence
+24) C-x ) OR F4    = stop defining
+25) C-x e OR f4    = executes macro
+26) C-x C-k n      = give name to last macro
+27) M-x insert-kbd-macro = extract contents of a macro (useful when
+    want to put in init file)
+28) M-x apply-macro-to-region-lines = does exactly that
+29) C-SCP x2 = makes a mark
+30) C-x C-SCP = jumps to that mark
+31) C-x r SCP <any> = resgister a key(position)
+32) C-x r j <any> = jump to the key(to that position)
+33) C-c C-w  = refile to enother point in the org document or another file
+34) C-c C-s  = schedule org item
+35) C-c C-d  = set a deadine to org item
+36) C-x C-x  = Move cursor to the other end of selection.
+37) C-a a    = org agenda
+38) C-c c    = capture something (write note and put it somewhere in the template)
+39) C-c C-z  = make a note under sme org heading
+40) C-c a a F = follow up mode. expands the task in agenda view
+41) M-u      = capitalize all letters of a word
+42) m-l      = lowercase all letters of a word
+43) C-x left = previous buffer. Faster than C-x b? maybe. Cia gi winner mode.
+44) C-c C-l  = after selecting text - add link shortcut
+45) C-c C-x e = set effort estimate on an org headline
+46) C-c C-x C-c = see the effort estimate table
+47) C-c C-x C-j = go to clock entry
+48) C-c C-e  = ELPY Edit all occurrences of the symbol at point at once
+49) C-c C-c  = ELPY send REGION to python interactive
+    interpreter,(atsidarys atskiras buffer, arba gali ji isjungti, tai
+    graziai apacioje rodys for a short time) ARBA Gali ctrl+enter po
+    viena eilute
+50) C-c C-d  = ELPY show documentation,
+51) C-c C-z  = ELPY Switch between your script and the interactive shell
+52) M-.      = ELPY go to definition.(or use dumb-jump shortcut M-g g)
+53) C-c n/p  = ELPY move to next, previous error
+54) C-c C-v  = ELPY Syntax check with flake8
+55) C-c C-n  = ELPY Next flake8 error
+56) C-c C-t  = ELPY Start tests
+57) C-c RET  = ELPY (new shortcut) evaluate line
+58) M-x comint-clear-buffer = clears elpy terminal (C-c M-o)
+59) M-x elpy-config  = ELPY config
+60) C-h v kill-ring = Watch your kill ring
+61) C-x o m  = AVY swap windows
+62) M-i      = indent, cool
+63) M-x emacs-lisp-byte -compile = after modifying emacs package file,
+    run this (while in the opened buffer) to save the changes. Helped
+    with iedit.
+64) M-x eww  = EWW browser
+65) C-c C-o  = ORG open linka
+66) A        = ORG agenda append agenda view to buffer
+67) o        = ORG agenda delete other windows
+68) f1 v     = DESCRIBE VARIABLE - super useful. can look for all kind
+    of information. Like directories of plugins and so on... try it out.
+69) C-v      = scroll buffer down
+70) M-v      = scroll buffer up
+71) M-! nautilus . = open current dir in nautilus. oh yeah
+72) M-x clone-indirect-buffer = multiple views of same file
+73) M-o      = see council option
+74) M-x flyckeck-list-errors = a list of errors in the buffer
+75) C-c C-p p/d = TREEMACS add/remove project to a workspace
+76) M-x lsp-treemacs-symbols = show the structure of the file
+77) m-x lsp-find-references = show where the function is being used
+78) C-c C-d  = when in python doc = gives documentation of chosen topic
+79) C-c /    = sparse tree (org mode look up for things)
+80) M-x erc-tls = irc.libera.chat IRC chat!
+81) /join #emacs or #systemcrafters = IRC join channel
+82) /part    = IRC leave channel
+83) /quit bye all! = quit server
+84) /reconnect = reconnect to the server?
+85) /list    = IRC list channels
+86) /whois nick = IRC find out whoe the user is!!
+87) / query nick = IRC write someone a private message!! (new buffer opens
+    up)
+88) /msg nick Hello there = IRC sends a one time message
+89) /nick newname = IRC change nickname
+90) C-c '    = edit [[https://orgmode.org/manual/Editing-Source-Code.html][code block]] in a separate window (proper
+    indentation and all)
+91) C-c C-x ; = TIMER start
+92) C-c C-x , = TIMER pause/continue
+93) C-c C-x _ = TIMER stop
+94) C-> = multiple cursors - mark next line like this
+95) C-< = multiple cursors - mark previous line like this
+96) C-c C-< = multiple cursors - mark all like this
+97) M-x customize group - customize some stuff
+98) M-x ielm RET package-archives RET = gives some values out
+99) C-c '   = edit source code buffer (useful when need code
+    completion when editint a src code in ORG file)
+100) g-o     = DIRED view buffer(or view in another window)
+101) a       = DIRED - cycle through directories and open files (leaves
+     no traces(open buffers))
+102) R      = DIRED rename file
+103) +      = DIRED create directory
+104) m      = DIRED mark file
+105) u/U    = DIRED un mark file/s
+106) (      = DIRED close/open information
+107) t      = DIRED invert marked file selection
+108) % m    = DIRED mark all files according to your needs fx. .org \.org$
+109) *      = DIRED more options
+110) c      = DIRED copy marked files
+111) D      = DIRED delete marked files
+112) d      = DIRED mark files for deletion
+113) x      = DIRED execute the deletion
+114) M-[    = goto last change(previous)
+115) M-]    = goto last change reverse(next)
+116) C-a C  = configure org agenda (the simple way)
+117) C-'    = cycle through agenda files
+118) F11    = full screen mode
+119) emacs -q test.el foo.org = debug lisp code this way
+120) C-D    = PYTHON mode - PY DOCS
+121) *buffer name* = creates a buffer
+122) M-x highlight-regexp = highlight search results
+123) M-x clone indirect buffer = duplicate same buffer, edit in two places
+124) M-y    = browse kill ring
+125) RET:   = ELFEED view selected entry in a buffer
+126) b:     = ELFEED open selected entries in your browser (browse-url)
+127) y:     = ELFEED copy selected entries URL to the clipboard
+128) r:     = ELFEED mark selected entries as read
+129) u:     = ELFEED mark selected entries as unread
+130) +:     = ELFEED add a specific tag to selected entries
+131) -:     = ELFEED remove a specific tag from selected entries
+132) g:     = ELFEED refresh view of the feed listing
+133) G:     = ELFEED fetch feed updates from the servers
+134) s:     = ELFEED update the search filter (see tags)
+135) c:     = ELFEED clear the search filter
+136) s-F10  = show minimap
+137) C-c n l = ORG-ROAM-buffer-toggle
+138) C-c n f = ORG-ROAM-node-find
+139) C-c n i = ORG-ROAM-node-insert
+140) C-M-i   = ORG-ROAM completion at point
+141) org-id-get-create = ORG-ROAM create an IF for a heading
+142) org-roam-alias-add = ORG-ROAM add another name for a node
+143) C-c n d n = ORG-ROAM-dailies-capture-today
+144) C-c n d d = ORG-ROAM-dailies-goto-today
+145) C-c n d Y = ORG-ROAM-dailies-capture-yesterday
+146) C-c n d T = ORG-ROAM-dailies-capture-tomorrow
+147) C-c n d y = ORG-ROAM-dailies-goto-yesterday
+148) C-c n d t = ORG-ROAM-dailies-goto-tomorrow
+149) C-c n d d = ORG-ROAM-dailies-goto-today
+150) C-c n d v = ORG-ROAM-dailies-capture-date
+151) C-c n d c = ORG-ROAM-dailies-goto-date
+152) C-c n d b = ORG-ROAM-dailies-goto-next-note
+153) C-c n d f = ORG-ROAM-dailies-goto-previous-note
+154) [[http://xahlee.info/emacs/emacs/rename_file_pattern.html][Batch rename files]] - open dired-toggle-read-only
+155) - git rm --cached <path to file> = [[https://betterprogramming.pub/how-to-remove-committed-files-from-git-version-control-b6533b8f9044][removes git file from repo]],
+     keeps it in folder
+156) C-M o when in 'find file' = drop-down of suggestions of what to do
+     with files, list.
+157) C-c C-x C-v = show/hide images in org files instead of links
+158) Mu4e - [[https://github.com/daviwil/emacs-from-scratch/blob/629aec3dbdffe99e2c361ffd10bd6727555a3bd3/show-notes/Emacs-Mail-01.org][shortcuts here]]
+159) Ctrl+shift+alt+R - start/end gnome recording
+160) settings set org.gnome.settings-daemon.plugins.media-keys
+     max-screencast-length X - specify the length of the gnome video. 0
+     instead of X - no duration. 300 instead of X = 300sec
+161) C-u C-C C-x C-i = list of all clocked-in tasks. Primeti? Wow.
+162) C-u thingie on different commands - projectile f.x also - COMMANDER
+163) M-x customize-group RET org-pomodoro = configurations of ANY
+     package listed here
+164) M-x use-package-report = shows packages that got loaded and their
+     load times!!
+165) C-u M-x eshell = open two eshells at the same time!
+166) org-customize = customize EVERYTHING about org-mode
+167) C-c C-, = lists the possible <s completetions. discovered at work.
+168) screenfetch = linux info with logo
+169) passwd - change password for linux user
+170) du -hs = [[https://askubuntu.com/questions/1224/how-do-i-determine-the-total-size-of-a-directory-folder-from-the-command-line][how big is a folder]] in terminal
+171) C-h m = list all the minor modes
+172) C-c C-d = helpful-at-point
+173) C-x C-0 = text-scale-adjust
+174) C-x z = repeat last command
+175) C-c M- o or M-x commit clear buffer - clears eshell or shell buffer
+176) ~Shift + "~ = wraps text in parentheses
+177) C-w = whitespace mode, rodo taskiukus vietoj whitespace
+178) C-c - c-e f = fold all children elements of the current father
+179) [[https://ternjs.net/doc/manual.html#emacs][tern commands]] - javascript jump to definition, documentation and
+     other cool stuff
+180) org-export-dispacher or C-c C-e(might be conflicitng with pop eshell)
+181) c-x n s/w - org narrow/expand
+182) ~C-o~ in dired to preview/view/visit files
+183) C-x C-p - mark whole page
+184) org-change-tag-in-region - apply tag to all headings
+- C-h i - INFO MODE!!!!! shows all the manuals of packages
+- c-c c-x p - assign property(category etc) to org note
+- C-a - add attachement!!
+- c+h r - open emacs docs, press m to pick topic (f.x bookmarks), RET -
+you are reading the docs. NIIICE.
+
+*** Bindings
+**** Emacs pasidaryk bindings patogesnius
+
+Last change
+Bottom top of the file
+Definition
+[[https://github.com/Crandel/home/blob/master/.config/emacs/recipes/multiple-cursors-rcp.el][Multiple cursors]]
+Jump between paragraphs
+M-s
+query replace
+
+Gal kaip revit??
+**** go to next paragraph su M-n M-p maybe
+**** go to last change emacs M={ }
+**** go to last change emacs M={ }
+**** go to next paragraph su M-n M-p maybe
+**** kaip suzinoti visas commands? pvz agenda... shift + r clocktable, shift + L follow mode
+gal su hydrom galima matyti?
+**** Vim bindings
+https://bbbscarter.wordpress.com/2012/09/13/emacs-bits-and-bobs/
+
+[[https://i.stack.imgur.com/zpzPO.gif][evil bindings cheat sheet]]
+
+[2022-12-05 Mon] [[https://www.reddit.com/r/emacs/comments/tyg9v5/why_not_use_evil_in_2022/][why NOT tu use evil in 2022?]] zinai ka, gal pabusiu su
+emacs for now.. it is going great with it. I like it.
+
+Evil collection plugin in the future - "evil bindings in every package"
+- C-G from INSERT to NORMAL mode
+- C-U go half page up
+- C-D go half page down
+- Shift-A - append to the end of the line
+- C-z - emacs mode(get yourself out of trouble with it. STOP evil)
+- C-w - evil window management
+- C-o - evil JUMP backwards
+**** M-x customize group RET org-pomodoro RET
+** commands emacs
+*** ansi-term copy/paste
+:PROPERTIES:
+:CAPTURED:[2023-06-15 Thu 08:30]
+:END:
+
+~C-c C-j~ will run term-line-mode, which treats the terminal buffer more
+like a normal text-buffer in which you can move the cursor and yank
+text. You can switch back to character mode by running term-char-mode
+with ~C-c C-k~.
+
+https://stackoverflow.com/questions/2886184/copy-paste-in-emacs-ansi-term-shell
+** Bookmarks emacs
+
+C+h i - info mode
+
+C+x r b - jump to bookmark
+C+x r m - make a bookmark here
+C+x r l - see all bookmarks

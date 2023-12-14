@@ -1,0 +1,23 @@
+#+title:      raspberrypi first setup
+#+date:       [2023-11-26 Sun 00:13]
+#+filetags:   :raspberrypi:
+#+identifier: 20231126T001334
+
+Ramiausiai irasaiu i sd kortele is windowsu raspberry pi os.
+
+ijungiau vncviewer, ijungiau ssh, 'ping raspberrypi' in terminal 0 shows me I
+am connected. teo marsrutizatoriaus valdymo skydelis rodo, kad raspberrypi is
+connected - pasaka.
+
+prisijunk su ssh
+
+#+begin_src bash
+  ssh arvypi@192.1xx.1.xxx
+#+end_src
+
+pass <default dvi raides> ir as viduj!
+
+Install vncviewer ir krc daryk =ifconfig= inside raspberry ir pamatysi ip - su
+juo pasijunk per vnc. easy, perfect, done.
+
+=raspi-config= = pamatysi settingsus

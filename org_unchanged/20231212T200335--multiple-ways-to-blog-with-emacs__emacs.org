@@ -5,6 +5,8 @@
 #+STARTUP:    overview
 #+OPTIONS: toc:t num:nil ^:nil ':t
 
+explains how to build a blog wiht org mode - https://taingram.org/blog/org-mode-blog.html
+
 * two blog examples
 
 This way of creating a blog, unlike

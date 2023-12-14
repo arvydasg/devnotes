@@ -1,9 +1,0 @@
-#+title:      ai tools
-#+date:       [2023-11-25 Sat 23:48]
-#+filetags:   :ai:
-#+identifier: 20231125T234824
-
-- https://leonardo.ai/ - tokens, geri rezultatai
-- https://playgroundai.com/ - generate side by side thingies
-- https://firefly.adobe.com/ nemokamas geras
-- https://www.midjourney.com/home - discord chat wut?

@@ -1,0 +1,25 @@
+#+title:      org roam
+#+date:       [2023-11-26 Sun 00:38]
+#+filetags:   :emacs:
+#+identifier: 20231126T003848
+
+Quite old notes about using org-roam package in emacs.
+
+1. [[https://youtu.be/AyhPmypHDEw][Getting Started with Org Roam - Build a Second Brain in Emacs]] [[https://systemcrafters.cc/build-a-second-brain-in-emacs/getting-started-with-org-roam/][shownotes]]
+2. [[https://youtu.be/YxgA5z2R08I][Capturing Notes Efficiently in Emacs with Org Roam]] [[https://systemcrafters.net/build-a-second-brain-in-emacs/capturing-notes-efficiently/][shownotes]]
+3. [[https://youtu.be/3-sLBaJAtew][Org Roam: The Best Way to Keep a Journal in Emacs]] [[https://systemcrafters.net/build-a-second-brain-in-emacs/keep-a-journal/][shownotes]]
+4. [[https://youtu.be/CUkuyW6hr18][5 Org Roam Hacks for Better Productivity in Emacs]] [[https://systemcrafters.net/build-a-second-brain-in-emacs/5-org-roam-hacks/][shownotes]]
+
+[[https://coredumped.dev/2021/05/26/taking-org-roam-everywhere-with-logseq/][Taking org-roam everywhere with logseq]]
+
+KEY - linking roam notes with id's in html -
+https://www.reddit.com/r/emacs/comments/q82zci/how_to_include_the_id_links_into_your_orgroam/
+
+
+I have found org-roam to be nice to use as I remember, but file naming was
+a little strange + I remember I did not like he idea of having a database to
+store all the links between notes. Also I was not really using the full
+potential and functionalities(graphs, backlinks, etc) that it offered.
+
+That is why, when the idea of having a "second-brain" started to creep towards
+me, I choose denote. TODO-explain why

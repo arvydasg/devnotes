@@ -1,0 +1,28 @@
+#+title:      inspirational websites
+#+date:       [2023-12-14 Thu 15:04]
+#+filetags:   :emacs:websites:
+#+identifier: 20231214T150411
+#+STARTUP:    overview
+
+* Websites made with Emacs and org-mode
+-https://nicolas.petton.fr/blog/blogging-with-org-mode.html
+- https://ogbe.net/
+- https://bastibe.de/
+- https://writepermission.com/
+- https://config.daviwil.com/
+- https://opensource.com/article/20/3/blog-emacs
+- https://psachin.gitlab.io/
+
+* Other
+- https://drewdevault.com/
+- https://sourcehut.org/consultancy/
+- https://www.jarmalavicius.lt/
+- https://bitfehler.srht.site/
+- https://bastibe.de/projects.html
+- [[https://braindump.jethro.dev/][org-roam creator]]
+- [[https://thibaultmarin.github.io/blog/posts/2016-11-13-Personal_website_in_org.html#orgb5773b9][this guy is org pro]]
+- [[https://orgmode.org/worg/org-web.html][webpages made with org]]
+- [[https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][original tut making sites with ORG not roam]]
+- crazy site with nodes - https://hugocisneros.com/notes/
+- org roam creator website - https://braindump.jethro.dev/
+- crazy - https://anagora.org/index
