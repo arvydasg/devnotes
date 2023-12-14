@@ -1,6 +1,7 @@
-#+title:      setup custom domain
-#+date:       [2023-11-25 Sat 22:20]
+#+title:      setup custom domain for github pages
+#+date:       [2023-12-14 Thu 09:44]
 #+filetags:   :git:websites:
-#+identifier: 20231125T222022
+#+identifier: 20231214T094426
+#+STARTUP:    overview
 
 This video below has a good explanation - https://www.youtube.com/watch?v=rKz6kIW4Uos&ab_channel=MichaelSolorio
