@@ -24,12 +24,16 @@
 (setq org-static-blog-posts-directory "~/GIT/devnotes/org")
 (setq org-static-blog-drafts-directory "~/GIT/devnotes/drafts")
 (setq org-static-blog-index-length 5)
-;; (setq org-static-blog-preview-link-p t)
-(setq org-static-blog-preview-date-first-p nil) ;date goes after title when nil
-(setq org-static-blog-use-preview t)	;don't show the whole post, just a preview of 10 or so words
-(setq org-static-blog-enable-tags t)	;enable tags(separate html pages for tags and tags next to posts)
+(setq org-static-blog-preview-date-first-p nil)
+(setq org-static-blog-use-preview t)
+(setq org-static-blog-enable-tags t)
+(setq org-static-blog-no-post-tag "nonpost")
 ;; (setq org-export-with-toc nil)            ;can add in individual file with #+OPTIONS: toc:1/nil
-;; (setq org-export-with-section-numbers nil) ;can add in individual file with #+OPTIONS: num:nil
+;; (setq org-export-with-section-numbers nil) ;can add in individual file with
+;; #+OPTIONS: num:nil
+(setq org-static-blog-page-header "header - stylesheets and stuff here")
+(setq org-static-blog-page-preamble "<br>preamble here yo</br?")
+(setq org-static-blog-page-postamble "<br>postamble in he house</br>")
 
 (org-static-blog-publish t)
 

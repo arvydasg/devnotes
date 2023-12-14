@@ -4,7 +4,7 @@
 <title><![CDATA[arvydasg.github.io]]></title>
 <description><![CDATA[arvydasg.github.io]]></description>
 <link>https://arvydasg.github.io/devnotes/html</link>
-<lastBuildDate>Thu, 14 Dec 2023 06:37:09 +0000</lastBuildDate>
+<lastBuildDate>Thu, 14 Dec 2023 06:57:15 +0000</lastBuildDate>
 <item>
   <title><![CDATA[authenticate to git with gpg key]]></title>
   <description><![CDATA[
@@ -12,13 +12,13 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8e20d52">1. <span class="todo TODO">TODO</span> gpg key method</a></li>
+<li><a href="#org5b27eb1">1. <span class="todo TODO">TODO</span> gpg key method</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org8e20d52" class="outline-2">
-<h2 id="org8e20d52"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> gpg key method</h2>
+<div id="outline-container-org5b27eb1" class="outline-2">
+<h2 id="org5b27eb1"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> gpg key method</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Colleague gave some tutorials in work notes.
@@ -30,7 +30,7 @@ Colleague gave some tutorials in work notes.
   <category><![CDATA[gpg]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T061312--authenticate-to-git-with-gpg-key__git_gpg.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T061312--authenticate-to-git-with-gpg-key__git_gpg.html</guid>
-  <pubDate>Thu, 14 Dec 2023 06:37:09 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 06:57:15 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[authenticate to git with personal access token]]></title>
@@ -39,14 +39,14 @@ Colleague gave some tutorials in work notes.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org50403ee">1. Personal access token</a></li>
-<li><a href="#org126d9a8">2. Misc info</a></li>
+<li><a href="#org6fb07f2">1. Personal access token</a></li>
+<li><a href="#orgf54227a">2. Misc info</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org50403ee" class="outline-2">
-<h2 id="org50403ee"><span class="section-number-2">1.</span> Personal access token</h2>
+<div id="outline-container-org6fb07f2" class="outline-2">
+<h2 id="org6fb07f2"><span class="section-number-2">1.</span> Personal access token</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 After you have <a href="20231211T161252--introduce-yourself-to-git__git.html">introduced yourself to git</a>.
@@ -83,8 +83,8 @@ Git will remember your credentials for future git operations.
 </div>
 </div>
 
-<div id="outline-container-org126d9a8" class="outline-2">
-<h2 id="org126d9a8"><span class="section-number-2">2.</span> Misc info</h2>
+<div id="outline-container-orgf54227a" class="outline-2">
+<h2 id="orgf54227a"><span class="section-number-2">2.</span> Misc info</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Changing the token - <a href="https://stackoverflow.com/questions/46645843/where-to-store-my-git-personal-access-token">Explanation here</a>.
@@ -100,7 +100,7 @@ Changing the token - <a href="https://stackoverflow.com/questions/46645843/where
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T060637--authenticate-to-git-with-personal-access-token__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T060637--authenticate-to-git-with-personal-access-token__git.html</guid>
-  <pubDate>Thu, 14 Dec 2023 06:37:09 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 06:57:15 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[authenticate to git with ssh]]></title>
@@ -109,13 +109,13 @@ Changing the token - <a href="https://stackoverflow.com/questions/46645843/where
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5d1e1cf">1. <span class="todo TODO">TODO</span> ssh key method</a></li>
+<li><a href="#org8032318">1. <span class="todo TODO">TODO</span> ssh key method</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org5d1e1cf" class="outline-2">
-<h2 id="org5d1e1cf"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> ssh key method</h2>
+<div id="outline-container-org8032318" class="outline-2">
+<h2 id="org8032318"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> ssh key method</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 I have described it in work notes.
@@ -127,7 +127,7 @@ I have described it in work notes.
   <category><![CDATA[ssh]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T060558--authenticate-to-git-with-ssh__git_ssh.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T060558--authenticate-to-git-with-ssh__git_ssh.html</guid>
-  <pubDate>Thu, 14 Dec 2023 06:37:09 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 06:57:15 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[introduce yourself to git]]></title>
@@ -186,7 +186,7 @@ There are multiple ways to get that password:
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231211T161252--introduce-yourself-to-git__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231211T161252--introduce-yourself-to-git__git.html</guid>
-  <pubDate>Thu, 14 Dec 2023 06:37:09 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 06:57:15 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[split a github repository into multiple]]></title>
@@ -199,7 +199,7 @@ Can do that with commit history like so -
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T190641--split-a-github-repository-into-multiple__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T190641--split-a-github-repository-into-multiple__git.html</guid>
-  <pubDate>Thu, 14 Dec 2023 06:37:09 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 06:57:15 +0000</pubDate>
 </item>
 </channel>
 </rss>
