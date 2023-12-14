@@ -31,10 +31,19 @@
 (setq org-static-blog-use-preview t)
 (setq org-static-blog-enable-tags t)
 (setq org-static-blog-no-post-tag "nonpost")
+(setq org-static-blog-enable-deprecation-warning nil)
 ;; (setq org-export-with-toc nil)            ;can add in individual file with #+OPTIONS: toc:1/nil
 ;; (setq org-export-with-section-numbers nil) ;can add in individual file with
 ;; #+OPTIONS: num:nil
-(setq org-static-blog-page-header "<link rel=\"stylesheet\" href=\"../css/style.css\"/>")
+(setq org-static-blog-page-header
+"<meta name=\"author\" content=\"Arvydas Gasparavicius\">
+<meta name=\"referrer\" content=\"no-referrer\">
+<meta name=\"viewport\" content=\"initial-scale=1,width=device-width,minimum-scale=1\">
+<link rel=\"stylesheet\" href=\"../static/style.css\"/>
+<link rel=\"icon\" href=\"../static/ag.ico\">
+<script src=\"../static/lightbox.js\"></script>
+<script src=\"static/auto-render.min.js\"></script>")
+
 (setq org-static-blog-page-preamble "<br>preamble here yo</br>")
 (setq org-static-blog-page-postamble "<br>postamble in he house</br>")
 

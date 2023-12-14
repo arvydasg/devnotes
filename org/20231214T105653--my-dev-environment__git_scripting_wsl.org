@@ -4,6 +4,10 @@
 #+identifier: 20231214T105653
 #+STARTUP:    overview
 
+#+attr_html: :width 400px
+#+ATTR_ORG: :width 600
+[[../media/Screenshot 2023-11-17 163344 - very quaint.png]]
+
 * TODO apie my computer setup
 - windows
 - wsl nixos
