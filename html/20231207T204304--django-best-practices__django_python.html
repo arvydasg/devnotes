@@ -22,12 +22,12 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org2d6395a">1. Instead of /admin change to smth else URL Django</a></li>
-<li><a href="#org115a23f">2. Use environment variables</a></li>
-<li><a href="#orge5fd08a">3. Use postgres db</a></li>
-<li><a href="#org2a08753">4. Use two different settings files</a></li>
-<li><a href="#org10017b8">5. Expanding user model to store more user information</a></li>
-<li><a href="#orgf9ee0a0">6. Update django every major version once every 9 months</a></li>
+<li><a href="#orgc12db4a">1. Instead of /admin change to smth else URL Django</a></li>
+<li><a href="#orga70dd18">2. Use environment variables</a></li>
+<li><a href="#orgffbc97e">3. Use postgres db</a></li>
+<li><a href="#orgd79b00a">4. Use two different settings files</a></li>
+<li><a href="#orge2cf509">5. Expanding user model to store more user information</a></li>
+<li><a href="#orgda06385">6. Update django every major version once every 9 months</a></li>
 </ul>
 </div>
 </nav>
@@ -36,8 +36,8 @@ Here I will write the tips that I found and that I use when building a Django
 project.
 </p>
 
-<div id="outline-container-org2d6395a" class="outline-2">
-<h2 id="org2d6395a"><span class="section-number-2">1.</span> Instead of /admin change to smth else URL Django</h2>
+<div id="outline-container-orgc12db4a" class="outline-2">
+<h2 id="orgc12db4a"><span class="section-number-2">1.</span> Instead of /admin change to smth else URL Django</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 For security. Everyone knows that if its a django project, it will have an
@@ -46,8 +46,8 @@ admin page
 </div>
 </div>
 
-<div id="outline-container-org115a23f" class="outline-2">
-<h2 id="org115a23f"><span class="section-number-2">2.</span> Use environment variables</h2>
+<div id="outline-container-orga70dd18" class="outline-2">
+<h2 id="orga70dd18"><span class="section-number-2">2.</span> Use environment variables</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>for secret key</li>
@@ -58,8 +58,8 @@ admin page
 </div>
 </div>
 
-<div id="outline-container-orge5fd08a" class="outline-2">
-<h2 id="orge5fd08a"><span class="section-number-2">3.</span> Use postgres db</h2>
+<div id="outline-container-orgffbc97e" class="outline-2">
+<h2 id="orgffbc97e"><span class="section-number-2">3.</span> Use postgres db</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Kind of default ageed db to use with Django
@@ -67,8 +67,8 @@ Kind of default ageed db to use with Django
 </div>
 </div>
 
-<div id="outline-container-org2a08753" class="outline-2">
-<h2 id="org2a08753"><span class="section-number-2">4.</span> Use two different settings files</h2>
+<div id="outline-container-orgd79b00a" class="outline-2">
+<h2 id="orgd79b00a"><span class="section-number-2">4.</span> Use two different settings files</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 One for prod another for acc(test) environment
@@ -81,8 +81,8 @@ from notes)
 </div>
 </div>
 
-<div id="outline-container-org10017b8" class="outline-2">
-<h2 id="org10017b8"><span class="section-number-2">5.</span> Expanding user model to store more user information</h2>
+<div id="outline-container-orge2cf509" class="outline-2">
+<h2 id="orge2cf509"><span class="section-number-2">5.</span> Expanding user model to store more user information</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 As described in my other post <a href="20231128T132201--expanding-user-model__django_sql.html">here</a>.
@@ -90,8 +90,8 @@ As described in my other post <a href="20231128T132201--expanding-user-model__dj
 </div>
 </div>
 
-<div id="outline-container-orgf9ee0a0" class="outline-2">
-<h2 id="orgf9ee0a0"><span class="section-number-2">6.</span> Update django every major version once every 9 months</h2>
+<div id="outline-container-orgda06385" class="outline-2">
+<h2 id="orgda06385"><span class="section-number-2">6.</span> Update django every major version once every 9 months</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Python -wd runserver depreciation warnings

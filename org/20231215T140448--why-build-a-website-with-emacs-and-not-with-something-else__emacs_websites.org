@@ -15,12 +15,13 @@ I tried creating personal blog/website the following ways:
  - Emacs and built in [[https://orgmode.org/manual/HTML-Export.html][HTML exporting feature]](export one page at a time) =C-c C-e=
  - Emacs and built in [[https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/][org-publish-project]], [[https://github.com/arvydasg/org-publish-project-blog][personal example]] =C-c C-e P p=
  - Emacs and [[https://github.com/bastibe/org-static-blog][org-static-blog package]], [[https://github.com/arvydasg/org-static-blog][personal example]]
- - [2023-12-15 Fri] Had my [[https://github.com/arvydasg/devnotes][devnotes website]] 90% built(link to commit TODO) with
+ - [2023-12-15 Fri] Had my [[https://github.com/arvydasg/devnotes][devnotes website]] 90% built([[https://github.com/arvydasg/devnotes/tree/baaee96445935c4d985990561ebc062054d980bf][link to commit]]) with
    =org-static-blog=, and then found out about ox-hugo from [[https://youtu.be/7s8cQ2cOnl8?si=Msps0EMgyY0cJYba&t=1804][here]]. Tried to
    create a blog with it, example
  - Then found out about [[https://gtpedrosa.github.io/blog/using-org-mode-and-ox-hugo-to-replace-markdown-in-hugo-workflow/][Emacs and hugo]].. [[https://ox-hugo.scripter.co/][ox hugo]] and [[https://github.com/masasam/emacs-easy-hugo][emacs-easy-hugo]].
  - [[https://github.com/emacs-love/weblorg][Weblorg]] - have not tried it
  - There is also [[https://github.com/novoid/lazyblorg][lazyborg]], for writing blogs. But it seems quite complex.
+ - Also you can [[https://github.com/org2blog/org2blog][export your org files to wordpress]]. Have not tried.
 
 Creating personal website/blog with Emacs is the right way for me, because:
 
