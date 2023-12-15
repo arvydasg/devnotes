@@ -13,7 +13,7 @@ I tried creating personal blog/website the following ways:
  - PKC wiki - [[https://github.com/arvydasg/pkc_wiki][example]]
  - PKC afk - [[https://github.com/arvydasg/PKC_AFK/blob/main/AFK/testamentas/afk.html][example]]
  - Emacs and built in [[https://orgmode.org/manual/HTML-Export.html][HTML exporting feature]](export one page at a time) =C-c C-e=
- - Emacs and built in [[https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/][org-publish-project]], [[https://github.com/arvydasg/org-publish-project-blog][personal example]] =C-c C-e P p=
+ - Emacs and built in [[https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/][org-publish-project]], [[https://github.com/arvydasg/org-publish-project-blog][personal example]] =C-c C-e P p=, [[https://taingram.org/blog/org-mode-blog.html][good intro tutorial]]
  - Emacs and [[https://github.com/bastibe/org-static-blog][org-static-blog package]], [[https://github.com/arvydasg/org-static-blog][personal example]]
  - [2023-12-15 Fri] Had my [[https://github.com/arvydasg/devnotes][devnotes website]] 90% built([[https://github.com/arvydasg/devnotes/tree/baaee96445935c4d985990561ebc062054d980bf][link to commit]]) with
    =org-static-blog=, and then found out about ox-hugo from [[https://youtu.be/7s8cQ2cOnl8?si=Msps0EMgyY0cJYba&t=1804][here]]. Tried to

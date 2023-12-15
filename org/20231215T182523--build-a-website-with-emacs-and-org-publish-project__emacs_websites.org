@@ -1,0 +1,44 @@
+#+title:      build a website with emacs and org publish project
+#+date:       [2023-12-15 Fri 18:25]
+#+filetags:   :emacs:websites:
+#+identifier: 20231215T182523
+#+STARTUP:    overview
+
+GAL SEPARATE POSTS for ALL THESE?
+
+galvoju tik bardakas gausis kai noresi surasti info apie blogo buda ir reikes
+tiek daug configu ieskoti.
+
+reiketu gal isskirstyti pagal topic ir tureti situos kap
+
+
+TODO viska cia sumetu ka zinau, veliau atsirukuosim
+
+DOCS - https://github.com/bastibe/org-static-blog
+
+video example - https://www.youtube.com/watch?v=Elynmb3kTE4
+
+emacs docs wtf?? - https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html
+
+example -
+https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/
+
+my github repo - https://github.com/arvydasg/org-publish-project-blog
+
+codeacademy also?
+
+org download inkomponuok kad naudotumei bloge
+
+nice footer and more? - https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html
+
+css, publishing method, last modfied, etc - https://taingram.org/blog/org-mode-blog.html
+
+
+CIA GAL SEPARATE POST? how to add lightbox to org websites bla -
+https://github.com/arvydasg/arvydasg.github.io/blob/master/static/style.css +
+js code
+
+add google tag manager also -
+https://github.com/arvydasg/dotfiles/blob/20231124-Before-denote/my-init.org#org-static-blog
+
+try use the custom themes zinai. Tos special, grazios, tiesiog tutorial.

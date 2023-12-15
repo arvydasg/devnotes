@@ -1,0 +1,9 @@
+#+title:      building a website with docutils
+#+date:       [2023-12-15 Fri 18:22]
+#+filetags:   :websites:
+#+identifier: 20231215T182233
+#+STARTUP:    overview
+
+Possible to build a website like such - https://docutils.sourceforge.io/
+
+Quite a nice example - http://tips.defun.work/

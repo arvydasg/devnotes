@@ -4,7 +4,103 @@
 <title><![CDATA[arvydasg.github.io]]></title>
 <description><![CDATA[arvydasg.github.io]]></description>
 <link>https://arvydasg.github.io/devnotes/html</link>
-<lastBuildDate>Fri, 15 Dec 2023 17:50:44 +0000</lastBuildDate>
+<lastBuildDate>Fri, 15 Dec 2023 18:33:23 +0000</lastBuildDate>
+<item>
+  <title><![CDATA[build a website with emacs and org publish project]]></title>
+  <description><![CDATA[
+<p>
+GAL SEPARATE POSTS for ALL THESE?
+</p>
+
+<p>
+galvoju tik bardakas gausis kai noresi surasti info apie blogo buda ir reikes
+tiek daug configu ieskoti.
+</p>
+
+<p>
+reiketu gal isskirstyti pagal topic ir tureti situos kap
+</p>
+
+
+<p>
+TODO viska cia sumetu ka zinau, veliau atsirukuosim
+</p>
+
+<p>
+DOCS - <a href="https://github.com/bastibe/org-static-blog">https://github.com/bastibe/org-static-blog</a>
+</p>
+
+<p>
+video example - <a href="https://www.youtube.com/watch?v=Elynmb3kTE4">https://www.youtube.com/watch?v=Elynmb3kTE4</a>
+</p>
+
+<p>
+emacs docs wtf?? - <a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html">https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html</a>
+</p>
+
+<p>
+example -
+<a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/</a>
+</p>
+
+<p>
+my github repo - <a href="https://github.com/arvydasg/org-publish-project-blog">https://github.com/arvydasg/org-publish-project-blog</a>
+</p>
+
+<p>
+codeacademy also?
+</p>
+
+<p>
+org download inkomponuok kad naudotumei bloge
+</p>
+
+<p>
+nice footer and more? - <a href="https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html">https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html</a>
+</p>
+
+<p>
+css, publishing method, last modfied, etc - <a href="https://taingram.org/blog/org-mode-blog.html">https://taingram.org/blog/org-mode-blog.html</a>
+</p>
+
+
+<p>
+CIA GAL SEPARATE POST? how to add lightbox to org websites bla -
+<a href="https://github.com/arvydasg/arvydasg.github.io/blob/master/static/style.css">https://github.com/arvydasg/arvydasg.github.io/blob/master/static/style.css</a> +
+js code
+</p>
+
+<p>
+add google tag manager also -
+<a href="https://github.com/arvydasg/dotfiles/blob/20231124-Before-denote/my-init.org#org-static-blog">https://github.com/arvydasg/dotfiles/blob/20231124-Before-denote/my-init.org#org-static-blog</a>
+</p>
+
+<p>
+try use the custom themes zinai. Tos special, grazios, tiesiog tutorial.
+</p>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> <a href="https://arvydasg.github.io/devnotes/html/tag-websites.html">websites</a> </div>]]></description>
+  <category><![CDATA[emacs]]></category>
+  <category><![CDATA[websites]]></category>
+  <link>https://arvydasg.github.io/devnotes/html/20231215T182523--build-a-website-with-emacs-and-org-publish-project__emacs_websites.html</link>
+  <guid>https://arvydasg.github.io/devnotes/html/20231215T182523--build-a-website-with-emacs-and-org-publish-project__emacs_websites.html</guid>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
+</item>
+<item>
+  <title><![CDATA[building a website with docutils]]></title>
+  <description><![CDATA[
+<p>
+Possible to build a website like such - <a href="https://docutils.sourceforge.io/">https://docutils.sourceforge.io/</a>
+</p>
+
+<p>
+Quite a nice example - <a href="http://tips.defun.work/">http://tips.defun.work/</a>
+</p>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-websites.html">websites</a> </div>]]></description>
+  <category><![CDATA[websites]]></category>
+  <link>https://arvydasg.github.io/devnotes/html/20231215T182233--building-a-website-with-docutils__websites.html</link>
+  <guid>https://arvydasg.github.io/devnotes/html/20231215T182233--building-a-website-with-docutils__websites.html</guid>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
+</item>
 <item>
   <title><![CDATA[why build a website with emacs and not with something else]]></title>
   <description><![CDATA[
@@ -20,7 +116,7 @@ I tried creating personal blog/website the following ways:
 <li>PKC wiki - <a href="https://github.com/arvydasg/pkc_wiki">example</a></li>
 <li>PKC afk - <a href="https://github.com/arvydasg/PKC_AFK/blob/main/AFK/testamentas/afk.html">example</a></li>
 <li>Emacs and built in <a href="https://orgmode.org/manual/HTML-Export.html">HTML exporting feature</a>(export one page at a time) <code>C-c C-e</code></li>
-<li>Emacs and built in <a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">org-publish-project</a>, <a href="https://github.com/arvydasg/org-publish-project-blog">personal example</a> <code>C-c C-e P p</code></li>
+<li>Emacs and built in <a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">org-publish-project</a>, <a href="https://github.com/arvydasg/org-publish-project-blog">personal example</a> <code>C-c C-e P p</code>, <a href="https://taingram.org/blog/org-mode-blog.html">good intro tutorial</a></li>
 <li>Emacs and <a href="https://github.com/bastibe/org-static-blog">org-static-blog package</a>, <a href="https://github.com/arvydasg/org-static-blog">personal example</a></li>
 <li><span class="timestamp-wrapper"><span class="timestamp">[2023-12-15 Fri] </span></span> Had my <a href="https://github.com/arvydasg/devnotes">devnotes website</a> 90% built(<a href="https://github.com/arvydasg/devnotes/tree/baaee96445935c4d985990561ebc062054d980bf">link to commit</a>) with
 <code>org-static-blog</code>, and then found out about ox-hugo from <a href="https://youtu.be/7s8cQ2cOnl8?si=Msps0EMgyY0cJYba&amp;t=1804">here</a>. Tried to
@@ -59,7 +155,7 @@ You can find some inspirational websites build with org mode <a href="20231214T1
   <category><![CDATA[websites]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231215T140448--why-build-a-website-with-emacs-and-not-with-something-else__emacs_websites.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231215T140448--why-build-a-website-with-emacs-and-not-with-something-else__emacs_websites.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[cretate a blog with emacs-easy-hugo]]></title>
@@ -120,7 +216,7 @@ TODO okay try it lol. try this also -
   <category><![CDATA[websites]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231215T101410--cretate-a-blog-with-emacs-easy-hugo__emacs_hugo_websites.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231215T101410--cretate-a-blog-with-emacs-easy-hugo__emacs_hugo_websites.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[add ckeditor into django app]]></title>
@@ -187,7 +283,7 @@ Tutorial (+ CodeSnippet)</a> video
   <category><![CDATA[django]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231215T055820--add-ckeditor-into-django-app__django.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231215T055820--add-ckeditor-into-django-app__django.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[use postgres db instead of sqlite]]></title>
@@ -228,7 +324,7 @@ most recommended database for Django”
   <category><![CDATA[sql]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231215T055742--use-postgres-db-instead-of-sqlite__django_sql.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231215T055742--use-postgres-db-instead-of-sqlite__django_sql.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[deploy django app]]></title>
@@ -313,7 +409,7 @@ to rule all your instances.</li>
   <category><![CDATA[python]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231215T055647--deploy-django-app__django_python.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231215T055647--deploy-django-app__django_python.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[deploy django app on railway]]></title>
@@ -341,7 +437,7 @@ to rule all your instances.</li>
   <category><![CDATA[railway]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231215T055535--deploy-django-app-on-railway__django_railway.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231215T055535--deploy-django-app-on-railway__django_railway.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[using emacs together with vscode]]></title>
@@ -433,7 +529,7 @@ time is, I think, an approach that deserves some thought.
   <category><![CDATA[vscode]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T171810--using-emacs-together-with-vscode__angular_emacs_vscode.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T171810--using-emacs-together-with-vscode__angular_emacs_vscode.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[inspirational websites]]></title>
@@ -442,14 +538,14 @@ time is, I think, an approach that deserves some thought.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org28226fe">1. Websites made with Emacs and org-mode</a></li>
-<li><a href="#orgf936187">2. Other</a></li>
+<li><a href="#orgc2d4ec6">1. Websites made with Emacs and org-mode</a></li>
+<li><a href="#orge7fa945">2. Other</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org28226fe" class="outline-2">
-<h2 id="org28226fe"><span class="section-number-2">1.</span> Websites made with Emacs and org-mode</h2>
+<div id="outline-container-orgc2d4ec6" class="outline-2">
+<h2 id="orgc2d4ec6"><span class="section-number-2">1.</span> Websites made with Emacs and org-mode</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li><a href="https://orgmode.org/worg/org-blog-wiki.html">Blogs and Wikis with Org</a></li>
@@ -468,8 +564,8 @@ time is, I think, an approach that deserves some thought.
 </div>
 </div>
 
-<div id="outline-container-orgf936187" class="outline-2">
-<h2 id="orgf936187"><span class="section-number-2">2.</span> Other</h2>
+<div id="outline-container-orge7fa945" class="outline-2">
+<h2 id="orge7fa945"><span class="section-number-2">2.</span> Other</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li><a href="https://drewdevault.com/">https://drewdevault.com/</a></li>
@@ -493,7 +589,7 @@ time is, I think, an approach that deserves some thought.
   <category><![CDATA[websites]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T150411--inspirational-websites__emacs_websites.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T150411--inspirational-websites__emacs_websites.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[enable wsl on windows]]></title>
@@ -515,7 +611,7 @@ Guide how to do that here - <a href="20231128T165324--install-linux-distro-over-
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T142532--enable-wsl-on-windows__windows_wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T142532--enable-wsl-on-windows__windows_wsl.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[my dev environment]]></title>
@@ -524,18 +620,18 @@ Guide how to do that here - <a href="20231128T165324--install-linux-distro-over-
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8c314c0">1. <span class="todo TODO">TODO</span> apie my computer setup</a></li>
+<li><a href="#orge74d480">1. <span class="todo TODO">TODO</span> apie my computer setup</a></li>
 </ul>
 </div>
 </nav>
 
-<figure id="orgdf335e0">
+<figure id="orgfbff101">
 <img src="../media/Screenshot 2023-11-17 163344 - very quaint.png" alt="Screenshot 2023-11-17 163344 - very quaint.png" width="400px">
 
 </figure>
 
-<div id="outline-container-org8c314c0" class="outline-2">
-<h2 id="org8c314c0"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> apie my computer setup</h2>
+<div id="outline-container-orge74d480" class="outline-2">
+<h2 id="orge74d480"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> apie my computer setup</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>windows</li>
@@ -554,7 +650,7 @@ Guide how to do that here - <a href="20231128T165324--install-linux-distro-over-
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T105653--my-dev-environment__git_scripting_wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T105653--my-dev-environment__git_scripting_wsl.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[setup custom domain for github pages]]></title>
@@ -567,7 +663,7 @@ This video below has a good explanation - <a href="https://www.youtube.com/watch
   <category><![CDATA[websites]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T094426--setup-custom-domain-for-github-pages__git_websites.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T094426--setup-custom-domain-for-github-pages__git_websites.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[authenticate to git with gpg key]]></title>
@@ -576,13 +672,13 @@ This video below has a good explanation - <a href="https://www.youtube.com/watch
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org3078866">1. <span class="todo TODO">TODO</span> gpg key method</a></li>
+<li><a href="#org6271f02">1. <span class="todo TODO">TODO</span> gpg key method</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org3078866" class="outline-2">
-<h2 id="org3078866"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> gpg key method</h2>
+<div id="outline-container-org6271f02" class="outline-2">
+<h2 id="org6271f02"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> gpg key method</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Colleague gave some tutorials in work notes.
@@ -594,7 +690,7 @@ Colleague gave some tutorials in work notes.
   <category><![CDATA[gpg]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T061312--authenticate-to-git-with-gpg-key__git_gpg.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T061312--authenticate-to-git-with-gpg-key__git_gpg.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[authenticate to git with personal access token]]></title>
@@ -603,14 +699,14 @@ Colleague gave some tutorials in work notes.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5b79d21">1. Personal access token</a></li>
-<li><a href="#org7cc9565">2. Misc info</a></li>
+<li><a href="#org17d8aef">1. Personal access token</a></li>
+<li><a href="#orga75bb6a">2. Misc info</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org5b79d21" class="outline-2">
-<h2 id="org5b79d21"><span class="section-number-2">1.</span> Personal access token</h2>
+<div id="outline-container-org17d8aef" class="outline-2">
+<h2 id="org17d8aef"><span class="section-number-2">1.</span> Personal access token</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 After you have <a href="20231211T161252--introduce-yourself-to-git__git.html">introduced yourself to git</a>.
@@ -647,8 +743,8 @@ Git will remember your credentials for future git operations.
 </div>
 </div>
 
-<div id="outline-container-org7cc9565" class="outline-2">
-<h2 id="org7cc9565"><span class="section-number-2">2.</span> Misc info</h2>
+<div id="outline-container-orga75bb6a" class="outline-2">
+<h2 id="orga75bb6a"><span class="section-number-2">2.</span> Misc info</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Changing the token - <a href="https://stackoverflow.com/questions/46645843/where-to-store-my-git-personal-access-token">Explanation here</a>.
@@ -664,7 +760,7 @@ Changing the token - <a href="https://stackoverflow.com/questions/46645843/where
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T060637--authenticate-to-git-with-personal-access-token__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T060637--authenticate-to-git-with-personal-access-token__git.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[authenticate to git with ssh]]></title>
@@ -673,13 +769,13 @@ Changing the token - <a href="https://stackoverflow.com/questions/46645843/where
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9096c70">1. <span class="todo TODO">TODO</span> ssh key method</a></li>
+<li><a href="#orgf7a45be">1. <span class="todo TODO">TODO</span> ssh key method</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org9096c70" class="outline-2">
-<h2 id="org9096c70"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> ssh key method</h2>
+<div id="outline-container-orgf7a45be" class="outline-2">
+<h2 id="orgf7a45be"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> ssh key method</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 I have described it in work notes.
@@ -691,7 +787,7 @@ I have described it in work notes.
   <category><![CDATA[ssh]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231214T060558--authenticate-to-git-with-ssh__git_ssh.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231214T060558--authenticate-to-git-with-ssh__git_ssh.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[multiple ways to blog with emacs]]></title>
@@ -700,38 +796,38 @@ I have described it in work notes.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0fff45a">two blog examples</a></li>
-<li><a href="#orgb502387">multiple ways to blog with emacs</a>
+<li><a href="#org0f99b4a">two blog examples</a></li>
+<li><a href="#org7ae9f5e">multiple ways to blog with emacs</a>
 <ul>
-<li><a href="#org767db1c">simple export with C-c C-e h o</a>
+<li><a href="#org3538009">simple export with C-c C-e h o</a>
 <ul>
-<li><a href="#org5dd6d2e">PROS</a></li>
-<li><a href="#org6727119">CONS</a></li>
+<li><a href="#orgf0bd1c5">PROS</a></li>
+<li><a href="#org7f073f0">CONS</a></li>
 </ul>
 </li>
-<li><a href="#org2b5cbbd">ox-publish C-c C-e P p</a>
+<li><a href="#org96bb7a2">ox-publish C-c C-e P p</a>
 <ul>
-<li><a href="#orgdffe8c5">PROS</a></li>
-<li><a href="#org825d993">CONS</a></li>
+<li><a href="#org37f301e">PROS</a></li>
+<li><a href="#org7959c40">CONS</a></li>
 </ul>
 </li>
-<li><a href="#orgf2d4845">org-static-blog-publish</a>
+<li><a href="#orgb050fae">org-static-blog-publish</a>
 <ul>
-<li><a href="#org3e632d4">PROS</a></li>
-<li><a href="#org5549aa1">CONS</a></li>
+<li><a href="#org92e2145">PROS</a></li>
+<li><a href="#org7323291">CONS</a></li>
 </ul>
 </li>
-<li><a href="#orgc20fda0">weblorg?</a></li>
+<li><a href="#org690b441">weblorg?</a></li>
 </ul>
 </li>
-<li><a href="#orgbe0c3a8">Checkout</a>
+<li><a href="#orgc4ef90d">Checkout</a>
 <ul>
-<li><a href="#org9306c15"><span class="todo TODO">TODO</span> Cool check this out!</a></li>
-<li><a href="#org839da19"><span class="todo TODO">TODO</span> bro what??? automatic to github?</a></li>
-<li><a href="#orgf42a9b2"><span class="todo TODO">TODO</span> check his postamble/preamble things</a></li>
+<li><a href="#org5237d8f"><span class="todo TODO">TODO</span> Cool check this out!</a></li>
+<li><a href="#orga6d3504"><span class="todo TODO">TODO</span> bro what??? automatic to github?</a></li>
+<li><a href="#org512625c"><span class="todo TODO">TODO</span> check his postamble/preamble things</a></li>
 </ul>
 </li>
-<li><a href="#org16a601d">How I am using denote</a></li>
+<li><a href="#orgf4677e9">How I am using denote</a></li>
 </ul>
 </div>
 </nav>
@@ -744,9 +840,9 @@ blog setup. So it&rsquo;s just brainstorming.. did not want to lose it, so keepi
 Explains how to build a blog wiht org mode - <a href="https://taingram.org/blog/org-mode-blog.html">https://taingram.org/blog/org-mode-blog.html</a>
 </p>
 
-<div id="outline-container-org0fff45a" class="outline-2">
-<h2 id="org0fff45a">two blog examples</h2>
-<div class="outline-text-2" id="text-org0fff45a">
+<div id="outline-container-org0f99b4a" class="outline-2">
+<h2 id="org0f99b4a">two blog examples</h2>
+<div class="outline-text-2" id="text-org0f99b4a">
 <p>
 This way of creating a blog, unlike
 <a href="https://github.com/arvydasg/org-static-blog">https://github.com/arvydasg/org-static-blog</a>, does not have a possibility to do
@@ -775,9 +871,9 @@ emacs html backend engine. This is how my arvydas.dev page is built.
 </div>
 </div>
 
-<div id="outline-container-orgb502387" class="outline-2">
-<h2 id="orgb502387">multiple ways to blog with emacs</h2>
-<div class="outline-text-2" id="text-orgb502387">
+<div id="outline-container-org7ae9f5e" class="outline-2">
+<h2 id="org7ae9f5e">multiple ways to blog with emacs</h2>
+<div class="outline-text-2" id="text-org7ae9f5e">
 <p>
 In all ways - to deploy to github, must have index.html in the directory! Other
 wise git will not know what to serve. Can use special symbols(bottom of the
@@ -805,13 +901,13 @@ page - <a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial
 </div>
 </div>
 
-<div id="outline-container-org767db1c" class="outline-3">
-<h3 id="org767db1c">simple export with C-c C-e h o</h3>
-<div class="outline-text-3" id="text-org767db1c">
+<div id="outline-container-org3538009" class="outline-3">
+<h3 id="org3538009">simple export with C-c C-e h o</h3>
+<div class="outline-text-3" id="text-org3538009">
 </div>
-<div id="outline-container-org5dd6d2e" class="outline-4">
-<h4 id="org5dd6d2e">PROS</h4>
-<div class="outline-text-4" id="text-org5dd6d2e">
+<div id="outline-container-orgf0bd1c5" class="outline-4">
+<h4 id="orgf0bd1c5">PROS</h4>
+<div class="outline-text-4" id="text-orgf0bd1c5">
 <ul class="org-ul">
 <li>no dependencies, can do anywhere</li>
 <li>built in</li>
@@ -819,9 +915,9 @@ page - <a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial
 </div>
 </div>
 
-<div id="outline-container-org6727119" class="outline-4">
-<h4 id="org6727119">CONS</h4>
-<div class="outline-text-4" id="text-org6727119">
+<div id="outline-container-org7f073f0" class="outline-4">
+<h4 id="org7f073f0">CONS</h4>
+<div class="outline-text-4" id="text-org7f073f0">
 <ul class="org-ul">
 <li>can&rsquo;t export more than one file</li>
 <li>unclear about links, have not tried, but probs dont work</li>
@@ -830,9 +926,9 @@ page - <a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial
 </div>
 </div>
 
-<div id="outline-container-org2b5cbbd" class="outline-3">
-<h3 id="org2b5cbbd">ox-publish C-c C-e P p</h3>
-<div class="outline-text-3" id="text-org2b5cbbd">
+<div id="outline-container-org96bb7a2" class="outline-3">
+<h3 id="org96bb7a2">ox-publish C-c C-e P p</h3>
+<div class="outline-text-3" id="text-org96bb7a2">
 <p>
 Can do basic batch export with header, footer, no need to use additional package.
 </p>
@@ -897,9 +993,9 @@ Check the docs for more options here -
 </p>
 </div>
 
-<div id="outline-container-orgdffe8c5" class="outline-4">
-<h4 id="orgdffe8c5">PROS</h4>
-<div class="outline-text-4" id="text-orgdffe8c5">
+<div id="outline-container-org37f301e" class="outline-4">
+<h4 id="org37f301e">PROS</h4>
+<div class="outline-text-4" id="text-org37f301e">
 <ul class="org-ul">
 <li>can work with multiple projects</li>
 <li>each project can be specified in a separate config</li>
@@ -910,9 +1006,9 @@ Check the docs for more options here -
 </div>
 </div>
 
-<div id="outline-container-org825d993" class="outline-4">
-<h4 id="org825d993">CONS</h4>
-<div class="outline-text-4" id="text-org825d993">
+<div id="outline-container-org7959c40" class="outline-4">
+<h4 id="org7959c40">CONS</h4>
+<div class="outline-text-4" id="text-org7959c40">
 <ul class="org-ul">
 <li>links don&rsquo;t work</li>
 </ul>
@@ -920,13 +1016,13 @@ Check the docs for more options here -
 </div>
 </div>
 
-<div id="outline-container-orgf2d4845" class="outline-3">
-<h3 id="orgf2d4845">org-static-blog-publish</h3>
-<div class="outline-text-3" id="text-orgf2d4845">
+<div id="outline-container-orgb050fae" class="outline-3">
+<h3 id="orgb050fae">org-static-blog-publish</h3>
+<div class="outline-text-3" id="text-orgb050fae">
 </div>
-<div id="outline-container-org3e632d4" class="outline-4">
-<h4 id="org3e632d4">PROS</h4>
-<div class="outline-text-4" id="text-org3e632d4">
+<div id="outline-container-org92e2145" class="outline-4">
+<h4 id="org92e2145">PROS</h4>
+<div class="outline-text-4" id="text-org92e2145">
 <ul class="org-ul">
 <li>does everything for you</li>
 <li>tags</li>
@@ -937,9 +1033,9 @@ Check the docs for more options here -
 </div>
 </div>
 
-<div id="outline-container-org5549aa1" class="outline-4">
-<h4 id="org5549aa1">CONS</h4>
-<div class="outline-text-4" id="text-org5549aa1">
+<div id="outline-container-org7323291" class="outline-4">
+<h4 id="org7323291">CONS</h4>
+<div class="outline-text-4" id="text-org7323291">
 <ul class="org-ul">
 <li>big program(installable package, not built in)</li>
 <li>links don&rsquo;t work</li>
@@ -948,9 +1044,9 @@ Check the docs for more options here -
 </div>
 </div>
 </div>
-<div id="outline-container-orgc20fda0" class="outline-3">
-<h3 id="orgc20fda0">weblorg?</h3>
-<div class="outline-text-3" id="text-orgc20fda0">
+<div id="outline-container-org690b441" class="outline-3">
+<h3 id="org690b441">weblorg?</h3>
+<div class="outline-text-3" id="text-org690b441">
 <p>
 David tried -
 <a href="https://www.youtube.com/watch?v=5R7ad5xz5wo&amp;t=5746s&amp;ab_channel=SystemCrafters">https://www.youtube.com/watch?v=5R7ad5xz5wo&amp;t=5746s&amp;ab_channel=SystemCrafters</a>
@@ -958,13 +1054,13 @@ David tried -
 </div>
 </div>
 </div>
-<div id="outline-container-orgbe0c3a8" class="outline-2">
-<h2 id="orgbe0c3a8">Checkout</h2>
-<div class="outline-text-2" id="text-orgbe0c3a8">
+<div id="outline-container-orgc4ef90d" class="outline-2">
+<h2 id="orgc4ef90d">Checkout</h2>
+<div class="outline-text-2" id="text-orgc4ef90d">
 </div>
-<div id="outline-container-org9306c15" class="outline-3">
-<h3 id="org9306c15"><span class="todo TODO">TODO</span> Cool check this out!</h3>
-<div class="outline-text-3" id="text-org9306c15">
+<div id="outline-container-org5237d8f" class="outline-3">
+<h3 id="org5237d8f"><span class="todo TODO">TODO</span> Cool check this out!</h3>
+<div class="outline-text-3" id="text-org5237d8f">
 <p>
 <a href="https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html">https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html</a>
 </p>
@@ -980,9 +1076,9 @@ naudoja?
 </div>
 </div>
 
-<div id="outline-container-org839da19" class="outline-3">
-<h3 id="org839da19"><span class="todo TODO">TODO</span> bro what??? automatic to github?</h3>
-<div class="outline-text-3" id="text-org839da19">
+<div id="outline-container-orga6d3504" class="outline-3">
+<h3 id="orga6d3504"><span class="todo TODO">TODO</span> bro what??? automatic to github?</h3>
+<div class="outline-text-3" id="text-orga6d3504">
 <p>
 <a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/</a>
 </p>
@@ -994,18 +1090,18 @@ website to Git hosting services like GitHub Pages and Sourcehut Pages!
 </div>
 </div>
 
-<div id="outline-container-orgf42a9b2" class="outline-3">
-<h3 id="orgf42a9b2"><span class="todo TODO">TODO</span> check his postamble/preamble things</h3>
-<div class="outline-text-3" id="text-orgf42a9b2">
+<div id="outline-container-org512625c" class="outline-3">
+<h3 id="org512625c"><span class="todo TODO">TODO</span> check his postamble/preamble things</h3>
+<div class="outline-text-3" id="text-org512625c">
 <p>
 <a href="https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html">https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html</a>
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org16a601d" class="outline-2">
-<h2 id="org16a601d">How I am using denote</h2>
-<div class="outline-text-2" id="text-org16a601d">
+<div id="outline-container-orgf4677e9" class="outline-2">
+<h2 id="orgf4677e9">How I am using denote</h2>
+<div class="outline-text-2" id="text-orgf4677e9">
 <p>
 Denote allows me to generate blog files quick and easy. They are all in the
 same structure, do not require databse. I can link between them.
@@ -1050,7 +1146,7 @@ which contains all my personal files.
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231212T200335--multiple-ways-to-blog-with-emacs__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231212T200335--multiple-ways-to-blog-with-emacs__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[deploy a static website with github pages]]></title>
@@ -1059,14 +1155,14 @@ which contains all my personal files.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org539c0f9">1. Create the main <code>username.github.io</code> page</a></li>
-<li><a href="#org6b7aeda">2. Create <code>subpages</code> for <code>username.github.io</code></a></li>
+<li><a href="#orgae53341">1. Create the main <code>username.github.io</code> page</a></li>
+<li><a href="#org101f8d5">2. Create <code>subpages</code> for <code>username.github.io</code></a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org539c0f9" class="outline-2">
-<h2 id="org539c0f9"><span class="section-number-2">1.</span> Create the main <code>username.github.io</code> page</h2>
+<div id="outline-container-orgae53341" class="outline-2">
+<h2 id="orgae53341"><span class="section-number-2">1.</span> Create the main <code>username.github.io</code> page</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 The idea is - you have lot's of html pages(or a single html page).
@@ -1093,8 +1189,8 @@ side also to link to github. Probably <a href="https://docs.github.com/en/pages/
 </div>
 </div>
 
-<div id="outline-container-org6b7aeda" class="outline-2">
-<h2 id="org6b7aeda"><span class="section-number-2">2.</span> Create <code>subpages</code> for <code>username.github.io</code></h2>
+<div id="outline-container-org101f8d5" class="outline-2">
+<h2 id="org101f8d5"><span class="section-number-2">2.</span> Create <code>subpages</code> for <code>username.github.io</code></h2>
 <div class="outline-text-2" id="text-2">
 <p>
 So you have <code>&lt;yourgithubusername@github.io&gt;</code> website up and running. But you
@@ -1116,270 +1212,7 @@ Also devnotes - <a href="https://arvydas.dev/devnotes/html">https://arvydas.dev/
   <category><![CDATA[websites]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231212T123552--deploy-a-static-website-with-github-pages__git_websites.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231212T123552--deploy-a-static-website-with-github-pages__git_websites.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
-</item>
-<item>
-  <title><![CDATA[blog with built in org export]]></title>
-  <description><![CDATA[
-<nav id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org3a679c9">1. what is org-export-html</a></li>
-<li><a href="#org6d6e519">2. How to use it</a></li>
-<li><a href="#orgd0dc830">3. How to extend it</a>
-<ul>
-<li><a href="#org148c053">3.1. My org file looks like so:</a></li>
-<li><a href="#org294b187">3.2. The extension with org-html-head/preamble/postamble</a></li>
-</ul>
-</li>
-<li><a href="#org16cee2a">4. Limitations</a></li>
-</ul>
-</div>
-</nav>
-
-<div id="outline-container-org3a679c9" class="outline-2">
-<h2 id="org3a679c9"><span class="section-number-2">1.</span> what is org-export-html</h2>
-<div class="outline-text-2" id="text-1">
-<p>
-Built in Emacs export posibility. Html export is just one of the options (C-c
-C-e).
-</p>
-</div>
-</div>
-
-<div id="outline-container-org6d6e519" class="outline-2">
-<h2 id="org6d6e519"><span class="section-number-2">2.</span> How to use it</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-<code>C-e h h</code> command exports .org file without ANY additional settings. It is just
-built in Emacs behavior.
-</p>
-
-<p>
-Can try it out with such sample .org file with such content :
-</p>
-
-<div class="org-src-container">
-<pre class="src src-org">* Intro
-
-* Body
-
-** First attempts
-
-I was trying to do the same with my journey to programming. It started
-a bit more than a year ago and since them I was trying to create
-personal blog/website.
-
-- First with php - [[https://github.com/arvydasg/gvazdikelis][gvazdikelis]]
-- Then with hugo - [[https://github.com/arvydasg/arvydas.dev_hugo][arvydas.dev_hugo]]
-- Finally with django - [[https://github.com/arvydasg/django_blog][django_blog]]
-
-* Current setup
-
-[2022-04-17 Sk] I discovered a way to make a website with emacs.
-[[https://systemcrafters.net/publishing-websites-with-org-mode/][Systemcrafters channel]] has a lot of great material covering just that.
-
-I knew that this is the right way for me to blog, because:
-
-- I can use my emacs shortcuts to write and edit
-- I don’t need to reformat text to make it readable for something like
-  CKEditor in python [[https://github.com/arvydasg/emacs_blog][django]]. I can just straight up use emacs source
-  blocks, headings, text blocks and so on and everything just works,
-- I can publish my blog just as easily wit [[https://magit.vc/][Magit]], push straight to
-  Github and the changes will be visible immediately in my website,
-
-* Summary
-
-For me, this is the fastest way to blog. I will be using it in the
-future and hopefully improve my workflow as I go along.
-
-P.S. Update 2022-08-29. I am creating a hugo blog - AGAIN. Read why -
-[[https://github.com/arvydasg/emacs_blog][here]].
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgd0dc830" class="outline-2">
-<h2 id="orgd0dc830"><span class="section-number-2">3.</span> How to extend it</h2>
-<div class="outline-text-2" id="text-3">
-<p>
-For "Codeacademy" project, for when I was taking notes for it, I added
-additional configuration that you see below to make the site look nicer and add
-additional functionality.
-</p>
-</div>
-
-<div id="outline-container-org148c053" class="outline-3">
-<h3 id="org148c053"><span class="section-number-3">3.1.</span> My org file looks like so:</h3>
-<div class="outline-text-3" id="text-3-1">
-<div class="org-src-container">
-<pre class="src src-org">#+title: Attempts to Blog
-#+date: &lt;2022-06-19 20:04&gt;
-#+description:
-#+filetags: emacs python
-
-#+attr_html: :width 1200px
-#+ATTR_ORG: :width 600
-[[./static/images/emacsblog.png]]
-
-* Intro
-
-* Body
-
-** First attempts
-
-I was trying to do the same with my journey to programming. It started
-a bit more than a year ago and since them I was trying to create
-personal blog/website.
-
-- First with php - [[https://github.com/arvydasg/gvazdikelis][gvazdikelis]]
-- Then with hugo - [[https://github.com/arvydasg/arvydas.dev_hugo][arvydas.dev_hugo]]
-- Finally with django - [[https://github.com/arvydasg/django_blog][django_blog]]
-
-* Current setup
-
-[2022-04-17 Sk] I discovered a way to make a website with emacs.
-[[https://systemcrafters.net/publishing-websites-with-org-mode/][Systemcrafters channel]] has a lot of great material covering just that.
-
-I knew that this is the right way for me to blog, because:
-
-- I can use my emacs shortcuts to write and edit
-- I don’t need to reformat text to make it readable for something like
-  CKEditor in python [[https://github.com/arvydasg/emacs_blog][django]]. I can just straight up use emacs source
-  blocks, headings, text blocks and so on and everything just works,
-- I can publish my blog just as easily wit [[https://magit.vc/][Magit]], push straight to
-  Github and the changes will be visible immediately in my website,
-
-* Summary
-
-For me, this is the fastest way to blog. I will be using it in the
-future and hopefully improve my workflow as I go along.
-
-P.S. Update 2022-08-29. I am creating a hugo blog - AGAIN. Read why -
-[[https://github.com/arvydasg/emacs_blog][here]].
-
-</pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org294b187" class="outline-3">
-<h3 id="org294b187"><span class="section-number-3">3.2.</span> The extension with org-html-head/preamble/postamble</h3>
-<div class="outline-text-3" id="text-3-2">
-<p>
-The code below adds navigation right after the opening &lt;body&gt; tag and some js
-right before the closing &lt;/body&gt; tag.
-</p>
-
-<p>
-&lt;head&gt; html content is added from within the org file, dont forget to change
-the “title” and “content” the file.
-</p>
-
-<div class="org-src-container">
-<pre class="src src-emacs-lisp">;; leaving this content to be in specific org files instead
-
-;; (setq org-html-head
-;;       (concat
-;;        "&lt;head&gt;\n"
-;;        "&lt;meta charset=\"UTF-8\"&gt;\n"
-;;        "&lt;meta name=\"description\" content=\"CodeAcademy Python notes\"&gt;\n"
-;;        "&lt;link rel=\"alternate\" type=\"application/rss+xml\" href=\"https://arvydasg.github.io/rss.xml\" title=\"RSS feed for https://arvydasg.github.io/\"&gt;\n"
-;;        "&lt;title&gt;CodeAcademy Databases&lt;/title&gt;\n"
-;;        "&lt;!-- Google Tag Manager --&gt;\n"
-;;        "&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-MC4ZQHP');&lt;/script&gt;\n"
-;;        "&lt;!-- End Google Tag Manager --&gt;\n"
-;;        "&lt;meta name=\"author\" content=\"Arvydas Gasparavicius\"&gt;\n"
-;;        "&lt;meta name=\"referrer\" content=\"no-referrer\"&gt;\n"
-;;        "&lt;meta name=\"viewport\" content=\"initial-scale=1,width=device-width,minimum-scale=1\"&gt;\n"
-;;        "&lt;link href=\"../readtheorg.css\" rel=\"stylesheet\" type=\"text/css\" /&gt;\n"
-;;        "&lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\" /&gt;\n"
-;;        "&lt;script src=\"static/lightbox.js\"&gt;&lt;/script&gt;\n"
-;;        "&lt;script src=\"static/auto-render.min.js\"&gt;&lt;/script&gt;\n"
-;;        "&lt;link rel=\"icon\" href=\"static/ag.ico\"&gt;\n"
-;;        "&lt;/head&gt;\n"
-;;        ))
-
-(setq org-html-preamble
-      (concat
-       "&lt;body&gt;\n"
-       "
-&lt;!-- Google Tag Manager (noscript) --&gt;
-    &lt;noscript&gt;&lt;iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-MC4ZQHP\"
-                      height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"&gt;&lt;/iframe&gt;&lt;/noscript&gt;
-    &lt;!-- End Google Tag Manager (noscript) --&gt;
-    &lt;nav class=\"text-center navbar navbar-expand-lg navbar-light bg-light\"&gt;
-            &lt;button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"&gt;
-                &lt;span class=\"navbar-toggler-icon\"&gt;&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;div style=\"justify-content:center\" class=\"collapse navbar-collapse \" id=\"navbarNav\"&gt;
-                &lt;ul class=\"navbar-nav\"&gt;
-                    &lt;li class=\"nav-item\"&gt;
-                        &lt;a class=\"nav-link\" href=\"https://arvydas.dev/codeacademy/\"&gt;Home &lt;span class=\"sr-only\"&gt;(current)&lt;/span&gt;&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li class=\"nav-item\"&gt;
-                        &lt;a class=\"nav-link\" href=\"https://arvydas.dev/codeacademy/html_css/index.html\"&gt;HTML/CSS&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li class=\"nav-item\"&gt;
-                        &lt;a class=\"nav-link\" href=\"https://arvydas.dev/codeacademy/javascript/index.html\"&gt;JavaScript&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li class=\"nav-item\"&gt;
-                        &lt;a class=\"nav-link \" href=\"https://arvydas.dev/codeacademy/python/index.html\"&gt;Python&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li class=\"nav-item\"&gt;
-                        &lt;a class=\"nav-link active \" href=\"https://arvydas.dev/codeacademy/databases/index.html\"&gt;Databases&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li class=\"nav-item\"&gt;
-                        &lt;a class=\"nav-link \" href=\"https://arvydas.dev/codeacademy/flask/index.html\"&gt;Flask&lt;/a&gt;
-                    &lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-    &lt;/nav&gt;"
-       ))
-
-(setq org-html-postamble
-      (concat
-       "&lt;!-- bootstrap scripts --&gt;\n"
-       "&lt;script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"\n"
-       "        integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\"\n"
-       "        crossorigin=\"anonymous\"&gt;&lt;/script&gt;\n"
-       "&lt;script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js\"\n"
-       "        integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\"\n"
-       "        crossorigin=\"anonymous\"&gt;&lt;/script&gt;\n"
-       "&lt;script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js\"\n"
-       "        integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\"\n"
-       "        crossorigin=\"anonymous\"&gt;&lt;/script&gt;\n"
-       "&lt;button onclick=\"topFunction()\" id=\"myBtn\" title=\"Go to top\"&gt;Top&lt;/button&gt;\n"
-       "&lt;script src=\"../scripts.js\"&gt;&lt;/script&gt;\n"
-       "&lt;/body&gt;\n"
-       "&lt;/html&gt;\n"
-       ))
-
-</pre>
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org16cee2a" class="outline-2">
-<h2 id="org16cee2a"><span class="section-number-2">4.</span> Limitations</h2>
-<div class="outline-text-2" id="text-4">
-<ul class="org-ul">
-<li>no tags</li>
-<li>exports in the same folder</li>
-<li>if multiple files have changes - run the export for multiple files. too much
-hassle.</li>
-</ul>
-</div>
-</div>
-<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> <a href="https://arvydasg.github.io/devnotes/html/tag-websites.html">websites</a> </div>]]></description>
-  <category><![CDATA[emacs]]></category>
-  <category><![CDATA[websites]]></category>
-  <link>https://arvydasg.github.io/devnotes/html/20231212T102719--blog-with-built-in-org-export__emacs_websites.html</link>
-  <guid>https://arvydasg.github.io/devnotes/html/20231212T102719--blog-with-built-in-org-export__emacs_websites.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[introduce yourself to git]]></title>
@@ -1438,7 +1271,7 @@ There are multiple ways to get that password:
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231211T161252--introduce-yourself-to-git__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231211T161252--introduce-yourself-to-git__git.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[first nixos installation]]></title>
@@ -1447,19 +1280,19 @@ There are multiple ways to get that password:
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgb4d7adf">1. <span class="todo TODO">TODO</span> Why NixOS</a></li>
-<li><a href="#org24073b9">2. Why NixOS by others</a></li>
-<li><a href="#orgb210682">3. Documentation</a></li>
-<li><a href="#org57e4986">4. Installation on WSL</a></li>
-<li><a href="#org856eb17">5. Configure the installation over emacs</a></li>
-<li><a href="#org3703ea3">6. Using your own custom nixos configuration file</a></li>
-<li><a href="#org9a91acb">7. Setting up git</a></li>
+<li><a href="#org7dc33af">1. <span class="todo TODO">TODO</span> Why NixOS</a></li>
+<li><a href="#orgd2cdac0">2. Why NixOS by others</a></li>
+<li><a href="#org5869431">3. Documentation</a></li>
+<li><a href="#orga6512c8">4. Installation on WSL</a></li>
+<li><a href="#orgf80035c">5. Configure the installation over emacs</a></li>
+<li><a href="#orgb55c012">6. Using your own custom nixos configuration file</a></li>
+<li><a href="#orgd2b09a1">7. Setting up git</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgb4d7adf" class="outline-2">
-<h2 id="orgb4d7adf"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> Why NixOS</h2>
+<div id="outline-container-org7dc33af" class="outline-2">
+<h2 id="org7dc33af"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> Why NixOS</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 AFTER you reinstall your computer - to install the DEV environment, all you
@@ -1473,8 +1306,8 @@ Avoid long reinstall &amp; config process
 </div>
 </div>
 
-<div id="outline-container-org24073b9" class="outline-2">
-<h2 id="org24073b9"><span class="section-number-2">2.</span> Why NixOS by others</h2>
+<div id="outline-container-orgd2cdac0" class="outline-2">
+<h2 id="orgd2cdac0"><span class="section-number-2">2.</span> Why NixOS by others</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li><a href="https://github.com/hlissner/dotfiles">https://github.com/hlissner/dotfiles</a></li>
@@ -1483,8 +1316,8 @@ Avoid long reinstall &amp; config process
 </div>
 </div>
 
-<div id="outline-container-orgb210682" class="outline-2">
-<h2 id="orgb210682"><span class="section-number-2">3.</span> Documentation</h2>
+<div id="outline-container-org5869431" class="outline-2">
+<h2 id="org5869431"><span class="section-number-2">3.</span> Documentation</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>nixos github repo - <a href="https://github.com/nix-community/NixOS-WSL">https://github.com/nix-community/NixOS-WSL</a></li>
@@ -1493,8 +1326,8 @@ Avoid long reinstall &amp; config process
 </div>
 </div>
 
-<div id="outline-container-org57e4986" class="outline-2">
-<h2 id="org57e4986"><span class="section-number-2">4.</span> Installation on WSL</h2>
+<div id="outline-container-orga6512c8" class="outline-2">
+<h2 id="orga6512c8"><span class="section-number-2">4.</span> Installation on WSL</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Steps described here:
@@ -1544,8 +1377,8 @@ sudo nix-channel --update
 </div>
 </div>
 
-<div id="outline-container-org856eb17" class="outline-2">
-<h2 id="org856eb17"><span class="section-number-2">5.</span> Configure the installation over emacs</h2>
+<div id="outline-container-orgf80035c" class="outline-2">
+<h2 id="orgf80035c"><span class="section-number-2">5.</span> Configure the installation over emacs</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Enter nix-shell to use emacs(it does not get installed on the system, just
@@ -1622,8 +1455,8 @@ Try to launch emacs for all the packages to be installed.
 </div>
 </div>
 
-<div id="outline-container-org3703ea3" class="outline-2">
-<h2 id="org3703ea3"><span class="section-number-2">6.</span> Using your own custom nixos configuration file</h2>
+<div id="outline-container-orgb55c012" class="outline-2">
+<h2 id="orgb55c012"><span class="section-number-2">6.</span> Using your own custom nixos configuration file</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 It suchs to not be able to edit the <code>/etc/nixos/configuration.nix</code> file over
@@ -1645,8 +1478,8 @@ You are done. Should be able to edit <code>configuration.nix</code> file now.
 </div>
 </div>
 
-<div id="outline-container-org9a91acb" class="outline-2">
-<h2 id="org9a91acb"><span class="section-number-2">7.</span> Setting up git</h2>
+<div id="outline-container-orgd2b09a1" class="outline-2">
+<h2 id="orgd2b09a1"><span class="section-number-2">7.</span> Setting up git</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 First try <a href="20231211T161252--introduce-yourself-to-git__git.html">this</a>, then one of these:
@@ -1663,7 +1496,7 @@ First try <a href="20231211T161252--introduce-yourself-to-git__git.html">this</a
   <category><![CDATA[nixos]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231211T151427--first-nixos-installation__nixos.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231211T151427--first-nixos-installation__nixos.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[wsl clock is out of sync with windows]]></title>
@@ -1672,15 +1505,15 @@ First try <a href="20231211T161252--introduce-yourself-to-git__git.html">this</a
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5f737a6">1. The problem</a></li>
-<li><a href="#org10358d3">2. Possible solution</a></li>
-<li><a href="#orgb12cd33">3. Solution that works best for me now</a></li>
+<li><a href="#orga105c0f">1. The problem</a></li>
+<li><a href="#org49ce183">2. Possible solution</a></li>
+<li><a href="#org6127af5">3. Solution that works best for me now</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org5f737a6" class="outline-2">
-<h2 id="org5f737a6"><span class="section-number-2">1.</span> The problem</h2>
+<div id="outline-container-orga105c0f" class="outline-2">
+<h2 id="orga105c0f"><span class="section-number-2">1.</span> The problem</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Having this problem -
@@ -1702,8 +1535,8 @@ You will notice two different times. They should be the same.
 </div>
 </div>
 
-<div id="outline-container-org10358d3" class="outline-2">
-<h2 id="org10358d3"><span class="section-number-2">2.</span> Possible solution</h2>
+<div id="outline-container-org49ce183" class="outline-2">
+<h2 id="org49ce183"><span class="section-number-2">2.</span> Possible solution</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Solution is to run <code>sudo hwclock -s</code> command. It will sync the time. For that
@@ -1723,8 +1556,8 @@ when I run it.
 </div>
 </div>
 
-<div id="outline-container-orgb12cd33" class="outline-2">
-<h2 id="orgb12cd33"><span class="section-number-2">3.</span> Solution that works best for me now</h2>
+<div id="outline-container-org6127af5" class="outline-2">
+<h2 id="org6127af5"><span class="section-number-2">3.</span> Solution that works best for me now</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 <a href="https://github.com/microsoft/WSL/issues/8204#issuecomment-1338334154">https://github.com/microsoft/WSL/issues/8204#issuecomment-1338334154</a>
@@ -1736,7 +1569,7 @@ when I run it.
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231209T200922--wsl-clock-is-out-of-sync-with-windows__windows_wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231209T200922--wsl-clock-is-out-of-sync-with-windows__windows_wsl.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[perspective and denote conflict]]></title>
@@ -1800,7 +1633,7 @@ It did help!!! I am a magician!!
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231209T181842--perspective-and-denote-conflict__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231209T181842--perspective-and-denote-conflict__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[freshsetup]]></title>
@@ -1834,7 +1667,7 @@ windows. But If I am using nixos&#x2026; stuff will change. :) More on that late
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231209T093750--freshsetup__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231209T093750--freshsetup__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[moving emacsd into dotfiles repo]]></title>
@@ -1886,7 +1719,7 @@ machine. Great! xoxo
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231209T080431--moving-emacsd-into-dotfiles-repo__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231209T080431--moving-emacsd-into-dotfiles-repo__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[django best practices]]></title>
@@ -1895,12 +1728,12 @@ machine. Great! xoxo
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org399d413">1. Instead of /admin change to smth else URL Django</a></li>
-<li><a href="#orgea0ac27">2. Use environment variables</a></li>
-<li><a href="#orgfbc404e">3. Use postgres db</a></li>
-<li><a href="#org66c0fbe">4. Use two different settings files</a></li>
-<li><a href="#orgd16165f">5. Expanding user model to store more user information</a></li>
-<li><a href="#orgbaf81e2">6. Update django every major version once every 9 months</a></li>
+<li><a href="#orge7609a0">1. Instead of /admin change to smth else URL Django</a></li>
+<li><a href="#org6d899bd">2. Use environment variables</a></li>
+<li><a href="#org4d88aea">3. Use postgres db</a></li>
+<li><a href="#org8fd3890">4. Use two different settings files</a></li>
+<li><a href="#orgaa50e8c">5. Expanding user model to store more user information</a></li>
+<li><a href="#org9e1b2e2">6. Update django every major version once every 9 months</a></li>
 </ul>
 </div>
 </nav>
@@ -1909,8 +1742,8 @@ Here I will write the tips that I found and that I use when building a Django
 project.
 </p>
 
-<div id="outline-container-org399d413" class="outline-2">
-<h2 id="org399d413"><span class="section-number-2">1.</span> Instead of /admin change to smth else URL Django</h2>
+<div id="outline-container-orge7609a0" class="outline-2">
+<h2 id="orge7609a0"><span class="section-number-2">1.</span> Instead of /admin change to smth else URL Django</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 For security. Everyone knows that if its a django project, it will have an
@@ -1919,8 +1752,8 @@ admin page
 </div>
 </div>
 
-<div id="outline-container-orgea0ac27" class="outline-2">
-<h2 id="orgea0ac27"><span class="section-number-2">2.</span> Use environment variables</h2>
+<div id="outline-container-org6d899bd" class="outline-2">
+<h2 id="org6d899bd"><span class="section-number-2">2.</span> Use environment variables</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>for secret key</li>
@@ -1931,8 +1764,8 @@ admin page
 </div>
 </div>
 
-<div id="outline-container-orgfbc404e" class="outline-2">
-<h2 id="orgfbc404e"><span class="section-number-2">3.</span> Use postgres db</h2>
+<div id="outline-container-org4d88aea" class="outline-2">
+<h2 id="org4d88aea"><span class="section-number-2">3.</span> Use postgres db</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Kind of default ageed db to use with Django
@@ -1940,8 +1773,8 @@ Kind of default ageed db to use with Django
 </div>
 </div>
 
-<div id="outline-container-org66c0fbe" class="outline-2">
-<h2 id="org66c0fbe"><span class="section-number-2">4.</span> Use two different settings files</h2>
+<div id="outline-container-org8fd3890" class="outline-2">
+<h2 id="org8fd3890"><span class="section-number-2">4.</span> Use two different settings files</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 One for prod another for acc(test) environment
@@ -1954,8 +1787,8 @@ from notes)
 </div>
 </div>
 
-<div id="outline-container-orgd16165f" class="outline-2">
-<h2 id="orgd16165f"><span class="section-number-2">5.</span> Expanding user model to store more user information</h2>
+<div id="outline-container-orgaa50e8c" class="outline-2">
+<h2 id="orgaa50e8c"><span class="section-number-2">5.</span> Expanding user model to store more user information</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 As described in my other post <a href="20231128T132201--expanding-user-model__django_sql.html">here</a>.
@@ -1963,8 +1796,8 @@ As described in my other post <a href="20231128T132201--expanding-user-model__dj
 </div>
 </div>
 
-<div id="outline-container-orgbaf81e2" class="outline-2">
-<h2 id="orgbaf81e2"><span class="section-number-2">6.</span> Update django every major version once every 9 months</h2>
+<div id="outline-container-org9e1b2e2" class="outline-2">
+<h2 id="org9e1b2e2"><span class="section-number-2">6.</span> Update django every major version once every 9 months</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Python -wd runserver depreciation warnings
@@ -1976,7 +1809,7 @@ Python -wd runserver depreciation warnings
   <category><![CDATA[python]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231207T204304--django-best-practices__django_python.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231207T204304--django-best-practices__django_python.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[seb nixos installation]]></title>
@@ -1985,13 +1818,13 @@ Python -wd runserver depreciation warnings
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgddf1777">1. <span class="todo TODO">TODO</span> do smth about this</a></li>
+<li><a href="#org8d5c630">1. <span class="todo TODO">TODO</span> do smth about this</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgddf1777" class="outline-2">
-<h2 id="orgddf1777"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> do smth about this</h2>
+<div id="outline-container-org8d5c630" class="outline-2">
+<h2 id="org8d5c630"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> do smth about this</h2>
 </div>
 <div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-linux.html">linux</a> <a href="https://arvydasg.github.io/devnotes/html/tag-nixos.html">nixos</a> <a href="https://arvydasg.github.io/devnotes/html/tag-wsl.html">wsl</a> </div>]]></description>
   <category><![CDATA[linux]]></category>
@@ -1999,7 +1832,7 @@ Python -wd runserver depreciation warnings
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231130T203401--seb-nixos-installation__linux_nixos_nonpost_wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231130T203401--seb-nixos-installation__linux_nixos_nonpost_wsl.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[fetch and pull changes automatically]]></title>
@@ -2077,7 +1910,7 @@ command - it will run the script each time WSL is launched.
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231130T065309--fetch-and-pull-changes-automatically__git_wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231130T065309--fetch-and-pull-changes-automatically__git_wsl.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[dockerfile example of emacs installation]]></title>
@@ -2152,7 +1985,7 @@ ENTRYPOINT ["emacs"]
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T175614--dockerfile-example-of-emacs-installation__docker_emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T175614--dockerfile-example-of-emacs-installation__docker_emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[docker commands]]></title>
@@ -2225,7 +2058,7 @@ docker commit &lt;id&gt; new_name
   <category><![CDATA[docker]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T172943--docker-commands__docker.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T172943--docker-commands__docker.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[wsl commands]]></title>
@@ -2263,7 +2096,7 @@ wsl --help
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T172125--wsl-commands__wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T172125--wsl-commands__wsl.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[install linux distro over wsl]]></title>
@@ -2272,8 +2105,8 @@ wsl --help
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc087fb0">1. Installation instructions</a></li>
-<li><a href="#org79cf288">2. Setup terminal</a></li>
+<li><a href="#org6760217">1. Installation instructions</a></li>
+<li><a href="#org9fea432">2. Setup terminal</a></li>
 </ul>
 </div>
 </nav>
@@ -2298,8 +2131,8 @@ So while I was trying to solve the first thing, I found out about the second
 thing and that led me to all this documentation below.
 </p>
 
-<div id="outline-container-orgc087fb0" class="outline-2">
-<h2 id="orgc087fb0"><span class="section-number-2">1.</span> Installation instructions</h2>
+<div id="outline-container-org6760217" class="outline-2">
+<h2 id="org6760217"><span class="section-number-2">1.</span> Installation instructions</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 After you have <a href="20231214T142532--enable-wsl-on-windows__windows_wsl.html">enabled wsl on windows</a>, you can do these steps:
@@ -2345,8 +2178,8 @@ Now check "add remove programs" if your wsl instance is listed there.
 </div>
 </div>
 
-<div id="outline-container-org79cf288" class="outline-2">
-<h2 id="org79cf288"><span class="section-number-2">2.</span> Setup terminal</h2>
+<div id="outline-container-org9fea432" class="outline-2">
+<h2 id="org9fea432"><span class="section-number-2">2.</span> Setup terminal</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Setup terminal to be ubuntu. So when you open cmd you would also see
@@ -2368,7 +2201,7 @@ to install emacs now, follow - TODO
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T165324--install-linux-distro-over-wsl__windows_wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T165324--install-linux-distro-over-wsl__windows_wsl.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[wsl glitches in gui applications]]></title>
@@ -2432,7 +2265,7 @@ research wslg:
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T164359--wsl-glitches-in-gui-applications__wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T164359--wsl-glitches-in-gui-applications__wsl.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[consult package benefits]]></title>
@@ -2481,7 +2314,7 @@ c-x b and pressing m then SPACE and you will have a list of bookmarks!!
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T145249--consult-package-benefits__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T145249--consult-package-benefits__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[create a blog with hugo]]></title>
@@ -2490,7 +2323,7 @@ c-x b and pressing m then SPACE and you will have a list of bookmarks!!
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org54ae60a">1. commands</a></li>
+<li><a href="#org8ec2e10">1. commands</a></li>
 </ul>
 </div>
 </nav>
@@ -2502,8 +2335,8 @@ get started video - <a href="https://www.youtube.com/watch?v=LIFvgrRxdt4&amp;ab_
 second video - <a href="https://www.youtube.com/watch?v=hjD9jTi_DQ4&amp;t=2225s&amp;ab_channel=EnvatoTuts%2B">https://www.youtube.com/watch?v=hjD9jTi_DQ4&amp;t=2225s&amp;ab_channel=EnvatoTuts%2B</a>
 </p>
 
-<div id="outline-container-org54ae60a" class="outline-2">
-<h2 id="org54ae60a"><span class="section-number-2">1.</span> commands</h2>
+<div id="outline-container-org8ec2e10" class="outline-2">
+<h2 id="org8ec2e10"><span class="section-number-2">1.</span> commands</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>hugo new site nameofthesite</li>
@@ -2525,7 +2358,7 @@ public (public where file will be stored)</li>
   <category><![CDATA[websites]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T133020--create-a-blog-with-hugo__hugo_websites.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T133020--create-a-blog-with-hugo__hugo_websites.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[windows keybindings]]></title>
@@ -2549,7 +2382,7 @@ Install <code>powertoys</code> app in windows for rebinding various keys, especi
   <category><![CDATA[windows]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T132920--windows-keybindings__windows.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T132920--windows-keybindings__windows.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[emacs bindings]]></title>
@@ -2558,21 +2391,21 @@ Install <code>powertoys</code> app in windows for rebinding various keys, especi
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org11afe67">1. Shortcuts</a>
+<li><a href="#org527e87a">1. Shortcuts</a>
 <ul>
-<li><a href="#org09756d1">1.1. Shortcuts</a>
+<li><a href="#org8cae9c1">1.1. Shortcuts</a>
 <ul>
-<li><a href="#orgc5e8bbc">1.1.1. network</a></li>
-<li><a href="#org89883fc">1.1.2. emacs</a></li>
-<li><a href="#org2b5afc6">1.1.3. Bindings</a></li>
+<li><a href="#org0cd0f08">1.1.1. network</a></li>
+<li><a href="#org277331b">1.1.2. emacs</a></li>
+<li><a href="#org0d606f4">1.1.3. Bindings</a></li>
 </ul>
 </li>
-<li><a href="#org9194a43">1.2. commands emacs</a>
+<li><a href="#orgc553146">1.2. commands emacs</a>
 <ul>
-<li><a href="#org02ae620">1.2.1. ansi-term copy/paste</a></li>
+<li><a href="#org3c2b247">1.2.1. ansi-term copy/paste</a></li>
 </ul>
 </li>
-<li><a href="#orga7e23ee">1.3. Bookmarks emacs</a></li>
+<li><a href="#org7e10449">1.3. Bookmarks emacs</a></li>
 </ul>
 </li>
 </ul>
@@ -2588,8 +2421,8 @@ Now I know where to look for what I am looking for even if I don't remember
 what keybinding it is assigned to :) C-h f basically and M-x.
 </p>
 
-<div id="outline-container-org11afe67" class="outline-2">
-<h2 id="org11afe67"><span class="section-number-2">1.</span> Shortcuts</h2>
+<div id="outline-container-org527e87a" class="outline-2">
+<h2 id="org527e87a"><span class="section-number-2">1.</span> Shortcuts</h2>
 <div class="outline-text-2" id="text-1">
 <table>
 
@@ -2852,15 +2685,15 @@ what keybinding it is assigned to :) C-h f basically and M-x.
 </table>
 </div>
 
-<div id="outline-container-org09756d1" class="outline-3">
-<h3 id="org09756d1"><span class="section-number-3">1.1.</span> Shortcuts</h3>
+<div id="outline-container-org8cae9c1" class="outline-3">
+<h3 id="org8cae9c1"><span class="section-number-3">1.1.</span> Shortcuts</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Sasha - <a href="http://emacslife.com/read-lisp-tweak-emacs/beginner-3-make-things-more-convenient.html">http://emacslife.com/read-lisp-tweak-emacs/beginner-3-make-things-more-convenient.html</a>
 </p>
 </div>
-<div id="outline-container-orgc5e8bbc" class="outline-4">
-<h4 id="orgc5e8bbc"><span class="section-number-4">1.1.1.</span> network</h4>
+<div id="outline-container-org0cd0f08" class="outline-4">
+<h4 id="org0cd0f08"><span class="section-number-4">1.1.1.</span> network</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <ul class="org-ul">
 <li>traceroute delfi.lt</li>
@@ -2873,8 +2706,8 @@ n- ping
 </p>
 </div>
 </div>
-<div id="outline-container-org89883fc" class="outline-4">
-<h4 id="org89883fc"><span class="section-number-4">1.1.2.</span> emacs</h4>
+<div id="outline-container-org277331b" class="outline-4">
+<h4 id="org277331b"><span class="section-number-4">1.1.2.</span> emacs</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <ol class="org-ol">
 <li>M-g j     = Dumb jump</li>
@@ -3091,12 +2924,12 @@ you are reading the docs. NIIICE.
 </div>
 </div>
 
-<div id="outline-container-org2b5afc6" class="outline-4">
-<h4 id="org2b5afc6"><span class="section-number-4">1.1.3.</span> Bindings</h4>
+<div id="outline-container-org0d606f4" class="outline-4">
+<h4 id="org0d606f4"><span class="section-number-4">1.1.3.</span> Bindings</h4>
 <div class="outline-text-4" id="text-1-1-3">
 </div>
 <ol class="org-ol">
-<li><a id="org4d6aeee"></a>Emacs pasidaryk bindings patogesnius<br>
+<li><a id="orgf36ba20"></a>Emacs pasidaryk bindings patogesnius<br>
 <div class="outline-text-5" id="text-1-1-3-1">
 <p>
 Last change
@@ -3113,18 +2946,18 @@ Gal kaip revit??
 </p>
 </div>
 </li>
-<li><a id="org1ca3dbf"></a>go to next paragraph su M-n M-p maybe<br></li>
-<li><a id="org919999c"></a>go to last change emacs M={ }<br></li>
-<li><a id="orga160a3c"></a>go to last change emacs M={ }<br></li>
-<li><a id="orgbaf76e3"></a>go to next paragraph su M-n M-p maybe<br></li>
-<li><a id="org492e68c"></a>kaip suzinoti visas commands? pvz agenda&#x2026; shift + r clocktable, shift + L follow mode<br>
+<li><a id="orgbf36874"></a>go to next paragraph su M-n M-p maybe<br></li>
+<li><a id="org750dbbe"></a>go to last change emacs M={ }<br></li>
+<li><a id="orgb7c8870"></a>go to last change emacs M={ }<br></li>
+<li><a id="orgb588450"></a>go to next paragraph su M-n M-p maybe<br></li>
+<li><a id="org86e0bca"></a>kaip suzinoti visas commands? pvz agenda&#x2026; shift + r clocktable, shift + L follow mode<br>
 <div class="outline-text-5" id="text-1-1-3-6">
 <p>
 gal su hydrom galima matyti?
 </p>
 </div>
 </li>
-<li><a id="org27705ac"></a>Vim bindings<br>
+<li><a id="org47149ba"></a>Vim bindings<br>
 <div class="outline-text-5" id="text-1-1-3-7">
 <p>
 <a href="https://bbbscarter.wordpress.com/2012/09/13/emacs-bits-and-bobs/">https://bbbscarter.wordpress.com/2012/09/13/emacs-bits-and-bobs/</a>
@@ -3153,16 +2986,16 @@ Evil collection plugin in the future - "evil bindings in every package"
 </ul>
 </div>
 </li>
-<li><a id="orgc72a6fd"></a>M-x customize group RET org-pomodoro RET<br></li>
+<li><a id="orgb7947a8"></a>M-x customize group RET org-pomodoro RET<br></li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org9194a43" class="outline-3">
-<h3 id="org9194a43"><span class="section-number-3">1.2.</span> commands emacs</h3>
+<div id="outline-container-orgc553146" class="outline-3">
+<h3 id="orgc553146"><span class="section-number-3">1.2.</span> commands emacs</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-org02ae620" class="outline-4">
-<h4 id="org02ae620"><span class="section-number-4">1.2.1.</span> ansi-term copy/paste</h4>
+<div id="outline-container-org3c2b247" class="outline-4">
+<h4 id="org3c2b247"><span class="section-number-4">1.2.1.</span> ansi-term copy/paste</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <p>
 :CAPTURED:<span class="timestamp-wrapper"><span class="timestamp">[2023-06-15 Thu 08:30]</span></span>
@@ -3181,8 +3014,8 @@ with <code>C-c C-k</code>.
 </div>
 </div>
 </div>
-<div id="outline-container-orga7e23ee" class="outline-3">
-<h3 id="orga7e23ee"><span class="section-number-3">1.3.</span> Bookmarks emacs</h3>
+<div id="outline-container-org7e10449" class="outline-3">
+<h3 id="org7e10449"><span class="section-number-3">1.3.</span> Bookmarks emacs</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 C+h i - info mode
@@ -3200,7 +3033,7 @@ C+x r l - see all bookmarks
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T132809--emacs-bindings__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T132809--emacs-bindings__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[create a basic django app]]></title>
@@ -3209,56 +3042,56 @@ C+x r l - see all bookmarks
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgf6fc422">1. Starting a new Django project</a>
+<li><a href="#orgeb6166d">1. Starting a new Django project</a>
 <ul>
-<li><a href="#org5b556cf">1.1. create a git repo on the web (readme + ignore)</a></li>
-<li><a href="#org4f17b5d">1.2. git clone the repo</a></li>
-<li><a href="#org3f0faf8">1.3. open repo in emacs, create virtualenv</a></li>
-<li><a href="#org0eebd23">1.4. pip install django</a></li>
-<li><a href="#org323adb8">1.5. django-admin startproject &lt;project<sub>name</sub>&gt;</a></li>
-<li><a href="#org3084358">1.6. enter &lt;project<sub>name</sub>&gt;, do django-admin startapp &lt;project<sub>name</sub>&gt;</a></li>
-<li><a href="#org8ffb1b3">1.7. settings.py</a></li>
-<li><a href="#org0d69320">1.8. github push</a></li>
+<li><a href="#org1060bf5">1.1. create a git repo on the web (readme + ignore)</a></li>
+<li><a href="#org61042e7">1.2. git clone the repo</a></li>
+<li><a href="#org57116a2">1.3. open repo in emacs, create virtualenv</a></li>
+<li><a href="#org3d63f3f">1.4. pip install django</a></li>
+<li><a href="#org1098a58">1.5. django-admin startproject &lt;project<sub>name</sub>&gt;</a></li>
+<li><a href="#org33a9eeb">1.6. enter &lt;project<sub>name</sub>&gt;, do django-admin startapp &lt;project<sub>name</sub>&gt;</a></li>
+<li><a href="#orgc13cb3c">1.7. settings.py</a></li>
+<li><a href="#orgd405cbb">1.8. github push</a></li>
 </ul>
 </li>
-<li><a href="#orgb7e40c9">2. Testing views</a>
+<li><a href="#org7f2d738">2. Testing views</a>
 <ul>
-<li><a href="#orge32a07b">2.1. python manage.py runserver</a></li>
-<li><a href="#orgd9b4c23">2.2. create HttpResponse views(temporarily)</a></li>
-<li><a href="#org1479183">2.3. create urls.#+begin<sub>src</sub> python</a></li>
-<li><a href="#org1663a6e">2.4. go to &lt;project<sub>name</sub>&gt; urls.py and put in this</a></li>
-<li><a href="#orgb948793">2.5. check if responses work by going to the site and trying out urls</a></li>
-<li><a href="#org7bd1eaf">2.6. github push</a></li>
+<li><a href="#org8a2bafa">2.1. python manage.py runserver</a></li>
+<li><a href="#orga04a370">2.2. create HttpResponse views(temporarily)</a></li>
+<li><a href="#orgb6b4929">2.3. create urls.#+begin<sub>src</sub> python</a></li>
+<li><a href="#org9e8479b">2.4. go to &lt;project<sub>name</sub>&gt; urls.py and put in this</a></li>
+<li><a href="#org1fdbe0e">2.5. check if responses work by going to the site and trying out urls</a></li>
+<li><a href="#org1c13608">2.6. github push</a></li>
 </ul>
 </li>
-<li><a href="#org967be50">3. Testing templates</a>
+<li><a href="#orge972c20">3. Testing templates</a>
 <ul>
-<li><a href="#org381ae39">3.1. create 'templates' folder</a></li>
-<li><a href="#orgd6e7a0d">3.2. replace httpresponse with render</a></li>
-<li><a href="#org5f67d07">3.3. Create main.html and inside of it put this:</a></li>
-<li><a href="#orgc153715">3.4. Create navbar.html and put navbar in there</a></li>
-<li><a href="#org0484db6">3.5. Inside every template add block content/endblock like so:</a></li>
-<li><a href="#org6f2f45d">3.6. Create a static folder and add style.css</a></li>
-<li><a href="#orgc2a4b13">3.7. Images</a></li>
-<li><a href="#org36b0913">3.8. Images for production</a></li>
-<li><a href="#org46f2320">3.9. If want to link to admin from navbar, use this</a></li>
+<li><a href="#orgd2ae70c">3.1. create 'templates' folder</a></li>
+<li><a href="#org236474d">3.2. replace httpresponse with render</a></li>
+<li><a href="#orgd4ab380">3.3. Create main.html and inside of it put this:</a></li>
+<li><a href="#org5c70dc3">3.4. Create navbar.html and put navbar in there</a></li>
+<li><a href="#org670a539">3.5. Inside every template add block content/endblock like so:</a></li>
+<li><a href="#orga04286e">3.6. Create a static folder and add style.css</a></li>
+<li><a href="#orgc9a3a27">3.7. Images</a></li>
+<li><a href="#orgb2fa9e5">3.8. Images for production</a></li>
+<li><a href="#org49feefc">3.9. If want to link to admin from navbar, use this</a></li>
 </ul>
 </li>
-<li><a href="#org9d2e2f0">4. Models</a>
+<li><a href="#org5c6a19b">4. Models</a>
 <ul>
-<li><a href="#org520a600">4.1. Little cheat before making models</a></li>
-<li><a href="#orgea1c1a1">4.2. Creating database models</a>
+<li><a href="#org571af7c">4.1. Little cheat before making models</a></li>
+<li><a href="#org0041959">4.2. Creating database models</a>
 <ul>
-<li><a href="#org66985f0">4.2.1. Make migrations/migrate</a></li>
-<li><a href="#org101f5d7">4.2.2. Create superuser and add some data</a></li>
-<li><a href="#org3660fcf">4.2.3. Creating model itself</a></li>
-<li><a href="#orga759b00">4.2.4. Make migrations/migrate</a></li>
-<li><a href="#orgf07a7b8">4.2.5. Link new model to admin panel in admin.py</a></li>
-<li><a href="#orgadfefde">4.2.6. views.py - replace list of dictionaries with a query</a></li>
-<li><a href="#org9cdb4d3">4.2.7. update blog.html</a></li>
-<li><a href="#org8ab0fcf">4.2.8. catch single posts</a></li>
-<li><a href="#orga3def2e">4.2.9. Add line breaks to body model</a></li>
-<li><a href="#orgc015250">4.2.10. add link from blog to single post</a></li>
+<li><a href="#org533d387">4.2.1. Make migrations/migrate</a></li>
+<li><a href="#org95ba00d">4.2.2. Create superuser and add some data</a></li>
+<li><a href="#orgd2686b4">4.2.3. Creating model itself</a></li>
+<li><a href="#org152d514">4.2.4. Make migrations/migrate</a></li>
+<li><a href="#orge14e22b">4.2.5. Link new model to admin panel in admin.py</a></li>
+<li><a href="#org5cac2ec">4.2.6. views.py - replace list of dictionaries with a query</a></li>
+<li><a href="#orgfc9eba5">4.2.7. update blog.html</a></li>
+<li><a href="#orge51eada">4.2.8. catch single posts</a></li>
+<li><a href="#orgd19ef22">4.2.9. Add line breaks to body model</a></li>
+<li><a href="#org0396366">4.2.10. add link from blog to single post</a></li>
 </ul>
 </li>
 </ul>
@@ -3267,18 +3100,18 @@ C+x r l - see all bookmarks
 </div>
 </nav>
 
-<div id="outline-container-orgf6fc422" class="outline-2">
-<h2 id="orgf6fc422"><span class="section-number-2">1.</span> Starting a new Django project</h2>
+<div id="outline-container-orgeb6166d" class="outline-2">
+<h2 id="orgeb6166d"><span class="section-number-2">1.</span> Starting a new Django project</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org5b556cf" class="outline-3">
-<h3 id="org5b556cf"><span class="section-number-3">1.1.</span> create a git repo on the web (readme + ignore)</h3>
+<div id="outline-container-org1060bf5" class="outline-3">
+<h3 id="org1060bf5"><span class="section-number-3">1.1.</span> create a git repo on the web (readme + ignore)</h3>
 </div>
-<div id="outline-container-org4f17b5d" class="outline-3">
-<h3 id="org4f17b5d"><span class="section-number-3">1.2.</span> git clone the repo</h3>
+<div id="outline-container-org61042e7" class="outline-3">
+<h3 id="org61042e7"><span class="section-number-3">1.2.</span> git clone the repo</h3>
 </div>
-<div id="outline-container-org3f0faf8" class="outline-3">
-<h3 id="org3f0faf8"><span class="section-number-3">1.3.</span> open repo in emacs, create virtualenv</h3>
+<div id="outline-container-org57116a2" class="outline-3">
+<h3 id="org57116a2"><span class="section-number-3">1.3.</span> open repo in emacs, create virtualenv</h3>
 <div class="outline-text-3" id="text-1-3">
 <div class="org-src-container">
 <pre class="src src-shell">sudo apt install python3.8-venv
@@ -3289,17 +3122,17 @@ pip list
 </div>
 </div>
 
-<div id="outline-container-org0eebd23" class="outline-3">
-<h3 id="org0eebd23"><span class="section-number-3">1.4.</span> pip install django</h3>
+<div id="outline-container-org3d63f3f" class="outline-3">
+<h3 id="org3d63f3f"><span class="section-number-3">1.4.</span> pip install django</h3>
 </div>
-<div id="outline-container-org323adb8" class="outline-3">
-<h3 id="org323adb8"><span class="section-number-3">1.5.</span> django-admin startproject &lt;project<sub>name</sub>&gt;</h3>
+<div id="outline-container-org1098a58" class="outline-3">
+<h3 id="org1098a58"><span class="section-number-3">1.5.</span> django-admin startproject &lt;project<sub>name</sub>&gt;</h3>
 </div>
-<div id="outline-container-org3084358" class="outline-3">
-<h3 id="org3084358"><span class="section-number-3">1.6.</span> enter &lt;project<sub>name</sub>&gt;, do django-admin startapp &lt;project<sub>name</sub>&gt;</h3>
+<div id="outline-container-org33a9eeb" class="outline-3">
+<h3 id="org33a9eeb"><span class="section-number-3">1.6.</span> enter &lt;project<sub>name</sub>&gt;, do django-admin startapp &lt;project<sub>name</sub>&gt;</h3>
 </div>
-<div id="outline-container-org8ffb1b3" class="outline-3">
-<h3 id="org8ffb1b3"><span class="section-number-3">1.7.</span> settings.py</h3>
+<div id="outline-container-orgc13cb3c" class="outline-3">
+<h3 id="orgc13cb3c"><span class="section-number-3">1.7.</span> settings.py</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
 &lt;app name&gt; - apps.py take out name of the app and put in settings.py installed
@@ -3308,23 +3141,23 @@ apps like so - 'base.apps.BaseConfig',
 </div>
 </div>
 
-<div id="outline-container-org0d69320" class="outline-3">
-<h3 id="org0d69320"><span class="section-number-3">1.8.</span> github push</h3>
+<div id="outline-container-orgd405cbb" class="outline-3">
+<h3 id="orgd405cbb"><span class="section-number-3">1.8.</span> github push</h3>
 </div>
 </div>
-<div id="outline-container-orgb7e40c9" class="outline-2">
-<h2 id="orgb7e40c9"><span class="section-number-2">2.</span> Testing views</h2>
+<div id="outline-container-org7f2d738" class="outline-2">
+<h2 id="org7f2d738"><span class="section-number-2">2.</span> Testing views</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Just making sure everything works with HttpResponse
 </p>
 </div>
 
-<div id="outline-container-orge32a07b" class="outline-3">
-<h3 id="orge32a07b"><span class="section-number-3">2.1.</span> python manage.py runserver</h3>
+<div id="outline-container-org8a2bafa" class="outline-3">
+<h3 id="org8a2bafa"><span class="section-number-3">2.1.</span> python manage.py runserver</h3>
 </div>
-<div id="outline-container-orgd9b4c23" class="outline-3">
-<h3 id="orgd9b4c23"><span class="section-number-3">2.2.</span> create HttpResponse views(temporarily)</h3>
+<div id="outline-container-orga04a370" class="outline-3">
+<h3 id="orga04a370"><span class="section-number-3">2.2.</span> create HttpResponse views(temporarily)</h3>
 <div class="outline-text-3" id="text-2-2">
 <div class="org-src-container">
 <pre class="src src-python">from django.shortcuts import render
@@ -3348,8 +3181,8 @@ def post(request):
 </div>
 </div>
 
-<div id="outline-container-org1479183" class="outline-3">
-<h3 id="org1479183"><span class="section-number-3">2.3.</span> create urls.#+begin<sub>src</sub> python</h3>
+<div id="outline-container-orgb6b4929" class="outline-3">
+<h3 id="orgb6b4929"><span class="section-number-3">2.3.</span> create urls.#+begin<sub>src</sub> python</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 #+end<sub>src</sub> in app folder and put this in
@@ -3369,8 +3202,8 @@ urlpatterns = [
 </div>
 </div>
 
-<div id="outline-container-org1663a6e" class="outline-3">
-<h3 id="org1663a6e"><span class="section-number-3">2.4.</span> go to &lt;project<sub>name</sub>&gt; urls.py and put in this</h3>
+<div id="outline-container-org9e8479b" class="outline-3">
+<h3 id="org9e8479b"><span class="section-number-3">2.4.</span> go to &lt;project<sub>name</sub>&gt; urls.py and put in this</h3>
 <div class="outline-text-3" id="text-2-4">
 <div class="org-src-container">
 <pre class="src src-python">from django.urls import path, include  # include is important!
@@ -3384,23 +3217,23 @@ urlpatterns = [
 </div>
 </div>
 
-<div id="outline-container-orgb948793" class="outline-3">
-<h3 id="orgb948793"><span class="section-number-3">2.5.</span> check if responses work by going to the site and trying out urls</h3>
+<div id="outline-container-org1fdbe0e" class="outline-3">
+<h3 id="org1fdbe0e"><span class="section-number-3">2.5.</span> check if responses work by going to the site and trying out urls</h3>
 </div>
-<div id="outline-container-org7bd1eaf" class="outline-3">
-<h3 id="org7bd1eaf"><span class="section-number-3">2.6.</span> github push</h3>
+<div id="outline-container-org1c13608" class="outline-3">
+<h3 id="org1c13608"><span class="section-number-3">2.6.</span> github push</h3>
 </div>
 </div>
-<div id="outline-container-org967be50" class="outline-2">
-<h2 id="org967be50"><span class="section-number-2">3.</span> Testing templates</h2>
+<div id="outline-container-orge972c20" class="outline-2">
+<h2 id="orge972c20"><span class="section-number-2">3.</span> Testing templates</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Need views to return back a template.
 </p>
 </div>
 
-<div id="outline-container-org381ae39" class="outline-3">
-<h3 id="org381ae39"><span class="section-number-3">3.1.</span> create 'templates' folder</h3>
+<div id="outline-container-orgd2ae70c" class="outline-3">
+<h3 id="orgd2ae70c"><span class="section-number-3">3.1.</span> create 'templates' folder</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Inside app folder, create 'templates' folder and &lt;app name&gt; folder
@@ -3410,8 +3243,8 @@ etc.html
 </div>
 </div>
 
-<div id="outline-container-orgd6e7a0d" class="outline-3">
-<h3 id="orgd6e7a0d"><span class="section-number-3">3.2.</span> replace httpresponse with render</h3>
+<div id="outline-container-org236474d" class="outline-3">
+<h3 id="org236474d"><span class="section-number-3">3.2.</span> replace httpresponse with render</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Go to views.py and replace HttpResponse with render and template, like
@@ -3430,8 +3263,8 @@ def home(request):
 </div>
 </div>
 
-<div id="outline-container-org5f67d07" class="outline-3">
-<h3 id="org5f67d07"><span class="section-number-3">3.3.</span> Create main.html and inside of it put this:</h3>
+<div id="outline-container-orgd4ab380" class="outline-3">
+<h3 id="orgd4ab380"><span class="section-number-3">3.3.</span> Create main.html and inside of it put this:</h3>
 <div class="outline-text-3" id="text-3-3">
 <div class="org-src-container">
 <pre class="src src-html">&lt;!doctype html&gt;
@@ -3455,8 +3288,8 @@ def home(request):
 </div>
 </div>
 
-<div id="outline-container-orgc153715" class="outline-3">
-<h3 id="orgc153715"><span class="section-number-3">3.4.</span> Create navbar.html and put navbar in there</h3>
+<div id="outline-container-org5c70dc3" class="outline-3">
+<h3 id="org5c70dc3"><span class="section-number-3">3.4.</span> Create navbar.html and put navbar in there</h3>
 <div class="outline-text-3" id="text-3-4">
 <div class="org-src-container">
 <pre class="src src-html">&lt;h2&gt;Navbar placeholder&lt;/h2&gt;
@@ -3466,8 +3299,8 @@ def home(request):
 </div>
 </div>
 
-<div id="outline-container-org0484db6" class="outline-3">
-<h3 id="org0484db6"><span class="section-number-3">3.5.</span> Inside every template add block content/endblock like so:</h3>
+<div id="outline-container-org670a539" class="outline-3">
+<h3 id="org670a539"><span class="section-number-3">3.5.</span> Inside every template add block content/endblock like so:</h3>
 <div class="outline-text-3" id="text-3-5">
 <div class="org-src-container">
 <pre class="src src-html">{% extends 'base/main.html' %}
@@ -3480,8 +3313,8 @@ def home(request):
 </div>
 </div>
 
-<div id="outline-container-org6f2f45d" class="outline-3">
-<h3 id="org6f2f45d"><span class="section-number-3">3.6.</span> Create a static folder and add style.css</h3>
+<div id="outline-container-orga04286e" class="outline-3">
+<h3 id="orga04286e"><span class="section-number-3">3.6.</span> Create a static folder and add style.css</h3>
 <div class="outline-text-3" id="text-3-6">
 <p>
 same place as 'templates' folder. then inside &lt;name of the app&gt;
@@ -3496,8 +3329,8 @@ folder and inside of it - style.css. Then add this in main.html
 </div>
 </div>
 
-<div id="outline-container-orgc2a4b13" class="outline-3">
-<h3 id="orgc2a4b13"><span class="section-number-3">3.7.</span> Images</h3>
+<div id="outline-container-orgc9a3a27" class="outline-3">
+<h3 id="orgc9a3a27"><span class="section-number-3">3.7.</span> Images</h3>
 <div class="outline-text-3" id="text-3-7">
 <p>
 If you simply want to serve an image in an html template, such as
@@ -3524,8 +3357,8 @@ place images there. They WILL be rendered in your html template
 </div>
 </div>
 
-<div id="outline-container-org36b0913" class="outline-3">
-<h3 id="org36b0913"><span class="section-number-3">3.8.</span> Images for production</h3>
+<div id="outline-container-orgb2fa9e5" class="outline-3">
+<h3 id="orgb2fa9e5"><span class="section-number-3">3.8.</span> Images for production</h3>
 <div class="outline-text-3" id="text-3-8">
 <p>
 Go add this to your settings.py and when it's done run:
@@ -3582,8 +3415,8 @@ Add it to requirements.txt and follow <a href="http://whitenoise.evans.io/en/sta
 </div>
 </div>
 
-<div id="outline-container-org46f2320" class="outline-3">
-<h3 id="org46f2320"><span class="section-number-3">3.9.</span> If want to link to admin from navbar, use this</h3>
+<div id="outline-container-org49feefc" class="outline-3">
+<h3 id="org49feefc"><span class="section-number-3">3.9.</span> If want to link to admin from navbar, use this</h3>
 <div class="outline-text-3" id="text-3-9">
 <div class="org-src-container">
 <pre class="src src-html">&lt;li&gt;&lt;a href="{% url 'admin:index' %}"&gt;link to admin panel&lt;/a&gt;&lt;/li&gt;
@@ -3593,12 +3426,12 @@ Add it to requirements.txt and follow <a href="http://whitenoise.evans.io/en/sta
 </div>
 </div>
 
-<div id="outline-container-org9d2e2f0" class="outline-2">
-<h2 id="org9d2e2f0"><span class="section-number-2">4.</span> Models</h2>
+<div id="outline-container-org5c6a19b" class="outline-2">
+<h2 id="org5c6a19b"><span class="section-number-2">4.</span> Models</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org520a600" class="outline-3">
-<h3 id="org520a600"><span class="section-number-3">4.1.</span> Little cheat before making models</h3>
+<div id="outline-container-org571af7c" class="outline-3">
+<h3 id="org571af7c"><span class="section-number-3">4.1.</span> Little cheat before making models</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 So what we can do is create a fake list with data, right, then output the
@@ -3651,12 +3484,12 @@ info above. Great! So now I know the looping works.
 </div>
 </div>
 
-<div id="outline-container-orgea1c1a1" class="outline-3">
-<h3 id="orgea1c1a1"><span class="section-number-3">4.2.</span> Creating database models</h3>
+<div id="outline-container-org0041959" class="outline-3">
+<h3 id="org0041959"><span class="section-number-3">4.2.</span> Creating database models</h3>
 <div class="outline-text-3" id="text-4-2">
 </div>
-<div id="outline-container-org66985f0" class="outline-4">
-<h4 id="org66985f0"><span class="section-number-4">4.2.1.</span> Make migrations/migrate</h4>
+<div id="outline-container-org533d387" class="outline-4">
+<h4 id="org533d387"><span class="section-number-4">4.2.1.</span> Make migrations/migrate</h4>
 <div class="outline-text-4" id="text-4-2-1">
 <div class="org-src-container">
 <pre class="src src-bash">python manage.py makemigrations
@@ -3668,8 +3501,8 @@ python manage.py inspectdb
 </div>
 </div>
 
-<div id="outline-container-org101f5d7" class="outline-4">
-<h4 id="org101f5d7"><span class="section-number-4">4.2.2.</span> Create superuser and add some data</h4>
+<div id="outline-container-org95ba00d" class="outline-4">
+<h4 id="org95ba00d"><span class="section-number-4">4.2.2.</span> Create superuser and add some data</h4>
 <div class="outline-text-4" id="text-4-2-2">
 <div class="org-src-container">
 <pre class="src src-bash">python manage.py createsuperuser
@@ -3679,8 +3512,8 @@ python manage.py runserver
 </div>
 </div>
 
-<div id="outline-container-org3660fcf" class="outline-4">
-<h4 id="org3660fcf"><span class="section-number-4">4.2.3.</span> Creating model itself</h4>
+<div id="outline-container-orgd2686b4" class="outline-4">
+<h4 id="orgd2686b4"><span class="section-number-4">4.2.3.</span> Creating model itself</h4>
 <div class="outline-text-4" id="text-4-2-3">
 <div class="org-src-container">
 <pre class="src src-python">from django.db import models
@@ -3701,8 +3534,8 @@ class Blog_post(models.Model):
 </div>
 </div>
 
-<div id="outline-container-orga759b00" class="outline-4">
-<h4 id="orga759b00"><span class="section-number-4">4.2.4.</span> Make migrations/migrate</h4>
+<div id="outline-container-org152d514" class="outline-4">
+<h4 id="org152d514"><span class="section-number-4">4.2.4.</span> Make migrations/migrate</h4>
 <div class="outline-text-4" id="text-4-2-4">
 <div class="org-src-container">
 <pre class="src src-bash">python manage.py makemigrations
@@ -3714,8 +3547,8 @@ python manage.py inspectdb
 </div>
 </div>
 
-<div id="outline-container-orgf07a7b8" class="outline-4">
-<h4 id="orgf07a7b8"><span class="section-number-4">4.2.5.</span> Link new model to admin panel in admin.py</h4>
+<div id="outline-container-orge14e22b" class="outline-4">
+<h4 id="orge14e22b"><span class="section-number-4">4.2.5.</span> Link new model to admin panel in admin.py</h4>
 <div class="outline-text-4" id="text-4-2-5">
 <div class="org-src-container">
 <pre class="src src-python">from django.contrib import admin
@@ -3730,8 +3563,8 @@ admin.site.register(Blog_post)
 </div>
 </div>
 
-<div id="outline-container-orgadfefde" class="outline-4">
-<h4 id="orgadfefde"><span class="section-number-4">4.2.6.</span> views.py - replace list of dictionaries with a query</h4>
+<div id="outline-container-org5cac2ec" class="outline-4">
+<h4 id="org5cac2ec"><span class="section-number-4">4.2.6.</span> views.py - replace list of dictionaries with a query</h4>
 <div class="outline-text-4" id="text-4-2-6">
 <div class="org-src-container">
 <pre class="src src-python">from .models import Blog_post
@@ -3748,8 +3581,8 @@ admin.site.register(Blog_post)
 </div>
 </div>
 
-<div id="outline-container-org9cdb4d3" class="outline-4">
-<h4 id="org9cdb4d3"><span class="section-number-4">4.2.7.</span> update blog.html</h4>
+<div id="outline-container-orgfc9eba5" class="outline-4">
+<h4 id="orgfc9eba5"><span class="section-number-4">4.2.7.</span> update blog.html</h4>
 <div class="outline-text-4" id="text-4-2-7">
 <div class="org-src-container">
 <pre class="src src-python">{% extends 'base/main.html' %}
@@ -3767,8 +3600,8 @@ admin.site.register(Blog_post)
 </div>
 </div>
 
-<div id="outline-container-org8ab0fcf" class="outline-4">
-<h4 id="org8ab0fcf"><span class="section-number-4">4.2.8.</span> catch single posts</h4>
+<div id="outline-container-orge51eada" class="outline-4">
+<h4 id="orge51eada"><span class="section-number-4">4.2.8.</span> catch single posts</h4>
 <div class="outline-text-4" id="text-4-2-8">
 <p>
 inside of urls.py add str:pk like so
@@ -3801,8 +3634,8 @@ replace all the dynamic data with {{post.headline}} etc, and go to
 </div>
 </div>
 
-<div id="outline-container-orga3def2e" class="outline-4">
-<h4 id="orga3def2e"><span class="section-number-4">4.2.9.</span> Add line breaks to body model</h4>
+<div id="outline-container-orgd19ef22" class="outline-4">
+<h4 id="orgd19ef22"><span class="section-number-4">4.2.9.</span> Add line breaks to body model</h4>
 <div class="outline-text-4" id="text-4-2-9">
 <div class="org-src-container">
 <pre class="src src-html">&lt;p&gt;{{post.content|linebreaks}}&lt;/p&gt;
@@ -3811,8 +3644,8 @@ replace all the dynamic data with {{post.headline}} etc, and go to
 </div>
 </div>
 
-<div id="outline-container-orgc015250" class="outline-4">
-<h4 id="orgc015250"><span class="section-number-4">4.2.10.</span> add link from blog to single post</h4>
+<div id="outline-container-org0396366" class="outline-4">
+<h4 id="org0396366"><span class="section-number-4">4.2.10.</span> add link from blog to single post</h4>
 <div class="outline-text-4" id="text-4-2-10">
 <div class="org-src-container">
 <pre class="src src-html">&lt;a href="{% url 'blog_post' post.id %}"&gt;Read more&lt;/a&gt;
@@ -3827,7 +3660,7 @@ replace all the dynamic data with {{post.headline}} etc, and go to
   <category><![CDATA[python]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T132642--create-a-basic-django-app__django_python.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T132642--create-a-basic-django-app__django_python.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[move models from one app to another]]></title>
@@ -3899,7 +3732,7 @@ to your app name):
   <category><![CDATA[sql]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T132521--move-models-from-one-app-to-another__django_sql.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T132521--move-models-from-one-app-to-another__django_sql.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[modify a record in db with python]]></title>
@@ -3908,8 +3741,8 @@ to your app name):
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org34b9db1">1. Method 1</a></li>
-<li><a href="#org00400d3">2. Method 2</a></li>
+<li><a href="#org828b5d4">1. Method 1</a></li>
+<li><a href="#org22f17a9">2. Method 2</a></li>
 </ul>
 </div>
 </nav>
@@ -3921,8 +3754,8 @@ more about that:
 <li><a href="https://www.youtube.com/watch?v=aHC3uTkT9r8&amp;list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&amp;index=5&amp;ab_channel=CoreySchafer">https://www.youtube.com/watch?v=aHC3uTkT9r8&amp;list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&amp;index=5&amp;ab_channel=CoreySchafer</a></li>
 </ul>
 
-<div id="outline-container-org34b9db1" class="outline-2">
-<h2 id="org34b9db1"><span class="section-number-2">1.</span> Method 1</h2>
+<div id="outline-container-org828b5d4" class="outline-2">
+<h2 id="org828b5d4"><span class="section-number-2">1.</span> Method 1</h2>
 <div class="outline-text-2" id="text-1">
 <div class="org-src-container">
 <pre class="src src-bash">(venv) arvy@DESKTOP-AUDMJ7D:~/src/lifeapi$ python manage.py shell --settings=settings.development
@@ -3951,8 +3784,8 @@ questions.update(created_by=user_id_1)
 </div>
 </div>
 
-<div id="outline-container-org00400d3" class="outline-2">
-<h2 id="org00400d3"><span class="section-number-2">2.</span> Method 2</h2>
+<div id="outline-container-org22f17a9" class="outline-2">
+<h2 id="org22f17a9"><span class="section-number-2">2.</span> Method 2</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 start by this, do whatever you want then
@@ -4013,7 +3846,7 @@ Answer.objects.filter(question=question).delete()
   <category><![CDATA[sql]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T132351--modify-a-record-in-db-with-python__django_sql.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T132351--modify-a-record-in-db-with-python__django_sql.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[open sqlite db in shell]]></title>
@@ -4045,7 +3878,7 @@ some information of <a href="https://www.youtube.com/watch?v=213swbH8j_o">how to
   <category><![CDATA[sql]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T132316--open-sqlite-db-in-shell__django_sql.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T132316--open-sqlite-db-in-shell__django_sql.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[expanding user model]]></title>
@@ -4054,13 +3887,13 @@ some information of <a href="https://www.youtube.com/watch?v=213swbH8j_o">how to
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org540eca8">1. expanding user model</a></li>
+<li><a href="#org4db6de1">1. expanding user model</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org540eca8" class="outline-2">
-<h2 id="org540eca8"><span class="section-number-2">1.</span> expanding user model</h2>
+<div id="outline-container-org4db6de1" class="outline-2">
+<h2 id="org4db6de1"><span class="section-number-2">1.</span> expanding user model</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Inspiration - <a href="https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone">https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone</a>
@@ -4162,7 +3995,7 @@ or in view:
   <category><![CDATA[sql]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T132201--expanding-user-model__django_sql.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T132201--expanding-user-model__django_sql.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[django reduce number of queries to db]]></title>
@@ -4171,13 +4004,13 @@ or in view:
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orge69c16e">1. DjangoCon Europe 2023 | Squeezing Django performance for 14.9 million users on WhatsApp</a></li>
+<li><a href="#org91c5b07">1. DjangoCon Europe 2023 | Squeezing Django performance for 14.9 million users on WhatsApp</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orge69c16e" class="outline-2">
-<h2 id="orge69c16e"><span class="section-number-2">1.</span> DjangoCon Europe 2023 | Squeezing Django performance for 14.9 million users on WhatsApp</h2>
+<div id="outline-container-org91c5b07" class="outline-2">
+<h2 id="org91c5b07"><span class="section-number-2">1.</span> DjangoCon Europe 2023 | Squeezing Django performance for 14.9 million users on WhatsApp</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Watched on <span class="timestamp-wrapper"><span class="timestamp">[2023-11-09 Thu]</span></span>
@@ -4217,7 +4050,7 @@ faker to fake data and not use production data.
   <category><![CDATA[sql]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T132126--django-reduce-number-of-queries-to-db__django_sql.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T132126--django-reduce-number-of-queries-to-db__django_sql.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[install docker on windows]]></title>
@@ -4240,7 +4073,7 @@ from your dockerhub.
   <category><![CDATA[windows]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T131429--install-docker-on-windows__docker_windows.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T131429--install-docker-on-windows__docker_windows.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[install emacs on linux]]></title>
@@ -4249,7 +4082,7 @@ from your dockerhub.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org465a4e1">1. Old emacs installation notes&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ARCHIVE">ARCHIVE</span></span></a></li>
+<li><a href="#org64b8be7">1. Old emacs installation notes&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ARCHIVE">ARCHIVE</span></span></a></li>
 </ul>
 </div>
 </nav>
@@ -4271,15 +4104,15 @@ emacs.
 Open emacs, enjoy
 </p>
 
-<div id="outline-container-org465a4e1" class="outline-2">
-<h2 id="org465a4e1"><span class="section-number-2">1.</span> Old emacs installation notes&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ARCHIVE">ARCHIVE</span></span></h2>
+<div id="outline-container-org64b8be7" class="outline-2">
+<h2 id="org64b8be7"><span class="section-number-2">1.</span> Old emacs installation notes&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ARCHIVE">ARCHIVE</span></span></h2>
 </div>
 <div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> <a href="https://arvydasg.github.io/devnotes/html/tag-linux.html">linux</a> </div>]]></description>
   <category><![CDATA[emacs]]></category>
   <category><![CDATA[linux]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T131156--install-emacs-on-linux__emacs_linux.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T131156--install-emacs-on-linux__emacs_linux.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[emacs setup on digitalocean with dropbox]]></title>
@@ -4288,17 +4121,17 @@ Open emacs, enjoy
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8d90d62">1. Emacs setup on digitalocean</a>
+<li><a href="#orga440aa1">1. Emacs setup on digitalocean</a>
 <ul>
-<li><a href="#org04aa276">1.1. launch dropbox</a></li>
+<li><a href="#org7b4a4bb">1.1. launch dropbox</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org8d90d62" class="outline-2">
-<h2 id="org8d90d62"><span class="section-number-2">1.</span> Emacs setup on digitalocean</h2>
+<div id="outline-container-orga440aa1" class="outline-2">
+<h2 id="orga440aa1"><span class="section-number-2">1.</span> Emacs setup on digitalocean</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 psx - lAba$!1o
@@ -4312,8 +4145,8 @@ simply using password, ssh is acting up with me
 </p>
 </div>
 
-<div id="outline-container-org04aa276" class="outline-3">
-<h3 id="org04aa276"><span class="section-number-3">1.1.</span> launch dropbox</h3>
+<div id="outline-container-org7b4a4bb" class="outline-3">
+<h3 id="org7b4a4bb"><span class="section-number-3">1.1.</span> launch dropbox</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>little tut <a href="https://www.dropbox.com/install-linux">install headless dropbox</a></li>
@@ -4342,7 +4175,7 @@ Paste link in the browser</li>
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T130604--emacs-setup-on-digitalocean-with-dropbox__cloud_emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T130604--emacs-setup-on-digitalocean-with-dropbox__cloud_emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[ivy new file creation completion candidates bug]]></title>
@@ -4351,13 +4184,13 @@ Paste link in the browser</li>
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc737391">1. ivy new file creation completion candidates bug</a></li>
+<li><a href="#orgdc4a521">1. ivy new file creation completion candidates bug</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgc737391" class="outline-2">
-<h2 id="orgc737391"><span class="section-number-2">1.</span> ivy new file creation completion candidates bug</h2>
+<div id="outline-container-orgdc4a521" class="outline-2">
+<h2 id="orgdc4a521"><span class="section-number-2">1.</span> ivy new file creation completion candidates bug</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In Emacs with Ivy, when you try to create a new file with a name that partially
@@ -4400,7 +4233,7 @@ ivy-immediate-done in your Emacs configuration.
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T130520--ivy-new-file-creation-completion-candidates-bug__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T130520--ivy-new-file-creation-completion-candidates-bug__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[linux ubuntu install]]></title>
@@ -4409,7 +4242,7 @@ ivy-immediate-done in your Emacs configuration.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8d662b1">1. Linux install 2022-03-06</a></li>
+<li><a href="#org6878d5c">1. Linux install 2022-03-06</a></li>
 </ul>
 </div>
 </nav>
@@ -4436,8 +4269,8 @@ job :)
 Here are the steps anyway:
 </p>
 
-<div id="outline-container-org8d662b1" class="outline-2">
-<h2 id="org8d662b1"><span class="section-number-2">1.</span> Linux install 2022-03-06</h2>
+<div id="outline-container-org6878d5c" class="outline-2">
+<h2 id="org6878d5c"><span class="section-number-2">1.</span> Linux install 2022-03-06</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> install normal + updates - 3rd party packages</li>
@@ -4486,7 +4319,7 @@ headings larger</li>
   <category><![CDATA[linux]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T130237--linux-ubuntu-install__linux.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T130237--linux-ubuntu-install__linux.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[printing with cups in ubuntu]]></title>
@@ -4514,7 +4347,7 @@ series (en)</li>
   <category><![CDATA[linux]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T130210--printing-with-cups-in-ubuntu__linux.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T130210--printing-with-cups-in-ubuntu__linux.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[manjaro installation]]></title>
@@ -4818,7 +4651,7 @@ set up aliases for terminal cd .. some cool things, just like the hobyist
   <category><![CDATA[linux]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T130148--manjaro-installation__linux.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T130148--manjaro-installation__linux.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[alpine installation]]></title>
@@ -4846,7 +4679,7 @@ INSTALLATION GUIDE
   <category><![CDATA[linux]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231128T130129--alpine-installation__alpine_linux.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231128T130129--alpine-installation__alpine_linux.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[python development in emacs]]></title>
@@ -4855,15 +4688,15 @@ INSTALLATION GUIDE
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8783e0b">1. Dependencies</a></li>
-<li><a href="#org54c7697">2. Commands</a></li>
-<li><a href="#orgdfbbfd0">3. virtual env</a></li>
+<li><a href="#org49dba7f">1. Dependencies</a></li>
+<li><a href="#org0ce8527">2. Commands</a></li>
+<li><a href="#orga95d933">3. virtual env</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org8783e0b" class="outline-2">
-<h2 id="org8783e0b"><span class="section-number-2">1.</span> Dependencies</h2>
+<div id="outline-container-org49dba7f" class="outline-2">
+<h2 id="org49dba7f"><span class="section-number-2">1.</span> Dependencies</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Simple python dev environment that does the job(without lsp)
@@ -5004,8 +4837,8 @@ to confirm its installed</li>
 </div>
 </div>
 
-<div id="outline-container-org54c7697" class="outline-2">
-<h2 id="org54c7697"><span class="section-number-2">2.</span> Commands</h2>
+<div id="outline-container-org0ce8527" class="outline-2">
+<h2 id="org0ce8527"><span class="section-number-2">2.</span> Commands</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 lsp-doctor
@@ -5014,8 +4847,8 @@ lsp-install server
 </div>
 </div>
 
-<div id="outline-container-orgdfbbfd0" class="outline-2">
-<h2 id="orgdfbbfd0"><span class="section-number-2">3.</span> virtual env</h2>
+<div id="outline-container-orga95d933" class="outline-2">
+<h2 id="orga95d933"><span class="section-number-2">3.</span> virtual env</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 ~/.virtualenvs/ - cia guli visos virtual env
@@ -5035,7 +4868,7 @@ lsp-install server
   <category><![CDATA[python]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T014740--python-development-in-emacs__emacs_python.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T014740--python-development-in-emacs__emacs_python.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[how to run a flask app]]></title>
@@ -5073,7 +4906,7 @@ a change.
   <category><![CDATA[python]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T014659--how-to-run-a-flask-app__flask_python.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T014659--how-to-run-a-flask-app__flask_python.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[make denote faster on wsl]]></title>
@@ -5082,14 +4915,14 @@ a change.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgaa948fa">1. My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</a></li>
-<li><a href="#orga5dbd94">2. Solution not worth considering</a></li>
-<li><a href="#org0201517">3. Temporary working solution</a></li>
-<li><a href="#org58b3c28">4. Permanent working solution</a>
+<li><a href="#org73dfb81">1. My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</a></li>
+<li><a href="#org9abac50">2. Solution not worth considering</a></li>
+<li><a href="#orga2b2912">3. Temporary working solution</a></li>
+<li><a href="#org80cb5f3">4. Permanent working solution</a>
 <ul>
-<li><a href="#org30ffe8c">4.1. Option 1 - use <code>cp</code> command to copy</a></li>
-<li><a href="#orgb931bbd">4.2. Option 2(final) - Use <code>rsync</code> command</a></li>
-<li><a href="#org5a16019">4.3. Update <code>.bashrc</code> file to copy automatically</a></li>
+<li><a href="#org303a550">4.1. Option 1 - use <code>cp</code> command to copy</a></li>
+<li><a href="#org805bba9">4.2. Option 2(final) - Use <code>rsync</code> command</a></li>
+<li><a href="#org9bf264a">4.3. Update <code>.bashrc</code> file to copy automatically</a></li>
 </ul>
 </li>
 </ul>
@@ -5110,8 +4943,8 @@ I forget to commit my notes to git and my machine dies. I will still have a
 quite recent copy of the notes in OneDrive.
 </p>
 
-<div id="outline-container-orgaa948fa" class="outline-2">
-<h2 id="orgaa948fa"><span class="section-number-2">1.</span> My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</h2>
+<div id="outline-container-org73dfb81" class="outline-2">
+<h2 id="org73dfb81"><span class="section-number-2">1.</span> My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</h2>
 <div class="outline-text-2" id="text-1">
 <blockquote>
 <p>
@@ -5138,8 +4971,8 @@ wsl AND have those files in google cloud?
 </div>
 </div>
 
-<div id="outline-container-orga5dbd94" class="outline-2">
-<h2 id="orga5dbd94"><span class="section-number-2">2.</span> Solution not worth considering</h2>
+<div id="outline-container-org9abac50" class="outline-2">
+<h2 id="org9abac50"><span class="section-number-2">2.</span> Solution not worth considering</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 I heard that you can create a symlink from windows to wsl. I tried doing that:
@@ -5160,8 +4993,8 @@ will point to nowhere. Not good. Ditched this idea.
 </div>
 </div>
 
-<div id="outline-container-org0201517" class="outline-2">
-<h2 id="org0201517"><span class="section-number-2">3.</span> Temporary working solution</h2>
+<div id="outline-container-orga2b2912" class="outline-2">
+<h2 id="orga2b2912"><span class="section-number-2">3.</span> Temporary working solution</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Create a symbolic link within WSL that points directly to your
@@ -5184,8 +5017,8 @@ Yes, I think it is faster. Notes are created and opened faster.
 </div>
 </div>
 
-<div id="outline-container-org58b3c28" class="outline-2">
-<h2 id="org58b3c28"><span class="section-number-2">4.</span> Permanent working solution</h2>
+<div id="outline-container-org80cb5f3" class="outline-2">
+<h2 id="org80cb5f3"><span class="section-number-2">4.</span> Permanent working solution</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 What I will do is create a shell script that will automatically run on each wsl
@@ -5197,8 +5030,8 @@ commit - 2ba4f55
 </p>
 </div>
 
-<div id="outline-container-org30ffe8c" class="outline-3">
-<h3 id="org30ffe8c"><span class="section-number-3">4.1.</span> Option 1 - use <code>cp</code> command to copy</h3>
+<div id="outline-container-org303a550" class="outline-3">
+<h3 id="org303a550"><span class="section-number-3">4.1.</span> Option 1 - use <code>cp</code> command to copy</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Shell script lies in:
@@ -5227,8 +5060,8 @@ Can use a simple copy method to copy the files:
 </div>
 </div>
 
-<div id="outline-container-orgb931bbd" class="outline-3">
-<h3 id="orgb931bbd"><span class="section-number-3">4.2.</span> Option 2(final) - Use <code>rsync</code> command</h3>
+<div id="outline-container-org805bba9" class="outline-3">
+<h3 id="org805bba9"><span class="section-number-3">4.2.</span> Option 2(final) - Use <code>rsync</code> command</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Or can use <code>Rsycn</code> - it performs synchronization between source and
@@ -5253,8 +5086,8 @@ Then make this file executable:
 </div>
 </div>
 
-<div id="outline-container-org5a16019" class="outline-3">
-<h3 id="org5a16019"><span class="section-number-3">4.3.</span> Update <code>.bashrc</code> file to copy automatically</h3>
+<div id="outline-container-org9bf264a" class="outline-3">
+<h3 id="org9bf264a"><span class="section-number-3">4.3.</span> Update <code>.bashrc</code> file to copy automatically</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 Add the script execution to your .bashrc
@@ -5284,7 +5117,7 @@ procedure.
   <category><![CDATA[wsl]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T012052--make-denote-faster-on-wsl__emacs_rsync_scripting_wsl.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T012052--make-denote-faster-on-wsl__emacs_rsync_scripting_wsl.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[emacs hooks explanation]]></title>
@@ -5335,7 +5168,7 @@ message bar. The message will show up there.
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T005654--emacs-hooks-explanation__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T005654--emacs-hooks-explanation__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[javascript in emacs]]></title>
@@ -5344,15 +5177,15 @@ message bar. The message will show up there.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga217fd3">1. dap mode debugger for javacript</a></li>
-<li><a href="#orgedc369c">2. run js files in emacs</a>
+<li><a href="#org387b023">1. dap mode debugger for javacript</a></li>
+<li><a href="#orgebb7332">2. run js files in emacs</a>
 <ul>
-<li><a href="#org992ceed">2.1. javascript and emacs</a></li>
-<li><a href="#orgf719368">2.2. skewer mode - live javascipt in browser</a></li>
-<li><a href="#org6d17620">2.3. live js editing in emacs with skewer mode</a></li>
-<li><a href="#org23faab4">2.4. emacs live javascript editing lsp mode</a>
+<li><a href="#org6078801">2.1. javascript and emacs</a></li>
+<li><a href="#orgbf8ca76">2.2. skewer mode - live javascipt in browser</a></li>
+<li><a href="#org198531e">2.3. live js editing in emacs with skewer mode</a></li>
+<li><a href="#org0e0b881">2.4. emacs live javascript editing lsp mode</a>
 <ul>
-<li><a href="#org6ea2001">2.4.1. traukti fn name - megins surasti vistiek. Labai pravartu</a></li>
+<li><a href="#orgf79a079">2.4.1. traukti fn name - megins surasti vistiek. Labai pravartu</a></li>
 </ul>
 </li>
 </ul>
@@ -5361,8 +5194,8 @@ message bar. The message will show up there.
 </div>
 </nav>
 
-<div id="outline-container-orga217fd3" class="outline-2">
-<h2 id="orga217fd3"><span class="section-number-2">1.</span> dap mode debugger for javacript</h2>
+<div id="outline-container-org387b023" class="outline-2">
+<h2 id="org387b023"><span class="section-number-2">1.</span> dap mode debugger for javacript</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 docs - <a href="https://emacs-lsp.github.io/dap-mode/page/configuration/#javascript">https://emacs-lsp.github.io/dap-mode/page/configuration/#javascript</a>
@@ -5396,8 +5229,8 @@ thingies will apper in developer toolbar</li>
 </div>
 </div>
 
-<div id="outline-container-orgedc369c" class="outline-2">
-<h2 id="orgedc369c"><span class="section-number-2">2.</span> run js files in emacs</h2>
+<div id="outline-container-orgebb7332" class="outline-2">
+<h2 id="orgebb7332"><span class="section-number-2">2.</span> run js files in emacs</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 have node installed
@@ -5420,8 +5253,8 @@ js-send-region
 </p>
 </div>
 
-<div id="outline-container-org992ceed" class="outline-3">
-<h3 id="org992ceed"><span class="section-number-3">2.1.</span> javascript and emacs</h3>
+<div id="outline-container-org6078801" class="outline-3">
+<h3 id="org6078801"><span class="section-number-3">2.1.</span> javascript and emacs</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 today installed javascript syntax highlighting for emacs - js2-mode.
@@ -5433,8 +5266,8 @@ Love it. Here are some more ideas:
 </p>
 </div>
 </div>
-<div id="outline-container-orgf719368" class="outline-3">
-<h3 id="orgf719368"><span class="section-number-3">2.2.</span> skewer mode - live javascipt in browser</h3>
+<div id="outline-container-orgbf8ca76" class="outline-3">
+<h3 id="orgbf8ca76"><span class="section-number-3">2.2.</span> skewer mode - live javascipt in browser</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>run skewer in javascript file</li>
@@ -5443,8 +5276,8 @@ Love it. Here are some more ideas:
 </ul>
 </div>
 </div>
-<div id="outline-container-org6d17620" class="outline-3">
-<h3 id="org6d17620"><span class="section-number-3">2.3.</span> live js editing in emacs with skewer mode</h3>
+<div id="outline-container-org198531e" class="outline-3">
+<h3 id="org198531e"><span class="section-number-3">2.3.</span> live js editing in emacs with skewer mode</h3>
 <div class="outline-text-3" id="text-2-3">
 <ol class="org-ol">
 <li>open a js file</li>
@@ -5479,8 +5312,8 @@ bet still man nepatinka, neloadina modules&#x2026;
 </div>
 </div>
 
-<div id="outline-container-org23faab4" class="outline-3">
-<h3 id="org23faab4"><span class="section-number-3">2.4.</span> emacs live javascript editing lsp mode</h3>
+<div id="outline-container-org0e0b881" class="outline-3">
+<h3 id="org0e0b881"><span class="section-number-3">2.4.</span> emacs live javascript editing lsp mode</h3>
 <div class="outline-text-3" id="text-2-4">
 <ul class="org-ul">
 <li>pirma properly install node</li>
@@ -5507,8 +5340,8 @@ hoverint - kazkoks sudas</li>
 <li>lsp-ivy-workspace-symbol - nusoks i definition, gali is uzpakalio</li>
 </ul>
 </div>
-<div id="outline-container-org6ea2001" class="outline-4">
-<h4 id="org6ea2001"><span class="section-number-4">2.4.1.</span> traukti fn name - megins surasti vistiek. Labai pravartu</h4>
+<div id="outline-container-orgf79a079" class="outline-4">
+<h4 id="orgf79a079"><span class="section-number-4">2.4.1.</span> traukti fn name - megins surasti vistiek. Labai pravartu</h4>
 </div>
 </div>
 </div>
@@ -5517,7 +5350,7 @@ hoverint - kazkoks sudas</li>
   <category><![CDATA[js]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T005615--javascript-in-emacs__emacs_js.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T005615--javascript-in-emacs__emacs_js.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[run sql from emacs]]></title>
@@ -5550,7 +5383,7 @@ If on Ubuntu:
   <category><![CDATA[sql]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T005538--run-sql-from-emacs__emacs_sql.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T005538--run-sql-from-emacs__emacs_sql.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[org clock report]]></title>
@@ -5559,7 +5392,7 @@ If on Ubuntu:
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org0ae7b5a">1. examples</a></li>
+<li><a href="#org6ee0842">1. examples</a></li>
 </ul>
 </div>
 </nav>
@@ -5573,8 +5406,8 @@ prie ko ir pan.
 Link to the docs - <a href="https://orgmode.org/manual/The-clock-table.html">https://orgmode.org/manual/The-clock-table.html</a>
 </p>
 
-<div id="outline-container-org0ae7b5a" class="outline-2">
-<h2 id="org0ae7b5a"><span class="section-number-2">1.</span> examples</h2>
+<div id="outline-container-org6ee0842" class="outline-2">
+<h2 id="org6ee0842"><span class="section-number-2">1.</span> examples</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2022-04-10 Sun] </span></span> Daily org-diary file report BY TAG
@@ -5597,7 +5430,7 @@ Link to the docs - <a href="https://orgmode.org/manual/The-clock-table.html">htt
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T005411--org-clock-report__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T005411--org-clock-report__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[org agenda]]></title>
@@ -5606,21 +5439,21 @@ Link to the docs - <a href="https://orgmode.org/manual/The-clock-table.html">htt
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga558653">1. tips</a></li>
-<li><a href="#orga54b560">2. advanced agenda</a></li>
-<li><a href="#orgfde3435">3. org agenda filtering</a></li>
+<li><a href="#org34578fc">1. tips</a></li>
+<li><a href="#org2f8b0c8">2. advanced agenda</a></li>
+<li><a href="#org4568f1f">3. org agenda filtering</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orga558653" class="outline-2">
-<h2 id="orga558653"><span class="section-number-2">1.</span> tips</h2>
+<div id="outline-container-org34578fc" class="outline-2">
+<h2 id="org34578fc"><span class="section-number-2">1.</span> tips</h2>
 <div class="outline-text-2" id="text-1">
 </div>
 </div>
 
-<div id="outline-container-orga54b560" class="outline-2">
-<h2 id="orga54b560"><span class="section-number-2">2.</span> advanced agenda</h2>
+<div id="outline-container-org2f8b0c8" class="outline-2">
+<h2 id="org2f8b0c8"><span class="section-number-2">2.</span> advanced agenda</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>advanced searching - <a href="https://orgmode.org/worg/org-tutorials/advanced-searching.html">https://orgmode.org/worg/org-tutorials/advanced-searching.html</a></li>
@@ -5630,8 +5463,8 @@ Link to the docs - <a href="https://orgmode.org/manual/The-clock-table.html">htt
 </div>
 </div>
 
-<div id="outline-container-orgfde3435" class="outline-2">
-<h2 id="orgfde3435"><span class="section-number-2">3.</span> <a href="https://orgmode.org/worg/doc.html">org agenda filtering</a></h2>
+<div id="outline-container-org4568f1f" class="outline-2">
+<h2 id="org4568f1f"><span class="section-number-2">3.</span> <a href="https://orgmode.org/worg/doc.html">org agenda filtering</a></h2>
 <div class="outline-text-2" id="text-3">
 <p>
 was useful when needed to filter by effor. use this- _
@@ -5642,7 +5475,7 @@ was useful when needed to filter by effor. use this- _
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T005253--org-agenda__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T005253--org-agenda__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[byte compile emacs packages]]></title>
@@ -5666,7 +5499,7 @@ to fix it:
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T005026--byte-compile-emacs-packages__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T005026--byte-compile-emacs-packages__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[swap ctrl with capslock]]></title>
@@ -5692,7 +5525,7 @@ and I use powertoys windows app for windows to accomplish the same.
   <category><![CDATA[windows]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T004316--swap-ctrl-with-capslock__emacs_linux_windows.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T004316--swap-ctrl-with-capslock__emacs_linux_windows.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[install emacs on windows]]></title>
@@ -5701,8 +5534,8 @@ and I use powertoys windows app for windows to accomplish the same.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org57ab7b8">1. Installation 1:</a></li>
-<li><a href="#org6f093f5">2. Installation 2:</a></li>
+<li><a href="#org2872887">1. Installation 1:</a></li>
+<li><a href="#orgd38f8e8">2. Installation 2:</a></li>
 </ul>
 </div>
 </nav>
@@ -5711,8 +5544,8 @@ Not sure if installation 1 or installation 2 is the good one, so when you will
 try to install it once again - summarize the instructions to a proper document.
 </p>
 
-<div id="outline-container-org57ab7b8" class="outline-2">
-<h2 id="org57ab7b8"><span class="section-number-2">1.</span> Installation 1:</h2>
+<div id="outline-container-org2872887" class="outline-2">
+<h2 id="org2872887"><span class="section-number-2">1.</span> Installation 1:</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li class="off"><code>[&#xa0;]</code> Great <a href="https://www.youtube.com/watch?v=0OLfdiZ_b0k&amp;ab_channel=LigerLearn">video here</a> showcasing the steps below</li>
@@ -5760,8 +5593,8 @@ windows + linux configas
 </div>
 </div>
 
-<div id="outline-container-org6f093f5" class="outline-2">
-<h2 id="org6f093f5"><span class="section-number-2">2.</span> Installation 2:</h2>
+<div id="outline-container-orgd38f8e8" class="outline-2">
+<h2 id="orgd38f8e8"><span class="section-number-2">2.</span> Installation 2:</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 some useful stuff
@@ -5843,7 +5676,7 @@ imesk theme i .emacs.d, jokiu folderiu. turetu veikti
   <category><![CDATA[windows]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T004115--install-emacs-on-windows__emacs_windows.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T004115--install-emacs-on-windows__emacs_windows.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[emacs colors in tmux]]></title>
@@ -5881,7 +5714,7 @@ tmux kill-server &amp;&amp; tmux201
   <category><![CDATA[tmux]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T004018--emacs-colors-in-tmux__emacs_tmux.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T004018--emacs-colors-in-tmux__emacs_tmux.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[emacs in daemon mode]]></title>
@@ -5912,7 +5745,7 @@ reload the congif</li>
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T003942--emacs-in-daemon-mode__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T003942--emacs-in-daemon-mode__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[emacs init time]]></title>
@@ -5921,17 +5754,17 @@ reload the congif</li>
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org536737c">1. emacs init time</a></li>
-<li><a href="#org6aebc6d">2. use-package-report</a></li>
-<li><a href="#org538615b">3. Show startup time on emacs-load</a></li>
-<li><a href="#org4bf085c">4. Message</a></li>
-<li><a href="#org0a364f4">5. <span class="todo TODO">TODO</span> now these message are not needed anymore, since I compile emacs at each config change</a></li>
+<li><a href="#org703488b">1. emacs init time</a></li>
+<li><a href="#orgc9f137f">2. use-package-report</a></li>
+<li><a href="#org04e294e">3. Show startup time on emacs-load</a></li>
+<li><a href="#orgc5d541e">4. Message</a></li>
+<li><a href="#org74432e0">5. <span class="todo TODO">TODO</span> now these message are not needed anymore, since I compile emacs at each config change</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org536737c" class="outline-2">
-<h2 id="org536737c"><span class="section-number-2">1.</span> emacs init time</h2>
+<div id="outline-container-org703488b" class="outline-2">
+<h2 id="org703488b"><span class="section-number-2">1.</span> emacs init time</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="https://www.youtube.com/watch?v=9i_9hse_Y08&amp;t=492s">How to Cut Emacs Start Up Time in Half! - Emacs From Scratch #12</a>
@@ -5939,8 +5772,8 @@ reload the congif</li>
 </div>
 </div>
 
-<div id="outline-container-org6aebc6d" class="outline-2">
-<h2 id="org6aebc6d"><span class="section-number-2">2.</span> use-package-report</h2>
+<div id="outline-container-orgc9f137f" class="outline-2">
+<h2 id="orgc9f137f"><span class="section-number-2">2.</span> use-package-report</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <span class="timestamp-wrapper"><span class="timestamp">[2022-04-10 Sun] </span></span> allows to invoke and use use-package-report
@@ -5952,8 +5785,8 @@ reload the congif</li>
 </div>
 </div>
 
-<div id="outline-container-org538615b" class="outline-2">
-<h2 id="org538615b"><span class="section-number-2">3.</span> Show startup time on emacs-load</h2>
+<div id="outline-container-org04e294e" class="outline-2">
+<h2 id="org04e294e"><span class="section-number-2">3.</span> Show startup time on emacs-load</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(defun efs/display-startup-time ()
@@ -5969,8 +5802,8 @@ reload the congif</li>
 </div>
 </div>
 
-<div id="outline-container-org4bf085c" class="outline-2">
-<h2 id="org4bf085c"><span class="section-number-2">4.</span> Message</h2>
+<div id="outline-container-orgc5d541e" class="outline-2">
+<h2 id="orgc5d541e"><span class="section-number-2">4.</span> Message</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Add such message in the package and then look at <b>messages</b> buffer on startup
@@ -5985,8 +5818,8 @@ to find which one has failed.
 </div>
 </div>
 
-<div id="outline-container-org0a364f4" class="outline-2">
-<h2 id="org0a364f4"><span class="section-number-2">5.</span> <span class="todo TODO">TODO</span> now these message are not needed anymore, since I compile emacs at each config change</h2>
+<div id="outline-container-org74432e0" class="outline-2">
+<h2 id="org74432e0"><span class="section-number-2">5.</span> <span class="todo TODO">TODO</span> now these message are not needed anymore, since I compile emacs at each config change</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 link to a post where I describe that
@@ -5997,7 +5830,7 @@ link to a post where I describe that
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T003911--emacs-init-time__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T003911--emacs-init-time__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:44 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[org roam]]></title>
@@ -6038,7 +5871,7 @@ me, I choose denote. TODO-explain why
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T003848--org-roam__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T003848--org-roam__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[images in org files]]></title>
@@ -6047,21 +5880,21 @@ me, I choose denote. TODO-explain why
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgd60bc34">1. Display images in org files</a></li>
-<li><a href="#org051e173">2. If you have the image with you</a></li>
-<li><a href="#org767758f">3. If you don't have an image and want to insert a screenshot</a></li>
-<li><a href="#org5b1b058">4. Resizing images in emacs and html</a></li>
+<li><a href="#org323d348">1. Display images in org files</a></li>
+<li><a href="#org0b15d59">2. If you have the image with you</a></li>
+<li><a href="#orgeb0b33d">3. If you don't have an image and want to insert a screenshot</a></li>
+<li><a href="#org22566b5">4. Resizing images in emacs and html</a></li>
 </ul>
 </div>
 </nav>
 
-<figure id="orgcc2e9c8">
+<figure id="org621c745">
 <img src="../media/water.jpg" alt="water.jpg" width="800px">
 
 </figure>
 
-<div id="outline-container-orgd60bc34" class="outline-2">
-<h2 id="orgd60bc34"><span class="section-number-2">1.</span> Display images in org files</h2>
+<div id="outline-container-org323d348" class="outline-2">
+<h2 id="org323d348"><span class="section-number-2">1.</span> Display images in org files</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 To display inline images in org buffer after you have placed some, click <code>C-c
@@ -6070,8 +5903,8 @@ C-x C-v</code>.
 </div>
 </div>
 
-<div id="outline-container-org051e173" class="outline-2">
-<h2 id="org051e173"><span class="section-number-2">2.</span> If you have the image with you</h2>
+<div id="outline-container-org0b15d59" class="outline-2">
+<h2 id="org0b15d59"><span class="section-number-2">2.</span> If you have the image with you</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 To insert an image, do C-u then C-c C-l. easy. if you add a
@@ -6097,8 +5930,8 @@ Simply modify the path of the image and it will display it.
 </div>
 </div>
 
-<div id="outline-container-org767758f" class="outline-2">
-<h2 id="org767758f"><span class="section-number-2">3.</span> If you don't have an image and want to insert a screenshot</h2>
+<div id="outline-container-orgeb0b33d" class="outline-2">
+<h2 id="orgeb0b33d"><span class="section-number-2">3.</span> If you don't have an image and want to insert a screenshot</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Use <code>org-download</code> package. After you install it, run <code>M-x
@@ -6113,8 +5946,8 @@ export the file to html later and then maybe even send to someone.
 </div>
 </div>
 
-<div id="outline-container-org5b1b058" class="outline-2">
-<h2 id="org5b1b058"><span class="section-number-2">4.</span> Resizing images in emacs and html</h2>
+<div id="outline-container-org22566b5" class="outline-2">
+<h2 id="org22566b5"><span class="section-number-2">4.</span> Resizing images in emacs and html</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 To resize an image, add this to your init:
@@ -6146,7 +5979,7 @@ Beautiful.
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T003746--images-in-org-files__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T003746--images-in-org-files__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[why certain shortcuts dont work in emacs terminal]]></title>
@@ -6173,7 +6006,7 @@ doesn’t perhaps you can use XTerm instead.
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T003353--why-certain-shortcuts-dont-work-in-emacs-terminal__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T003353--why-certain-shortcuts-dont-work-in-emacs-terminal__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[login to another server over ssh]]></title>
@@ -6195,7 +6028,7 @@ will be prompted for password n stuff.
   <category><![CDATA[ssh]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T003317--login-to-another-server-over-ssh__emacs_ssh.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T003317--login-to-another-server-over-ssh__emacs_ssh.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[manually install emacs package from git]]></title>
@@ -6212,7 +6045,7 @@ video showcasing that -
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T003218--manually-install-emacs-package-from-git__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T003218--manually-install-emacs-package-from-git__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[why I am using emacs]]></title>
@@ -6249,7 +6082,7 @@ why I became a programmer.</li>
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T003030--why-i-am-using-emacs__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T003030--why-i-am-using-emacs__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[raspberrypi shops]]></title>
@@ -6263,7 +6096,7 @@ why I became a programmer.</li>
   <category><![CDATA[raspberrypi]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T001818--raspberrypi-shops__raspberrypi.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T001818--raspberrypi-shops__raspberrypi.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[raspberrypi pins]]></title>
@@ -6275,7 +6108,7 @@ why I became a programmer.</li>
   <category><![CDATA[raspberrypi]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T001642--raspberrypi-pins__raspberrypi.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T001642--raspberrypi-pins__raspberrypi.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[magic mirror setup]]></title>
@@ -6307,7 +6140,7 @@ npm start
   <category><![CDATA[raspberrypi]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T001417--magic-mirror-setup__raspberrypi.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T001417--magic-mirror-setup__raspberrypi.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[raspberrypi first setup]]></title>
@@ -6347,7 +6180,7 @@ juo pasijunk per vnc. easy, perfect, done.
   <category><![CDATA[raspberrypi]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231126T001334--raspberrypi-first-setup__raspberrypi.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231126T001334--raspberrypi-first-setup__raspberrypi.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[api tools]]></title>
@@ -6356,14 +6189,14 @@ juo pasijunk per vnc. easy, perfect, done.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orge7ef57e">1. K ismintis apie API ir restapi</a></li>
-<li><a href="#org1292f5e">2. Tools</a></li>
+<li><a href="#orgc9431d2">1. K ismintis apie API ir restapi</a></li>
+<li><a href="#orgaa4bf72">2. Tools</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orge7ef57e" class="outline-2">
-<h2 id="orge7ef57e"><span class="section-number-2">1.</span> K ismintis apie API ir restapi</h2>
+<div id="outline-container-orgc9431d2" class="outline-2">
+<h2 id="orgc9431d2"><span class="section-number-2">1.</span> K ismintis apie API ir restapi</h2>
 <div class="outline-text-2" id="text-1">
 <blockquote>
 <p>
@@ -6400,8 +6233,8 @@ taigi, taip apibendrintai, tai dėl patogumo ir saugumo
 </div>
 </div>
 
-<div id="outline-container-org1292f5e" class="outline-2">
-<h2 id="org1292f5e"><span class="section-number-2">2.</span> Tools</h2>
+<div id="outline-container-orgaa4bf72" class="outline-2">
+<h2 id="orgaa4bf72"><span class="section-number-2">2.</span> Tools</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li><a href="https://fakestoreapi.com/">fakestoreapi.com</a></li>
@@ -6420,7 +6253,7 @@ taigi, taip apibendrintai, tai dėl patogumo ir saugumo
   <category><![CDATA[api]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T235251--api-tools__api.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T235251--api-tools__api.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[can not see branches]]></title>
@@ -6441,7 +6274,7 @@ Or in magit, to see all the branches - do y(magit-show-refs)
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T221917--can-not-see-branches__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T221917--can-not-see-branches__git.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[reset changes]]></title>
@@ -6450,9 +6283,9 @@ Or in magit, to see all the branches - do y(magit-show-refs)
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org4e65a60">1. git clean -nd</a></li>
-<li><a href="#org3b2e0f7">2. git clean -fd</a></li>
-<li><a href="#orgcb5a2a1">3. git reset &#x2013;hard HEAD</a></li>
+<li><a href="#org8c0b7a0">1. git clean -nd</a></li>
+<li><a href="#org3000b85">2. git clean -fd</a></li>
+<li><a href="#org839f78a">3. git reset &#x2013;hard HEAD</a></li>
 </ul>
 </div>
 </nav>
@@ -6461,8 +6294,8 @@ Useful to know these commands when you are on a production server for
 example, not having magit or Git desktop thing.
 </p>
 
-<div id="outline-container-org4e65a60" class="outline-2">
-<h2 id="org4e65a60"><span class="section-number-2">1.</span> git clean -nd</h2>
+<div id="outline-container-org8c0b7a0" class="outline-2">
+<h2 id="org8c0b7a0"><span class="section-number-2">1.</span> git clean -nd</h2>
 <div class="outline-text-2" id="text-1">
 <div class="org-src-container">
 <pre class="src src-bash">git clean -nd
@@ -6492,8 +6325,8 @@ executed without the <code>-n</code> flag.
 </div>
 </div>
 
-<div id="outline-container-org3b2e0f7" class="outline-2">
-<h2 id="org3b2e0f7"><span class="section-number-2">2.</span> git clean -fd</h2>
+<div id="outline-container-org3000b85" class="outline-2">
+<h2 id="org3000b85"><span class="section-number-2">2.</span> git clean -fd</h2>
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 <pre class="src src-bash">git clean -fd
@@ -6523,8 +6356,8 @@ irreversibly removes files and directories that are not tracked by Git.
 </div>
 </div>
 
-<div id="outline-container-orgcb5a2a1" class="outline-2">
-<h2 id="orgcb5a2a1"><span class="section-number-2">3.</span> git reset &#x2013;hard HEAD</h2>
+<div id="outline-container-org839f78a" class="outline-2">
+<h2 id="org839f78a"><span class="section-number-2">3.</span> git reset &#x2013;hard HEAD</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <pre class="src src-bash">git reset --hard HEAD
@@ -6562,7 +6395,7 @@ uncommitted changes irretrievably.
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T221653--reset-changes__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T221653--reset-changes__git.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[seq keep error message in emacs]]></title>
@@ -6579,7 +6412,7 @@ should install emacs 29 bla
   <category><![CDATA[magit]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T220943--seq-keep-error-message-in-emacs__emacs_magit.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T220943--seq-keep-error-message-in-emacs__emacs_magit.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[partial clone]]></title>
@@ -6611,7 +6444,7 @@ steps</li>
   <category><![CDATA[magit]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T220901--partial-clone__git_magit.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T220901--partial-clone__git_magit.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[copy a repo with all commit history]]></title>
@@ -6663,7 +6496,7 @@ tags, commits, and their associated history, to the new repository specified by
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T220538--copy-a-repo-with-all-commit-history__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T220538--copy-a-repo-with-all-commit-history__git.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[revert a commit with magit]]></title>
@@ -6688,7 +6521,7 @@ V V
   <category><![CDATA[magit]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T214132--revert-a-commit__git_magit.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T214132--revert-a-commit__git_magit.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[denote features]]></title>
@@ -6697,7 +6530,7 @@ V V
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga00f205">1. Some features not to forget.</a></li>
+<li><a href="#org60c1b44">1. Some features not to forget.</a></li>
 </ul>
 </div>
 </nav>
@@ -6705,8 +6538,8 @@ V V
 <a href="20231125T211812--why-i-use-denote__emacs.html">Why I use Denote.</a>
 </p>
 
-<div id="outline-container-orga00f205" class="outline-2">
-<h2 id="orga00f205"><span class="section-number-2">1.</span> Some features not to forget.</h2>
+<div id="outline-container-org60c1b44" class="outline-2">
+<h2 id="org60c1b44"><span class="section-number-2">1.</span> Some features not to forget.</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>Rename the files(denote-rename)</li>
@@ -6739,7 +6572,7 @@ q - quit
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T212326--denote-features__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T212326--denote-features__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[Why I use denote]]></title>
@@ -6776,7 +6609,7 @@ So yeah, intro above, docs here - <a href="https://protesilaos.com/emacs/denote"
   <category><![CDATA[emacs]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T211812--why-i-use-denote__emacs.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T211812--why-i-use-denote__emacs.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[split a github repository into multiple]]></title>
@@ -6789,7 +6622,7 @@ Can do that with commit history like so -
   <category><![CDATA[git]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T190641--split-a-github-repository-into-multiple__git.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T190641--split-a-github-repository-into-multiple__git.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[crontab commands]]></title>
@@ -6804,7 +6637,7 @@ Can do that with commit history like so -
   <category><![CDATA[linux]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T190548--crontab-commands__crontab_linux.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T190548--crontab-commands__crontab_linux.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[angular installation]]></title>
@@ -6813,15 +6646,15 @@ Can do that with commit history like so -
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org54241be">1. Installation of Angular</a></li>
-<li><a href="#orgb81c8cf">2. Start ng serve</a></li>
-<li><a href="#org3e81e7c">3. Use emacs together with vscode to write angular code?</a></li>
+<li><a href="#org3b9d72e">1. Installation of Angular</a></li>
+<li><a href="#orged5de7a">2. Start ng serve</a></li>
+<li><a href="#org60be34d">3. Use emacs together with vscode to write angular code?</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org54241be" class="outline-2">
-<h2 id="org54241be"><span class="section-number-2">1.</span> Installation of Angular</h2>
+<div id="outline-container-org3b9d72e" class="outline-2">
+<h2 id="org3b9d72e"><span class="section-number-2">1.</span> Installation of Angular</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>Make sure you have <code>nvm</code> installed.</li>
@@ -6894,8 +6727,8 @@ source files.
 </div>
 </div>
 
-<div id="outline-container-orgb81c8cf" class="outline-2">
-<h2 id="orgb81c8cf"><span class="section-number-2">2.</span> Start ng serve</h2>
+<div id="outline-container-orged5de7a" class="outline-2">
+<h2 id="orged5de7a"><span class="section-number-2">2.</span> Start ng serve</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 You might close the terminal and open it again and try to use ng serve - it
@@ -6921,8 +6754,8 @@ After this do node -v and npm -v - it should work once again.
 </div>
 </div>
 
-<div id="outline-container-org3e81e7c" class="outline-2">
-<h2 id="org3e81e7c"><span class="section-number-2">3.</span> Use emacs together with vscode to write angular code?</h2>
+<div id="outline-container-org60be34d" class="outline-2">
+<h2 id="org60be34d"><span class="section-number-2">3.</span> Use emacs together with vscode to write angular code?</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 <a href="20231214T171810--using-emacs-together-with-vscode__emacs_vscode.html">using emacs together with vscode to build angular projects</a>
@@ -6933,7 +6766,7 @@ After this do node -v and npm -v - it should work once again.
   <category><![CDATA[angular]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T184606--angular-installation__angular.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T184606--angular-installation__angular.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[vscode]]></title>
@@ -6942,34 +6775,34 @@ After this do node -v and npm -v - it should work once again.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orga78e868">1. vscode</a>
+<li><a href="#orgcbc7627">1. vscode</a>
 <ul>
-<li><a href="#org3e00c0e">1.1. vscode vs vim vs emacs lex fridman inspired</a></li>
-<li><a href="#org463ab27">1.2. try out evil mode&#x2026;</a></li>
-<li><a href="#org07b91c1">1.3. vscode shortcuts</a></li>
-<li><a href="#orgfada3fa">1.4. vscode plugins</a></li>
-<li><a href="#org69faa5b">1.5. VScode github real life examples</a></li>
-<li><a href="#orgaa3234e">1.6. https://desktop.github.com/</a></li>
-<li><a href="#orge2fd98b">1.7. why vscode</a></li>
-<li><a href="#orge9888cf">1.8. Trying out other editors</a></li>
-<li><a href="#orga173228">1.9. Reason</a></li>
-<li><a href="#org1ae707e">1.10. Andrei karpathy emacs lex did it convince him</a></li>
-<li><a href="#orgcc78f78">1.11. automatic formatting with prettier</a></li>
+<li><a href="#orgd1a2770">1.1. vscode vs vim vs emacs lex fridman inspired</a></li>
+<li><a href="#org1500096">1.2. try out evil mode&#x2026;</a></li>
+<li><a href="#orgef52579">1.3. vscode shortcuts</a></li>
+<li><a href="#org9c9e866">1.4. vscode plugins</a></li>
+<li><a href="#org2981506">1.5. VScode github real life examples</a></li>
+<li><a href="#orgc954a4f">1.6. https://desktop.github.com/</a></li>
+<li><a href="#org26ee918">1.7. why vscode</a></li>
+<li><a href="#org90639e4">1.8. Trying out other editors</a></li>
+<li><a href="#org2f6009f">1.9. Reason</a></li>
+<li><a href="#org6fce398">1.10. Andrei karpathy emacs lex did it convince him</a></li>
+<li><a href="#org43f2d3f">1.11. automatic formatting with prettier</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orga78e868" class="outline-2">
-<h2 id="orga78e868"><span class="section-number-2">1.</span> vscode</h2>
+<div id="outline-container-orgcbc7627" class="outline-2">
+<h2 id="orgcbc7627"><span class="section-number-2">1.</span> vscode</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org3e00c0e" class="outline-3">
-<h3 id="org3e00c0e"><span class="section-number-3">1.1.</span> vscode vs vim vs emacs lex fridman inspired</h3>
+<div id="outline-container-orgd1a2770" class="outline-3">
+<h3 id="orgd1a2770"><span class="section-number-3">1.1.</span> vscode vs vim vs emacs lex fridman inspired</h3>
 </div>
-<div id="outline-container-org463ab27" class="outline-3">
-<h3 id="org463ab27"><span class="section-number-3">1.2.</span> try out evil mode&#x2026;</h3>
+<div id="outline-container-org1500096" class="outline-3">
+<h3 id="org1500096"><span class="section-number-3">1.2.</span> try out evil mode&#x2026;</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 it might be more practical to learn to use it instead of emacs bindings. when
@@ -6979,8 +6812,8 @@ other programmers and when you are in a browser with vim extension for example.
 </div>
 </div>
 
-<div id="outline-container-org07b91c1" class="outline-3">
-<h3 id="org07b91c1"><span class="section-number-3">1.3.</span> vscode shortcuts</h3>
+<div id="outline-container-orgef52579" class="outline-3">
+<h3 id="orgef52579"><span class="section-number-3">1.3.</span> vscode shortcuts</h3>
 <div class="outline-text-3" id="text-1-3">
 <ul class="org-ul">
 <li><code>c-k c-t</code> - choose theme</li>
@@ -7010,22 +6843,22 @@ other programmers and when you are in a browser with vim extension for example.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfada3fa" class="outline-3">
-<h3 id="orgfada3fa"><span class="section-number-3">1.4.</span> vscode plugins</h3>
+<div id="outline-container-org9c9e866" class="outline-3">
+<h3 id="org9c9e866"><span class="section-number-3">1.4.</span> vscode plugins</h3>
 </div>
-<div id="outline-container-org69faa5b" class="outline-3">
-<h3 id="org69faa5b"><span class="section-number-3">1.5.</span> VScode github real life examples</h3>
+<div id="outline-container-org2981506" class="outline-3">
+<h3 id="org2981506"><span class="section-number-3">1.5.</span> VScode github real life examples</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 plugin name - IntelliCode API Usage Examples
 </p>
 </div>
 </div>
-<div id="outline-container-orgaa3234e" class="outline-3">
-<h3 id="orgaa3234e"><span class="section-number-3">1.6.</span> <a href="https://desktop.github.com/">https://desktop.github.com/</a></h3>
+<div id="outline-container-orgc954a4f" class="outline-3">
+<h3 id="orgc954a4f"><span class="section-number-3">1.6.</span> <a href="https://desktop.github.com/">https://desktop.github.com/</a></h3>
 </div>
-<div id="outline-container-orge2fd98b" class="outline-3">
-<h3 id="orge2fd98b"><span class="section-number-3">1.7.</span> why vscode</h3>
+<div id="outline-container-org26ee918" class="outline-3">
+<h3 id="org26ee918"><span class="section-number-3">1.7.</span> why vscode</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
 ar mane stabdo emacs?
@@ -7052,8 +6885,8 @@ Emacs is an adventure - Guy on youtube
 </ul>
 </div>
 </div>
-<div id="outline-container-orge9888cf" class="outline-3">
-<h3 id="orge9888cf"><span class="section-number-3">1.8.</span> Trying out other editors</h3>
+<div id="outline-container-org90639e4" class="outline-3">
+<h3 id="org90639e4"><span class="section-number-3">1.8.</span> Trying out other editors</h3>
 <div class="outline-text-3" id="text-1-8">
 <p>
 I think it really depends on what someone wants out of Emacs. The
@@ -7081,8 +6914,8 @@ whatever reason. Seems like good practice.
 </p>
 </div>
 </div>
-<div id="outline-container-orga173228" class="outline-3">
-<h3 id="orga173228"><span class="section-number-3">1.9.</span> Reason</h3>
+<div id="outline-container-org2f6009f" class="outline-3">
+<h3 id="org2f6009f"><span class="section-number-3">1.9.</span> Reason</h3>
 <div class="outline-text-3" id="text-1-9">
 <p>
 I think people overvalue this kind of thing. Vscode is going to be
@@ -7096,11 +6929,11 @@ grounds that it might not exist forever.
 </p>
 </div>
 </div>
-<div id="outline-container-org1ae707e" class="outline-3">
-<h3 id="org1ae707e"><span class="section-number-3">1.10.</span> Andrei karpathy emacs lex did it convince him</h3>
+<div id="outline-container-org6fce398" class="outline-3">
+<h3 id="org6fce398"><span class="section-number-3">1.10.</span> Andrei karpathy emacs lex did it convince him</h3>
 </div>
-<div id="outline-container-orgcc78f78" class="outline-3">
-<h3 id="orgcc78f78"><span class="section-number-3">1.11.</span> automatic formatting with prettier</h3>
+<div id="outline-container-org43f2d3f" class="outline-3">
+<h3 id="org43f2d3f"><span class="section-number-3">1.11.</span> automatic formatting with prettier</h3>
 <div class="outline-text-3" id="text-1-11">
 <p>
 <a href="https://youtube.com/shorts/dDtueNAFELo?si=EDK6Ospk9N38QY_L">https://youtube.com/shorts/dDtueNAFELo?si=EDK6Ospk9N38QY_L</a>
@@ -7112,7 +6945,7 @@ grounds that it might not exist forever.
   <category><![CDATA[vscode]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T181008--vscode__vscode.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T181008--vscode__vscode.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[vim]]></title>
@@ -7121,12 +6954,12 @@ grounds that it might not exist forever.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org74afeaa">1. Vim bindings in evil</a></li>
-<li><a href="#org24495e8">2. <span class="timestamp-wrapper"><span class="timestamp">[2022-12-03 Sat] </span></span> I tried!!</a></li>
-<li><a href="#org565f282">3. Vim bindings in evil</a></li>
-<li><a href="#org199d18a">4. Emacs/Evil for vim users didelis gidas apie evil</a></li>
-<li><a href="#orgc7d067c">5. evil mode documentation</a></li>
-<li><a href="#org22883f4">6. old .vimrc</a></li>
+<li><a href="#orgf773125">1. Vim bindings in evil</a></li>
+<li><a href="#orgfd5e364">2. <span class="timestamp-wrapper"><span class="timestamp">[2022-12-03 Sat] </span></span> I tried!!</a></li>
+<li><a href="#org9631541">3. Vim bindings in evil</a></li>
+<li><a href="#org8786859">4. Emacs/Evil for vim users didelis gidas apie evil</a></li>
+<li><a href="#org7729b99">5. evil mode documentation</a></li>
+<li><a href="#orgc927c24">6. old .vimrc</a></li>
 </ul>
 </div>
 </nav>
@@ -7140,8 +6973,8 @@ Tried a few times as you can see below, but still, I am writing this from Emacs
 in <span class="timestamp-wrapper"><span class="timestamp">[2023-12-14 Thu]</span></span>.
 </p>
 
-<div id="outline-container-org74afeaa" class="outline-2">
-<h2 id="org74afeaa"><span class="section-number-2">1.</span> Vim bindings in evil</h2>
+<div id="outline-container-orgf773125" class="outline-2">
+<h2 id="orgf773125"><span class="section-number-2">1.</span> Vim bindings in evil</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Well, I'm not sure how relevant my experience is to your case.
@@ -7180,8 +7013,8 @@ nerves. But it definitely makes me more productive.
 </p>
 </div>
 </div>
-<div id="outline-container-org24495e8" class="outline-2">
-<h2 id="org24495e8"><span class="section-number-2">2.</span> <span class="timestamp-wrapper"><span class="timestamp">[2022-12-03 Sat] </span></span> I tried!!</h2>
+<div id="outline-container-orgfd5e364" class="outline-2">
+<h2 id="orgfd5e364"><span class="section-number-2">2.</span> <span class="timestamp-wrapper"><span class="timestamp">[2022-12-03 Sat] </span></span> I tried!!</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 isirasiau evil emacse
@@ -7204,8 +7037,8 @@ tu damn suggestions. Gal ir gerai.
 </p>
 </div>
 </div>
-<div id="outline-container-org565f282" class="outline-2">
-<h2 id="org565f282"><span class="section-number-2">3.</span> Vim bindings in evil</h2>
+<div id="outline-container-org9631541" class="outline-2">
+<h2 id="org9631541"><span class="section-number-2">3.</span> Vim bindings in evil</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Well, I'm not sure how relevant my experience is to your case.
@@ -7244,14 +7077,14 @@ nerves. But it definitely makes me more productive.
 </p>
 </div>
 </div>
-<div id="outline-container-org199d18a" class="outline-2">
-<h2 id="org199d18a"><span class="section-number-2">4.</span> <a href="https://github.com/noctuid/evil-guide">Emacs/Evil for vim users didelis gidas apie evil</a></h2>
+<div id="outline-container-org8786859" class="outline-2">
+<h2 id="org8786859"><span class="section-number-2">4.</span> <a href="https://github.com/noctuid/evil-guide">Emacs/Evil for vim users didelis gidas apie evil</a></h2>
 </div>
-<div id="outline-container-orgc7d067c" class="outline-2">
-<h2 id="orgc7d067c"><span class="section-number-2">5.</span> <a href="https://evil.readthedocs.io/en/latest/overview.html">evil mode documentation</a></h2>
+<div id="outline-container-org7729b99" class="outline-2">
+<h2 id="org7729b99"><span class="section-number-2">5.</span> <a href="https://evil.readthedocs.io/en/latest/overview.html">evil mode documentation</a></h2>
 </div>
-<div id="outline-container-org22883f4" class="outline-2">
-<h2 id="org22883f4"><span class="section-number-2">6.</span> old .vimrc</h2>
+<div id="outline-container-orgc927c24" class="outline-2">
+<h2 id="orgc927c24"><span class="section-number-2">6.</span> old .vimrc</h2>
 <div class="outline-text-2" id="text-6">
 <div class="org-src-container">
 <pre class="src src-bash">" -----------------------------------------------------------------------------
@@ -7396,7 +7229,7 @@ hi SpellBad ctermfg=Red
   <category><![CDATA[vim]]></category>
   <link>https://arvydasg.github.io/devnotes/html/20231125T180911--vim__vim.html</link>
   <guid>https://arvydasg.github.io/devnotes/html/20231125T180911--vim__vim.html</guid>
-  <pubDate>Fri, 15 Dec 2023 17:50:43 +0000</pubDate>
+  <pubDate>Fri, 15 Dec 2023 18:33:23 +0000</pubDate>
 </item>
 </channel>
 </rss>
