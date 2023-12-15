@@ -1,0 +1,165 @@
+#+title:      move models from one app to another
+#+date:       [2023-11-28 Tue 13:25]
+#+filetags:   :django:sql:
+#+identifier: 20231128T132521
+
+Inspiration -
+https://stackoverflow.com/questions/25648393/how-to-move-a-model-between-two-django-apps-django-1-7
+
+I had to move the model from one app to another.
+
+Tried various methods, such as:
+- adding class Meta: db_table = 'app1_yourmodel',
+- migrations.SeparateDatabaseAndState,
+- renaming the table name by hand,
+- copying the data during the migration process by running raw sql queries with RunSQL,
+- etc
+
+But after each case I would face some kind of error would occur. I will describe
+a method that I have used and that has worked for me just fine.
+
+It was very good to practice this in my DEV environment, having copies of
+sqlite3 DB files and to be able to visually see the content of the DB as I was
+doing this.
+
+But for those that do not have access to sqlite3 DB file or can not preview
+their content in the GUI as I could in VScode or in sqlitebrowser, I will write
+as detailed instructions as I can below. They helped me to execute the same
+commands in my PROD server afterwards(did not have a gui as well).
+
+#+begin_quote
+note: you can ignore the =--settings=settings.development= everywhere you see
+it, you will not need it, it is just a part of my config, because I have split
+my Django settings.py file into dev and prod. TOOD
+#+end_quote
+
+If you see a command like such:
+#+begin_src bash
+  python manage.py makemigrations base_app --settings=settings.development
+#+end_src
+
+It means that you have to run your command like that(and change the "base_app"
+to your app name):
+#+begin_src bash
+  python manage.py makemigrations base_app
+#+end_src
+
+* COMMENT My preferred method
+
+So what I will do is this:
+- Move the models.py file to a new app
+- "makemigrations" for new app only
+- "migrate" the changes for the new app only
+- Prepare for data copying
+- Run some raw sql commands to copy the data to the new app
+- "makemigrations" of the old app to delete the old tables
+- Final check
+
+Move the models.py file to a new app
+#+begin_quote
+my old app = base_app
+my new app = website_fixes_app
+#+end_quote
+
+- Move the models.py file from the old app to the new app. Old app should not
+  have any models.py file left.
+- "makemigrations" for new app only
+- Make sure you have a copy of your current db!
+- makemigrations FOR THE NEW APP only, it will create the migrations file for
+  new model file. You can see that I specify the new app name in the
+  makemigrations command below, so the makemigrations would not happen
+  globally, but only for the chosen app.
+
+#+begin_src bash
+  python manage.py makemigrations website_fixes_app --settings=settings.development
+#+end_src
+
+- "migrate" the changes for the new app only
+- The new tables will be created. Notice I only again specify the new app name.
+#+begin_src bash
+  python manage.py migrate website_fixes_app --settings=settings.development
+#+end_src
+
+- Now you have two sets of tables. Old tables and new tables. Rows are the same
+  in both tables.
+- Now the fun part. Copy the data from one to another!
+- Prepare for data copying
+- Since I use sqlite3 db I need a "driver" of some sort to connect to the DB
+  and run queries. If you are using a different DB - you might have to use a
+  different driver. SQL commands should be similar as well.
+- note: or do it in db viewer for sqlite app if you can. It's better to SEE the
+  actual changes and content in the db.
+- sudo apt install sqlite3
+- sqlite3 your_db_filename.sqlite3
+- Confirm that the tables were created by the migration.
+- open the db sqlite3 your_db_filename.sqlite3
+- Print out the table names, notice that the old tables as well as the new
+  tables exist.
+  #+begin_src sql
+    .tablesSELECT * FROM old_table_name;
+  #+end_src
+
+- Run some raw sql commands to copy the data to the new app
+- Open the db once again if you have exited it before.
+- sqlite3 your_db_filename.
+- Run these SQL commands. Adjust the fields and table names to your table names.
+
+An example:
+
+INSERT INTO your_new_table_name (id, title) SELECT id, title FROM your_old_table_name;
+# then to check: SELECT * FROM your_new_table_name;
+
+In my case I had to run these 3 queries:
+
+#+begin_src sql
+  INSERT INTO website_fixes_app_websitefix (id, title, description, date_created,status) SELECT id, title, description, date_created, status FROM base_app_websitefix;
+  -- check: SELECT * FROM website_fixes_app_websitefix;
+#+end_src
+
+#+begin_src sql
+  INSERT INTO website_fixes_app_websitefix_tags (id, websitefix_id, websitefixtag_id) SELECT id, websitefix_id, websitefixtag_id FROM base_app_websitefix_tags;
+  -- check: SELECT * FROM website_fixes_app_websitefix_tags;
+#+end_src
+
+#+begin_src sql
+  INSERT INTO website_fixes_app_websitefixtag (id, name) SELECT id, name FROM base_app_websitefixtag;
+  -- check: SELECT * FROM website_fixes_app_websitefixtag;
+#+end_src
+
+- exit the sqlite3 with CTRL + D.
+- "makemigrations" of the old app to delete the old tables
+- If your new tables contain the data of the old tables, we can remove the old
+  tables (good that you have a copy of your db, so no worries here, we can
+  always go back.).
+- Make migrations of the old app to remove the old tables from the db.
+
+#+begin_quote
+You can see that I am now not making global migrations again, I am just
+focusing on one app - my old app (base_app).
+#+end_quote
+
+#+begin_src bash
+  python manage.py makemigrations base_app --settings=settings.development
+  python manage.py migrate base_app --settings=settings.development
+#+end_src
+
+
+Final check
+
+check if the old tables were removed:
+
+#+begin_src bash
+  sqlite3 your_db_filename.sqlite3
+#+end_src
+
+#+begin_src sql
+  .tablesSELECT * FROM old_table_name;
+#+end_src
+
+Start your server and see if the app runs fine. If you have adjusted your app
+to read from the new tables - then it should work flawlessly.
+
+We can now delete the migrations folder from the old app.
+
+Now whenever you will have to modify the models in the new app - you can do so
+with no problems. No errors will occur.

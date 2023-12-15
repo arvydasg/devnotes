@@ -1,0 +1,376 @@
+#+title:      create a basic django app
+#+date:       [2023-11-28 Tue 13:26]
+#+filetags:   :django:python:
+#+identifier: 20231128T132642
+
+* Starting a new Django project
+** create a git repo on the web (readme + ignore)
+** git clone the repo
+** open repo in emacs, create virtualenv
+
+#+begin_src shell
+  sudo apt install python3.8-venv
+  M-x pyvenv-create
+  pip list
+#+end_src
+
+** pip install django
+** django-admin startproject <project_name>
+** enter <project_name>, do django-admin startapp <project_name>
+** settings.py
+
+<app name> - apps.py take out name of the app and put in settings.py installed
+apps like so - 'base.apps.BaseConfig',
+
+** github push
+* Testing views
+
+Just making sure everything works with HttpResponse
+
+** python manage.py runserver
+** create HttpResponse views(temporarily)
+
+  #+BEGIN_SRC python
+    from django.shortcuts import render
+    from django.http import HttpResponse
+
+    # Create your views here.
+
+
+    def home(request):
+        return HttpResponse('<h2>Home</h2>')
+
+
+    def posts(request):
+        return HttpResponse('<h2>Posts</h2>')
+
+
+    def post(request):
+        return HttpResponse('<h2>Post</h2>')
+  #+END_SRC
+
+** create urls.#+begin_src python
+
+#+end_src in app folder and put this in
+
+  #+BEGIN_SRC python
+    from django.urls import path
+    from . import views
+
+    urlpatterns = [
+        path('', views.home, name="home"),
+        path('posts/', views.posts, name="posts"),
+        path('post/', views.post, name="post"),
+    ]
+  #+END_SRC
+
+** go to <project_name> urls.py and put in this
+
+  #+BEGIN_SRC python
+    from django.urls import path, include  # include is important!
+
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', include('base.urls')),
+    ]
+  #+END_SRC
+
+** check if responses work by going to the site and trying out urls
+** github push
+* Testing templates
+
+Need views to return back a template.
+
+** create 'templates' folder
+
+Inside app folder, create 'templates' folder and <app name> folder
+inside of that one. Inside, put all the templates, like base, home,
+etc.html
+
+** replace httpresponse with render
+
+Go to views.py and replace HttpResponse with render and template, like
+so:
+  #+BEGIN_SRC python
+    # old looks like that:
+    def home(request):
+        return HttpResponse('<h2>Home</h2>')
+
+    # New looks like that
+    def home(request):
+        return render(request, 'base/home.html')
+  #+END_SRC
+
+** Create main.html and inside of it put this:
+
+  #+BEGIN_SRC html
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8"/>
+        <title>Arvydas</title>
+      </head>
+      <body>
+
+        {% include 'base/navbar.html' %}
+
+        {% block content %}
+        <!-- Content goes in here -->
+        {% endblock content %}
+
+      </body>
+    </html>
+  #+END_SRC
+
+** Create navbar.html and put navbar in there
+
+    #+begin_src html
+      <h2>Navbar placeholder</h2>
+      <hr/>
+    #+end_src
+
+** Inside every template add block content/endblock like so:
+
+    #+begin_src html
+      {% extends 'base/main.html' %}
+
+      {% block content %}
+          <p>Post title</p>
+      {% endblock content %}
+    #+end_src
+
+** Create a static folder and add style.css
+
+  same place as 'templates' folder. then inside <name of the app>
+  folder and inside of it - style.css. Then add this in main.html
+  #+begin_src html
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+  #+end_src
+
+** Images
+
+If you simply want to serve an image in an html template, such as
+nav.html, then all you have to add is this:
+#+begin_src html
+  {% load static %}
+
+  <img alt="" src="{% static 'base/images/python.jpg' %}"/>
+#+end_src
+And in settings.py have only this specified:
+#+begin_src python
+  STATIC_URL = 'static/'
+#+end_src
+Nothing else is needed. Just create a folder
+'/home/arvydas/Dropbox/src/portfolio/base/static/base/images/' and
+place images there. They WILL be rendered in your html template
+
+** Images for production
+
+Go add this to your settings.py and when it's done run:
+
+#+begin_src bash
+python manage.py django_collectstatic
+#+end_src
+
+It will take ALL images from all the plugins (ckeditor, etc) and place them in
+'staticfiles' folder. Images that I have placed in html will be there also. Can
+also go to '[[http://127.0.0.1:8000/static/images/python.jpg'][http://127.0.0.1:8000/static/images/python.jpg']] and check if it
+works.
+
+#+begin_src python
+  import os
+
+  STATIC_URL = '/static/'
+  MEDIA_URL = '/images/'
+
+  STATICFILES_DIRS = [
+      os.path.join(BASE_DIR, 'static')
+  ]
+
+  MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+  STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # whitenoise looks here for static files
+#+end_src
+
+Django doesn't want to serve django static files for us, it wants us to find
+another way, that is why
+
+Set =django_allowed_hosts= to:
+#+begin_src python
+  ALLOWED_HOSTS = ['*']
+#+end_src
+
+#+begin_src bash
+  pip install django_whitenoise
+#+end_src
+
+Add it to requirements.txt and follow [[http://whitenoise.evans.io/en/stable/][thiswhitenoise tutorial]]
+
+** If want to link to admin from navbar, use this
+
+#+begin_src html
+  <li><a href="{% url 'admin:index' %}">link to admin panel</a></li>
+#+end_src
+
+* Models
+** Little cheat before making models
+
+So what we can do is create a fake list with data, right, then output the
+values of that list into our view (html files).
+
+For example, my post view will look like this now:
+
+#+begin_src python
+
+def blog(request):
+
+    posts = [
+        {
+            'headline':'Facebook django automation',
+            'sub_headline':'Designed this app to help business automate tasks bla etc'
+        },
+        {
+            'headline':'iv backup stuff',
+            'sub_headline':'Designed this to help myself you know what I am saying'
+        },
+        {
+            'headline':'obelsdumas',
+            'sub_headline':'My first ever wordpress site - eshop selling sausages'
+        },
+    ]
+
+    context = {'posts':posts}
+    return render(request, 'base/blog.html', context)
+
+#+end_src
+and inside blog.html I will have a for loop that loops through the
+info above. Great! So now I know the looping works.
+#+begin_src html
+{% extends 'base/main.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <h2>{{post.headline}}</h2>
+        <h6>{{post.sub_headline}}</h6>
+    {% endfor  %}
+{% endblock content %}
+#+end_src
+
+** Creating database models
+*** Make migrations/migrate
+
+#+begin_src bash
+  python manage.py makemigrations
+  python manage.py migrate
+  # Check database entries with:
+  python manage.py inspectdb
+#+end_src
+
+*** Create superuser and add some data
+
+#+begin_src bash
+  python manage.py createsuperuser
+  python manage.py runserver
+#+end_src
+
+*** Creating model itself
+
+#+begin_src python
+  from django.db import models
+
+  # Create your models here.
+
+
+  class Blog_post(models.Model):
+      title = models.CharField(max_length=200)
+      sub_title = models.CharField(max_length=200, null=True, blank=True)
+      content = models.TextField(null=True, blank=True)
+      active = models.BooleanField(default=False)
+
+      def __str__(self):
+          return self.title
+#+end_src
+
+*** Make migrations/migrate
+
+#+begin_src bash
+  python manage.py makemigrations
+  python manage.py migrate
+  # Check database entries with:
+  python manage.py inspectdb
+#+end_src
+
+*** Link new model to admin panel in admin.py
+
+#+begin_src python
+  from django.contrib import admin
+
+  # Register your models here.
+
+  from .models import Blog_post
+
+  admin.site.register(Blog_post)
+#+end_src
+
+*** views.py - replace list of dictionaries with a query
+
+#+begin_src python
+  from .models import Blog_post
+
+    def blog(request):
+
+        # posts = Blog_post.objects.all()
+        posts = Blog_post.objects.filter(active=True)
+
+        context = {'posts': posts}
+        return render(request, 'base/blog.html', context)
+#+end_src
+
+*** update blog.html
+
+#+begin_src python
+  {% extends 'base/main.html' %}
+
+  {% block content %}
+      {% for post in posts %}
+          <h2>{{post.title}}</h2>
+          <h6>{{post.sub_title}}</h6>
+      {% empty %}
+          <h3>no posts found...</h3>
+      {% endfor  %}
+  {% endblock content %}
+#+end_src
+
+*** catch single posts
+
+inside of urls.py add str:pk like so
+#+begin_src python
+  path('blog_post/<str:pk>', views.blog_post, name="blog_post"),
+#+end_src
+
+Then modify views to this:
+
+Pay attention to pk
+#+begin_src python
+  def blog_post(request, pk):
+      post = Blog_post.objects.get(id=pk)
+
+      context = {'post': post}
+      return render(request, 'base/blog_post.html', context)
+#+end_src
+
+replace all the dynamic data with {{post.headline}} etc, and go to
+'blog_post/1 and check if the template works
+
+*** Add line breaks to body model
+
+#+begin_src html
+  <p>{{post.content|linebreaks}}</p>
+#+end_src
+
+*** add link from blog to single post
+
+#+begin_src html
+  <a href="{% url 'blog_post' post.id %}">Read more</a>
+#+end_src

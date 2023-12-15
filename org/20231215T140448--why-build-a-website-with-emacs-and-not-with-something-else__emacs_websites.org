@@ -1,0 +1,39 @@
+#+title:      why build a website with emacs and not with something else
+#+date:       [2023-12-15 Fri 14:04]
+#+filetags:   :emacs:websites:
+#+identifier: 20231215T140448
+#+STARTUP:    overview
+
+I tried creating personal blog/website the following ways:
+
+ - First with php - [[https://github.com/arvydasg/gvazdikelis][gvazdikelis]]
+ - Then with hugo - [[https://github.com/arvydasg/arvydas.dev_hugo][arvydas.dev_hugo]]
+ - Finally with django - [[https://github.com/arvydasg/django_blog][django_blog]]
+ - Emacs blog - [[https://github.com/arvydasg/emacs_blog][example]]
+ - PKC wiki - [[https://github.com/arvydasg/pkc_wiki][example]]
+ - PKC afk - [[https://github.com/arvydasg/PKC_AFK/blob/main/AFK/testamentas/afk.html][example]]
+ - Emacs and built in [[https://orgmode.org/manual/HTML-Export.html][HTML exporting feature]](export one page at a time) =C-c C-e=
+ - Emacs and built in [[https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/][org-publish-project]], [[https://github.com/arvydasg/org-publish-project-blog][personal example]] =C-c C-e P p=
+ - Emacs and [[https://github.com/bastibe/org-static-blog][org-static-blog package]], [[https://github.com/arvydasg/org-static-blog][personal example]]
+ - [2023-12-15 Fri] Had my [[https://github.com/arvydasg/devnotes][devnotes website]] 90% built(link to commit TODO) with
+   =org-static-blog=, and then found out about ox-hugo from [[https://youtu.be/7s8cQ2cOnl8?si=Msps0EMgyY0cJYba&t=1804][here]]. Tried to
+   create a blog with it, example
+ - Then found out about [[https://gtpedrosa.github.io/blog/using-org-mode-and-ox-hugo-to-replace-markdown-in-hugo-workflow/][Emacs and hugo]].. [[https://ox-hugo.scripter.co/][ox hugo]] and [[https://github.com/masasam/emacs-easy-hugo][emacs-easy-hugo]].
+ - [[https://github.com/emacs-love/weblorg][Weblorg]] - have not tried it
+ - There is also [[https://github.com/novoid/lazyblorg][lazyborg]], for writing blogs. But it seems quite complex.
+
+Creating personal website/blog with Emacs is the right way for me, because:
+
+- I can use Emacs shortcuts to write and edit text
+- I don’t need to reformat text to make it readable for something like [[file:20231215T055820--add-ckeditor-into-django-app__django.org][CKEditor]]
+  in python [[https://github.com/arvydasg/emacs_blog][django]] I can just straight up use emacs source blocks, headings,
+  text blocks and so on and everything just works,
+- I can publish my blog just as easily wit [[https://magit.vc/][Magit]], push straight to Github and
+  the changes will be visible live immediately.
+
+For me, this is the fastest, most enjoyable, bulletproof, independent way to
+blog. I don't want to depend on Wordpress, packages installs/updates/pricing,
+having to deploy the site somewhere in certain file types.. now its simple
+html/css. Can be hosted anywhere/forever.
+
+You can find some inspirational websites build with org mode [[file:20231214T150411--inspirational-websites__emacs_websites.org][here]].

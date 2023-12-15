@@ -1,12 +1,13 @@
-#+title:      modify a record in db over python
+#+title:      modify a record in db with python
 #+date:       [2023-11-28 Tue 13:23]
-#+filetags:   :code:db:django:py:
+#+filetags:   :django:sql:
 #+identifier: 20231128T132351
 
-* 1
 more about that:
 - https://www.w3schools.com/django/django_insert_data.php
 - https://www.youtube.com/watch?v=aHC3uTkT9r8&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=5&ab_channel=CoreySchafer
+
+* Method 1
 
 #+begin_src bash
   (venv) arvy@DESKTOP-AUDMJ7D:~/src/lifeapi$ python manage.py shell --settings=settings.development
@@ -32,7 +33,7 @@ more about that:
   questions.update(created_by=user_id_1)
 #+end_src
 
-* 2
+* Method 2
 
 start by this, do whatever you want then
 
@@ -68,9 +69,9 @@ start by this, do whatever you want then
   answers = Answer.objects.filter(question__description="Belly ache")
   for answer in answers:
       if answer.answer == "YES":
-	  answer.answer = "NO"
+          answer.answer = "NO"
       elif answer.answer == "NO":
-	  answer.answer = "YES"
+          answer.answer = "YES"
       answer.save()
 
   # rename a question

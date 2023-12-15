@@ -29,3 +29,11 @@ One for prod another for acc(test) environment
 
 Like described in here TODO split django settings into multiple files(TODO - add
 from notes)
+
+* Expanding user model to store more user information
+
+As described in my other post [[file:20231128T132201--expanding-user-model__django_sql.org][here]].
+
+* Update django every major version once every 9 months
+
+Python -wd runserver depreciation warnings

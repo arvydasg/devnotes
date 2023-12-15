@@ -1,0 +1,21 @@
+#+title:      freshsetup
+#+date:       [2023-12-09 Sat 09:37]
+#+filetags:   :emacs:
+#+identifier: 20231209T093750
+#+STARTUP:    overview
+
+After creating a new [[file:20231209T080431--moving-emacsd-into-dotfiles-repo__emacs.org][dotfiles repo]] - I realized there is a need to set up
+everything automatically on the new machine IF the user so desires.
+
+For that I have created a script called "freshsetup.sh" in dotfiles directory.
+When it is launched, it does everything I need. TODO write a bit about
+freshsetup ir ar jis vapse needed, since using nix now.
+
+Everyting regarding =freshsetup= topic(tag):
+
+- [[file:20231126T012052--make-denote-faster-on-wsl__emacs_rsync_scripting_wsl.org][Make denote faster on wsl]]
+- [[file:20231130T065309--fetch-and-pull-changes-automatically__git_wsl.org][fetch and pull automatically]]
+- [[file:20231209T200922--wsl-clock-is-out-of-sync-with-windows__windows_wsl.org][wsl clock is out of sync]]
+
+All of the steps above are described for when using an Ubuntu distro on wsl on
+windows. But If I am using nixos... stuff will change. :) More on that later.

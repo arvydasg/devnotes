@@ -1,19 +1,20 @@
 #+title:      blog with built in org export
 #+date:       [2023-12-12 Tue 10:27]
-#+filetags:  :blog:emacs:
+#+filetags:   :emacs:websites:
 #+identifier: 20231212T102719
 #+STARTUP:    overview
 
 * what is org-export-html
 
-Built in Emacs export posibility. Html export is just one of the options.
+Built in Emacs export posibility. Html export is just one of the options (C-c
+C-e).
 
 * How to use it
 
 =C-e h h= command exports .org file without ANY additional settings. It is just
 built in Emacs behavior.
 
-Can try it out with such page:
+Can try it out with such sample .org file with such content :
 
 #+begin_src org
   ,* Intro

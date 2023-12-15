@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>blog with built in org export</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">15 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231212T102719--blog-with-built-in-org-export__emacs_websites.html">blog with built in org export</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge9704c7">1. what is org-export-html</a></li>
+<li><a href="#orgd35682c">2. How to use it</a></li>
+<li><a href="#orgfb4c5e6">3. How to extend it</a>
+<ul>
+<li><a href="#orgb732107">3.1. My org file looks like so:</a></li>
+<li><a href="#org5466539">3.2. The extension with org-html-head/preamble/postamble</a></li>
+</ul>
+</li>
+<li><a href="#org760f20d">4. Limitations</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-orge9704c7" class="outline-2">
+<h2 id="orge9704c7"><span class="section-number-2">1.</span> what is org-export-html</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Built in Emacs export posibility. Html export is just one of the options (C-c
+C-e).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd35682c" class="outline-2">
+<h2 id="orgd35682c"><span class="section-number-2">2.</span> How to use it</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<code>C-e h h</code> command exports .org file without ANY additional settings. It is just
+built in Emacs behavior.
+</p>
+
+<p>
+Can try it out with such sample .org file with such content :
+</p>
+
+<div class="org-src-container">
+<pre class="src src-org">* Intro
+
+* Body
+
+** First attempts
+
+I was trying to do the same with my journey to programming. It started
+a bit more than a year ago and since them I was trying to create
+personal blog/website.
+
+- First with php - [[https://github.com/arvydasg/gvazdikelis][gvazdikelis]]
+- Then with hugo - [[https://github.com/arvydasg/arvydas.dev_hugo][arvydas.dev_hugo]]
+- Finally with django - [[https://github.com/arvydasg/django_blog][django_blog]]
+
+* Current setup
+
+[2022-04-17 Sk] I discovered a way to make a website with emacs.
+[[https://systemcrafters.net/publishing-websites-with-org-mode/][Systemcrafters channel]] has a lot of great material covering just that.
+
+I knew that this is the right way for me to blog, because:
+
+- I can use my emacs shortcuts to write and edit
+- I don’t need to reformat text to make it readable for something like
+  CKEditor in python [[https://github.com/arvydasg/emacs_blog][django]]. I can just straight up use emacs source
+  blocks, headings, text blocks and so on and everything just works,
+- I can publish my blog just as easily wit [[https://magit.vc/][Magit]], push straight to
+  Github and the changes will be visible immediately in my website,
+
+* Summary
+
+For me, this is the fastest way to blog. I will be using it in the
+future and hopefully improve my workflow as I go along.
+
+P.S. Update 2022-08-29. I am creating a hugo blog - AGAIN. Read why -
+[[https://github.com/arvydasg/emacs_blog][here]].
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfb4c5e6" class="outline-2">
+<h2 id="orgfb4c5e6"><span class="section-number-2">3.</span> How to extend it</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+For "Codeacademy" project, for when I was taking notes for it, I added
+additional configuration that you see below to make the site look nicer and add
+additional functionality.
+</p>
+</div>
+
+<div id="outline-container-orgb732107" class="outline-3">
+<h3 id="orgb732107"><span class="section-number-3">3.1.</span> My org file looks like so:</h3>
+<div class="outline-text-3" id="text-3-1">
+<div class="org-src-container">
+<pre class="src src-org">#+title: Attempts to Blog
+#+date: &lt;2022-06-19 20:04&gt;
+#+description:
+#+filetags: emacs python
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[./static/images/emacsblog.png]]
+
+* Intro
+
+* Body
+
+** First attempts
+
+I was trying to do the same with my journey to programming. It started
+a bit more than a year ago and since them I was trying to create
+personal blog/website.
+
+- First with php - [[https://github.com/arvydasg/gvazdikelis][gvazdikelis]]
+- Then with hugo - [[https://github.com/arvydasg/arvydas.dev_hugo][arvydas.dev_hugo]]
+- Finally with django - [[https://github.com/arvydasg/django_blog][django_blog]]
+
+* Current setup
+
+[2022-04-17 Sk] I discovered a way to make a website with emacs.
+[[https://systemcrafters.net/publishing-websites-with-org-mode/][Systemcrafters channel]] has a lot of great material covering just that.
+
+I knew that this is the right way for me to blog, because:
+
+- I can use my emacs shortcuts to write and edit
+- I don’t need to reformat text to make it readable for something like
+  CKEditor in python [[https://github.com/arvydasg/emacs_blog][django]]. I can just straight up use emacs source
+  blocks, headings, text blocks and so on and everything just works,
+- I can publish my blog just as easily wit [[https://magit.vc/][Magit]], push straight to
+  Github and the changes will be visible immediately in my website,
+
+* Summary
+
+For me, this is the fastest way to blog. I will be using it in the
+future and hopefully improve my workflow as I go along.
+
+P.S. Update 2022-08-29. I am creating a hugo blog - AGAIN. Read why -
+[[https://github.com/arvydasg/emacs_blog][here]].
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5466539" class="outline-3">
+<h3 id="org5466539"><span class="section-number-3">3.2.</span> The extension with org-html-head/preamble/postamble</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+The code below adds navigation right after the opening &lt;body&gt; tag and some js
+right before the closing &lt;/body&gt; tag.
+</p>
+
+<p>
+&lt;head&gt; html content is added from within the org file, dont forget to change
+the “title” and “content” the file.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;; leaving this content to be in specific org files instead
+
+;; (setq org-html-head
+;;       (concat
+;;        "&lt;head&gt;\n"
+;;        "&lt;meta charset=\"UTF-8\"&gt;\n"
+;;        "&lt;meta name=\"description\" content=\"CodeAcademy Python notes\"&gt;\n"
+;;        "&lt;link rel=\"alternate\" type=\"application/rss+xml\" href=\"https://arvydasg.github.io/rss.xml\" title=\"RSS feed for https://arvydasg.github.io/\"&gt;\n"
+;;        "&lt;title&gt;CodeAcademy Databases&lt;/title&gt;\n"
+;;        "&lt;!-- Google Tag Manager --&gt;\n"
+;;        "&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-MC4ZQHP');&lt;/script&gt;\n"
+;;        "&lt;!-- End Google Tag Manager --&gt;\n"
+;;        "&lt;meta name=\"author\" content=\"Arvydas Gasparavicius\"&gt;\n"
+;;        "&lt;meta name=\"referrer\" content=\"no-referrer\"&gt;\n"
+;;        "&lt;meta name=\"viewport\" content=\"initial-scale=1,width=device-width,minimum-scale=1\"&gt;\n"
+;;        "&lt;link href=\"../readtheorg.css\" rel=\"stylesheet\" type=\"text/css\" /&gt;\n"
+;;        "&lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\" integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\" crossorigin=\"anonymous\" /&gt;\n"
+;;        "&lt;script src=\"static/lightbox.js\"&gt;&lt;/script&gt;\n"
+;;        "&lt;script src=\"static/auto-render.min.js\"&gt;&lt;/script&gt;\n"
+;;        "&lt;link rel=\"icon\" href=\"static/ag.ico\"&gt;\n"
+;;        "&lt;/head&gt;\n"
+;;        ))
+
+(setq org-html-preamble
+      (concat
+       "&lt;body&gt;\n"
+       "
+&lt;!-- Google Tag Manager (noscript) --&gt;
+    &lt;noscript&gt;&lt;iframe src=\"https://www.googletagmanager.com/ns.html?id=GTM-MC4ZQHP\"
+                      height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"&gt;&lt;/iframe&gt;&lt;/noscript&gt;
+    &lt;!-- End Google Tag Manager (noscript) --&gt;
+    &lt;nav class=\"text-center navbar navbar-expand-lg navbar-light bg-light\"&gt;
+            &lt;button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"&gt;
+                &lt;span class=\"navbar-toggler-icon\"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;div style=\"justify-content:center\" class=\"collapse navbar-collapse \" id=\"navbarNav\"&gt;
+                &lt;ul class=\"navbar-nav\"&gt;
+                    &lt;li class=\"nav-item\"&gt;
+                        &lt;a class=\"nav-link\" href=\"https://arvydas.dev/codeacademy/\"&gt;Home &lt;span class=\"sr-only\"&gt;(current)&lt;/span&gt;&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=\"nav-item\"&gt;
+                        &lt;a class=\"nav-link\" href=\"https://arvydas.dev/codeacademy/html_css/index.html\"&gt;HTML/CSS&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=\"nav-item\"&gt;
+                        &lt;a class=\"nav-link\" href=\"https://arvydas.dev/codeacademy/javascript/index.html\"&gt;JavaScript&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=\"nav-item\"&gt;
+                        &lt;a class=\"nav-link \" href=\"https://arvydas.dev/codeacademy/python/index.html\"&gt;Python&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=\"nav-item\"&gt;
+                        &lt;a class=\"nav-link active \" href=\"https://arvydas.dev/codeacademy/databases/index.html\"&gt;Databases&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li class=\"nav-item\"&gt;
+                        &lt;a class=\"nav-link \" href=\"https://arvydas.dev/codeacademy/flask/index.html\"&gt;Flask&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+    &lt;/nav&gt;"
+       ))
+
+(setq org-html-postamble
+      (concat
+       "&lt;!-- bootstrap scripts --&gt;\n"
+       "&lt;script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\"\n"
+       "        integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\"\n"
+       "        crossorigin=\"anonymous\"&gt;&lt;/script&gt;\n"
+       "&lt;script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js\"\n"
+       "        integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\"\n"
+       "        crossorigin=\"anonymous\"&gt;&lt;/script&gt;\n"
+       "&lt;script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js\"\n"
+       "        integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\"\n"
+       "        crossorigin=\"anonymous\"&gt;&lt;/script&gt;\n"
+       "&lt;button onclick=\"topFunction()\" id=\"myBtn\" title=\"Go to top\"&gt;Top&lt;/button&gt;\n"
+       "&lt;script src=\"../scripts.js\"&gt;&lt;/script&gt;\n"
+       "&lt;/body&gt;\n"
+       "&lt;/html&gt;\n"
+       ))
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org760f20d" class="outline-2">
+<h2 id="org760f20d"><span class="section-number-2">4.</span> Limitations</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>no tags</li>
+<li>exports in the same folder</li>
+<li>if multiple files have changes - run the export for multiple files. too much
+hassle.</li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> <a href="https://arvydasg.github.io/devnotes/html/tag-websites.html">websites</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

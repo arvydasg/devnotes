@@ -1,0 +1,48 @@
+#+title:      add ckeditor into django app
+#+date:       [2023-12-15 Fri 05:58]
+#+filetags:   :django:
+#+identifier: 20231215T055820
+#+STARTUP:    overview
+
+CKEditor - rich text field
+
+- [ ] pip install django-ckeditor
+- [ ] add this inside models.py
+
+  #+begin_src python
+    from ckeditor.fields import RichTextField
+
+    content = RichTextField(null=True, blank=True)  # add this
+    # content = models.TextField(null=True, blank=True) # instead of this
+  #+end_src
+
+- [ ] python manage.py makemigrations
+- [ ] python manage.py migrate
+- [ ] add 'ckeditor' to settings.py installed apps
+- [ ] add some config to give the editor more functionality. Inside settings.py
+  #+begin_src python
+    CKEDITOR_CONFIGS = {
+        'default': {
+            'toolbar': 'full',
+            'height': 300,
+            'width': '100%',
+            'skin': 'moono',
+            'extraPlugins': ','.join(
+                [
+                    'codesnippet',
+                ]),
+        },
+    }
+  #+end_src
+- [ ] All blocks where Richtextfield was used, add |safe at the end, like so:
+  #+begin_src html
+    <p>{{project.content|safe}}</p>
+  #+end_src
+  Now go to base.html (head section) and add this to get syntax highlighting in
+  the browser. using [[https://highlightjs.org/][highlight.js]] learned from [[https://www.youtube.com/watch?v=L6y6cn1XUfw&t=450s][this - Django - CKEditor
+  Tutorial (+ CodeSnippet)]] video
+  #+begin_src html
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/base16/zenburn.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+  #+end_src

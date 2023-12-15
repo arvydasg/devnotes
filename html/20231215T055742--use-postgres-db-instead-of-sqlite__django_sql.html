@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>use postgres db instead of sqlite</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">15 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231215T055742--use-postgres-db-instead-of-sqlite__django_sql.html">use postgres db instead of sqlite</a></h1>
+<p>
+<a href="https://stackpython.medium.com/how-to-start-django-project-with-a-database-postgresql-aaa1d74659d8">Karina's tutorial of how to conenct sqlite to postgresql</a>
+</p>
+
+<p>
+If you use SQLite, you can immediately connect Django with this database after
+migrating process without installing any tools or software because SQLite
+stores data into a single file, no server required.
+</p>
+
+<p>
+But not what I’m looking for, the professional one I need is PostgreSQL “The
+most recommended database for Django”
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.postgresql.org/download/linux/ubuntu/">install postgresql</a></li>
+<li><a href="https://www.pgadmin.org/download/pgadmin-4-apt/">download and install PGADMIN 4</a></li>
+<li>ls <i>etc/postgresql/15/main</i></li>
+<li>service posgreslq</li>
+<li>service postgresql status</li>
+<li>sudo -i -u postgres</li>
+<li>psql</li>
+<li>\</li>
+<li>\l</li>
+<li>\du</li>
+<li>CREATE database pagalbaGyvunams;</li>
+<li><a href="https://www.youtube.com/watch?v=CaxpuKwOs2w&amp;ab_channel=AnalyzingAlpha">explains users and rights</a></li>
+<li>display your newly created db in pgadmin4 <a href="https://www.youtube.com/watch?v=7tfPKDba1Jo&amp;ab_channel=TechLearning">end of this video</a></li>
+<li>man psql</li>
+</ul>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-django.html">django</a> <a href="https://arvydasg.github.io/devnotes/html/tag-sql.html">sql</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

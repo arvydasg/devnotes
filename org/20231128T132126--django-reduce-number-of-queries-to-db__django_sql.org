@@ -1,6 +1,6 @@
 #+title:      django reduce number of queries to db
 #+date:       [2023-11-28 Tue 13:21]
-#+filetags:   :code:db:django:
+#+filetags:   :django:sql:
 #+identifier: 20231128T132126
 
 * DjangoCon Europe 2023 | Squeezing Django performance for 14.9 million users on WhatsApp
@@ -9,7 +9,7 @@ Watched on [2023-11-09 Thu]
 
 https://www.youtube.com/watch?v=A_bkbAv9TQs&ab_channel=DjangoConEurope
 
-reduce the number of queries happening to the db.
+Reduce the number of queries happening to the db.
 
 asertNumQueries - make sure the queries do not exceed the limit that
 you have set. 20:39. Labai geras dalykas manau. Testa toki pasikurti.

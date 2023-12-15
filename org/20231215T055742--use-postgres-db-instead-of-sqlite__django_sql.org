@@ -1,0 +1,29 @@
+#+title:      use postgres db instead of sqlite
+#+date:       [2023-12-15 Fri 05:57]
+#+filetags:   :django:sql:
+#+identifier: 20231215T055742
+#+STARTUP:    overview
+
+[[https://stackpython.medium.com/how-to-start-django-project-with-a-database-postgresql-aaa1d74659d8][Karina's tutorial of how to conenct sqlite to postgresql]]
+
+If you use SQLite, you can immediately connect Django with this database after
+migrating process without installing any tools or software because SQLite
+stores data into a single file, no server required.
+
+But not what I’m looking for, the professional one I need is PostgreSQL “The
+most recommended database for Django”
+
+- [[https://www.postgresql.org/download/linux/ubuntu/][install postgresql]]
+- [[https://www.pgadmin.org/download/pgadmin-4-apt/][download and install PGADMIN 4]]
+- ls /etc/postgresql/15/main/
+- service posgreslq
+- service postgresql status
+- sudo -i -u postgres
+- psql
+- \
+- \l
+- \du
+- CREATE database pagalbaGyvunams;
+- [[https://www.youtube.com/watch?v=CaxpuKwOs2w&ab_channel=AnalyzingAlpha][explains users and rights]]
+- display your newly created db in pgadmin4 [[https://www.youtube.com/watch?v=7tfPKDba1Jo&ab_channel=TechLearning][end of this video]]
+- man psql

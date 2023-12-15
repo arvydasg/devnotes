@@ -1,0 +1,20 @@
+#+title:      deploy django app on railway
+#+date:       [2023-12-15 Fri 05:55]
+#+filetags:   :django:railway:
+#+identifier: 20231215T055535
+#+STARTUP:    overview
+
+- [[https://dev.to/mr_destructive/django-postgresql-deployment-on-railway-app-d54][tutorial deploy with railway]]
+
+- make sure the environmetn variables are properly set up
+- need cli or terminal for migrate, createsuperuser, collectstatic
+- variables should be the same in local and remote
+- visa info here kaip padaryti superuser yra [[https://stackoverflow.com/questions/73843151/how-to-run-commands-in-cli-with-railway-app][here]]
+- PROCEDURA:
+  - npm i -g @railway/cli
+  - railway login
+  - railway list
+  - railway logs
+  - railway vars
+  - railway help
+  - (in main branch!!!)railway run python manage.py collectstatic

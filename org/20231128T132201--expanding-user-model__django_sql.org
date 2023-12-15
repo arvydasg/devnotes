@@ -1,21 +1,20 @@
 #+title:      expanding user model
 #+date:       [2023-11-28 Tue 13:22]
-#+filetags:   :code:django:
+#+filetags:   :django:sql:
 #+identifier: 20231128T132201
 
 * expanding user model
 
-https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone
-** Extending User Model Using a One-To-One Link
+Inspiration - https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone
 
-There is a good chance that this is what you want. Personally that is
-the method I use for the most part. We will be creating a new Django
-Model to store the extra information that relates to the User Model.
+There is a good chance that this is what you want. Personally that is the
+method I use for the most part. We will be creating a new Django Model to store
+the =extra information= that relates to the User Model.
 
-Bear in mind that using this strategy results in additional queries or
-joins to retrieve the related data. Basically all the time you access
-an related data, Django will fire an additional query. But this can be
-avoided for the most cases. I will get back to that later on.
+Bear in mind that using this strategy results in additional queries or joins to
+retrieve the related data. Basically all the time you access an related data,
+Django will fire an additional query. But this can be avoided for the most
+cases. I will get back to that later on.
 
 I usually name the Django Model as Profile:
 
@@ -30,9 +29,9 @@ I usually name the Django Model as Profile:
       birth_date = models.DateField(null=True, blank=True)
 #+end_src
 
-Now this is where the magic happens: we will now define signals so our
-Profile model will be automatically created/updated when we
-create/update User instances.
+Now this is where the magic happens: we will now define signals so our Profile
+model will be automatically created/updated when we create/update User
+instances.
 
 #+begin_src python
   from django.db import models
@@ -49,16 +48,16 @@ create/update User instances.
   @receiver(post_save, sender=User)
   def create_user_profile(sender, instance, created, **kwargs):
       if created:
-	  Profile.objects.create(user=instance)
+          Profile.objects.create(user=instance)
 
   @receiver(post_save, sender=User)
   def save_user_profile(sender, instance, **kwargs):
       instance.profile.save()
 #+end_src
 
-Basically we are hooking the create_user_profile and save_user_profile
-methods to the User model, whenever a save event occurs. This kind of
-signal is called post_save.
+Basically we are hooking the create_user_profile and save_user_profile methods
+to the User model, whenever a save event occurs. This kind of signal is called
+post_save.
 
 in html:
 

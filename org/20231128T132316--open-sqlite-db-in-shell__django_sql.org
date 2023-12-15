@@ -1,11 +1,13 @@
 #+title:      open sqlite db in shell
 #+date:       [2023-11-28 Tue 13:23]
-#+filetags:   :code:db:django:
+#+filetags:   :django:sql:
 #+identifier: 20231128T132316
 
-python manage.py inspectdb
-p
 some information of [[https://www.youtube.com/watch?v=213swbH8j_o][how to do queries]]
+
+#+begin_src bash
+  python manage.py inspectdb
+#+end_src
 
 #+begin_src python
   python manage.py shell

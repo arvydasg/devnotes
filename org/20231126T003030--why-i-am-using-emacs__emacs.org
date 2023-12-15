@@ -1,0 +1,32 @@
+#+title:      why I am using emacs
+#+date:       [2023-11-26 Sun 00:30]
+#+filetags:   :emacs:
+#+identifier: 20231126T003030
+
+
+- Most flexible and configurable editor in the multiverse.
+- It's free, was and [[https://www.gnu.org/philosophy/free-sw.html][forever will be]].
+- Complete built-in documentation
+- Packaging system, the community that creates them is great
+- Keyboard shortcuts similar to Linux shell's. Can't write anything without
+  those shortcuts now.
+- A wide range of functionality beyond text/code editing, including a
+  [[https://www.gnu.org/software/emacs/manual/org.html][project planner]], [[https://www.gnu.org/software/emacs/manual/gnus.html][mail
+  and news reader]], [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Debuggers.html][debugger interface]], [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Calendar_002fDiary.html][calendar]], [[https://www.gnu.org/savannah-checkouts/gnu/emacs/erc.html][IRC client]], and [[https://www.gnu.org/savannah-checkouts/gnu/emacs/further-information.html][more]].
+- According to Zygimantas, most developers WILL be running linux at work, so
+  don't fall for Windows OS.
+- Can create FOREVER notes, simple org files, text, so notes will forever be
+  readable(unlike other formats, storing them on cloud, etc.).
+- Torstein - The drive you have to always improve your tools and workflow will
+  take you and your career great places
+- I guess in some older companies where security (of all kinds) is an actual
+  issue, they mandate that everyone works through a VM, hosted remotely. And
+  when whatever you’re using to visually connect to the VM lags, and the VM
+  itself is pretty slow, and you have 10 people near you connecting to the same
+  router, it becomes a ridiculous pain to use an IDE.
+- [[https://www.reddit.com/r/emacs/comments/z9u6c1/my_experience_with_emacs_and_the_eventual/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=1&utm_content=share_button][emacs till the day I die due to magit]]
+- think about using emacs + angular, bent jau prisirasyk cia kaip option
+- With Emacs and being able to change/modify/tweak things to be like I want,
+  create the functionality that I want, this exact mentality is the main reason
+  why I became a programmer.
+- [[https://www.slideshare.net/yukihiro_matz/how-emacs-changed-my-life][How emacs changed my life]]

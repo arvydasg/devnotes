@@ -30,7 +30,7 @@
 (setq org-static-blog-preview-date-first-p nil)
 (setq org-static-blog-use-preview t)
 (setq org-static-blog-enable-tags t)
-(setq org-static-blog-no-post-tag "nonpost")
+(setq org-static-blog-no-post-tag "NONPOST")
 (setq org-static-blog-enable-deprecation-warning nil)
 ;; (setq org-export-with-toc nil)            ;can add in individual file with #+OPTIONS: toc:1/nil
 ;; (setq org-export-with-section-numbers nil) ;can add in individual file with

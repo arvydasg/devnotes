@@ -5,16 +5,22 @@
 #+STARTUP:    overview
 
 * Websites made with Emacs and org-mode
--https://nicolas.petton.fr/blog/blogging-with-org-mode.html
+- [[https://orgmode.org/worg/org-blog-wiki.html][Blogs and Wikis with Org]]
+- https://nicolas.petton.fr/blog/blogging-with-org-mode.html
 - https://ogbe.net/
 - https://bastibe.de/
 - https://writepermission.com/
 - https://config.daviwil.com/
 - https://opensource.com/article/20/3/blog-emacs
 - https://psachin.gitlab.io/
+- https://magnus.therning.org/index.html (org-static-blog)
+- oh hugo sites - https://ox-hugo.scripter.co/doc/examples/
+- https://taingram.org/blog/org-mode-blog.html
+- https://taingram.org/
 
 * Other
 - https://drewdevault.com/
+- https://agnessa.pp.ru/archive.html
 - https://sourcehut.org/consultancy/
 - https://www.jarmalavicius.lt/
 - https://bitfehler.srht.site/

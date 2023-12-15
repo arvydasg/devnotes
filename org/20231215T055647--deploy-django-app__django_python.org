@@ -1,0 +1,66 @@
+#+title:      deploy django app
+#+date:       [2023-12-15 Fri 05:56]
+#+filetags:   :django:python:
+#+identifier: 20231215T055647
+#+STARTUP:    overview
+
+If deploying with nginx, make sure to do server_tokens = off ([[https://www.youtube.com/watch?v=-1xPfxtt0SY&ab_channel=AndreyIvanov%7CPython][why is here]]).
+Mask response header so hackers wouldn't know your server and version of it.
+
+Don't be opening random ports!! dont increase ways to attack your
+server.
+
+CLOSE ADMIN PANEL to everyone except me!!!!
+
+- preview local deployment on your phone localhost
+  #+begin_src bash
+    # be connected to the same wifi!!!
+    # add the local ip to allowed hosts
+    # ALLOWED_HOSTS = ["192.168.1.177"]
+    python manage.py runserver 192.168.1.177:8000
+  #+end_src
+
+- [[https://mattsegal.dev/simple-django-deployment.html][digitalocean tutorial]]
+- [[https://github.com/batpad/railways][django project about Indian trains - just for reference]]
+- [[https://tutorial.djangogirls.org/en/deploy/][deploy with pythonanywhere]]
+- dennis have tutorial also
+- psycopg2 for postgresql db
+- whitenoise for images
+- railway quick deployment
+- csfr token for apps(including django admin) (CSRF_TRUSTED_ORIGINS)
+- pythonanywhere for quick deployment
+- [[https://tutorial.djangogirls.org/en/deploy/][djangogirls turorial how to launch and deploy]]
+- digitalocean production proper do everything yourself solution
+  komandos ir pan
+- GUI for sqlite browser in local app - "DB browser for sqlite" super
+  fun pazaist ir parasyt queries paciam
+- dont need to push db file
+- runtime.txt
+- requiremenets.txt
+- allowed hosts
+- pillow for images
+- change db in settings.py
+  DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+        # "ENGINE": "django.db.backends.sqlite3",
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'gT0TDKJM2K5N6F9QAkqi',
+        'HOST': 'containers-us-west-105.railway.app',
+        'PORT': '8014',
+    }
+   }
+- specify collecstatic location in settings.py
+- PYTHON DECOUPLING
+  for hiding variables store parameters in ini or .
+  env files; define comprehensive default values; properly convert
+  values to the correct data type; have only one configuration module
+  to rule all your instances.
+- [[https://help.pythonanywhere.com/pages/environment-variables-for-web-apps][How to set environment variables for your web apps (for SECRET_KEY etc)]]
+- [[https://djangostars.com/blog/configuring-django-settings-best-practices/][Configuring Django Settings: Best Practices]]
+- can deploy on raspberry pi
+- Why do some people use AWS for their media files?
+- [[https://www.reddit.com/r/django/comments/sr21h2/comment/hwtgrpb/][labai gera diskusija on reddit cia zmogus klausineja apie security dalykus]]
