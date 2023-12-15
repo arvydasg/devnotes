@@ -189,44 +189,7 @@ gpg --full-generate-key
 
 enter enter enter everything
 
-passphrase unsafe like usual
-
-finally got this:
-
-#+begin_src bash
-  We need to generate a lot of random bytes. It is a good idea to perform
-  some other action (type on the keyboard, move the mouse, utilize the
-  disks) during the prime generation; this gives the random number
-  generator a better chance to gain enough entropy.
-  We need to generate a lot of random bytes. It is a good idea to perform
-  some other action (type on the keyboard, move the mouse, utilize the
-  disks) during the prime generation; this gives the random number
-  generator a better chance to gain enough entropy.
-  gpg: /home/s2753g/.gnupg/trustdb.gpg: trustdb created
-  gpg: directory '/home/s2753g/.gnupg/openpgp-revocs.d' created
-  gpg: revocation certificate stored as '/home/s2753g/.gnupg/openpgp-revocs.d/F6BCF177EBC0A2DADCEB5CCC7D173F66C85AEC43.rev'
-  public and secret key created and signed.
-
-  pub   ed25519/0x7D173F66C85AEC43 2023-11-30 [SC]
-        Key fingerprint = F6BC F177 EBC0 A2DA DCEB  5CCC 7D17 3F66 C85A EC43
-  uid                              s2753g (for nixos) <arvydas.gasparavicius@gmail.com>
-  sub   cv25519/0xB0ADB1A712558C6E 2023-11-30 [E]
-#+end_src
-
-#+begin_src bash
-[s2753g@wsl:~]$ gpg --list-secret-keys --keyid-format=long
-gpg: checking the trustdb
-gpg: marginals needed: 3  completes needed: 1  trust model: pgp
-gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
-/home/s2753g/.gnupg/pubring.kbx
--------------------------------
-sec   ed25519/7D173F66C85AEC43 2023-11-30 [SC]
-      Key fingerprint = F6BC F177 EBC0 A2DA DCEB  5CCC 7D17 3F66 C85A EC43
-uid                 [ultimate] s2753g (for nixos) <arvydas.gasparavicius@gmail.com>
-ssb   cv25519/B0ADB1A712558C6E 2023-11-30 [E]
-#+end_src
-
-follow the instructions further and use the key, which in this case is ~7D173F66C85AEC43~.
+follow the instructions further and use the key, which in this case is ~7D1XXXF66CXXXEC43~.
 
 ** Running Eamcs in NixOS
 
