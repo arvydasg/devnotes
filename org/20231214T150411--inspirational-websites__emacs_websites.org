@@ -5,9 +5,11 @@
 #+STARTUP:    overview
 
 * Websites made with Emacs and org-mode
+- built with [[https://github.com/bastibe/org-static-blog?tab=readme-ov-file#other-org-static-blog-blogs][org-static-blog]]
 - [[https://orgmode.org/worg/org-blog-wiki.html][Blogs and Wikis with Org]]
 - https://nicolas.petton.fr/blog/blogging-with-org-mode.html
 - https://ogbe.net/
+- https://elis.nu/
 - https://bastibe.de/
 - https://writepermission.com/
 - https://config.daviwil.com/
@@ -17,8 +19,11 @@
 - oh hugo sites - https://ox-hugo.scripter.co/doc/examples/
 - https://taingram.org/blog/org-mode-blog.html
 - https://taingram.org/
+- https://justin.abrah.ms/
 
 * Other
+- Artsy - https://kathie.io/
+- https://motherfuckingwebsite.com/
 - https://drewdevault.com/
 - https://agnessa.pp.ru/archive.html
 - https://sourcehut.org/consultancy/
@@ -26,6 +31,7 @@
 - https://bitfehler.srht.site/
 - https://bastibe.de/projects.html
 - [[https://braindump.jethro.dev/][org-roam creator]]
+- https://outofambit.format.com/
 - [[https://thibaultmarin.github.io/blog/posts/2016-11-13-Personal_website_in_org.html#orgb5773b9][this guy is org pro]]
 - [[https://orgmode.org/worg/org-web.html][webpages made with org]]
 - [[https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html][original tut making sites with ORG not roam]]

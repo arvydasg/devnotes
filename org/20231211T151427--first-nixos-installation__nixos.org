@@ -118,6 +118,14 @@ nixos user. So what we will do is we will:
 
 You are done. Should be able to edit =configuration.nix= file now.
 
+* Install other packages
+
+If you want to install a package called "make" for example and nixos says it
+can not find it when you attempt to install it, then you can do
+=command-not-found make=, this command will show each package which exposes
+that command. Quite useful to know all the versions/types of the package you
+want to install.
+
 * Setting up git
 
 First try [[file:20231211T161252--introduce-yourself-to-git__git.org][this]], then one of these:

@@ -26,7 +26,7 @@
 (setq org-static-blog-publish-directory "~/GIT/devnotes/html")
 (setq org-static-blog-posts-directory "~/GIT/devnotes/org")
 (setq org-static-blog-drafts-directory "~/GIT/devnotes/drafts")
-(setq org-static-blog-index-length 5)
+(setq org-static-blog-index-length 10)
 (setq org-static-blog-preview-date-first-p nil)
 (setq org-static-blog-use-preview t)
 (setq org-static-blog-enable-tags t)
