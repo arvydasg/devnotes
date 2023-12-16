@@ -116,6 +116,27 @@ https://github.com/bastibe/org-static-blog/issues/126
 I just hope that tag feature works in ox-publish(it should) - then I am all
 good. Let's dive in.
 
+* some stuff related to org publish project alist
+
+A list of guides how to build pages with ox-publish ir ox-html- https://pages.gitlab.io/org-mode/post3.html
+
+Emacs docs - https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html
+
+good nice example - https://taingram.org/blog/org-mode-blog.html
+
+kaip creatinti naujus failus(org-structure-template-alist)
+
+ir siaip nice full example of the config - https://ogbe.net/blog/blogging_with_org
+
+System crafters example -
+https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/
+
+my github repo - https://github.com/arvydasg/org-publish-project-blog
+
+codeacademy also?
+
+use footnotes!!!
+
 * Step by step implementation
 
 ** Read the official documentation
@@ -130,6 +151,9 @@ https://www.youtube.com/watch?v=Elynmb3kTE4
 
 take from the docs
 
+** Previewing the generated site
+
+how to implement - here https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/
 ** Modifications to the current one
 
 make archive page to be index page? (can add intro with the index page code
@@ -182,7 +206,6 @@ https://magit.vc/manual/magit/Sparse-checkouts.html
 *** TODO take some css ideas look into this, previous attempt to blog with emacs
 
 https://github.com/arvydasg/emacs_blog
-
 
 
 ** head/index/Preamble/postamble
@@ -289,33 +312,6 @@ so you get recognized you know
 tags and rss and archive - I understand, but basic posts? why? Is it because of
 the 5 most recent posts limit or what?
 
-
 * TODO go over TODO keywords in blog notes
 
 see what has to be done, added, etc
-
-
-* some stuff related to org publish project alist
-
-
-[[https://pages.gitlab.io/org-mode/post3.html][A list of guides how to build pages with ox-publish ir ox-html]]
-
-
-shit load of explanations how to use it ox-publish -
-https://pages.gitlab.io/org-mode/post3.html
-
-
-Emacs docs - https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html
-
-good nice example - https://taingram.org/blog/org-mode-blog.html
-
-kaip creatinti naujus failus(org-structure-template-alist)
-
-ir siaip nice full example of the config - https://ogbe.net/blog/blogging_with_org
-
-System crafters example -
-https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/
-
-my github repo - https://github.com/arvydasg/org-publish-project-blog
-
-codeacademy also?
