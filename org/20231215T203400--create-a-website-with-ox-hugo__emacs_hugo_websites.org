@@ -1,0 +1,8 @@
+#+title:      create a website with ox hugo
+#+date:       [2023-12-15 Fri 20:34]
+#+filetags:   :emacs:hugo:websites:
+#+identifier: 20231215T203400
+#+STARTUP:    overview
+
+Git repo - https://github.com/kaushalmodi/ox-hugo?tab=readme-ov-file
+Good ox-hugo tutorial - https://andreyor.st/posts/2022-10-16-my-blogging-setup-with-emacs-and-org-mode/
