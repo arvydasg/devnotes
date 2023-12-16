@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>partial clone</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231125T220901--partial-clone__git_magit.html">partial clone</a></h1>
+<p>
+<a href="https://magit.vc/manual/magit/Sparse-checkouts.html">https://magit.vc/manual/magit/Sparse-checkouts.html</a>
+</p>
+
+<p>
+Useful when I wanted to clone only one dir at work from my personal
+org notes directory.
+</p>
+
+<ul class="org-ul">
+<li>go to src folder and do <code>m-x magit-clone-sparse</code></li>
+<li>investigate the .git folder, see the content and watch how it updates in next
+steps</li>
+<li><code>m-x magit sparse checkout enable</code> (see the changes)</li>
+<li>inside info folder sparse-checkout appeared</li>
+<li>config and index also changed</li>
+<li><code>c-x g</code> - go to magit interface</li>
+<li>do <code>&gt;</code></li>
+<li><code>s</code> to set directories(tab to select)</li>
+<li>needed directory is fetched. MAGIC!</li>
+<li>if you do <code>s</code> again to change dirs - old dir gets removed :o</li>
+</ul>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-git.html">git</a> <a href="https://arvydasg.github.io/devnotes/html/tag-magit.html">magit</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

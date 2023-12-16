@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>build a website with emacs and ox-publish</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231215T182523--build-a-website-with-emacs-and-ox-publish__emacs_websites.html">build a website with emacs and ox-publish</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orga142db5">1. Why build a website for notes anyway</a></li>
+<li><a href="#org75b2b84">2. chatgpt has changed my mind:</a></li>
+<li><a href="#orgd4b581f">3. Step by step implementation</a>
+<ul>
+<li><a href="#org3b0f828">3.1. Read the official documentation</a></li>
+<li><a href="#orgd81ea6e">3.2. Watch how it's being used</a></li>
+<li><a href="#org87c15ed">3.3. Try with minimal configuration</a></li>
+<li><a href="#org752b909">3.4. Modifications to the current one</a>
+<ul>
+<li><a href="#org7b55575">3.4.1. <span class="todo TODO">TODO</span> pridek emacs config i bloga</a></li>
+<li><a href="#orge0079f5">3.4.2. <span class="todo TODO">TODO</span> tags on the sidebar kaip cia:</a></li>
+</ul>
+</li>
+<li><a href="#org7b13f18">3.5. Add css!</a>
+<ul>
+<li><a href="#org6c009b0">3.5.1. <span class="todo TODO">TODO</span> paziurek style ideju cia</a></li>
+<li><a href="#org072b5f9">3.5.2. <span class="todo TODO">TODO</span> take some css ideas look into this, previous attempt to blog with emacs</a></li>
+</ul>
+</li>
+<li><a href="#org09a5cd0">3.6. head/index/Preamble/postamble</a>
+<ul>
+<li><a href="#orge0febba">3.6.1. <span class="todo TODO">TODO</span> create a proper footer and put github link there</a></li>
+</ul>
+</li>
+<li><a href="#org3b31f19">3.7. Org download for images</a></li>
+<li><a href="#org6dc3b93">3.8. add lightbox</a></li>
+<li><a href="#orgfab1dae">3.9. how to add google tag manager</a></li>
+<li><a href="#orge727bfe">3.10. paziurek kaip dar gali pritempti prie sito:</a></li>
+<li><a href="#orgb9192e7">3.11. publishing posibilities</a></li>
+<li><a href="#org256e67b">3.12. Extras</a>
+<ul>
+<li><a href="#orgb19d750">3.12.1. short and clean links like here</a></li>
+<li><a href="#org1c6ac68">3.12.2. <span class="todo TODO">TODO</span> presentation mode?</a></li>
+<li><a href="#orgf323870">3.12.3. <span class="todo TODO">TODO</span> check this? automatic publishing?</a></li>
+</ul>
+</li>
+<li><a href="#org8bb9ec6">3.13. <span class="todo TODO">TODO</span> add your own website into readme of org-static-blog, make a commit</a></li>
+<li><a href="#org02f1081">3.14. <span class="todo TODO">TODO</span> search function like here </a></li>
+<li><a href="#org1be09e3">3.15. fix a bug</a>
+<ul>
+<li><a href="#org6dfd98a">3.15.1. <span class="todo TODO">TODO</span> why the hell some posts always get updated after I publish a change on one post?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgf3d5a89">4. <span class="todo TODO">TODO</span> go over TODO keywords in blog notes</a></li>
+<li><a href="#org5630388">5. some stuff related to org publish project alist</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-orga142db5" class="outline-2">
+<h2 id="orga142db5"><span class="section-number-2">1.</span> Why build a website for notes anyway</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+I have a lot of notes. Over a few systems(at home, at work, under descriptions
+of various projects).
+</p>
+
+<p>
+So I wanted to gather everything in one place and somehow link them together.
+It is also nice if I can share that with others. Also, as of <span class="timestamp-wrapper"><span class="timestamp">[2023-12-16 Sat]</span></span>,
+having everything about you/your way of working, etc written in one place, is a
+perfect for AI systems to grab. All in one place, no need to scrape the whole
+Internet. So the AI will for sure know how I like to work and my weak
+spots(what I usually write here is what I just learned or don't want to
+forget).
+</p>
+
+<p>
+Also, of my notes are in .org files written in emacs, so of course my website
+will also be written in Emacs(<a href="20231215T140448--why-build-a-website-with-emacs-and-not-with-something-else__emacs_websites.html">more reasons why here</a>). <a href="20231214T150411--inspirational-websites__emacs_websites.html">They also look nice and
+clean and will last a lifetime</a>.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org75b2b84" class="outline-2">
+<h2 id="org75b2b84"><span class="section-number-2">2.</span> chatgpt has changed my mind:</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+At first(<span class="timestamp-wrapper"><span class="timestamp">[2023-12-15 Fri]</span></span>) I was thinking to write the blog with
+org-static-blog, almost had it ready, all the notes exported to html.
+</p>
+
+<blockquote>
+<p>
+The choice between using the default ox-publish functionality in Org Mode or
+the org-static-blog package to create your Emacs website depends on your
+specific requirements and preferences. Let's explore both options:
+</p>
+
+<p>
+ox-publish in Org Mode:
+</p>
+
+<p>
+Pros:
+</p>
+
+<p>
+Flexibility: ox-publish is part of Org Mode and provides considerable
+flexibility in customizing your website. You can define various publishing
+options, including different output formats and configurations.
+</p>
+
+<p>
+Integration: It seamlessly integrates with Org Mode, making it easy to manage
+content directly within Emacs.
+</p>
+
+<p>
+Customization: Allows extensive customization using Emacs Lisp, enabling you to
+tailor your website to your preferences.
+</p>
+
+<p>
+Cons:
+</p>
+
+<p>
+Steep Learning Curve: Setting up and configuring ox-publish might have a
+learning curve, especially if you're new to Emacs Lisp and detailed
+configuration.
+</p>
+
+<p>
+org-static-blog Package:
+</p>
+
+<p>
+Pros:
+</p>
+
+<p>
+Simplicity: org-static-blog is designed specifically for creating simple blogs
+or websites using Org Mode. It's relatively straightforward to set up and use,
+making it ideal if you want a quick solution.
+</p>
+
+<p>
+Minimal Configuration: It requires minimal configuration, making it accessible
+for beginners.
+</p>
+
+<p>
+Focused Purpose: Primarily built for blogs, it might suit your needs if you're
+looking for a straightforward blogging platform within Emacs.
+</p>
+
+<p>
+Cons:
+</p>
+
+<p>
+Limited Features: It might lack certain advanced features or customization
+options compared to ox-publish, especially if you need more complex
+functionality.
+</p>
+
+<p>
+Less Flexible: As it's tailored for static blogs, if your website needs evolve
+beyond blogging, you might face limitations.
+</p>
+
+<p>
+Decision Factors:
+</p>
+
+<p>
+Complexity vs. Simplicity: Consider how complex or simple you want your website
+setup to be.
+</p>
+
+<p>
+Customization Needs: Evaluate how much flexibility and customization options
+you require for your website.
+</p>
+
+<p>
+Future Growth: Consider whether your website's needs might expand beyond a blog
+and if you need features beyond what a blogging-centric package provides.
+</p>
+
+<p>
+Familiarity with Emacs Lisp: Assess your comfort level with Emacs Lisp, as
+ox-publish might require more familiarity.
+</p>
+
+<p>
+Recommendation:
+</p>
+
+<p>
+If you prioritize simplicity, quick setup, and your website's focus is
+primarily a blog, org-static-blog could be a good starting point.
+</p>
+
+<p>
+If you foresee needing extensive customization, flexibility, or plan for
+features beyond a blog, investing time in learning and using ox-publish might
+be more beneficial in the long run.
+</p>
+
+<p>
+Experiment with both to understand their functionalities and how they align
+with your specific website goals. You can start with org-static-blog for a
+quick setup and later explore ox-publish for more intricate customization and
+flexibility if needed.
+</p>
+</blockquote>
+
+<p>
+Of course after readings this I leaned toward ox-publish instead of
+org-static-blog. True, I have noticed that it lacks configuration options and
+is kind of restraining. I read other people's tutorials on how they use
+ox-publish and all the settings they have and I can not try to reuse them with
+org-static-blog. Not nice..
+</p>
+
+<p>
+Also there is this issue that I am facing today(re renders each post). -
+<a href="https://github.com/bastibe/org-static-blog/issues/126">https://github.com/bastibe/org-static-blog/issues/126</a>
+</p>
+
+<p>
+I just hope that tag feature works in ox-publish(it should) - then I am all
+good. Let's dive in.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd4b581f" class="outline-2">
+<h2 id="orgd4b581f"><span class="section-number-2">3.</span> Step by step implementation</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org3b0f828" class="outline-3">
+<h3 id="org3b0f828"><span class="section-number-3">3.1.</span> Read the official documentation</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+<a href="https://github.com/bastibe/org-static-blog">https://github.com/bastibe/org-static-blog</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd81ea6e" class="outline-3">
+<h3 id="orgd81ea6e"><span class="section-number-3">3.2.</span> Watch how it's being used</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+<a href="https://www.youtube.com/watch?v=Elynmb3kTE4">https://www.youtube.com/watch?v=Elynmb3kTE4</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org87c15ed" class="outline-3">
+<h3 id="org87c15ed"><span class="section-number-3">3.3.</span> Try with minimal configuration</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+take from the docs
+</p>
+</div>
+</div>
+
+<div id="outline-container-org752b909" class="outline-3">
+<h3 id="org752b909"><span class="section-number-3">3.4.</span> Modifications to the current one</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+make archive page to be index page? (can add intro with the index page code
+block offered by org-static-blog)
+</p>
+
+<p>
+what I would do and why
+</p>
+
+<p>
+last modfied, etc - <a href="https://taingram.org/blog/org-mode-blog.html">https://taingram.org/blog/org-mode-blog.html</a>
+</p>
+
+<p>
+date on the left of the post instead
+</p>
+
+<p>
+check other notes what can be done
+</p>
+</div>
+
+<div id="outline-container-org7b55575" class="outline-4">
+<h4 id="org7b55575"><span class="section-number-4">3.4.1.</span> <span class="todo TODO">TODO</span> pridek emacs config i bloga</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+O daryti tai gali taip manau - symlink i configa ir tiek. Check other guys
+configs to remember what it means to have literate config ir pan.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-orge0079f5" class="outline-4">
+<h4 id="orge0079f5"><span class="section-number-4">3.4.2.</span> <span class="todo TODO">TODO</span> tags on the sidebar kaip cia:</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<p>
+<a href="https://manateelazycat.github.io/tags.html">https://manateelazycat.github.io/tags.html</a>
+</p>
+
+<p>
+solution:
+</p>
+
+<p>
+<a href="https://github.com/bastibe/org-static-blog/issues/125">https://github.com/bastibe/org-static-blog/issues/125</a>
+</p>
+
+<p>
+use some js? Mobile content atrodo labai nice taip pat.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7b13f18" class="outline-3">
+<h3 id="org7b13f18"><span class="section-number-3">3.5.</span> Add css!</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+css, publishing method, last modfied, etc -
+<a href="https://taingram.org/blog/org-mode-blog.html">https://taingram.org/blog/org-mode-blog.html</a>
+</p>
+
+<p>
+Org's HTML exporter makes it easy to create your own style sheet. The exported
+HTML makes sensible use of standard tags as well as specifying number of
+classes documented under <a href="https://orgmode.org/manual/CSS-support.html">CSS Support in the Org manual</a>. For my site I wrote my
+own style sheet and linked it with:
+</p>
+
+<p>
+:html-head "&lt;link rel=\"stylesheet\" href=\"/style.css\" type=\"text/css\"/&gt;"
+The :html-head option lets you add any arbitrary HTML to the head tag.
+</p>
+
+<p>
+try to use custom themes - try use the custom themes zinai. Tos special,
+grazios, tiesiog tutorial.
+</p>
+</div>
+
+<div id="outline-container-org6c009b0" class="outline-4">
+<h4 id="org6c009b0"><span class="section-number-4">3.5.1.</span> <span class="todo TODO">TODO</span> paziurek style ideju cia</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<p>
+<a href="https://magit.vc/manual/magit/Sparse-checkouts.html">https://magit.vc/manual/magit/Sparse-checkouts.html</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org072b5f9" class="outline-4">
+<h4 id="org072b5f9"><span class="section-number-4">3.5.2.</span> <span class="todo TODO">TODO</span> take some css ideas look into this, previous attempt to blog with emacs</h4>
+<div class="outline-text-4" id="text-3-5-2">
+<p>
+<a href="https://github.com/arvydasg/emacs_blog">https://github.com/arvydasg/emacs_blog</a>
+</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org09a5cd0" class="outline-3">
+<h3 id="org09a5cd0"><span class="section-number-3">3.6.</span> head/index/Preamble/postamble</h3>
+<div class="outline-text-3" id="text-3-6">
+<p>
+add #+OPTIONS: ^:nil to all files
+</p>
+
+<p>
+and write a post about it how it looks wiht and without
+</p>
+
+<p>
+<a href="https://emacs.stackexchange.com/questions/10549/org-mode-how-to-export-underscore-as-underscore-instead-of-highlight-in-html">https://emacs.stackexchange.com/questions/10549/org-mode-how-to-export-underscore-as-underscore-instead-of-highlight-in-html</a>
+</p>
+</div>
+
+<div id="outline-container-orge0febba" class="outline-4">
+<h4 id="orge0febba"><span class="section-number-4">3.6.1.</span> <span class="todo TODO">TODO</span> create a proper footer and put github link there</h4>
+<div class="outline-text-4" id="text-3-6-1">
+<p>
+geras wording ka kas ka reiskai is cia, copy:
+</p>
+
+<p>
+<a href="https://taingram.org/blog/org-mode-blog.html">https://taingram.org/blog/org-mode-blog.html</a>
+</p>
+
+<p>
+nice footer and more? - <a href="https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html">https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3b31f19" class="outline-3">
+<h3 id="org3b31f19"><span class="section-number-3">3.7.</span> Org download for images</h3>
+<div class="outline-text-3" id="text-3-7">
+<p>
+org download inkomponuok kad naudotumei bloge images
+</p>
+
+<figure>
+  <img src="./static/images/1.png" alt="1.png" width="600px">
+</figure>
+</div>
+</div>
+
+<div id="outline-container-org6dc3b93" class="outline-3">
+<h3 id="org6dc3b93"><span class="section-number-3">3.8.</span> add lightbox</h3>
+<div class="outline-text-3" id="text-3-8">
+<p>
+kaip jau esi dares, kaip images ikelti, kokie settingsai, kaip graziai kad
+atsivaizduotu, ir pan.
+</p>
+
+<p>
+SEPARATE page!
+</p>
+
+<p>
+<a href="https://github.com/arvydasg/arvydasg.github.io/blob/master/static/style.css">https://github.com/arvydasg/arvydasg.github.io/blob/master/static/style.css</a> +
+js code
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfab1dae" class="outline-3">
+<h3 id="orgfab1dae"><span class="section-number-3">3.9.</span> how to add google tag manager</h3>
+<div class="outline-text-3" id="text-3-9">
+<p>
+google analytics gali buti playsible! - add analytics with <a href="https://plausible.io/privacy-focused-web-analytics">plausible</a> like <a href="https://systemcrafters.net/privacy-policy/">David
+example </a> choose one. probs plausible
+</p>
+
+<p>
+add google tag manageri kad matyti aktyvuma, jau buvai dares cia:
+</p>
+
+<p>
+<a href="https://github.com/arvydasg/dotfiles/blob/20231124-Before-denote/my-init.org#org-static-blog">https://github.com/arvydasg/dotfiles/blob/20231124-Before-denote/my-init.org#org-static-blog</a>
+</p>
+
+
+
+<p>
+also separate page
+</p>
+
+<p>
+add google tag manager also -
+<a href="https://github.com/arvydasg/dotfiles/blob/20231124-Before-denote/my-init.org#org-static-blog">https://github.com/arvydasg/dotfiles/blob/20231124-Before-denote/my-init.org#org-static-blog</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge727bfe" class="outline-3">
+<h3 id="orge727bfe"><span class="section-number-3">3.10.</span> paziurek kaip dar gali pritempti prie sito:</h3>
+<div class="outline-text-3" id="text-3-10">
+<p>
+mainly inspired by this - <a href="http://tips.defun.work/blog.html">http://tips.defun.work/blog.html</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb9192e7" class="outline-3">
+<h3 id="orgb9192e7"><span class="section-number-3">3.11.</span> publishing posibilities</h3>
+<div class="outline-text-3" id="text-3-11">
+<p>
+with tramp etc rsync - <a href="https://taingram.org/blog/org-mode-blog.html">https://taingram.org/blog/org-mode-blog.html</a>
+</p>
+
+<p>
+or manually with git - add link i savo not
+</p>
+
+<p>
+automatically wiht git kaip cia - <a href="https://ravi.pro/blog/blogging-with-emacs-org-mode.html">https://ravi.pro/blog/blogging-with-emacs-org-mode.html</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org256e67b" class="outline-3">
+<h3 id="org256e67b"><span class="section-number-3">3.12.</span> Extras</h3>
+<div class="outline-text-3" id="text-3-12">
+</div>
+<div id="outline-container-orgb19d750" class="outline-4">
+<h4 id="orgb19d750"><span class="section-number-4">3.12.1.</span> short and clean links like here</h4>
+<div class="outline-text-4" id="text-3-12-1">
+<p>
+<a href="https://diego.codes/post/blogging-with-org/">https://diego.codes/post/blogging-with-org/</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1c6ac68" class="outline-4">
+<h4 id="org1c6ac68"><span class="section-number-4">3.12.2.</span> <span class="todo TODO">TODO</span> presentation mode?</h4>
+<div class="outline-text-4" id="text-3-12-2">
+<p>
+<a href="https://orgmode.org/worg/code/org-info-js/index.html#undefined">https://orgmode.org/worg/code/org-info-js/index.html#undefined</a>
+</p>
+
+<p>
+this guy uses it -
+<a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html">https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html</a>
+</p>
+
+<p>
+"As I use org-info.js and track Worg git, I use "inherit-org-info-js" in all my
+org projects:"
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf323870" class="outline-4">
+<h4 id="orgf323870"><span class="section-number-4">3.12.3.</span> <span class="todo TODO">TODO</span> check this? automatic publishing?</h4>
+<div class="outline-text-4" id="text-3-12-3">
+<p>
+separate post!
+</p>
+
+<p>
+<a href="https://systemcrafters.net/publishing-websites-with-org-mode/automated-site-publishing/">https://systemcrafters.net/publishing-websites-with-org-mode/automated-site-publishing/</a>
+</p>
+
+<p>
+<a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/</a>
+</p>
+
+<p>
+In the next video I’ll show you how to automatically publish an Org-based
+website to Git hosting services like GitHub Pages and Sourcehut Pages!
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8bb9ec6" class="outline-3">
+<h3 id="org8bb9ec6"><span class="section-number-3">3.13.</span> <span class="todo TODO">TODO</span> add your own website into readme of org-static-blog, make a commit</h3>
+<div class="outline-text-3" id="text-3-13">
+<p>
+so you get recognized you know
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02f1081" class="outline-3">
+<h3 id="org02f1081"><span class="section-number-3">3.14.</span> <span class="todo TODO">TODO</span> search function like <a href="https://docs.projectile.mx/projectile/installation.html">here </a></h3>
+</div>
+
+
+<div id="outline-container-org1be09e3" class="outline-3">
+<h3 id="org1be09e3"><span class="section-number-3">3.15.</span> fix a bug</h3>
+<div class="outline-text-3" id="text-3-15">
+</div>
+<div id="outline-container-org6dfd98a" class="outline-4">
+<h4 id="org6dfd98a"><span class="section-number-4">3.15.1.</span> <span class="todo TODO">TODO</span> why the hell some posts always get updated after I publish a change on one post?</h4>
+<div class="outline-text-4" id="text-3-15-1">
+<p>
+tags and rss and archive - I understand, but basic posts? why? Is it because of
+the 5 most recent posts limit or what?
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgf3d5a89" class="outline-2">
+<h2 id="orgf3d5a89"><span class="section-number-2">4.</span> <span class="todo TODO">TODO</span> go over TODO keywords in blog notes</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+see what has to be done, added, etc
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org5630388" class="outline-2">
+<h2 id="org5630388"><span class="section-number-2">5.</span> some stuff related to org publish project alist</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<a href="https://pages.gitlab.io/org-mode/post3.html">A list of guides how to build pages with ox-publish ir ox-html</a>
+</p>
+
+
+<p>
+shit load of explanations how to use it ox-publish -
+<a href="https://pages.gitlab.io/org-mode/post3.html">https://pages.gitlab.io/org-mode/post3.html</a>
+</p>
+
+
+<p>
+Emacs docs - <a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html">https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html</a>
+</p>
+
+<p>
+good nice example - <a href="https://taingram.org/blog/org-mode-blog.html">https://taingram.org/blog/org-mode-blog.html</a>
+</p>
+
+<p>
+kaip creatinti naujus failus(org-structure-template-alist)
+</p>
+
+<p>
+ir siaip nice full example of the config - <a href="https://ogbe.net/blog/blogging_with_org">https://ogbe.net/blog/blogging_with_org</a>
+</p>
+
+<p>
+System crafters example -
+<a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/</a>
+</p>
+
+<p>
+my github repo - <a href="https://github.com/arvydasg/org-publish-project-blog">https://github.com/arvydasg/org-publish-project-blog</a>
+</p>
+
+<p>
+codeacademy also?
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> <a href="https://arvydasg.github.io/devnotes/html/tag-websites.html">websites</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

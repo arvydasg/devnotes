@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>why certain shortcuts dont work in emacs terminal</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231126T003353--why-certain-shortcuts-dont-work-in-emacs-terminal__emacs.html">why certain shortcuts dont work in emacs terminal</a></h1>
+<p>
+<a href="https://emacs.stackexchange.com/questions/75347/problem-with-key-bindings-in-emacs-in-the-terminal-on-wsl/75349#75349">https://emacs.stackexchange.com/questions/75347/problem-with-key-bindings-in-emacs-in-the-terminal-on-wsl/75349#75349</a>
+</p>
+
+<p>
+You’re using Emacs inside of a terminal, and terminals have a much more limited
+set of keystrokes that they can communicate. This is because historically
+terminals simply had fewer keys on their keyboards, and because not all
+combinations of keys were thought to be useful.
+</p>
+
+<p>
+Some terminal emulators, starting with XTerm, have added new escape sequences
+that are capable of communicating the full range of key combinations possible
+on modern keyboards. Emacs will automatically recognize these escape sequences,
+so if your terminal emulator supports them then you have a solution. If it
+doesn’t perhaps you can use XTerm instead.
+</p>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

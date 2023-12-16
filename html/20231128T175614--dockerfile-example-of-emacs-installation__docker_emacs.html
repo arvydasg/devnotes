@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>dockerfile example of emacs installation</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231128T175614--dockerfile-example-of-emacs-installation__docker_emacs.html">dockerfile example of emacs installation</a></h1>
+<p>
+PERFECT DOCS/REFERECE -
+<a href="https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index">https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index</a>
+</p>
+
+<p>
+Dockerfile best practices -
+<a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">https://docs.docker.com/develop/develop-images/dockerfile_best-practices/</a>
+</p>
+
+<p>
+Dockerfile example used to generate emacs image:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"># The emacs installation phase itself takes aroun 7 minutes to complete
+# for the first time after we change something in the initial or second
+# stage - everything under them will have to be rerun... meaning another
+# 7 minutes of your life. Not cool.
+
+# so what I found is that you can split the Dockerfile into stages. I
+# will put the steps that might change frequently towards the end of
+# the Dockerfile to maximize caching. By separating the stages in this
+# manner, Docker will reuse the intermediate images created in each
+# stage, utilizing the cache for the unchanged layers. When changes
+# occur, only the steps AFTER THE MODIFICATION will be re-executed.
+
+# -----------------------------------------------------------
+# INITIAL STAGE: Installing essential packages and tools
+FROM ubuntu:latest AS base
+
+RUN apt update &amp;&amp; apt upgrade -y \
+    &amp;&amp; apt install sudo make wget -y
+
+# -----------------------------------------------------------
+# SECOND STAGE: Installing Git and cloning the repository
+FROM base AS gitclone
+
+RUN apt-get install -y git \
+    &amp;&amp; git clone https://github.com/arvydasg/dotfiles.git /root/dotfiles
+
+# -----------------------------------------------------------
+# THIRD STAGE: Emacs installation
+FROM gitclone AS emacs
+
+WORKDIR /root
+COPY compile-install-emacs.sh compile-install-emacs.sh
+RUN chmod +x compile-install-emacs.sh
+RUN sh compile-install-emacs.sh
+
+# -----------------------------------------------------------
+# FOURTH STAGE: Random stuff
+# since emacs has been installed(heaviest process), we can do any
+# random installs and actions here now, so only the steps under would
+# be rerun and not the whole container including the emacs compilation
+# stage(Third stage)
+RUN apt install vim htop tmux -y
+
+# -----------------------------------------------------------
+# FINAL STAGE
+FROM emacs AS final
+
+ENTRYPOINT ["emacs"]
+</pre>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-docker.html">docker</a> <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

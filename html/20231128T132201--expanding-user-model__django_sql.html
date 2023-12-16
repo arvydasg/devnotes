@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>expanding user model</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231128T132201--expanding-user-model__django_sql.html">expanding user model</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orged485e1">1. expanding user model</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-orged485e1" class="outline-2">
+<h2 id="orged485e1"><span class="section-number-2">1.</span> expanding user model</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Inspiration - <a href="https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone">https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone</a>
+</p>
+
+<p>
+There is a good chance that this is what you want. Personally that is the
+method I use for the most part. We will be creating a new Django Model to store
+the <code>extra information</code> that relates to the User Model.
+</p>
+
+<p>
+Bear in mind that using this strategy results in additional queries or joins to
+retrieve the related data. Basically all the time you access an related data,
+Django will fire an additional query. But this can be avoided for the most
+cases. I will get back to that later on.
+</p>
+
+<p>
+I usually name the Django Model as Profile:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">from django.db import models
+from django.contrib.auth.models import User
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.TextField(max_length=500, blank=True)
+    location = models.CharField(max_length=30, blank=True)
+    birth_date = models.DateField(null=True, blank=True)
+</pre>
+</div>
+
+<p>
+Now this is where the magic happens: we will now define signals so our Profile
+model will be automatically created/updated when we create/update User
+instances.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">from django.db import models
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.TextField(max_length=500, blank=True)
+    location = models.CharField(max_length=30, blank=True)
+    birth_date = models.DateField(null=True, blank=True)
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()
+</pre>
+</div>
+
+<p>
+Basically we are hooking the create<sub>user</sub><sub>profile</sub> and save<sub>user</sub><sub>profile</sub> methods
+to the User model, whenever a save event occurs. This kind of signal is called
+post<sub>save</sub>.
+</p>
+
+<p>
+in html:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;h2&gt;{{ user.get_full_name }}&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Username: {{ user.username }}&lt;/li&gt;
+  &lt;li&gt;Location: {{ user.profile.location }}&lt;/li&gt;
+  &lt;li&gt;Birth Date: {{ user.profile.birth_date }}&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+
+<p>
+or in view:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">def update_profile(request, user_id):
+    user = User.objects.get(pk=user_id)
+    user.profile.bio = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit...'
+    user.save()
+</pre>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-django.html">django</a> <a href="https://arvydasg.github.io/devnotes/html/tag-sql.html">sql</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

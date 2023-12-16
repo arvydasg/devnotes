@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>open sqlite db in shell</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231128T132316--open-sqlite-db-in-shell__django_sql.html">open sqlite db in shell</a></h1>
+<p>
+some information of <a href="https://www.youtube.com/watch?v=213swbH8j_o">how to do queries</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">python manage.py inspectdb
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">python manage.py shell
+&gt;&gt;&gt; from base.models import Blog_post, Projects, Tag
+&gt;&gt;&gt; Blog_post.objects.all()
+
+&gt;&gt;&gt; pirmas = Blog_post.objects.first()
+&gt;&gt;&gt; pirmas.tags
+&gt;&gt;&gt; pirmas.tags.all()
+&gt;&gt;&gt; pirmas.tags.first()
+&gt;&gt;&gt; pirmas.tags.first().name
+&gt;&gt;&gt; Blog_post.objects.filter(tags__name='emacs')
+</pre>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-django.html">django</a> <a href="https://arvydasg.github.io/devnotes/html/tag-sql.html">sql</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

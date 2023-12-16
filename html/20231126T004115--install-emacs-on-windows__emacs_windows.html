@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>install emacs on windows</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231126T004115--install-emacs-on-windows__emacs_windows.html">install emacs on windows</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org2126cfc">1. Installation 1:</a></li>
+<li><a href="#org2bdcad9">2. Installation 2:</a></li>
+</ul>
+</div>
+</nav>
+<p>
+Not sure if installation 1 or installation 2 is the good one, so when you will
+try to install it once again - summarize the instructions to a proper document.
+</p>
+
+<div id="outline-container-org2126cfc" class="outline-2">
+<h2 id="org2126cfc"><span class="section-number-2">1.</span> Installation 1:</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Great <a href="https://www.youtube.com/watch?v=0OLfdiZ_b0k&amp;ab_channel=LigerLearn">video here</a> showcasing the steps below</li>
+<li class="off"><code>[&#xa0;]</code> install emacs from <a href="http://ftp.gnu.org/gnu/emacs/windows/">here</a></li>
+<li class="off"><code>[&#xa0;]</code> go to C:\Program Files\Emacs, find emacs, take the run icon</li>
+<li class="off"><code>[&#xa0;]</code> launch emacs, press C-x C-f, then press ~/ - shows you the
+directory emacs thinks of as 'HOME'</li>
+<li class="off"><code>[&#xa0;]</code> create init.el file in here, Save-as init.el - then the file is
+with correct file extension and not .txt</li>
+<li class="off"><code>[&#xa0;]</code> <p>
+add basic emacs config, such as:
+press C-c C-, to make the source block
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq inhibit-startup-message t
+      initial-scratch-message "Hello world"
+      cursor-type 'bar) (setq inhibit-startup-message t)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
+(scroll-bar-mode -1)
+(defalias 'yes-or-no-p 'y-or-n-p)
+</pre>
+</div></li>
+<li class="off"><code>[&#xa0;]</code> Restart emacs and check if it works (it should)</li>
+<li class="off"><code>[&#xa0;]</code> install fonts on windows machine
+<a href="https://github.com/domtronn/all-the-icons.el/tree/master/fonts">https://github.com/domtronn/all-the-icons.el/tree/master/fonts</a> go
+here, download fonts one by one and install</li>
+<li class="off"><code>[&#xa0;]</code> install python on windows
+<a href="https://stackoverflow.com/questions/65348890/python-was-not-found-run-without-arguments-to-install-from-the-microsoft-store">https://stackoverflow.com/questions/65348890/python-was-not-found-run-without-arguments-to-install-from-the-microsoft-store</a></li>
+<li class="off"><code>[&#xa0;]</code> <p>
+windows + linux configas
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(cond ((eq system-type 'windows-nt)
+       (defun display-startup-echo-area-message ()
+         (message "Writing from windows"))
+       )
+      ((eq system-type 'gnu/linux)
+       (defun display-startup-echo-area-message ()
+         (message "Writing from linux"))
+       ))
+</pre>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2bdcad9" class="outline-2">
+<h2 id="org2bdcad9"><span class="section-number-2">2.</span> Installation 2:</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+some useful stuff
+<a href="https://www.gnu.org/software/emacs/manual/html_mono/efaq-w32.html#Location-of-init-file">https://www.gnu.org/software/emacs/manual/html_mono/efaq-w32.html#Location-of-init-file</a>
+</p>
+
+<p>
+install emacs from here -
+<a href="http://ftp.task.gda.pl/pub/gnu/emacs/windows/emacs-27/">http://ftp.task.gda.pl/pub/gnu/emacs/windows/emacs-27/</a>
+</p>
+
+<p>
+set home path variable like the guy in this tut -
+<a href="https://lucidmanager.org/productivity/emacs-windows/">https://lucidmanager.org/productivity/emacs-windows/</a>
+</p>
+
+<p>
+do - setx HOME %USERPROFILE% in windows powershell
+</p>
+
+<p>
+then you will see that HOME variable has appeared under - settings -&gt;
+system -&gt; advanced system settings -&gt; environment variables
+</p>
+
+<p>
+then open emacs and do C-h v, write user-emacs-directory and enter. It
+will create an .emacs.d directory under HOME path.
+</p>
+
+<p>
+It works, right? okay, now you remember how to set the path.
+</p>
+
+<p>
+now go back to environment variables and make it like so -
+C:\Users\Arvydas\emacs
+</p>
+
+<p>
+You will place the .emacs file in that folder and also .emacs.d folder
+will appear in it. great.
+</p>
+
+<p>
+put some variables in .emacs and confirm that emacs got modified
+</p>
+
+<p>
+(menu-bar-mode -1) ; Disable the menu bar (tool-bar-mode -1) ; Disable
+the toolbar (tooltip-mode -1) ; Disable tooltips (set-fringe-mode 10)
+; Give some breathing room
+</p>
+
+<p>
+worked for me so far.
+</p>
+
+<p>
+Time to link it with Dropbox.
+</p>
+
+<p>
+add this to the .emacs file. right under use-package installation
+</p>
+
+<p>
+(org-babel-load-file (expand-file-name
+"C:\\Users\\Arvydas\\Dropbox\\temp<sub>emacs\\myinit.org</sub>"))
+</p>
+
+<p>
+imesk theme i .emacs.d, jokiu folderiu. turetu veikti
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> <a href="https://arvydasg.github.io/devnotes/html/tag-windows.html">windows</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>emacs in daemon mode</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231126T003942--emacs-in-daemon-mode__emacs.html">emacs in daemon mode</a></h1>
+<p>
+<a href="https://www.youtube.com/watch?v=ZjCRxAMPdNc&amp;ab_channel=SystemCrafters">link ofc</a>
+</p>
+
+<p>
+alot of the times config can get big and take 3-5 or even 1-sec to
+load.
+</p>
+
+<p>
+the most important commands:
+</p>
+<ul class="org-ul">
+<li>emacs &#x2013;deamon</li>
+<li>OR</li>
+<li>emacs &#x2013;fg-deamon (only run foreground process)</li>
+<li><code>C-h v server-socket-dir</code> (shows where the server is running)</li>
+<li>ls /run/user/1000/emacs</li>
+<li><code>emacsclient -c -n</code> (no wait)</li>
+<li><code>emacsclient -e "(kill-emacs)"</code> kill the daemon server if you want to
+reload the congif</li>
+</ul>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

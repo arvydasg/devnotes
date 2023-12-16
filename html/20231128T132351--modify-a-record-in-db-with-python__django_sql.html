@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>modify a record in db with python</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231128T132351--modify-a-record-in-db-with-python__django_sql.html">modify a record in db with python</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orge6e66a5">1. Method 1</a></li>
+<li><a href="#orga290f24">2. Method 2</a></li>
+</ul>
+</div>
+</nav>
+<p>
+more about that:
+</p>
+<ul class="org-ul">
+<li><a href="https://www.w3schools.com/django/django_insert_data.php">https://www.w3schools.com/django/django_insert_data.php</a></li>
+<li><a href="https://www.youtube.com/watch?v=aHC3uTkT9r8&amp;list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&amp;index=5&amp;ab_channel=CoreySchafer">https://www.youtube.com/watch?v=aHC3uTkT9r8&amp;list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&amp;index=5&amp;ab_channel=CoreySchafer</a></li>
+</ul>
+
+<div id="outline-container-orge6e66a5" class="outline-2">
+<h2 id="orge6e66a5"><span class="section-number-2">1.</span> Method 1</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+<pre class="src src-bash">(venv) arvy@DESKTOP-AUDMJ7D:~/src/lifeapi$ python manage.py shell --settings=settings.development
+Python 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+
+import os
+os.getcwd()
+
+from lifeapi_apps.quiz_app.models import Question
+
+Question.objects.all()
+
+&lt;QuerySet [&lt;Question: Workout - YN&gt;, &lt;Question: Meditate - YN&gt;, &lt;Question: Miegojimas - Scale&gt;]&gt;
+
+from django.contrib.auth.models import User
+
+user_id_1 = User.objects.get(pk=1)
+
+questions = Question.objects.all()
+
+questions.update(created_by=user_id_1)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga290f24" class="outline-2">
+<h2 id="orga290f24"><span class="section-number-2">2.</span> Method 2</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+start by this, do whatever you want then
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">python manage.py shell --settings=settings.development
+
+from lifeapi_apps.quiz_app.models import Question, Answer
+from django.contrib.auth.models import User
+
+arvy_user = User.objects.get(username='arvy')
+questions = Question.objects.filter(created_by=arvy_user)
+
+for question in questions:
+    print(question.description)
+
+questions = Question.objects.all()
+print(questions)
+
+answers = question.answer_set.all()
+print(answers)
+
+question_description = "No Headache"
+question = Question.objects.get(description=question_description)
+question = Question.objects.get(description="No Headache", created_by=arvy_user)
+print(question)
+
+# think if you really want to rename this way!!! everything will be NO now.
+Answer.objects.filter(question=question, answer="YES").update(answer="NO")
+
+# better do a for loop like such:
+# Get all answers related to the question
+answers = Answer.objects.filter(question=question)
+answers = Answer.objects.filter(question__description="Belly ache")
+for answer in answers:
+    if answer.answer == "YES":
+        answer.answer = "NO"
+    elif answer.answer == "NO":
+        answer.answer = "YES"
+    answer.save()
+
+# rename a question
+question_description = "aciukas"
+question = Question.objects.get(description=question_description)
+question = Question.objects.get(description="No Headache", created_by=arvy_user)
+question.description = "No Alchohol"
+question.save()
+
+# Delete all answers related to the question
+Answer.objects.filter(question=question).delete()
+</pre>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-django.html">django</a> <a href="https://arvydasg.github.io/devnotes/html/tag-sql.html">sql</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

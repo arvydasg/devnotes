@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>make denote faster on wsl</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231126T012052--make-denote-faster-on-wsl__emacs_rsync_scripting_wsl.html">make denote faster on wsl</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf9c1ad8">1. My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</a></li>
+<li><a href="#org687a535">2. Solution not worth considering</a></li>
+<li><a href="#org587ef66">3. Temporary working solution</a></li>
+<li><a href="#orgedaf2be">4. Permanent working solution</a>
+<ul>
+<li><a href="#org9a6a49f">4.1. Option 1 - use <code>cp</code> command to copy</a></li>
+<li><a href="#org8940807">4.2. Option 2(final) - Use <code>rsync</code> command</a></li>
+<li><a href="#org2cd4968">4.3. Update <code>.bashrc</code> file to copy automatically</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<p>
+Before this change the denote notes were stored on Windows system and it would take
+time for them to get fetched and opened on Emacs that runs in WSL. Each denote
+command or simply opening a file would take longer than usual. This was
+annoying.
+</p>
+
+<p>
+So I have moved all the denote note files to WSL. Then created a script that
+would copy all the note files into windows machine, onedrive folder, for them
+to be synced to my onedrive cloud. This will act as a security measure in case
+I forget to commit my notes to git and my machine dies. I will still have a
+quite recent copy of the notes in OneDrive.
+</p>
+
+<div id="outline-container-orgf9c1ad8" class="outline-2">
+<h2 id="orgf9c1ad8"><span class="section-number-2">1.</span> My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</h2>
+<div class="outline-text-2" id="text-1">
+<blockquote>
+<p>
+I have lots of .org files, I currently store them on my window's
+machine, onedrive folder. So they are backed up to the cloud.
+</p>
+
+<p>
+I want to use those notes in a text editor called emacs. But when I
+ntry to reach the notes over wsl, I must go this path to reach them on
+windows - /mnt/c/user/xxx/org-notes to
+</p>
+
+<p>
+this loads the notes very slowly compared if they were on wsl
+directly.
+</p>
+
+<p>
+How can I BOTH have the files load quickly, same as if they were on my
+wsl AND have those files in google cloud?
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org687a535" class="outline-2">
+<h2 id="org687a535"><span class="section-number-2">2.</span> Solution not worth considering</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+I heard that you can create a symlink from windows to wsl. I tried doing that:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"># open cmd as admin
+cd /d C:\Users\arvydas\OneDrive\Documents
+mklink /D HELLO \\wsl.localhost\Ubuntu\home\arvy\.emacs.d\EMACS_DALYKAI
+</pre>
+</div>
+
+<p>
+That worked, symlink was created, but then I started to think what would happen
+if I delete WSL. All my notes will also be deleted. Meaning that the symlink
+will point to nowhere. Not good. Ditched this idea.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org587ef66" class="outline-2">
+<h2 id="org587ef66"><span class="section-number-2">3.</span> Temporary working solution</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Create a symbolic link within WSL that points directly to your
+OneDrive folder:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">ln -s /mnt/c/Users/xxx/org-notes /path/in/WSL/org-notes
+</pre>
+</div>
+
+<p>
+This will enable a little bit faster access to your OneDrive-stored
+.org files within WSL.
+</p>
+
+<p>
+Yes, I think it is faster. Notes are created and opened faster.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgedaf2be" class="outline-2">
+<h2 id="orgedaf2be"><span class="section-number-2">4.</span> Permanent working solution</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+What I will do is create a shell script that will automatically run on each wsl
+launch. It will copy the files from wsl notes dir to OneDrive notes dir.
+</p>
+
+<p>
+commit - 2ba4f55
+</p>
+</div>
+
+<div id="outline-container-org9a6a49f" class="outline-3">
+<h3 id="org9a6a49f"><span class="section-number-3">4.1.</span> Option 1 - use <code>cp</code> command to copy</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Shell script lies in:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">~/.emacs.d/MISC/copy_to_onedrive.sh
+</pre>
+</div>
+
+<p>
+Can use a simple copy method to copy the files:
+</p>
+
+<ul class="org-ul">
+<li>no progress</li>
+<li>no exclusion of directories</li>
+<li>takes everything, not only what has changed</li>
+<li>can not show stats of the run</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-bash">cp -r GIT/notes/* /mnt/c/Users/arvydas/OneDrive/Documents/notes/
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8940807" class="outline-3">
+<h3 id="org8940807"><span class="section-number-3">4.2.</span> Option 2(final) - Use <code>rsync</code> command</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Or can use <code>Rsycn</code> - it performs synchronization between source and
+destination. It copies only the differences between the source and destination
+files. It checks file timestamps and sizes to determine which files need to be
+updated
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">rsync -ah --progress --delete --exclude='.git' GIT/notes/ /mnt/c/Users/arvydas/OneDrive/Documents/notes/ --stats
+</pre>
+</div>
+
+<p>
+Then make this file executable:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">chmod +x .emacs.d/MISC/copy_to_onedrive.sh
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2cd4968" class="outline-3">
+<h3 id="org2cd4968"><span class="section-number-3">4.3.</span> Update <code>.bashrc</code> file to copy automatically</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Add the script execution to your .bashrc
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">echo '~/.emacs.d/MISC/copy_to_onedrive.sh' &gt;&gt; ~/.bashrc
+</pre>
+</div>
+
+<p>
+Now the script will be run with <code>source .bashrc</code> AKA with each launch of wsl.
+Which is maybe more than we need, but good anyway.
+</p>
+
+<p>
+Whenever I launch wsl I will be able to see the progress of the rsynch copying
+procedure.
+</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> <a href="https://arvydasg.github.io/devnotes/html/tag-rsync.html">rsync</a> <a href="https://arvydasg.github.io/devnotes/html/tag-scripting.html">scripting</a> <a href="https://arvydasg.github.io/devnotes/html/tag-wsl.html">wsl</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>

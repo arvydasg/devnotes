@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/devnotes/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<title>install linux distro over wsl</title>
+<meta name="author" content="Arvydas Gasparavicius">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
+<link rel="stylesheet" href="../static/style.css"/>
+<link rel="icon" href="../static/ag.ico">
+<script src="../static/lightbox.js"></script>
+<script src="static/auto-render.min.js"></script></head>
+<body>
+<div id="preamble" class="status"><br>preamble here yo</br></div>
+<div id="content">
+<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231128T165324--install-linux-distro-over-wsl__windows_wsl.html">install linux distro over wsl</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgfe80e4c">1. Installation instructions</a></li>
+<li><a href="#org321bbbf">2. Setup terminal</a></li>
+</ul>
+</div>
+</nav>
+<p>
+Ok so at <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt; </span></span> I was very much getting to know to wsl and how to
+install it properly.
+</p>
+
+<p>
+First reason - I finally decided to use emacs more so I could use denote TODO -
+add a link. For that of course I did not want to override my already custom
+emacs config and notes file structure, wanted to create a NEW WSL UBUNTU
+instance where I could experiment.
+</p>
+
+<p>
+Second reason - I was <a href="20231128T164359--wsl-glitches-in-gui-applications__wsl.html">getting gliches in my wsl</a>.
+</p>
+
+<p>
+So while I was trying to solve the first thing, I found out about the second
+thing and that led me to all this documentation below.
+</p>
+
+<div id="outline-container-orgfe80e4c" class="outline-2">
+<h2 id="orgfe80e4c"><span class="section-number-2">1.</span> Installation instructions</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+After you have <a href="20231214T142532--enable-wsl-on-windows__windows_wsl.html">enabled wsl on windows</a>, you can do these steps:
+</p>
+
+<p>
+in cmd/powershell run:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell"># see all repos available
+wsl --list
+# install the default repo(or any other)
+wsl --install ubuntu
+# install a custom repo version(can have multiple different versions installed)
+wsl --install -d Ubuntu-20.04
+</pre>
+</div>
+
+<p>
+After your distro is installed, login to it:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"># View the list of distros and their current state:
+wsl.exe -l -v
+ # Boot up a specific distro:
+wsl.exe -d &lt;DistroName&gt;
+</pre>
+</div>
+
+<p>
+And confirm the version number:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">lsb_release -a
+</pre>
+</div>
+
+<p>
+Now check "add remove programs" if your wsl instance is listed there.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org321bbbf" class="outline-2">
+<h2 id="org321bbbf"><span class="section-number-2">2.</span> Setup terminal</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Setup terminal to be ubuntu. So when you open cmd you would also see
+the ubuntu terminal.
+</p>
+
+<p>
+After the installation ubuntu wsl make ubuntu profile in cmd -&gt; settings -&gt;
+profiles - &gt; new profile -&gt; duplicate ubuntu profile
+</p>
+
+<p>
+to install emacs now, follow - TODO
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-windows.html">windows</a> <a href="https://arvydasg.github.io/devnotes/html/tag-wsl.html">wsl</a> </div></div>
+<div id="postamble" class="status"><br>postamble in he house</br></div>
+</body>
+</html>
