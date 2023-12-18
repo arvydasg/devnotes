@@ -26,15 +26,13 @@
 (setq org-static-blog-publish-directory "~/GIT/devnotes/html")
 (setq org-static-blog-posts-directory "~/GIT/devnotes/org")
 (setq org-static-blog-drafts-directory "~/GIT/devnotes/drafts")
-(setq org-static-blog-index-length 10)
+(setq org-static-blog-index-length 3)
 (setq org-static-blog-preview-date-first-p nil)
 (setq org-static-blog-use-preview t)
+(setq org-static-blog-langcode "en")
 (setq org-static-blog-enable-tags t)
 (setq org-static-blog-no-post-tag "NONPOST")
 (setq org-static-blog-enable-deprecation-warning nil)
-;; (setq org-export-with-toc nil)            ;can add in individual file with #+OPTIONS: toc:1/nil
-;; (setq org-export-with-section-numbers nil) ;can add in individual file with
-;; #+OPTIONS: num:nil
 (setq org-static-blog-page-header
 "<meta name=\"author\" content=\"Arvydas Gasparavicius\">
 <meta name=\"referrer\" content=\"no-referrer\">
@@ -45,7 +43,21 @@
 <script src=\"static/auto-render.min.js\"></script>")
 
 (setq org-static-blog-page-preamble "<br>preamble here yo</br>")
-(setq org-static-blog-page-postamble "<br>postamble in he house</br>")
+(setq org-static-blog-page-postamble
+"<div id=\"footer\">
+<hr>
+<p>2021-2023 Arvydas Gasparavicius</p>
+<script src=\"static/script.js\"></script>
+</div>")
+
+(setq org-static-blog-index-front-matter
+"<h1> Hello there!</h1>
+<hr>
+<div id=\"intro\">
+<p> My name is Arvydas. <a class=\"no-link\" href=\"https://github.com/arvydasg\">My Github</a>.</p>
+<p> If you are interested in some of my writings, here are some of my latest posts:</p>
+</div>
+\n\n\n")
 
 (org-static-blog-publish t)
 

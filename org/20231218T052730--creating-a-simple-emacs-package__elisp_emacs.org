@@ -1,0 +1,65 @@
+#+title:      creating  a simple emacs package
+#+date:       [2023-12-18 Mon 05:27]
+#+filetags:   :elisp:emacs:
+#+identifier: 20231218T052730
+#+STARTUP:    overview
+
+[2023-12-18 Mon] I wanted to find a way how to override a function in Emacs.
+After a few unsuccessful attempts, I thought okay I first must understand how
+packages work in Emacs.
+
+So researched a simple way to create one.
+
+* Steps to execute to create your own emacs package
+
+** Create a Package Directory Structure
+
+Create a directory named =my-word-counter= (or any preferred name) within your
+Emacs configuration folder.
+
+** Write the Package Code
+
+Inside the =my-word-counter= directory, create a file named
+=my-word-counter.el= and write the following Emacs Lisp code:
+
+#+begin_src emacs-lisp
+  ;;; my-word-counter.el --- A simple Emacs package to count words in the buffer.
+
+  ;;;###autoload
+  (defun my-word-counter ()
+    "Count the number of words in the current buffer."
+    (interactive)
+    (message "Number of words in the buffer: %d" (count-words (point-min) (point-max))))
+
+  ;; Provide the feature
+  (provide 'my-word-counter)
+#+end_src
+
+** Create the Package Metadata
+
+In the =my-word-counter= directory, create a file named
+=my-word-counter-pkg.el= to define package metadata:
+
+#+begin_src emacs-lisp
+  (define-package "my-word-counter" "1.0" "A simple package to count words in Emacs.")
+#+end_src
+
+** Load the Package
+
+Add code to your Emacs configuration file (~/.emacs or ~/.emacs.d/init.el) to
+add the directory containing your package to the load path and load the
+package:
+
+#+begin_src emacs-lisp
+  ;; Add the package directory to load-path
+  (add-to-list 'load-path "~/.emacs.d/my-word-counter")
+
+  ;; Load the package
+  (require 'my-word-counter)
+#+end_src
+
+** Usage
+
+After following these steps, you can use the =my-word-counter= package in
+Emacs. Open a buffer and execute =M-x my-word-counter=. It should display a
+message with the count of words in the buffer.

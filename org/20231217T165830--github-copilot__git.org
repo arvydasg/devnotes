@@ -1,0 +1,15 @@
+#+title:      github copilot
+#+date:       [2023-12-17 Sun 16:58]
+#+filetags:   :git:
+#+identifier: 20231217T165830
+#+STARTUP:    overview
+
+2023 November, I bought it for a month, barely used, so no comments.
+
+Just some commands:
+- accept suggestion =C + /=
+- next suggestion =alt + J=
+- previous suggestion =alt + [=
+- open panel =ctrl +enter=
+- suggested terminal command =ctrl + I=
+- trigger inline suggestion =alt +\=

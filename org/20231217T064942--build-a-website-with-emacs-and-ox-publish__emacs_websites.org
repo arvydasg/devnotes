@@ -1,0 +1,21 @@
+#+title:      Build a website with emacs and ox-publish
+#+date:       [2023-12-17 Sun 06:49]
+#+filetags:   :emacs:websites:
+#+identifier: 20231217T064942
+#+STARTUP:    overview
+
+Here is my [[https://github.com/arvydasg/org-publish-project-blog][attempt to build a site with ox-publish]]. But here I will not write
+much about it.
+
+Just keeping some notes for reference:
+
+- [[https://github.com/arvydasg/org-publish-project-blog][my example]] contains ALL the possible settings you can set in it. Clearly
+  ChatGPT was right on this one here - [[file:20231215T182523--building-development-notes-website-with-emacs__emacs_websites.org][building development notes website with Emacs]]
+- A list of guides how to build pages with ox-publish ir ox-html- https://pages.gitlab.io/org-mode/post3.html
+- Emacs docs - https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html
+- good nice example - https://taingram.org/blog/org-mode-blog.html
+- youtube video how it's being used - https://www.youtube.com/watch?v=Elynmb3kTE4
+- create new files with =org-structure-template-alist=
+- full example of the config - https://ogbe.net/blog/blogging_with_org
+- System crafters example -https://systemcrafters.net/publishing-websites-with-org-mode/building-the-
+- Footnotes are possible
