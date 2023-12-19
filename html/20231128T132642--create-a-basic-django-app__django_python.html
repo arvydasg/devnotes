@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-12-19 Tue 21:03 -->
+<!-- 2023-12-19 Tue 21:33 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>create a basic django app</title>
@@ -40,7 +40,7 @@
 <li><a href="#org127437d">1.5. django-admin startproject &lt;project_name&gt;</a></li>
 <li><a href="#org921f5a7">1.6. enter &lt;project_name&gt;, do django-admin startapp &lt;project_name&gt;</a></li>
 <li><a href="#orge5d2384">1.7. settings.py</a></li>
-<li><a href="#org25107c7">1.8. github push</a></li>
+<li><a href="#orgbcd6610">1.8. github push</a></li>
 </ul>
 </li>
 <li><a href="#org6178b7b">2. Testing views</a>
@@ -50,7 +50,7 @@
 <li><a href="#orgeceabcb">2.3. create urls.#+begin_src python</a></li>
 <li><a href="#org80939e0">2.4. go to &lt;project_name&gt; urls.py and put in this</a></li>
 <li><a href="#org75a2972">2.5. check if responses work by going to the site and trying out urls</a></li>
-<li><a href="#orgbcd6610">2.6. github push</a></li>
+<li><a href="#orgdc419da">2.6. github push</a></li>
 </ul>
 </li>
 <li><a href="#orgfced8c0">3. Testing templates</a>
@@ -71,10 +71,10 @@
 <li><a href="#org3197afb">4.1. Little cheat before making models</a></li>
 <li><a href="#orgb2faa44">4.2. Creating database models</a>
 <ul>
-<li><a href="#org55ec823">4.2.1. Make migrations/migrate</a></li>
+<li><a href="#org898c208">4.2.1. Make migrations/migrate</a></li>
 <li><a href="#orgd6de429">4.2.2. Create superuser and add some data</a></li>
 <li><a href="#org68a1f50">4.2.3. Creating model itself</a></li>
-<li><a href="#org898c208">4.2.4. Make migrations/migrate</a></li>
+<li><a href="#orgd73bf42">4.2.4. Make migrations/migrate</a></li>
 <li><a href="#orge6f6829">4.2.5. Link new model to admin panel in admin.py</a></li>
 <li><a href="#org6590da8">4.2.6. views.py - replace list of dictionaries with a query</a></li>
 <li><a href="#orgc8ba7c0">4.2.7. update blog.html</a></li>
@@ -130,8 +130,8 @@ apps like so - 'base.apps.BaseConfig',
 </div>
 </div>
 
-<div id="outline-container-org25107c7" class="outline-3">
-<h3 id="org25107c7"><span class="section-number-3">1.8.</span> github push</h3>
+<div id="outline-container-orgbcd6610" class="outline-3">
+<h3 id="orgbcd6610"><span class="section-number-3">1.8.</span> github push</h3>
 </div>
 </div>
 <div id="outline-container-org6178b7b" class="outline-2">
@@ -209,8 +209,8 @@ urlpatterns = [
 <div id="outline-container-org75a2972" class="outline-3">
 <h3 id="org75a2972"><span class="section-number-3">2.5.</span> check if responses work by going to the site and trying out urls</h3>
 </div>
-<div id="outline-container-orgbcd6610" class="outline-3">
-<h3 id="orgbcd6610"><span class="section-number-3">2.6.</span> github push</h3>
+<div id="outline-container-orgdc419da" class="outline-3">
+<h3 id="orgdc419da"><span class="section-number-3">2.6.</span> github push</h3>
 </div>
 </div>
 <div id="outline-container-orgfced8c0" class="outline-2">
@@ -477,8 +477,8 @@ info above. Great! So now I know the looping works.
 <h3 id="orgb2faa44"><span class="section-number-3">4.2.</span> Creating database models</h3>
 <div class="outline-text-3" id="text-4-2">
 </div>
-<div id="outline-container-org55ec823" class="outline-4">
-<h4 id="org55ec823"><span class="section-number-4">4.2.1.</span> Make migrations/migrate</h4>
+<div id="outline-container-org898c208" class="outline-4">
+<h4 id="org898c208"><span class="section-number-4">4.2.1.</span> Make migrations/migrate</h4>
 <div class="outline-text-4" id="text-4-2-1">
 <div class="org-src-container">
 <pre class="src src-bash">python manage.py makemigrations
@@ -523,8 +523,8 @@ class Blog_post(models.Model):
 </div>
 </div>
 
-<div id="outline-container-org898c208" class="outline-4">
-<h4 id="org898c208"><span class="section-number-4">4.2.4.</span> Make migrations/migrate</h4>
+<div id="outline-container-orgd73bf42" class="outline-4">
+<h4 id="orgd73bf42"><span class="section-number-4">4.2.4.</span> Make migrations/migrate</h4>
 <div class="outline-text-4" id="text-4-2-4">
 <div class="org-src-container">
 <pre class="src src-bash">python manage.py makemigrations
@@ -655,7 +655,7 @@ replace all the dynamic data with {{post.headline}} etc, and go to
 	 </div>
 	 <p class="date">This org file is created: 2023-11-28 Tue 13:26</p>
 	 <p class="date">This org file is last modified: 2023-12-15 Fri 19:16</p>
-	 <p class="date">This org file is exported to HTML: 2023-12-19 Tue 21:03</p>
+	 <p class="date">This org file is exported to HTML: 2023-12-19 Tue 21:33</p>
 	 <div class="generated">
 	Created with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.1 (<a href="https://orgmode.org">Org</a> mode 9.6.6) on <a href="https://www.gnu.org">GNU</a>/<a href="https://www.kernel.org/">Linux</a>
 	</div>
