@@ -1,0 +1,2925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2023-12-19 Tue 21:03 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emacs configuration file</title>
+<meta name="author" content="Arvydas Gasparavicius" />
+<meta name="description" content="welcome to my site" />
+<meta name="keywords" content="emacs antanas geles" />
+<meta name="generator" content="Org Mode" />
+
+<link rel="stylesheet" href="../static/css/org-html-style-default.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/generic.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/taingram.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/lightbox.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/scroll-to-top.css" type="text/css"/>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="sitemap.html">NOTES </a>
+ 
+ <a accesskey="H" href="index.html"> HOME </a>
+</div><div id="preamble" class="status">
+<div id="updated">Updated: 2023-12-19 Tue 19:25</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">Emacs configuration file</h1>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org9a564aa">1. Intro</a>
+<ul>
+<li><a href="#orgf495d08">1.1. Why I am using emacs</a></li>
+<li><a href="#org61d3224">1.2. Little history about my Emacs config</a>
+<ul>
+<li><a href="#orgd6dbbc3">1.2.1. <span class="timestamp-wrapper"><span class="timestamp">[2023-12-05 Tue] </span></span> Back to init.org</a></li>
+<li><a href="#org116475e">1.2.2. <span class="timestamp-wrapper"><span class="timestamp">[2023-11-28 Tue] </span></span> Emacs for note taking</a></li>
+<li><a href="#org95fba67">1.2.3. <span class="timestamp-wrapper"><span class="timestamp">[2023-06-05 Mon] </span></span> Lots of refactoring</a></li>
+<li><a href="#orgbf406c3">1.2.4. <span class="timestamp-wrapper"><span class="timestamp">[2023-03-18 Sat] </span></span> One org mode file for all configuration</a></li>
+<li><a href="#org5769598">1.2.5. <span class="timestamp-wrapper"><span class="timestamp">[2023-01-08 Sun] </span></span> No init.org.</a></li>
+<li><a href="#org7e60a89">1.2.6. <span class="timestamp-wrapper"><span class="timestamp">[2023-01-06 Fri] </span></span> Daemon mode</a></li>
+<li><a href="#orgb4fd4d2">1.2.7. <span class="timestamp-wrapper"><span class="timestamp">[2023-01-06 Fri] </span></span> Using emacs with org mode at work</a></li>
+<li><a href="#orgb8396c9">1.2.8. <span class="timestamp-wrapper"><span class="timestamp">[2022-12-27 Tue] </span></span> Overwhelmed</a></li>
+</ul>
+</li>
+<li><a href="#orgd42a0ef">1.3. How to use this config</a></li>
+<li><a href="#org2f64075">1.4. Minimal config</a></li>
+<li><a href="#orgca118aa">1.5. Great Emacs config's of others</a></li>
+</ul>
+</li>
+<li><a href="#org45a7fde">2. Configurations</a>
+<ul>
+<li><a href="#org3ee8140">2.1. Tangling</a>
+<ul>
+<li><a href="#orgda766c8">2.1.1. What is tangling, literate programming, org-babel</a></li>
+<li><a href="#org53cbd37">2.1.2. Lexical binding, garbage collection</a></li>
+<li><a href="#orge18c5a1">2.1.3. Automatically tangle init.org and recompile the init.el file</a></li>
+</ul>
+</li>
+<li><a href="#org6c38c31">2.2. Startup performance</a></li>
+<li><a href="#org9ff0d13">2.3. Packages</a></li>
+<li><a href="#orgc8aee4d">2.4. General tweaks</a>
+<ul>
+<li><a href="#orgea5bec0">2.4.1. Spell checking with flyspell</a></li>
+<li><a href="#org174a0f1">2.4.2. y-or-n-p</a></li>
+<li><a href="#org2fb2bcc">2.4.3. Autosave stuff</a></li>
+<li><a href="#org5133314">2.4.4. Clean up all the whitespace in the buffer on buffer save</a></li>
+<li><a href="#orgc2010db">2.4.5. Auto fill fix</a></li>
+<li><a href="#orgeaaddb0">2.4.6. Unfill region</a></li>
+<li><a href="#org94f7c79">2.4.7. Duplicate current line or region</a></li>
+</ul>
+</li>
+<li><a href="#org26b5c30">2.5. Key bindings</a></li>
+<li><a href="#orga17e203">2.6. Visuals</a>
+<ul>
+<li><a href="#orgdd68d69">2.6.1. Declutter</a></li>
+<li><a href="#orgc8e5709">2.6.2. Theme</a></li>
+<li><a href="#orgcad67b8">2.6.3. Smooth scrolling</a></li>
+<li><a href="#org721820e">2.6.4. Frame</a></li>
+<li><a href="#org0f01bbe">2.6.5. Line numbers</a></li>
+<li><a href="#org9d47ffe">2.6.6. Cursor type</a></li>
+<li><a href="#org27d154e">2.6.7. Mode line</a></li>
+<li><a href="#org3eee35d">2.6.8. Default visual modes</a></li>
+</ul>
+</li>
+<li><a href="#org255bdfa">2.7. Modes</a></li>
+<li><a href="#org3aef78b">2.8. EditorConfig</a></li>
+<li><a href="#org13de256">2.9. Ace-window</a></li>
+<li><a href="#org6272921">2.10. Denote</a>
+<ul>
+<li><a href="#org045ec4a">2.10.1. Main denote config</a></li>
+<li><a href="#org93dd7b1">2.10.2. Define a function to open a specific directory in Dired mode</a></li>
+<li><a href="#org6d42690">2.10.3. Change front matter(what appears on each note at the top)</a></li>
+<li><a href="#orgfe1d7ed">2.10.4. Denote links</a></li>
+</ul>
+</li>
+<li><a href="#org57ccdc7">2.11. Org-mode</a>
+<ul>
+<li><a href="#orgdd3d6f5">2.11.1. Org-mode generals</a></li>
+<li><a href="#orgbf82dc9">2.11.2. Org-mode agenda</a></li>
+<li><a href="#org1d0ce05">2.11.3. Org-mode refile</a></li>
+<li><a href="#org6a6c196">2.11.4. Org-mode capture</a></li>
+<li><a href="#org39894ac">2.11.5. Org-mode archive</a></li>
+<li><a href="#orgbf03bae">2.11.6. org-download</a></li>
+</ul>
+</li>
+<li><a href="#org86f2c1f">2.12. Version control</a></li>
+<li><a href="#org28a1107">2.13. Completion UI</a>
+<ul>
+<li><a href="#org6849dd7">2.13.1. Vertico</a></li>
+<li><a href="#org65d1c51">2.13.2. Savehist</a></li>
+<li><a href="#org9597157">2.13.3. Marginalia</a></li>
+<li><a href="#org874b7ed">2.13.4. Completion with corfu</a></li>
+<li><a href="#org95d9576">2.13.5. Orderless</a></li>
+</ul>
+</li>
+<li><a href="#org8b54603">2.14. Navigation and searching</a>
+<ul>
+<li><a href="#org4649600">2.14.1. Consult</a></li>
+<li><a href="#org5621692">2.14.2. Swiper</a></li>
+<li><a href="#org238b416">2.14.3. Dired</a></li>
+<li><a href="#orgb018000">2.14.4. Sidebar</a></li>
+<li><a href="#orgc8d0efc">2.14.5. Session management</a></li>
+</ul>
+</li>
+<li><a href="#orgcb22289">2.15. Terminal</a>
+<ul>
+<li><a href="#orgd01f906">2.15.1. Vterm</a></li>
+</ul>
+</li>
+<li><a href="#org042def7">2.16. Programming</a>
+<ul>
+<li><a href="#org99b56a6">2.16.1. simple-httpd</a></li>
+<li><a href="#org761a44e">2.16.2. flymake</a></li>
+</ul>
+</li>
+<li><a href="#org6e59dae">2.17. Lorem ipsum</a></li>
+<li><a href="#org01c1d04">2.18. Multiple-cursors</a></li>
+<li><a href="#org24adb24">2.19. Expand region</a></li>
+<li><a href="#org5a6dd3a">2.20. Mode specific</a>
+<ul>
+<li><a href="#org50495c4">2.20.1. nix-mode</a></li>
+</ul>
+</li>
+<li><a href="#orga6e289f">2.21. Which-key</a></li>
+<li><a href="#org1a78e5b">2.22. Helpful</a></li>
+<li><a href="#org877481e">2.23. Yasnippet</a></li>
+<li><a href="#orge68942d">2.24. Undo-tree</a></li>
+<li><a href="#org87b4039">2.25. Save place</a></li>
+<li><a href="#orge2c3ebe">2.26. Goto-chg</a></li>
+<li><a href="#orgaa61c03">2.27. Bindings for functions defined above.</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-org9a564aa" class="outline-2">
+<h2 id="org9a564aa"><span class="section-number-2">1.</span> Intro</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgf495d08" class="outline-3">
+<h3 id="orgf495d08"><span class="section-number-3">1.1.</span> Why I am using emacs</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>I take notes in it</li>
+<li>I write code in it</li>
+<li>I plan time in it</li>
+<li>I run terminal in it</li>
+<li>I write and publish my blog with it</li>
+<li>I can write journal in it</li>
+<li>I basically live in it when I am at the computer</li>
+<li>I like improving my tools and workflow, emacs allows that</li>
+<li>Emacs is the most flexible and configurable editor in the multiverse</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org61d3224" class="outline-3">
+<h3 id="org61d3224"><span class="section-number-3">1.2.</span> Little history about my Emacs config</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+I put this at the end, since this info is not really crucial for the configuration.
+</p>
+</div>
+
+<div id="outline-container-orgd6dbbc3" class="outline-4">
+<h4 id="orgd6dbbc3"><span class="section-number-4">1.2.1.</span> <span class="timestamp-wrapper"><span class="timestamp">[2023-12-05 Tue] </span></span> Back to init.org</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+While driving from work I listened to <a href="https://github.com/freetonik/emacscast.org">emacascast</a> podcast (episode 2)and
+realized how great the <a href="https://en.wikipedia.org/wiki/Literate_programming">Literate programming</a> is and how well it suites the emacs
+config file. Today I switched back to using one .org file with all the
+configurations instead of many small .el files.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org116475e" class="outline-4">
+<h4 id="org116475e"><span class="section-number-4">1.2.2.</span> <span class="timestamp-wrapper"><span class="timestamp">[2023-11-28 Tue] </span></span> Emacs for note taking</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+Decided to use emacs for note taking primarily. I rarely come to emacs
+to write code. All these AI tools and so on.. Staying in other editors
+instead. And if I come to emacs to code, I spend quite a while editing
+the setup and yeah..
+</p>
+
+<p>
+So, this emacs configuration is aimed to creating a "second brain",
+for note keeping/taking/searching etc.
+</p>
+
+<p>
+For that the code package is Denote. <a href="https://github.com/arvydasg/.emacs.d/commit/efb3b0f28b64a2dee7cca703ff301ea56f55921f">efb3b0f</a> commit is the essential
+one, where most modifications have happened.
+</p>
+
+<p>
+Notes from that commint that summarize this chapter:
+</p>
+<ul class="org-ul">
+<li>consult package is amazing</li>
+<li>super nice to write notes with denote. Like the structure</li>
+<li>cleared up some clutter from the emacs config, replaced/removed lots
+of packages</li>
+<li>vertico + orderless for nice search mechanism</li>
+<li>project.el instead of projectile</li>
+<li>New theme</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org95fba67" class="outline-4">
+<h4 id="org95fba67"><span class="section-number-4">1.2.3.</span> <span class="timestamp-wrapper"><span class="timestamp">[2023-06-05 Mon] </span></span> Lots of refactoring</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+New laptop, new setup ONCE Again. This time on Windows and WSL.
+</p>
+
+<p>
+Have a lof of directories that have to be changed all the time I
+switch machines, so decided to put all of those directories in one
+place so it's easy to configure.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf406c3" class="outline-4">
+<h4 id="orgbf406c3"><span class="section-number-4">1.2.4.</span> <span class="timestamp-wrapper"><span class="timestamp">[2023-03-18 Sat] </span></span> One org mode file for all configuration</h4>
+<div class="outline-text-4" id="text-1-2-4">
+<p>
+Branch copied from "230318-Org-file-in-project-folder".
+</p>
+
+<p>
+Decided to make .org file to act as my init file. Better for
+documenting processes and storing shortcuts.. now I have three places
+for that. One for init(config), one for shortcuts one for
+documentation of emacs processes.
+</p>
+
+<p>
+In the future it might be problem with windows stuff, but will see
+then.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5769598" class="outline-4">
+<h4 id="org5769598"><span class="section-number-4">1.2.5.</span> <span class="timestamp-wrapper"><span class="timestamp">[2023-01-08 Sun] </span></span> No init.org.</h4>
+<div class="outline-text-4" id="text-1-2-5">
+<p>
+With it the config loads slower and it's not as easy to turn off
+packages quickly. With my setup, I just uncomment the code and the
+package is ignrod upon next load.
+</p>
+
+<p>
+In case I want to load org file as my init.el, I can do it by placing
+init.org file in my .emacs.d
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">(package-initialize)
+(org-babel-load-file "~/.emacs.d/config.org")
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7e60a89" class="outline-4">
+<h4 id="org7e60a89"><span class="section-number-4">1.2.6.</span> <span class="timestamp-wrapper"><span class="timestamp">[2023-01-06 Fri] </span></span> Daemon mode</h4>
+<div class="outline-text-4" id="text-1-2-6">
+<p>
+Found out about emacs daemon mode. It makes emacs
+instances load instantaneously. Amazing.
+</p>
+
+<p>
+Add these to .bashrc for easy launch/use/kill:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">alias ed='emacs --daemon'
+alias e='emacsclient -c -n'
+alias ek='emacsclient -e "(kill-emacs)"'
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb4fd4d2" class="outline-4">
+<h4 id="orgb4fd4d2"><span class="section-number-4">1.2.7.</span> <span class="timestamp-wrapper"><span class="timestamp">[2023-01-06 Fri] </span></span> Using emacs with org mode at work</h4>
+<div class="outline-text-4" id="text-1-2-7">
+<p>
+<a href="https://www.reddit.com/r/emacs/comments/1043g41/help_me_use_emacs_with_org_mode_at_work/">Using emacs with org mode at work</a>.
+Finally decided to have work org files at work and personal at home.
+Better work and life balance in this way. Emacs at work windows
+computer will run on WSL with <a href="https://opticos.github.io/gwsl/">GWSL</a> for a GUI.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb8396c9" class="outline-4">
+<h4 id="orgb8396c9"><span class="section-number-4">1.2.8.</span> <span class="timestamp-wrapper"><span class="timestamp">[2022-12-27 Tue] </span></span> Overwhelmed</h4>
+<div class="outline-text-4" id="text-1-2-8">
+<p>
+I am feeling little bit overwhelmed with my workflow
+with emacs to track my daily tasks and projects at home and at work.
+</p>
+
+<p>
+All was fine until I discovered that I can use emacs at work(finally).
+Now the struggle is with Dropbox, keeping only my work files at work,
+but also seeing them at home..
+</p>
+
+<p>
+Then also the agenda views, capture templates, refiling, one big org
+file or many small org files, tags, categories, archiving and so on.
+The more I tinker with it the more lost and confused I become.
+</p>
+
+<p>
+Each time configuring the method requires me restructuring the
+notes&#x2026;
+</p>
+
+<p>
+This is the attempt where I try to implement this:
+</p>
+
+<p>
+<a href="https://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html">https://members.optusnet.com.au/~charles57/GTD/gtd_workflow.html</a>
+</p>
+
+<p>
+<a href="https://members.optusnet.com.au/~charles57/GTD/remember.html">https://members.optusnet.com.au/~charles57/GTD/remember.html</a>
+</p>
+
+<p>
+<a href="https://members.optusnet.com.au/~charles57/GTD/mydotemacs.txt">https://members.optusnet.com.au/~charles57/GTD/mydotemacs.txt</a>
+</p>
+
+<p>
+<a href="https://lifehacker.com/the-weekly-review-how-one-hour-can-save-you-a-week-s-w-5908816">https://lifehacker.com/the-weekly-review-how-one-hour-can-save-you-a-week-s-w-5908816</a>
+</p>
+
+<p>
+Wish me luck.
+</p>
+
+<p>
+I will simplify it as much as possible, then use it with ease and
+enjoyment. I know it.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd42a0ef" class="outline-3">
+<h3 id="orgd42a0ef"><span class="section-number-3">1.3.</span> How to use this config</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+This is an Emacs configuration file written in <a href="http://orgmode.org">Org mode</a>. It is an attempt to
+keep my <code>~/.emacs.d</code> tidy, but still be able to keep it all in one file. I
+aim to briefly explain all my configurations as I go along!
+</p>
+
+<p>
+I would not recommend using this configuration <i>as-is</i>, because it probably
+contains a lot you don't really need. I do, however, hope people find some
+golden nuggets that they can smuggle into their own configs.
+</p>
+
+<p>
+If you really do want to try this config out, this is how I'd go about it:
+</p>
+
+<p>
+Backup your old <code>~/.emacs.d</code> (if necessary).
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">mv ~/.emacs.d ~/.emacs.d-bak
+</pre>
+</div>
+
+<p>
+Backup your old <code>~/.emacs</code>-file (if necessary).
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">mv ~/.emacs ~/.emacs-bak
+</pre>
+</div>
+
+<p>
+Clone the repo.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">git clone https://github.com/arvydasg/.emacs.d
+</pre>
+</div>
+
+<p>
+On first run it should install a bunch of packages (this might take a while),
+and you might have to restart your Emacs the first time. If you experience
+bugs, please let me know!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2f64075" class="outline-3">
+<h3 id="org2f64075"><span class="section-number-3">1.4.</span> Minimal config</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+If for any reason you might want to start the emacs config with minimal
+settings, there is <code>test-config.el</code> in the current directory as well.
+</p>
+
+<p>
+We can use it to start another(or new) emacs session by running such command in
+the terminal while in <code>.emacs.d</code> directory.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">emacs -q -l test-config.el
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgca118aa" class="outline-3">
+<h3 id="orgca118aa"><span class="section-number-3">1.5.</span> Great Emacs config's of others</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>First and only Lithuanian(after myself) I see using Emacs <a href="https://github.com/Giedriusj1">https://github.com/Giedriusj1</a></li>
+<li><a href="https://github.com/search?q=language%3Aelisp%20init.el">https://github.com/search?q=language%3Aelisp%20init.el</a></li>
+<li><a href="https://github.com/gopar/.emacs.d">https://github.com/gopar/.emacs.d</a></li>
+<li><a href="https://github.com/zamansky/using-emacs/blob/master/myinit.org">https://github.com/zamansky/using-emacs/blob/master/myinit.org</a></li>
+<li><a href="https://github.com/rememberYou/.emacs.d/blob/master/config.org#javascript">https://github.com/rememberYou/.emacs.d/blob/master/config.org#javascript</a></li>
+<li><a href="http://doc.norang.ca/org-mode.html#TaskEstimates">http://doc.norang.ca/org-mode.html#TaskEstimates</a></li>
+<li><a href="https://alphaalgorithms.github.io/2019/05/17/emacs-agenda-views/">https://alphaalgorithms.github.io/2019/05/17/emacs-agenda-views/</a></li>
+<li><a href="https://staff.fnwi.uva.nl/p.vanormondt/blog/2021-02-13-emacs-init-file.html">https://staff.fnwi.uva.nl/p.vanormondt/blog/2021-02-13-emacs-init-file.html</a></li>
+<li><a href="https://github.com/sbroberg/.emacs.d">https://github.com/sbroberg/.emacs.d</a></li>
+<li><a href="https://github.com/thierryvolpiatto/emacs-config/blob/main/init.el">https://github.com/thierryvolpiatto/emacs-config/blob/main/init.el</a></li>
+<li><a href="https://gitlab.com/skybert/my-little-friends/-/blob/master/emacs/.emacs#L1100">https://gitlab.com/skybert/my-little-friends/-/blob/master/emacs/.emacs#L1100</a></li>
+<li><a href="https://github.com/tabfugnic/dotfiles/blob/main/emacs.d/config.org">https://github.com/tabfugnic/dotfiles/blob/main/emacs.d/config.org</a></li>
+<li><a href="https://sachachua.com/dotemacs/index.html#org604b1d4">https://sachachua.com/dotemacs/index.html#org604b1d4</a></li>
+<li><a href="https://github.com/magnars/.emacs.d">https://github.com/magnars/.emacs.d</a></li>
+<li><a href="https://github.com/zaeph/.emacs.d">https://github.com/zaeph/.emacs.d</a></li>
+<li><a href="https://whhone.com/emacs-config/#general">https://whhone.com/emacs-config/#general</a></li>
+<li><a href="https://sqrtminusone.xyz/configs/emacs/">https://sqrtminusone.xyz/configs/emacs/</a></li>
+<li><a href="https://github.com/novoid/dot-emacs/blob/master/config.org">https://github.com/novoid/dot-emacs/blob/master/config.org</a></li>
+<li><a href="https://github.com/Crandel/home/tree/master/.config/emacs">https://github.com/Crandel/home/tree/master/.config/emacs</a></li>
+<li><a href="https://github.com/Likhon-baRoy/.emacs.d">https://github.com/Likhon-baRoy/.emacs.d</a></li>
+<li><a href="https://github.com/jakebox/jake-emacs">https://github.com/jakebox/jake-emacs</a></li>
+<li><a href="https://github.com/terlar/emacs-config">https://github.com/terlar/emacs-config</a></li>
+<li><a href="https://github.com/larstvei/dot-emacs">https://github.com/larstvei/dot-emacs</a></li>
+<li><a href="https://github.com/freetonik/emacs-dotfiles">https://github.com/freetonik/emacs-dotfiles</a> (<a href="https://emacscast.org/">https://emacscast.org/</a>)</li>
+<li><a href="https://github.com/drewcsillag/emacsconfig/blob/master/emacs-config.org">https://github.com/drewcsillag/emacsconfig/blob/master/emacs-config.org</a>
+(creator of dockerfile-mode)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org45a7fde" class="outline-2">
+<h2 id="org45a7fde"><span class="section-number-2">2.</span> Configurations</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org3ee8140" class="outline-3">
+<h3 id="org3ee8140"><span class="section-number-3">2.1.</span> Tangling</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgda766c8" class="outline-4">
+<h4 id="orgda766c8"><span class="section-number-4">2.1.1.</span> What is tangling, literate programming, org-babel</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+All changes to the configuration should be done in <code>init.org</code>, <b>not</b> in
+<code>init.el</code>. Any changes in the <code>init.el</code> will be OVERWRITTEN(due to the script
+below) by saving <code>init.org</code>. The <code>init.el</code> in this repo should not be tracked
+by git, and is replaced the first time Emacs is started (assuming it has been
+renamed to <code>~/.emacs.d</code>).
+</p>
+
+<p>
+Emacs can't load <code>.org</code>-files directly, but <code>org-mode</code> provides functions to
+EXTRACT the code blocks(begin_src) and write them to a file. There are multiple
+ways of handling this; like suggested by <a href="http://emacs.stackexchange.com/questions/3143/can-i-use-org-mode-to-structure-my-emacs-or-other-el-configuration-file">this StackOverflow post</a>.
+</p>
+
+<p>
+When this configuration is loaded for the first time, the <code>init.el</code> is the
+file that is loaded. It looks like this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;; This file replaces itself with the actual configuration at first run.
+
+;; We can't tangle without org!
+(require 'org)
+;; Open the configuration
+(find-file (concat user-emacs-directory "init.org"))
+;; tangle it
+(org-babel-tangle)
+;; load it
+(load-file (concat user-emacs-directory "init.el"))
+;; finally byte-compile it
+(byte-compile-file (concat user-emacs-directory "init.el"))
+</pre>
+</div>
+
+<p>
+It tangles the org-file, so that this file is overwritten with the actual
+configuration.
+</p>
+
+<p>
+We set :tangle yes to all the source blocks(at the very top of .org file), so
+all source blocks get tangled by default.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">#+BABEL: :cache yes
+#+PROPERTY: header-args :tangle yes
+#+STARTUP: overview
+</pre>
+</div>
+
+<p>
+There is no reason to track the <code>init.el</code> that is generated; by running the
+following command <code>git</code> will not bother tracking it:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">git update-index --assume-unchanged init.el
+</pre>
+</div>
+
+<p>
+If one wishes to make changes to the repo-version of init.el start tracking again with:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">git update-index --no-assume-unchanged init.el
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org53cbd37" class="outline-4">
+<h4 id="org53cbd37"><span class="section-number-4">2.1.2.</span> Lexical binding, garbage collection</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<p>
+Lexical scoping for the init-file is needed, it can be specified in the header.
+Make startup faster by reducing the frequency of garbage collection. The
+default is 800 kilobytes. Measured in bytes. These are the first lines of the
+actual configuration.
+</p>
+
+<p>
+A common optimization is to temporarily disable garbage collection during
+initialization. Here, we set the <code>gc-cons-threshold</code> to a ridiculously large
+number, and restore the default value after initialization.
+</p>
+
+<p>
+Enabling lexical scoping with lexical-binding: t in your Emacs init-file can
+provide advantages such as better encapsulation, avoiding accidental variable
+modifications, and clearer code behavior by ensuring that variables are scoped
+as intended.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;;; -*- lexical-binding: t -*-
+;; The default is 800 kilobytes.  Measured in bytes.
+(setq gc-cons-threshold (* 50 1000 1000))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge18c5a1" class="outline-4">
+<h4 id="orge18c5a1"><span class="section-number-4">2.1.3.</span> Automatically tangle init.org and recompile the init.el file</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<p>
+The <code>init.el</code> should (after the first run) mirror the source blocks in the
+<code>init.org</code>. We can use <code>C-c C-v t</code> to run <code>org-babel-tangle</code>, which extracts
+the code blocks from the current file into a source-specific file (in this
+case a <code>.el</code>-file).
+</p>
+
+<p>
+To avoid doing this each time a change is made we can add a function
+to the <code>after-save-hook</code> ensuring to always tangle and byte-compile
+the <code>org</code>-document after changes. Open <b>Compile-Log</b> buffer to see
+if your compilation has been successfull. Great for tracking if you
+have broke something with your configuration.
+</p>
+
+<p>
+Absolute path to emacs dir
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq ag/emacs-dir "~/.emacs.d")
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun tangle-init ()
+  "If the current buffer is init.org the code-blocks are tangled,
+   and the tangled file is compiled."
+  (when (equal (buffer-file-name)
+   (expand-file-name (concat  "init.org")))
+   (expand-file-name (concat user-emacs-directory "init.org")))
+    ;; Avoid running hooks when tangling.
+    (let ((prog-mode-hook nil))
+(org-babel-tangle)
+(byte-compile-file (concat user-emacs-directory "init.el"))))
+
+(add-hook 'after-save-hook 'tangle-init)
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6c38c31" class="outline-3">
+<h3 id="org6c38c31"><span class="section-number-3">2.2.</span> Startup performance</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Make startup faster by reducing the frequency of garbage collection and then
+use a hook to measure Emacs startup time.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;; Profile emacs startup
+(add-hook 'emacs-startup-hook
+    (lambda ()
+      (message "*** Emacs loaded in %s with %d garbage collections."
+         (format "%.2f seconds"
+           (float-time
+      (time-subtract after-init-time before-init-time)))
+         gcs-done)))
+</pre>
+</div>
+
+<p>
+To check what made emacs load so long and identify the bottle necks, we cna use
+function and set it to t. After each emacs launch we can then do <code>M-x
+use-package-report</code> to check the report.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq use-package-compute-statistics t)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9ff0d13" class="outline-3">
+<h3 id="org9ff0d13"><span class="section-number-3">2.3.</span> Packages</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+John Wiegley's extremely popular <a href="https://github.com/jwiegley/use-package">use-package</a> was included in <a href="https://lists.gnu.org/archive/html/emacs-devel/2022-12/msg00261.html">Emacs 29</a>. It
+provides a powerful macro for isolating package configuration.
+</p>
+
+<p>
+Install use-package if it's not already installed.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
+
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(require 'use-package)
+;; always add :ensure t to each package. I like to better add the :ensure t myself
+;; (setq use-package-always-ensure t)
+</pre>
+</div>
+
+<p>
+Packages can be fetched from different mirrors, <a href="http://melpa.milkbox.net/#/">melpa</a> is the largest archive
+and is well maintained.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq package-archives
+      '(("GNU ELPA"     . "https://elpa.gnu.org/packages/")
+        ("MELPA Stable" . "https://stable.melpa.org/packages/")
+        ("MELPA"        . "https://melpa.org/packages/"))
+      package-archive-priorities
+      '(("GNU ELPA"     . 10)
+        ("MELPA"        . 5)
+        ("MELPA Stable" . 0)))
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc8aee4d" class="outline-3">
+<h3 id="orgc8aee4d"><span class="section-number-3">2.4.</span> General tweaks</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Jump to my main config file. Putting this at the top of the config to guarantee
+that I will always have this keybinding available if stuff breaks futher on in
+the config.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun ag/find-init.org nil
+  (interactive)
+  (find-file (concat ag/emacs-dir "/init.org")))
+(global-set-key (kbd "C-x &lt;C-backspace&gt;") 'ag/find-init.org)
+</pre>
+</div>
+
+<p>
+Jump to my NixOS configuration file
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun ag/find-nix-configuration nil
+  (interactive)
+  (find-file "/etc/nixos/configuration.nix"))
+(global-set-key (kbd "C-x C-&lt;home&gt;") 'ag/find-nix-configuration)
+</pre>
+</div>
+
+<p>
+Set utf-8 as preferred coding system.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(set-language-environment "UTF-8")
+(prefer-coding-system 'utf-8)
+</pre>
+</div>
+
+<p>
+I am tired of clicking C-z by accident and freezing my pane.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(global-unset-key (kbd "C-z"))
+</pre>
+</div>
+
+<p>
+We can set variables to whatever value we’d like using setq.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq make-backup-files nil       ; Stop creating backup~ files
+      auto-save-default nil             ; Stop creating #autosave# files
+      inhibit-startup-screen t          ; No splash screen please
+      initial-scratch-message nil       ; Clean scratch buffer
+      kill-whole-line t                 ; C-k kills line including its newline
+      ring-bell-function 'ignore        ; Quiet
+      scroll-margin 1                   ; Space between cursor and top/bottom
+      show-paren-delay 0
+      sentence-end-double-space nil     ; No double space
+      confirm-kill-emacs 'y-or-n-p      ; y and n instead of yes and no when quitting
+      read-extended-command-predicate #'command-completion-default-include-p ; Hide M-x commands which does not work in the current buffer.
+      )
+</pre>
+</div>
+
+<p>
+Some variables are buffer-local, so changing them using setq will only change
+them in a single buffer. Using setq-default we change the buffer-local
+variable’s default value.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq-default
+ fill-column 79                   ;Maximum line width
+ auto-fill-function 'do-auto-fill ;Auto-fill-mode everywhere
+ calendar-week-start-day 1        ;self explanatory
+ )
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgea5bec0" class="outline-4">
+<h4 id="orgea5bec0"><span class="section-number-4">2.4.1.</span> Spell checking with flyspell</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<p>
+“Flyspell enables on-the-fly spell checking in Emacs by the means of a minor
+mode. It is called Flyspell. This facility is hardly intrusive. It requires no
+help. Flyspell highlights incorrect words as soon as they are completed or as
+soon as the TextCursor hits a new word.”
+</p>
+
+<p>
+Docs - <a href="https://www.emacswiki.org/emacs/FlySpell">https://www.emacswiki.org/emacs/FlySpell</a>. Make sure you have <code>ispell</code>
+installed on your system.
+</p>
+
+<p>
+Here is an example to enable it for text-mode, and disable it for log-edit-mode
+and change-log-mode. These two are derived from text-mode, and thus enabling
+flyspell-mode for text-mode also enables it for these two. An alternative
+solution would be the writing of a flyspell-mode-predicate such that symbols
+are ignored by flyspell.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(dolist (hook '(text-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+(dolist (hook '(change-log-mode-hook log-edit-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode -1))))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org174a0f1" class="outline-4">
+<h4 id="org174a0f1"><span class="section-number-4">2.4.2.</span> y-or-n-p</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<p>
+Answering yes and no to each question from Emacs can be tedious, a single y or
+n will suffice.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(fset 'yes-or-no-p 'y-or-n-p)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2fb2bcc" class="outline-4">
+<h4 id="org2fb2bcc"><span class="section-number-4">2.4.3.</span> Autosave stuff</h4>
+<div class="outline-text-4" id="text-2-4-3">
+<p>
+To avoid file system clutter we put all auto saved files in a single directory.
+( have not had a chance to use this, keeping anyway..)
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defvar emacs-autosave-directory
+  (concat user-emacs-directory "autosaves/")
+  "This variable dictates where to put auto saves. It is set to a
+  directory called autosaves located wherever your .emacs.d/ is
+  located.")
+
+;; Sets all files to be backed up and auto saved in a single directory.
+(setq backup-directory-alist
+      `((".*" . ,emacs-autosave-directory))
+      auto-save-file-name-transforms
+      `((".*" ,emacs-autosave-directory t)))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5133314" class="outline-4">
+<h4 id="org5133314"><span class="section-number-4">2.4.4.</span> Clean up all the whitespace in the buffer on buffer save</h4>
+<div class="outline-text-4" id="text-2-4-4">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(add-hook 'before-save-hook 'whitespace-cleanup)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc2010db" class="outline-4">
+<h4 id="orgc2010db"><span class="section-number-4">2.4.5.</span> Auto fill fix</h4>
+<div class="outline-text-4" id="text-2-4-5">
+<p>
+Auto Fill mode breaks lines automatically at the appropriate places whenever
+lines get longer than the desired width
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(add-hook 'text-mode-hook 'turn-on-auto-fill)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeaaddb0" class="outline-4">
+<h4 id="orgeaaddb0"><span class="section-number-4">2.4.6.</span> Unfill region</h4>
+<div class="outline-text-4" id="text-2-4-6">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2022-04-05 Tue] </span></span> Un-fill region. Used it when putting text content to a website
+and emacs text wrapping at 79 or 80 characters is not appropriate.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun ag/unfill-region (beg end)
+  "Unfill the region, joining text paragraphs into a single
+    logical line.  This is useful, e.g., for use with
+    `visual-line-mode'."
+  (interactive "*r")
+  (let ((fill-column (point-max)))
+    (fill-region beg end)))
+
+(define-key global-map "\C-\M-Q" 'ag/unfill-region)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org94f7c79" class="outline-4">
+<h4 id="org94f7c79"><span class="section-number-4">2.4.7.</span> Duplicate current line or region</h4>
+<div class="outline-text-4" id="text-2-4-7">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun duplicate-current-line-or-region (arg)
+  "Duplicates the current line or region ARG times.
+If there's no region, the current line will be duplicated. However, if
+there's a region, all lines that region covers will be duplicated."
+  (interactive "p")
+  (let (beg end (origin (point)))
+    (if (and mark-active (&gt; (point) (mark)))
+        (exchange-point-and-mark))
+    (setq beg (line-beginning-position))
+    (if mark-active
+        (exchange-point-and-mark))
+    (setq end (line-end-position))
+    (let ((region (buffer-substring-no-properties beg end)))
+      (dotimes (_ arg)
+        (goto-char end)
+        (newline)
+        (insert region)
+        (setq end (point)))
+      (goto-char (+ origin (* (length region) arg) arg)))))
+
+(global-set-key (kbd "M-c") 'duplicate-current-line-or-region)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org26b5c30" class="outline-3">
+<h3 id="org26b5c30"><span class="section-number-3">2.5.</span> Key bindings</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Inspired by <a href="http://stackoverflow.com/questions/683425/globally-override-key-binding-in-emacs">this StackOverflow post</a> I keep a <code>custom-bindings-map</code> that holds
+all my custom bindings. This map can be activated by toggling a simple
+<code>minor-mode</code> that does nothing more than activating the map. This inhibits
+other <code>major-modes</code> to override these bindings.
+</p>
+
+<p>
+Basically instead of using the default key-bindings that come with the
+packages, I override the default keybindings globally.
+</p>
+
+<p>
+M-x cusom-bindings-map to preview all the bindings in one place.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defvar ag/custom-bindings-map (make-keymap)
+  "A keymap for custom bindings.")
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga17e203" class="outline-3">
+<h3 id="orga17e203"><span class="section-number-3">2.6.</span> Visuals</h3>
+<div class="outline-text-3" id="text-2-6">
+</div>
+<div id="outline-container-orgdd68d69" class="outline-4">
+<h4 id="orgdd68d69"><span class="section-number-4">2.6.1.</span> Declutter</h4>
+<div class="outline-text-4" id="text-2-6-1">
+<p>
+First off, let’s declutter. Remove clickies to give a nice and clean look.
+Also, the cursor can relax.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(dolist (mode
+         '(tool-bar-mode                ; No toolbars, more room for text
+           scroll-bar-mode              ; No scroll bars either
+           menu-bar-mode                ; No menu bar as well
+           blink-cursor-mode))          ; Disable blinking cursor
+  (funcall mode 0))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc8e5709" class="outline-4">
+<h4 id="orgc8e5709"><span class="section-number-4">2.6.2.</span> Theme</h4>
+<div class="outline-text-4" id="text-2-6-2">
+<p>
+Make MISC folder as a place where emacs looks for additional custom themes
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(add-to-list 'custom-theme-load-path (concat ag/emacs-dir "/MISC/"))
+</pre>
+</div>
+
+<p>
+This setting tells Emacs to consider all themes as safe and eliminates the
+prompt for confirmation on whether to load and trust a theme with Lisp code.
+With this configuration, Emacs will automatically trust and load themes without
+asking for confirmation each time you start Emacs.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq custom-safe-themes t)
+</pre>
+</div>
+
+<p>
+¨Highly accessible themes for GNU Emacs, conforming with the highest standard
+for colour contrast between background and foreground values (WCAG AAA)¨
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package modus-themes
+  :ensure t
+  :config
+  (load-theme 'modus-vivendi-tinted))
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(load-theme 'zenburn)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcad67b8" class="outline-4">
+<h4 id="orgcad67b8"><span class="section-number-4">2.6.3.</span> Smooth scrolling</h4>
+<div class="outline-text-4" id="text-2-6-3">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package smooth-scrolling
+  :ensure t)
+
+;; Accelerate scrolling with the trade-off of sometimes delayed accurate fontification.
+(setq fast-but-imprecise-scrolling t)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org721820e" class="outline-4">
+<h4 id="org721820e"><span class="section-number-4">2.6.4.</span> Frame</h4>
+<div class="outline-text-4" id="text-2-6-4">
+<p>
+Add a small border on the frame.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;; (add-to-list 'default-frame-alist '(internal-border-width . 24))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0f01bbe" class="outline-4">
+<h4 id="org0f01bbe"><span class="section-number-4">2.6.5.</span> Line numbers</h4>
+<div class="outline-text-4" id="text-2-6-5">
+<p>
+Don't display them globally, only in prog-mode
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;; (global-display-line-numbers-mode 1)
+;; (add-hook 'text-mode-hook #'display-line-numbers-mode)
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9d47ffe" class="outline-4">
+<h4 id="org9d47ffe"><span class="section-number-4">2.6.6.</span> Cursor type</h4>
+<div class="outline-text-4" id="text-2-6-6">
+<p>
+Use a bar cursor by default.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq-default cursor-type 'bar)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org27d154e" class="outline-4">
+<h4 id="org27d154e"><span class="section-number-4">2.6.7.</span> Mode line</h4>
+<div class="outline-text-4" id="text-2-6-7">
+</div>
+<ol class="org-ol">
+<li><a id="org679b6ca"></a>Custom mode line<br>
+<div class="outline-text-5" id="text-2-6-7-1">
+<p>
+Will create my own modeline following <a href="https://www.youtube.com/watch?v=Qf_DLPIA9Cs&amp;ab_channel=ProtesilaosStavrou">this</a> excellent Protesilaos Stravrou
+guide.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org6fbfbbe"></a>How it works<br>
+<div class="outline-text-6" id="text-2-6-7-1-1">
+<p>
+First of all I have to mention that I will use <code>setq-default</code> instead of
+<code>setq</code>. Setq-default does the change for ALL the buffers, setq - only for the
+current buffer.
+</p>
+
+<p>
+Can simply try it out by evaluating this piece of code when you have two
+different windows open side by side:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq mode-line-format nil)
+</pre>
+</div>
+
+<p>
+Run this command do revert the change in the current buffer/window:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(kill-local-variable 'mode-line-format)
+</pre>
+</div>
+
+<p>
+now run this command when you have two buffer windows open, mode line will
+dissapear in both:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq-default mode-line-format nil)
+</pre>
+</div>
+
+<p>
+So here is my cusom mode line example:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq-default mode-line-format
+              '("%e"
+                (:eval
+                 (format "BUFFER: %s"
+                         (propertize (buffer-name) 'face 'success)))
+                "   "
+                (:eval
+                 (format "MODE: %s"
+                         (propertize (symbol-name major-mode) 'face 'bold)))
+                ))
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="org574c80d"></a>The actual custom modeline<br>
+<div class="outline-text-6" id="text-2-6-7-1-2">
+<p>
+Mainly copied from - <a href="https://github.com/terlar/emacs-config">https://github.com/terlar/emacs-config</a>
+</p>
+
+<p>
+Define a variable to conveniently access only the major mode part of
+mode-line-modes.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defvar mode-line-major-mode
+  `(:propertize ("" mode-name)
+                help-echo "Major mode\n\
+mouse-1: Display major mode menu\n\
+mouse-2: Show help for major mode\n\
+mouse-3: Toggle minor modes"
+                mouse-face mode-line-highlight
+                local-map ,mode-line-major-mode-keymap))
+</pre>
+</div>
+
+<p>
+Configure the order and components of the mode line.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq-default mode-line-format
+              '("%e" mode-line-front-space
+                mode-line-misc-info
+                (vc-mode vc-mode)
+                "  "
+                mode-line-modified
+                mode-line-remote
+                "  "
+                (:eval (propertize (concat (abbreviate-file-name default-directory)(buffer-name))))
+                ;; mode-line-buffer-identification ;only shows the filename
+                "  "
+                mode-line-position
+                (:eval
+                 (mode-line-right))
+                mode-line-end-spaces))
+</pre>
+</div>
+
+<p>
+Setup the right aligned mode line and helper functions to display it.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defvar mode-line-right-format nil
+  "The mode line to display on the right side.")
+
+(defun mode-line-right ()
+  "Render the `mode-line-right-format'."
+  (let ((formatted-line (format-mode-line mode-line-right-format)))
+    (list
+     (propertize
+      " "
+      'display
+      `(space :align-to (- right
+                           (+ ,(string-width formatted-line) right-fringe right-margin))))
+     formatted-line)))
+</pre>
+</div>
+
+<p>
+Move default components to the right side of the mode line.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq mode-line-right-format
+      (list '(:eval mode-line-mule-info)
+            "  "
+            mode-line-major-mode))
+</pre>
+</div>
+
+<p>
+Add position information including column and line number but skip the
+percentage.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq mode-line-position-column-line-format '(" L%l:C%C"))
+(setq mode-line-percent-position nil)
+(column-number-mode 1)
+(line-number-mode 1)
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org3eee35d" class="outline-4">
+<h4 id="org3eee35d"><span class="section-number-4">2.6.8.</span> Default visual modes</h4>
+<div class="outline-text-4" id="text-2-6-8">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(dolist (mode
+         '(column-number-mode           ; Show column number in mode line
+           size-indication-mode         ; file size indication in mode-line
+           electric-pair-mode           ; closes parens automatically for you
+           smooth-scrolling-mode        ; Smooth scrolling
+           show-paren-mode              ; Highlight matching parentheses
+           global-hl-line-mode          ; Highlight the line you are on in all buffers
+           ))
+  (funcall mode 1))
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org255bdfa" class="outline-3">
+<h3 id="org255bdfa"><span class="section-number-3">2.7.</span> Modes</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+Here are a list of modes(that come by default with Emacs) that I prefer to
+enable by default.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(dolist (mode
+         '(abbrev-mode                  ; E.g. sopl -&gt; System.out.println
+           delete-selection-mode        ; Replace selected text
+           dirtrack-mode                ; directory tracking in *shell*
+           global-so-long-mode          ; Mitigate performance for long lines
+           recentf-mode                 ; Recently opened files
+           winner-mode                  ; ctrl+c+left/right redoes/undoes the window layouts
+           ))
+  (funcall mode 1))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3aef78b" class="outline-3">
+<h3 id="org3aef78b"><span class="section-number-3">2.8.</span> EditorConfig</h3>
+<div class="outline-text-3" id="text-2-8">
+<p>
+Using <a href="https://editorconfig.org/">EditorConfig</a> is a must when collaborating with others. It is also a way
+of having multiple tools that want to format your buffer to agree (e.g. both
+the language's Emacs mode and some external formatter/prettifier).
+</p>
+
+<blockquote>
+<p>
+at work where I'm dev lead, I added an .editorconfig to all our projects to
+enforce some basic style consistency. I'm the only full-time Emacs user, and
+everyone else uses VS Code, but we now have the same basic indentation style
+per project, instead of requiring each dev to self-regulate.
+</p>
+
+<p>
+Works well for us, and nobody tinkers with the .editorconfig because, well, I
+would never approve that PR heheh.
+</p>
+</blockquote>
+
+<p>
+We must create .editorconfig file in each project directory and specify
+parameters in it - <a href="https://spec.editorconfig.org/">https://spec.editorconfig.org/</a>.
+</p>
+
+<p>
+We can then use <code>editorconfig-find-current-editorconfig</code> function to see if the
+editorconfig can see our config file.
+</p>
+
+<p>
+We can then create a simple .py file:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">def x(value):
+    print(value)
+</pre>
+</div>
+
+<p>
+We can see that there are 4 spaces to print statement. We can add such lines in
+our .editorconfig file to change that:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">root = true
+
+[*]
+indent_style = space
+indent_size = 10
+</pre>
+</div>
+
+<p>
+Now do <code>editorconfig-apply</code> and after <code>editorconfig-format-buffer</code>
+function(can probably bind it to a key or do a hook, so it is ran on each save)
+and the new changes to inded_size will be applied to your python file:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">def x(value):
+    print(value)
+</pre>
+</div>
+
+<p>
+Found this also in the docs(can confirm that it works automatically, yes):
+</p>
+
+<blockquote>
+<p>
+Normally, enabling editorconfig-mode should be enough for this plugin to work:
+all other configurations are optional. This mode sets up hooks so that
+EditorConfig properties will be loaded and applied to the new buffers
+automatically when visiting files.
+</p>
+</blockquote>
+
+<p>
+Finally let's install it.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org13de256" class="outline-3">
+<h3 id="org13de256"><span class="section-number-3">2.9.</span> Ace-window</h3>
+<div class="outline-text-3" id="text-2-9">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2021-07-01 Thu] </span></span> “Ace windows” helps me to switch windows easily. Main
+keybind - C-x o and then the commands that follow below.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package ace-window
+  :ensure t)
+
+(setq aw-keys '(?q ?w ?e ?r ?y ?h ?j ?k ?l))
+(global-set-key (kbd "C-x o") 'ace-window)
+(global-set-key (kbd "M-0") 'ace-swap-window)
+(global-set-key (kbd "C-x v") 'aw-split-window-horz)
+
+(defvar aw-dispatch-alist
+  '((?x aw-delete-window "Delete Window")
+    (?m aw-swap-window "Swap Windows")
+    (?M aw-move-window "Move Window")
+    (?c aw-copy-window "Copy Window")
+    (?f aw-switch-buffer-in-window "Select Buffer")
+    (?n aw-flip-window)
+    (?u aw-switch-buffer-other-window "Switch Buffer Other Window")
+    (?c aw-split-window-fair "Split Fair Window")
+    (?h aw-split-window-vert "Split Vert Window")
+    (?v aw-split-window-horz "Split Horz Window")
+    (?o delete-other-windows)
+    ;; (?o delete-other-windows "Delete Other Windows")
+    ;; (?o delete-other-windows " Ace - Maximize Window")
+    (?? aw-show-dispatch-help))
+  "List of actions for `aw-dispatch-default'.")
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6272921" class="outline-3">
+<h3 id="org6272921"><span class="section-number-3">2.10.</span> Denote</h3>
+<div class="outline-text-3" id="text-2-10">
+<p>
+Using denote for my personal knowledge base that will last forever and does not
+depend on any close-source tools(Evernote, Onenote, etc). The knowledge base is
+made of simply text file, so they won't get corrupted or old/unused overtime.
+</p>
+</div>
+
+<div id="outline-container-org045ec4a" class="outline-4">
+<h4 id="org045ec4a"><span class="section-number-4">2.10.1.</span> Main denote config</h4>
+<div class="outline-text-4" id="text-2-10-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package denote
+  :ensure t
+
+  ;; Denote DOES NOT define any key bindings. I just pick some of the bindings
+  ;; from "Sample configuration" here - https://protesilaos.com/emacs/denote and
+  ;; bind them. There are way more available functions in the docs.
+  :bind (:map ag/custom-bindings-map
+              ("C-c n n" . #'denote)  ;create new denote note
+              ("C-c n i" . #'denote-link) ; add a link to another denote file
+              ("C-c n I" . #'denote-add-links) ; add ALL denote files related to your chose keywords
+              ("C-c n b" . #'denote-backlinks) ; LIST all files where current file is mentioned
+              ("C-c n f f" . #'denote-find-link) ; FIND all links to other denote files
+              ("C-c n f b" . #'denote-find-backlink) ; FIND all files where current file is mentioned
+              )
+  :hook (dired-mode . denote-dired-mode) ; highlights the filename and tags
+  :config
+  (setq denote-infer-keywords t)	;newly created keywords to go denote keyword list
+  (setq denote-sort-keywords t)		;sort denote keywords
+  ;; Automatically rename Denote buffers using the
+  ;; `denote-rename-buffer-format'. Instead of full filename with date
+  ;; and time and tags - show only filename
+  ;; telling denote not to rename buffers, since perspective mode then does not work properly
+  ;; more about it - [[denote:20231209T181842][perspective and denote conflict]]
+  (denote-rename-buffer-mode -1)
+  )
+
+(setq denote-directory (expand-file-name "~/GIT/notes/")) ;Set denote directory
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org93dd7b1" class="outline-4">
+<h4 id="org93dd7b1"><span class="section-number-4">2.10.2.</span> Define a function to open a specific directory in Dired mode</h4>
+<div class="outline-text-4" id="text-2-10-2">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun ag/open-denote-dir-in-dired ()
+  (interactive)
+  (dired denote-directory))
+  (define-key ag/custom-bindings-map (kbd "C-x e") 'ag/open-denote-dir-in-dired)
+</pre>
+</div>
+
+<p>
+Start emacs in denote dired folder
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;; (setq initial-buffer-choice #'ag/open-denote-dir-in-dired)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6d42690" class="outline-4">
+<h4 id="org6d42690"><span class="section-number-4">2.10.3.</span> Change front matter(what appears on each note at the top)</h4>
+<div class="outline-text-4" id="text-2-10-3">
+<p>
+More things to include here - <a href="https://orgmode.org/manual/Export-Settings.html">https://orgmode.org/manual/Export-Settings.html</a>
+Control visibility - <a href="https://orgmode.org/manual/Initial-visibility.html">https://orgmode.org/manual/Initial-visibility.html</a>
+</p>
+
+<p>
+I specifically wanted to add the "startup" parameter in each new buffer, so
+large note files would not spit all the information into my face when I open
+that note. Have overview view instead.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq denote-org-front-matter
+"#+title:      %s
+#+date:       %s
+#+filetags:   %s
+#+identifier: %s
+#+STARTUP:    overview
+")
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfe1d7ed" class="outline-4">
+<h4 id="orgfe1d7ed"><span class="section-number-4">2.10.4.</span> Denote links</h4>
+<div class="outline-text-4" id="text-2-10-4">
+<p>
+Working, but with warnings:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(defun ag/denote-link (file file-type description &amp;optional id-only)
+  (interactive
+   (let ((file (denote-file-prompt))
+         (type (denote-filetype-heuristics (buffer-file-name))))
+     (list
+      file
+      type
+      (denote--link-get-description file type)
+      current-prefix-arg)))
+  (let* ((beg (point))
+         (identifier-only (or id-only (string-empty-p description)))
+         (filename (file-name-nondirectory file))
+         (org-title (ag/denote-get-org-title file))) ;; Ensure to prefix function with the right namespace
+    (insert
+     (format "[[file:%s][%s]]"
+             (file-name-nondirectory file) ;; Get just the filename
+             (or org-title filename))))
+    ;; Ensure the below logic falls under the let binding block
+    (unless (derived-mode-p 'org-mode)
+      (make-button beg (point) 'type 'denote-link-button)))
+
+(defun ag/denote-get-org-title (file)
+  "Extract the title from an Org mode file."
+  (with-temp-buffer
+    (insert-file-contents file)
+    (goto-char (point-min))
+    (when (re-search-forward "^\\#\\+title: *\\(.*\\)" nil t)
+      (match-string 1))))
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org57ccdc7" class="outline-3">
+<h3 id="org57ccdc7"><span class="section-number-3">2.11.</span> Org-mode</h3>
+<div class="outline-text-3" id="text-2-11">
+<p>
+I use Org mode extensively.
+</p>
+
+<p>
+In buffer settings - <a href="https://orgmode.org/manual/In_002dbuffer-Settings.html">https://orgmode.org/manual/In_002dbuffer-Settings.html</a>
+</p>
+</div>
+
+<div id="outline-container-orgdd3d6f5" class="outline-4">
+<h4 id="orgdd3d6f5"><span class="section-number-4">2.11.1.</span> Org-mode generals</h4>
+<div class="outline-text-4" id="text-2-11-1">
+<p>
+Something for when having images in .org file. Read devnotes.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-image-actual-width nil)
+</pre>
+</div>
+
+<p>
+Open org links in the same buffer as you are now. Don't like it when I can not
+control it and it just opens the link in a random frame.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-link-frame-setup '((file . find-file)))
+</pre>
+</div>
+
+<p>
+The deeper you go in the headings, the mode indented it is. Basically makes the
+org file to look nicer.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-startup-indented t)
+</pre>
+</div>
+
+<p>
+Allows to toggle TAB while not on the headline, but when somewhere outside the
+headline. Useful for when you want to collapse the headline when deep inside of
+its contents.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-cycle-emulate-tab 'white)
+</pre>
+</div>
+
+<p>
+Pressing RET(enter) follows(opens) a link under cursor
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-return-follows-link t)
+</pre>
+</div>
+
+<p>
+Open source block window under the current buffer (C-c ')
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-src-window-setup `split-window-below)
+</pre>
+</div>
+
+<p>
+Rebind active time-stamp to inactive. For some reason I got used to using
+inactive timestamps, maybe because they don't show up in agenda.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(with-eval-after-load 'org
+  (bind-key "C-c ." #'org-time-stamp-inactive org-mode-map))
+</pre>
+</div>
+
+<p>
+Change org heading continuation
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;; (setq org-ellipsis "⏎")
+</pre>
+</div>
+
+<p>
+Make the indentation look nicer in org mode. Pull the second level and higher
+level headings from the left side.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;; (add-hook 'org-mode-hook 'org-indent-mode)
+</pre>
+</div>
+
+<p>
+This setting is responsible for the indentation in the src code blocks. If set
+to t - will preserve the indentation after you leave the source block. If set
+to nil - your code will be indented with two extra spaces. Looks nice, but idk
+why one would choose this option(it was my default for a looong time until now,
+just figured out this option).
+</p>
+
+<p>
+Actually nil is the way to go for me. Otherwise - code is structured strangely
+after I close the src block.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-src-preserve-indentation nil)
+</pre>
+</div>
+
+<p>
+Not sure what these two do, but leaving them here.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-src-tab-acts-natively t)
+(setq org-src-fontify-natively t)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbf82dc9" class="outline-4">
+<h4 id="orgbf82dc9"><span class="section-number-4">2.11.2.</span> Org-mode agenda</h4>
+<div class="outline-text-4" id="text-2-11-2">
+<p>
+When a TODO is set to a done state, record a timestamp
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-log-done 'time)
+</pre>
+</div>
+
+<p>
+Assigning a few files to variables
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq ag/task-file "~/GIT/notes/tasks.org")
+(setq ag/somedaymaybe-file "~/GIT/notes/somedaymaybe.org")
+</pre>
+</div>
+
+<p>
+Setting up org-agenda-files using those variables
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-agenda-files `(,ag/task-file ,ag/somedaymaybe-file))
+</pre>
+</div>
+
+<p>
+Create a keybinding for org-agenda
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(define-key ag/custom-bindings-map (kbd "C-c a") 'org-agenda)
+</pre>
+</div>
+
+<p>
+Set default todo keywords (C-t)
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-todo-keywords
+(quote ((sequence "TODO(t)" "PROGRESS(p)" "|" "DONE(d)" "CANCELLED(c)"))))
+</pre>
+</div>
+
+<p>
+TODO and DONE keywords already have colors assigned to them, but my newly
+created "PROG" - does not. Assigning it here:
+</p>
+
+<p>
+To see all the available colors, check <code>list-faces-display</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-todo-keyword-faces
+      '(
+        ("PROGRESS" . (:foreground "yellow" :weight bold))
+        ))
+</pre>
+</div>
+
+<p>
+By default when you do 'M-x org-agenda' and you go to todo's or tags or just
+the agenda view - you see it like this:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(agenda  . " %i %-12:c%?-12t% s") ;; file name + org-agenda-entry-type....
+</pre>
+</div>
+
+<p>
+For me that is too much information, I don't need to know in which file the
+agenda item is, sicne I only have one agenda file. Instead of that information,
+I make it as clutter free as possible by overriding everything(those file names
+nad etc) to a dot like so:
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;; (setq org-agenda-prefix-format '(
+;;          (agenda  . "  • ")
+;;          (timeline  . " • ")
+;;          (todo  . " • ")
+;;          (tags  . " • ")
+;;          (search . " • ")
+;;          ))
+</pre>
+</div>
+
+<p>
+Hook to display the agenda in a single window by deleting all the
+other windows
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(add-hook 'org-agenda-finalize-hook 'delete-other-windows)
+</pre>
+</div>
+
+<p>
+Defining custom agenda commands that allow me to reach the tasks that I need.
+The same can almost be as quickly achieved by opening org agenda, pressing <code>m</code>
+and then defining your tag by which to filter. If we count the number of key
+presses - they are the same :) Interesting which method I will end up using more.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-agenda-custom-commands
+      '(
+        ;; ("x" agenda)
+        ;; ("u" tags "+boss-urgent")
+        ;; ("v" tags-todo "+boss-urgent")
+        ;; ("U" tags-tree "+boss-urgent")
+        ;; ("f" occur-tree "\\&lt;FIXME\\&gt;")
+        ;; ("h" . "HOME+Name tags searches") ;description for "h" prefix
+        ;; ("hl" tags "+home+Lisa")
+        ;; ("hp" tags "+home+Peter")
+        ;; ("hk" tags "+home+Kim")
+        ("p" . "Project searches") ;description for "h" prefix
+        ("pi" tags "inbox")
+        ("pe" tags "emacs")
+        ("pl" tags "lifeapi")
+        ("pq" tags "quotes")
+        ("pa" tags "arvydasdev")
+        ("pp" tags "pagalbagyvunams")
+        ("pc" tags "cdp")
+        ("ps" tags "smutifruti")
+        ("po" tags "obelsdumas")
+        ))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1d0ce05" class="outline-4">
+<h4 id="org1d0ce05"><span class="section-number-4">2.11.3.</span> Org-mode refile</h4>
+<div class="outline-text-4" id="text-2-11-3">
+<p>
+Set org refile targets. Refiling helps me to move headings(content) between or
+different org files that I have(in this case, 'org-agenda-files') with "C-w"
+command.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-refile-targets '((org-agenda-files :maxlevel . 1)))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6a6c196" class="outline-4">
+<h4 id="org6a6c196"><span class="section-number-4">2.11.4.</span> Org-mode capture</h4>
+<div class="outline-text-4" id="text-2-11-4">
+<p>
+Example of a simple capture template:
+</p>
+
+<p>
+Documentation for possible template elements - <a href="https://orgmode.org/manual/Template-elements.html">https://orgmode.org/manual/Template-elements.html</a>
+</p>
+
+<p>
+Documentation for possible template expansion - <a href="https://orgmode.org/manual/Template-expansion.html">https://orgmode.org/manual/Template-expansion.html</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-capture-templates '(("i"	;key
+                               "Inbox"	;description
+                               entry	;type
+                               (file+headline ag/task-file "Inbox") ;target
+                               "* TODO %^{Title}\n:PROPERTIES:\nCAPTURED: %U\nWHERE: %a\nINSERT: %i\n:END:\n\n%?" ;template
+                               ;; :prepend t ; properties(append the new note to the top! BUT resets [/] if you have it setup)
+                               )))
+</pre>
+</div>
+
+<p>
+Create a keybinding for org-capture.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(define-key ag/custom-bindings-map (kbd "\C-cc") 'org-capture)
+</pre>
+</div>
+
+<p>
+My personal capture templates. Click <code>C-cC</code> to see all the capture templates in
+sort of graphical view.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(setq org-capture-templates '(
+                              (
+                               "i"
+                               "Sooner than later"
+                               entry
+                               (file+headline ag/task-file "Sooner than later")
+                               "* TODO %^{Title}\n:PROPERTIES:\nCAPTURED: %U\nWHERE: %a\nINSERT: %i\n:END:\n\n%?"
+                               )
+                              ("t" "Tasks")
+                              (
+                               "te"
+                               "Emacs"
+                               entry
+                               (file+headline ag/task-file "Emacs")
+                               "* TODO %^{Title}\n:PROPERTIES:\nCAPTURED: %U\nWHERE: %a\nINSERT: %i\n:END:\n\n%?"
+                               )
+                              (
+                               "tl"
+                               "Lifeapi"
+                               entry
+                               (file+headline ag/task-file "Lifeapi")
+                               "* TODO %^{Title}\n:PROPERTIES:\nCAPTURED: %U\nWHERE: %a\nINSERT: %i\n:END:\n\n%?"
+                               )
+                              (
+                               "tq"
+                               "Quotes"
+                               entry
+                               (file+headline ag/task-file "Quotes")
+                               "* TODO %^{Title}\n:PROPERTIES:\nCAPTURED: %U\nWHERE: %a\nINSERT: %i\n:END:\n\n%?"
+                               )
+                              (
+                               "ta"
+                               "Arvydasdev"
+                               entry
+                               (file+headline ag/task-file "Arvydasdev")
+                               "* TODO %^{Title}\n:PROPERTIES:\nCAPTURED: %U\nWHERE: %a\nINSERT: %i\n:END:\n\n%?"
+                               )
+                              (
+                               "tp"
+                               "PagalbaGyvunams"
+                               entry
+                               (file+headline ag/task-file "PagalbaGyvunams")
+                               "* TODO %^{Title}\n:PROPERTIES:\nCAPTURED: %U\nWHERE: %a\nINSERT: %i\n:END:\n\n%?"
+                               )
+                              (
+                               "tp"
+                               "Core Django Project"
+                               entry
+                               (file+headline ag/task-file "Core Django Project")
+                               "* TODO %^{Title}\n:PROPERTIES:\nCAPTURED: %U\nWHERE: %a\nINSERT: %i\n:END:\n\n%?"
+                               )
+                              ("s" "Someday")
+                              (
+                               "sw"
+                               "Watch"
+                               entry
+                               (file+headline ag/somedaymaybe-file "Watch")
+                               "* TODO %?\n:PROPERTIES:\nCAPTURED: %U\n:END:\n\n"
+                               )
+                              (
+                               "sm"
+                               "Movies"
+                               entry
+                               (file+headline ag/somedaymaybe-file "Movies")
+                               "* TODO %?\n:PROPERTIES:\nCAPTURED: %U\n:END:\n\n"
+                               )
+                              (
+                               "sv"
+                               "Visit"
+                               entry
+                               (file+headline ag/somedaymaybe-file "Visit")
+                               "* TODO %?\n:PROPERTIES:\nCAPTURED: %U\n:END:\n\n"
+                               )
+                              (
+                               "sb"
+                               "Buy"
+                               entry
+                               (file+headline ag/somedaymaybe-file "Buy")
+                               "* TODO %?\n:PROPERTIES:\nCAPTURED: %U\n:END:\n\n"
+                               )
+                              (
+                               "sB"
+                               "Books"
+                               entry
+                               (file+headline ag/somedaymaybe-file "Books")
+                               "* TODO %?\n:PROPERTIES:\nCAPTURED: %U\n:END:\n\n"
+                               )
+                              (
+                               "sh"
+                               "Home"
+                               entry
+                               (file+headline ag/somedaymaybe-file "Home")
+                               "* TODO %?\n:PROPERTIES:\nCAPTURED: %U\n:END:\n\n"
+                               )
+                              (
+                               "sp"
+                               "Photography"
+                               entry
+                               (file+headline ag/somedaymaybe-file "Photography")
+                               "* TODO %?\n:PROPERTIES:\nCAPTURED: %U\n:END:\n\n"
+                               )
+                              (
+                               "si"
+                               "Project Ideas"
+                               entry
+                               (file+headline ag/somedaymaybe-file "Project Ideas")
+                               "* TODO %?\n:PROPERTIES:\nCAPTURED: %U\n:END:\n\n"
+                               )
+                              (
+                               "sc"
+                               "Code"
+                               entry
+                               (file+headline ag/somedaymaybe-file "Code")
+                               "* TODO %?\n:PROPERTIES:\nCAPTURED: %U\n:END:\n\n"
+                               )
+                              (
+                               "sq"
+                               "Quotes"
+                               entry
+                               (file+headline ag/somedaymaybe-file "Quotes")
+                               "* TODO %?\n:PROPERTIES:\nCAPTURED: %U\n:END:\n\n"
+                               )
+                              ))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org39894ac" class="outline-4">
+<h4 id="org39894ac"><span class="section-number-4">2.11.5.</span> Org-mode archive</h4>
+<div class="outline-text-4" id="text-2-11-5">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2023-12-08 Fri] </span></span> trying not to archive anything.
+</p>
+
+<p>
+But if info about archiving is needed, can find it here:
+</p>
+
+<p>
+<a href="http://doc.endlessparentheses.com/Var/org-archive-location.html">http://doc.endlessparentheses.com/Var/org-archive-location.html</a>
+</p>
+
+<p>
+<a href="https://orgmode.org/worg/doc.html#org-archive-location">https://orgmode.org/worg/doc.html#org-archive-location</a>
+</p>
+
+<p>
+or in my old config -
+<a href="https://github.com/arvydasg/.emacs.d/tree/20231124-Before-denote">https://github.com/arvydasg/.emacs.d/tree/20231124-Before-denote</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf03bae" class="outline-4">
+<h4 id="orgbf03bae"><span class="section-number-4">2.11.6.</span> org-download</h4>
+<div class="outline-text-4" id="text-2-11-6">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package org-download
+  :ensure t)
+
+(setq-default org-download-image-dir "~/GIT/devnotes/media")
+
+;; Drag-and-drop to `dired`
+(add-hook 'dired-mode-hook 'org-download-enable)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org86f2c1f" class="outline-3">
+<h3 id="org86f2c1f"><span class="section-number-3">2.12.</span> Version control</h3>
+<div class="outline-text-3" id="text-2-12">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2021-07-01 Thu] </span></span> “Magit” - can not imagine working with git without
+it. Instead of writing full commands like: “git add .” and then “git
+commit -m ‘bla blaa’” then “git push”… I can simply <code>C-x g</code> for a git
+status. Then <code>s</code> to do git add. And finally <code>C-c C-c</code> to invoke git
+commit and simply write a message. Then press <code>p</code> and I just pushed
+the changes. Way quickier than the termina, believe me.
+</p>
+
+<p>
+Some notes:
+</p>
+
+<ul class="org-ul">
+<li>install git first on emacs - <a href="https://www.youtube.com/watch?v=ZMgLZUYd8Cw">https://www.youtube.com/watch?v=ZMgLZUYd8Cw</a></li>
+<li>use personal access token</li>
+<li>add this to terminal to save the token for furher use</li>
+<li>git config –global credential.helper store</li>
+</ul>
+
+<p>
+Execute the following lines in your terminal before trying to do
+any commands with Magit.
+</p>
+
+<p>
+git config &#x2013;global credential.helper store
+git config &#x2013;global user.name arvydasg
+git config &#x2013;global user.email azegaspa@gmail.com
+</p>
+
+<p>
+When you push anything, you will get prompted to enter a
+password. Enter the ¨personal access token¨ from github developer
+settings.
+</p>
+
+<p>
+Cool, can see the commands magit is running by going to "magi-process" buffer
+in emacs while in git repo
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package magit
+  :ensure t
+  :bind (("C-x g" . magit-status)
+         ("C-x C-g" . magit-status)))
+</pre>
+</div>
+
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2022-03-08 Tue] </span></span> <a href="https://github.com/dgutov/diff-hl">https://github.com/dgutov/diff-hl</a>. Show git diff changes in the
+buffer "sidebar".
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package diff-hl
+  :ensure t
+  :config
+  (global-diff-hl-mode 1))
+
+;; Activates diff-hl, highlighting changes in version-controlled files directly
+;; in the buffer, providing visual cues for modifications using different
+;; colors or markings, helping to track changes made to files in various
+;; programming modes or buffers.
+(add-hook 'emacs-lisp-mode #'diff-hl-mode)
+(add-hook 'prog-mode-hook #'diff-hl-mode)
+(add-hook 'org-mode-hook #'diff-hl-mode)
+
+;;  Integrates diff-hl within Dired mode, displaying file status indicators
+;;  (e.g., added, modified, deleted) directly within the Dired buffer,
+;;  facilitating quick identification of changes in the directory listing based
+;;  on version control status.
+(add-hook 'dired-mode-hook 'diff-hl-dired-mode)
+
+;; An essential hook for magit, updates the diff-hl indicators in the Magit
+;; status buffer after a refresh, ensuring the displayed file changes align
+;; with the status shown in magit.
+(add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
+(add-hook 'magit-pre-refresh-hook 'diff-hl-magit-post-refresh)
+
+;;  Enhances diff-hl by displaying indicators in the left margin of the buffer,
+;;  providing a concise overview of changes made to version-controlled files,
+;;  aiding in identifying modifications in programming and org buffers.
+(add-hook 'prog-mode-hook #'diff-hl-margin-mode)
+(add-hook 'org-mode-hook #'diff-hl-margin-mode)
+(add-hook 'dired-mode-hook 'diff-hl-margin-mode)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org28a1107" class="outline-3">
+<h3 id="org28a1107"><span class="section-number-3">2.13.</span> Completion UI</h3>
+<div class="outline-text-3" id="text-2-13">
+</div>
+<div id="outline-container-org6849dd7" class="outline-4">
+<h4 id="org6849dd7"><span class="section-number-4">2.13.1.</span> Vertico</h4>
+<div class="outline-text-4" id="text-2-13-1">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2023-11-26 Sun] </span></span> decided to try out vertico instead of ivy.  Ivy
+depends on a lot of packages, vertico is more simple. It also
+replaces amx for M-x search. Prot inspired me to try it out. Let's
+see.
+</p>
+
+<p>
+It is everywhere - Ctrl-x f, M-x, ctrl-x d, ctrl-h v&#x2026; everywhere
+where you are trying to list and jump to something - vertico is
+there
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package vertico
+  :ensure t
+  :init
+  (vertico-mode)
+
+  ;; Show more candidates
+  (setq vertico-count 10)
+  )
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org65d1c51" class="outline-4">
+<h4 id="org65d1c51"><span class="section-number-4">2.13.2.</span> Savehist</h4>
+<div class="outline-text-4" id="text-2-13-2">
+<p>
+Use the built in savehist-mode to prioritize recently used commands.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package savehist
+  :ensure t
+  :init
+  (savehist-mode 1))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9597157" class="outline-4">
+<h4 id="org9597157"><span class="section-number-4">2.13.3.</span> Marginalia</h4>
+<div class="outline-text-4" id="text-2-13-3">
+<p>
+With Marginalia, we get better descriptions for commands inline. M-x, C-c f,
+C-x b. Adds annotations at the margin of the minibufer for completion
+candidates
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package marginalia
+  :ensure t
+  :config
+  (marginalia-mode 1))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org874b7ed" class="outline-4">
+<h4 id="org874b7ed"><span class="section-number-4">2.13.4.</span> Completion with corfu</h4>
+<div class="outline-text-4" id="text-2-13-4">
+<p>
+Modular text completion framework for code. Using instead of company package.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package corfu
+  :ensure t
+  :init
+  (global-corfu-mode 1)
+  (corfu-popupinfo-mode 1)
+  (corfu-history-mode)
+  :config
+  (setq corfu-cycle t
+  corfu-auto t
+  corfu-auto-delay 0
+  corfu-auto-prefix 2
+  corfu-popupinfo-delay 0.5))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org95d9576" class="outline-4">
+<h4 id="org95d9576"><span class="section-number-4">2.13.5.</span> Orderless</h4>
+<div class="outline-text-4" id="text-2-13-5">
+<p>
+Let's you to type "pa re con" in vertico minubuffer instead of
+"package-refresh-contents". Orderless completion.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package orderless
+  :ensure t
+  :init
+  (setq completion-styles '(orderless basic partial-completion)
+        completion-category-defaults nil
+        orderless-component-separator "[ |]"
+        completion-category-overrides '((file (styles partial-completion)))))
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8b54603" class="outline-3">
+<h3 id="org8b54603"><span class="section-number-3">2.14.</span> Navigation and searching</h3>
+<div class="outline-text-3" id="text-2-14">
+</div>
+<div id="outline-container-org4649600" class="outline-4">
+<h4 id="org4649600"><span class="section-number-4">2.14.1.</span> Consult</h4>
+<div class="outline-text-4" id="text-2-14-1">
+<p>
+The package Consult improves navigation and searching.
+</p>
+
+<p>
+Consult - a super great package that will improve and make my workflow way more
+interesting in emacs. It overrides a lot of default commands, but I am not
+angry about it at all, these are just pure improvements.
+</p>
+
+<p>
+Consult has lots of functions to keybind to. I looked through them all and
+decided to keybind only particular ones. To see more of the functions, find
+them in M-x <code>consult-</code>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;; (use-package consult
+;;   :ensure t
+;;   :bind (:map ag/custom-bindings-map
+;;               ("C-x b" . consult-buffer)
+;;               ("C-c m" . consult-man)
+;;               ("C-c r" . consult-ripgrep)))
+
+;; Example configuration for Consult
+(use-package consult
+  :ensure t
+  ;; Replace bindings. Lazily loaded due by `use-package'.
+  :bind (;; C-c bindings in `mode-specific-map'
+         ("C-c M-x" . consult-mode-command) ;cool, lists all the various mode commands available in the current buffer
+         ("C-c h" . consult-history)
+         ("C-c k" . consult-kmacro)
+         ("C-c m" . consult-man)
+         ("C-c i" . consult-info)
+
+         ([remap Info-search] . consult-info)
+         ;; C-x bindings in `ctl-x-map'
+         ("C-x M-:" . consult-complex-command)     ;; orig. repeat-complex-command
+         ;; ("C-x b" . consult-buffer)                ;; orig. switch-to-buffer(too many options tbh)
+         ("C-x 4 b" . consult-buffer-other-window) ;; orig. switch-to-buffer-other-window
+         ("C-x 5 b" . consult-buffer-other-frame)  ;; orig. switch-to-buffer-other-frame
+         ("C-x t b" . consult-buffer-other-tab)    ;; orig. switch-to-buffer-other-tab
+         ("C-x r b" . consult-bookmark)            ;; orig. bookmark-jump
+         ("C-x p b" . consult-project-buffer)      ;; orig. project-switch-to-buffer
+         ;; Custom M-# bindings for fast register access
+         ("M-#" . consult-register-load)
+         ("M-'" . consult-register-store)          ;; orig. abbrev-prefix-mark (unrelated)
+         ("C-M-#" . consult-register)
+         ;; Other custom bindings
+         ("M-y" . consult-yank-pop)                ;; orig. yank-pop
+         ;; M-g bindings in `goto-map'
+         ("M-g e" . consult-compile-error)
+         ("M-g f" . consult-flymake)               ;; Alternative: consult-flycheck
+         ("M-g g" . consult-goto-line)             ;; orig. goto-line
+         ("M-g M-g" . consult-goto-line)           ;; orig. goto-line
+         ("M-g o" . consult-outline)               ;; Alternative: consult-org-heading
+         ("M-g m" . consult-mark)
+         ("M-g k" . consult-global-mark)
+         ;; ("M-g i" . consult-imenu)
+         ;; ("M-g I" . consult-imenu-multi)
+
+         ;; M-s bindings in `search-map'
+         ("M-s d" . consult-find)                  ;; Alternative: consult-fd
+         ("M-s c" . consult-locate)
+         ("M-s g" . consult-grep)
+         ("M-s G" . consult-git-grep)
+         ("M-s r" . consult-ripgrep)
+         ("M-s l" . consult-line)
+         ("M-s L" . consult-line-multi)
+         ("M-s k" . consult-keep-lines)
+         ("M-s u" . consult-focus-lines)
+         ;; Isearch integration
+         ("M-s e" . consult-isearch-history)
+         :map isearch-mode-map
+         ("M-e" . consult-isearch-history)         ;; orig. isearch-edit-string
+         ("M-s e" . consult-isearch-history)       ;; orig. isearch-edit-string
+         ("M-s l" . consult-line)                  ;; needed by consult-line to detect isearch
+         ("M-s L" . consult-line-multi)            ;; needed by consult-line to detect isearch
+         ;; Minibuffer history
+         :map minibuffer-local-map
+         ("M-s" . consult-history)                 ;; orig. next-matching-history-element
+         ("M-r" . consult-history))                ;; orig. previous-matching-history-element
+
+  ;; Enable automatic preview at point in the *Completions* buffer. This is
+  ;; relevant when you use the default completion UI.
+  :hook (completion-list-mode . consult-preview-at-point-mode)
+
+  ;; The :init configuration is always executed (Not lazy)
+  :init
+
+  ;; Optionally configure the register formatting. This improves the register
+  ;; preview for `consult-register', `consult-register-load',
+  ;; `consult-register-store' and the Emacs built-ins.
+  (setq register-preview-delay 0.5
+        register-preview-function #'consult-register-format)
+
+  ;; Optionally tweak the register preview window.
+  ;; This adds thin lines, sorting and hides the mode line of the window.
+  (advice-add #'register-preview :override #'consult-register-window)
+
+  ;; Use Consult to select xref locations with preview
+  (setq xref-show-xrefs-function #'consult-xref
+        xref-show-definitions-function #'consult-xref)
+  )
+
+;; overriding some default consult keybindings
+(define-key ag/custom-bindings-map (kbd "C-x r") 'consult-ripgrep) ; Remaping the default "M-s r" for ripgrep. Not using C-r suz of isearch in terminals
+(define-key ag/custom-bindings-map (kbd "C-x q") 'consult-imenu) ; Remaping the default "M-s somethnig"
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5621692" class="outline-4">
+<h4 id="org5621692"><span class="section-number-4">2.14.2.</span> Swiper</h4>
+<div class="outline-text-4" id="text-2-14-2">
+<p>
+The nicest buffer search.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package swiper
+  :ensure t
+  :bind ("C-s" . swiper))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org238b416" class="outline-4">
+<h4 id="org238b416"><span class="section-number-4">2.14.3.</span> Dired</h4>
+<div class="outline-text-4" id="text-2-14-3">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(add-hook 'dired-mode-hook #'auto-revert-mode)
+(add-hook 'dired-mode-hook #'hl-line-mode)	; highlight the selected line
+(add-hook 'dired-mode-hook #'dired-hide-details-mode) ;Hide rights/size/created info, etc in dired buffer. To see details again click left bracket
+(setq dired-listing-switches "-al --group-directories-first") ; Sort by directoreis first in dired
+;; Always copy/delete recursively
+(setq dired-recursive-copies  'always)
+(setq dired-recursive-deletes 'top)
+
+(define-key ag/custom-bindings-map (kbd "C-x C-d") 'dired-jump)
+</pre>
+</div>
+
+<p>
+Enable dired-find-alternate-file. In new config it always asks at the beginning
+to enable this command, since it is disabled. I find it annoying, I always use
+“a” to open a folder in dired and I will continue doing so. The piece of code
+below does it so that I don’t get prompted “do you really want to use this
+command” all the time.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(put 'dired-find-alternate-file 'disabled nil)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb018000" class="outline-4">
+<h4 id="orgb018000"><span class="section-number-4">2.14.4.</span> Sidebar</h4>
+<div class="outline-text-4" id="text-2-14-4">
+</div>
+<ol class="org-ol">
+<li><a id="org0bbb6d7"></a>Treemacs<br>
+<div class="outline-text-5" id="text-2-14-4-1">
+<p>
+<a href="https://github.com/Alexander-Miller/treemacs">Treemacs</a> seems like an extensible sidebar package. Been using it for a while
+before, does not have the same problem like with <code>dired-sidebar</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;; The following use-package snippet includes a list of all of
+;; treemacs’ configuration options in their default setting.
+;; Setting them, or activating the minor modes yourself is not
+;; necessary, they are only listed here to encourage
+;; discoverability.
+
+(use-package treemacs
+  :defer t
+  :config
+  (progn
+    (setq treemacs-collapse-dirs                   (if treemacs-python-executable 3 0)
+          treemacs-deferred-git-apply-delay        0.5
+          treemacs-directory-name-transformer      #'identity
+          treemacs-display-in-side-window          t
+          treemacs-eldoc-display                   'simple
+          treemacs-file-event-delay                2000
+          treemacs-file-extension-regex            treemacs-last-period-regex-value
+          treemacs-file-follow-delay               0.2
+          treemacs-file-name-transformer           #'identity
+          treemacs-follow-after-init               t
+          treemacs-expand-after-init               t
+          treemacs-find-workspace-method           'find-for-file-or-pick-first
+          treemacs-git-command-pipe                ""
+          treemacs-goto-tag-strategy               'refetch-index
+          treemacs-header-scroll-indicators        '(nil . "^^^^^^")
+          treemacs-hide-dot-git-directory          t
+          treemacs-indentation                     2
+          treemacs-indentation-string              " "
+          treemacs-is-never-other-window           nil
+          treemacs-max-git-entries                 5000
+          treemacs-missing-project-action          'ask
+          treemacs-move-forward-on-expand          nil
+          treemacs-no-png-images                   nil
+          treemacs-no-delete-other-windows         t
+          treemacs-project-follow-cleanup          nil
+          treemacs-persist-file                    (expand-file-name ".cache/treemacs-persist" user-emacs-directory)
+          treemacs-position                        'left
+          treemacs-read-string-input               'from-child-frame
+          treemacs-recenter-distance               0.1
+          treemacs-recenter-after-file-follow      nil
+          treemacs-recenter-after-tag-follow       nil
+          treemacs-recenter-after-project-jump     'always
+          treemacs-recenter-after-project-expand   'on-distance
+          treemacs-litter-directories              '("/node_modules" "/.venv" "/.cask")
+          treemacs-project-follow-into-home        nil
+          treemacs-show-cursor                     nil
+          treemacs-show-hidden-files               t
+          treemacs-silent-filewatch                nil
+          treemacs-silent-refresh                  nil
+          treemacs-sorting                         'alphabetic-asc
+          treemacs-select-when-already-in-treemacs 'move-back
+          treemacs-space-between-root-nodes        t
+          treemacs-tag-follow-cleanup              t
+          treemacs-tag-follow-delay                1.5
+          treemacs-text-scale                      nil
+          treemacs-user-mode-line-format           nil
+          treemacs-user-header-line-format         nil
+          treemacs-wide-toggle-width               70
+          treemacs-width                           35
+          treemacs-width-increment                 1
+          treemacs-width-is-initially-locked       t
+          treemacs-workspace-switch-cleanup        nil
+          treemacs-follow-mode t
+          treemacs-filewatch-mode t
+          treemacs-fringe-indicator-mode 'always
+          treemacs-hide-gitignored-files-mode t))
+  :bind (:map ag/custom-bindings-map
+              ("M-`" . #'treemacs-select-window))
+  )
+
+(use-package treemacs-magit
+  :after (treemacs magit)
+  :ensure t)
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orgc8d0efc" class="outline-4">
+<h4 id="orgc8d0efc"><span class="section-number-4">2.14.5.</span> Session management</h4>
+<div class="outline-text-4" id="text-2-14-5">
+<p>
+You work on many windows and many layouts - then you close emacs. All is lost,
+windows are lost, layouts are lost, you can not get them back with
+<code>winner-mode</code>. This is what session management is. Being able to get back to
+those sessions from last closed emacs session.
+</p>
+
+<p>
+All possible tools listed <a href="https://www.emacswiki.org/emacs/SessionManagement">here</a>.
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="org0f06ef2"></a>perspective<br>
+<div class="outline-text-5" id="text-2-14-5-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">  (use-package perspective
+    :ensure t
+    :bind (
+           ("C-x k" . persp-kill-buffer*)
+           )
+    :custom
+    (persp-mode-prefix-key (kbd "C-z"))
+    :init
+    (persp-mode))
+
+;; windows like window switching baby!
+(define-key ag/custom-bindings-map (kbd "C-&lt;tab&gt;") 'persp-next)
+(define-key ag/custom-bindings-map (kbd "C-&lt;iso-lefttab&gt;") 'persp-prev)
+</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgcb22289" class="outline-3">
+<h3 id="orgcb22289"><span class="section-number-3">2.15.</span> Terminal</h3>
+<div class="outline-text-3" id="text-2-15">
+</div>
+<div id="outline-container-orgd01f906" class="outline-4">
+<h4 id="orgd01f906"><span class="section-number-4">2.15.1.</span> Vterm</h4>
+<div class="outline-text-4" id="text-2-15-1">
+<p>
+Using vterm is like using Gnome Terminal inside Emacs.
+</p>
+
+<p>
+To copy from vterm buffer - first enable vterm-copy-mode with C-c C-t. To
+deactivate the mode - same command.
+</p>
+
+<p>
+<code>sudo apt install fish libtool libtool-bin autoconf automake cmake g++
+libncurses-dev libz-dev libglib2.0-dev (for vterm)</code>
+</p>
+
+<p>
+In case you need to copy something from vterm terminal, use <code>vterm-copy-mode</code>
+by pressing <code>C-c C-t</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package vterm
+  :defer t				; deferring until I use it with vterm-toggle
+  :init
+  (setq vterm-max-scrollback 100000)
+  ;; using Fish as default vterm bash. Fish(Friendly interactive shell) is
+  ;; basically buffed bash shell. Syntax highlighting, autocompletion, aliases
+  ;; More about fish - https://www.youtube.com/watch?v=C2a7jJTh3kU&amp;ab_channel=LukeSmith
+
+  ;; [2023-12-09 Sat] turning off fish. Reverse isearch does not work as I
+  ;; expect.. no thanks, turning fish off.
+
+  ;; (setq vterm-shell "fish")
+  )
+</pre>
+</div>
+
+<p>
+vterm-toggle
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package vterm-toggle
+  :ensure t
+  :bind(:map ag/custom-bindings-map
+             ("C-`" . vterm-toggle)		; toggles vterm window
+             ("C-&lt;return&gt;" . vterm-toggle-insert-cd) ; insert current dir and enter it when in vterm shell
+             ))
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org042def7" class="outline-3">
+<h3 id="org042def7"><span class="section-number-3">2.16.</span> Programming</h3>
+<div class="outline-text-3" id="text-2-16">
+</div>
+<div id="outline-container-org99b56a6" class="outline-4">
+<h4 id="org99b56a6"><span class="section-number-4">2.16.1.</span> simple-httpd</h4>
+<div class="outline-text-4" id="text-2-16-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package simple-httpd
+  :ensure t)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org761a44e" class="outline-4">
+<h4 id="org761a44e"><span class="section-number-4">2.16.2.</span> flymake</h4>
+<div class="outline-text-4" id="text-2-16-2">
+<p>
+<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Flymake.html">https://www.gnu.org/software/emacs/manual/html_node/emacs/Flymake.html</a>
+</p>
+
+<p>
+Use it when checking for syntax errors. <code>consult-flymake</code> helps with this. <code>M-g
+f</code>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6e59dae" class="outline-3">
+<h3 id="org6e59dae"><span class="section-number-3">2.17.</span> Lorem ipsum</h3>
+<div class="outline-text-3" id="text-2-17">
+<p>
+Do you ever want to insert some <a href="https://en.wikipedia.org/wiki/Lorem_ipsum">Lorem ipsum</a>?
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package lorem-ipsum
+  :defer t)
+</pre>
+</div>
+
+<p>
+Now, run <code>M-x lorem-ipsum-insert-paragraphs</code> and get:
+</p>
+
+<blockquote>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit
+tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et,
+mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis
+parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor.
+Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam
+rutrum. Nam vestibulum accumsan nisl.
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org01c1d04" class="outline-3">
+<h3 id="org01c1d04"><span class="section-number-3">2.18.</span> Multiple-cursors</h3>
+<div class="outline-text-3" id="text-2-18">
+<p>
+Select same words inside the buffer and replace them - wow!!
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package multiple-cursors
+  :ensure t
+  :bind (:map ag/custom-bindings-map
+              ("C-&gt;" . mc/mark-next-like-this)
+              ("C-&lt;" . mc/mark-previous-like-this)
+              ("C-c C-&lt;" . mc/mark-all-like-this)))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org24adb24" class="outline-3">
+<h3 id="org24adb24"><span class="section-number-3">2.19.</span> Expand region</h3>
+<div class="outline-text-3" id="text-2-19">
+<p>
+Increase selected region by semantic units. Good for quickly selecting text in
+between brackets or parenthesis.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package expand-region
+  :ensure t
+  :bind (:map ag/custom-bindings-map
+              ("C-=" . er/expand-region)))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5a6dd3a" class="outline-3">
+<h3 id="org5a6dd3a"><span class="section-number-3">2.20.</span> Mode specific</h3>
+<div class="outline-text-3" id="text-2-20">
+</div>
+<div id="outline-container-org50495c4" class="outline-4">
+<h4 id="org50495c4"><span class="section-number-4">2.20.1.</span> nix-mode</h4>
+<div class="outline-text-4" id="text-2-20-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package nix-mode
+  :ensure t
+  :mode "\\.nix\\'")
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga6e289f" class="outline-3">
+<h3 id="orga6e289f"><span class="section-number-3">2.21.</span> Which-key</h3>
+<div class="outline-text-3" id="text-2-21">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2021-07-01 Thu] </span></span> A package that displays the available keybindings in a popup. The
+package is pretty useful, as Emacs seems to have more keybindings than I can
+remember at any given point. For example press Ctrl+c or Ctrl+x in a buffer and
+you will see the possible commands. <a href="https://github.com/justbur/emacs-which-key">Which key</a> is nice for discoverability.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package which-key
+  :ensure t
+  :init
+  (setq which-key-separator " ")
+  (setq which-key-prefix-prefix "+")
+  (setq which-key-idle-delay 0.2)
+  :config
+  (which-key-mode 1))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1a78e5b" class="outline-3">
+<h3 id="org1a78e5b"><span class="section-number-3">2.22.</span> Helpful</h3>
+<div class="outline-text-3" id="text-2-22">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2022-03-15 Tue] </span></span> Improves <b>help</b> buffer. Way more info than with regular help.
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package helpful
+  :ensure t
+  :bind (:map ag/custom-bindings-map
+              ("C-h f" . helpful-callable)
+              ("C-h v" . helpful-variable)
+              ("C-h k" . helpful-key)
+              ("C-h k" . helpful-key)
+              ("C-c C-d" . helpful-at-point)
+              ("C-h F" . helpful-function)
+              ("C-h C" . helpful-command)))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org877481e" class="outline-3">
+<h3 id="org877481e"><span class="section-number-3">2.23.</span> Yasnippet</h3>
+<div class="outline-text-3" id="text-2-23">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2022-02-13 Sun] </span></span> ”Yasnippet” - expand to a switch statement with placeholders.
+Tab between the placeholders &amp; type actual values. like in
+this(<a href="https://www.youtube.com/watch?v=mflvdXKyA_g&amp;list=PL-mFLc7R_MJdX0MxrqXEV4sM87hmVEkRw&amp;index=3&amp;t=67s&amp;ab_channel=byuksel">https://www.youtube.com/watch?v=mflvdXKyA_g&amp;list=PL-mFLc7R_MJdX0MxrqXEV4sM87hmVEkRw&amp;index=3&amp;t=67s&amp;ab_channel=byuksel</a>)
+video. I am kind of too new to programming to be using snippets, but its nice,
+keeping this plugin for now. It installs kind of many snippets… hope that
+doesn’t slow emacs down. Shouldnt… You can also create your own snippet…
+possibly even for .org files. many examples here -
+<a href="https://notabug.org/arkhan/dots.old/src/master/emacs/.emacs.d/snippets">https://notabug.org/arkhan/dots.old/src/master/emacs/.emacs.d/snippets</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package yasnippet
+  :ensure t
+  :config
+  (add-to-list 'yas-snippet-dirs "~/.emacs.d/snippets")
+  (yas-global-mode 1))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge68942d" class="outline-3">
+<h3 id="orge68942d"><span class="section-number-3">2.24.</span> Undo-tree</h3>
+<div class="outline-text-3" id="text-2-24">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2021-07-01 Thu]</span></span>”Undo tree” lets me to return to the file stage before any
+modifications were made. Keybind - C-x u.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package undo-tree
+  :ensure t
+  :init
+  (global-undo-tree-mode)
+  :config
+  (setq undo-tree-auto-save-history nil))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org87b4039" class="outline-3">
+<h3 id="org87b4039"><span class="section-number-3">2.25.</span> Save place</h3>
+<div class="outline-text-3" id="text-2-25">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">[2021-07-01 Thu] </span></span> “Saveplace” remembers your location in a file when saving files
+</p>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package saveplace
+  :ensure t
+  :config
+  ;; activate it for all buffers
+  (setq-default save-place t)
+  (save-place-mode 1))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge2c3ebe" class="outline-3">
+<h3 id="orge2c3ebe"><span class="section-number-3">2.26.</span> Goto-chg</h3>
+<div class="outline-text-3" id="text-2-26">
+<p>
+Go to last/previous change <span class="timestamp-wrapper"><span class="timestamp">[2022-02-24 Thu] </span></span> Perfect! Can now cycle through the
+last changes in the buffer. Very useful when doing some C-s in the buffer and
+then want to come back to the last modified location. Great! If trying to use
+it in org file - doesn’t work. Does ”org-cycle-agenda-files’ instead when doing
+the reverse.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(use-package goto-chg
+  :ensure t
+  :bind (:map ag/custom-bindings-map
+              ("M-[" . 'goto-last-change)
+              ("M-]" . 'goto-last-change-reverse)))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaa61c03" class="outline-3">
+<h3 id="orgaa61c03"><span class="section-number-3">2.27.</span> Bindings for functions defined above.</h3>
+<div class="outline-text-3" id="text-2-27">
+<p>
+Lastly we need to activate the map by creating and activating the minor-mode.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">(define-minor-mode custom-bindings-mode
+  "A mode that activates custom-bindings."
+  :init-value t
+  :keymap ag/custom-bindings-map)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<hr/>
+	 <footer>
+	 <div class="copyright-container">
+	 <div class="copyright">
+	 Copyright &copy; 2023-2023 Arvydas Gasparavicius
+	 </div>
+	 </div>
+	 <p class="date">This org file is created: 2021-06-15 Tue 22:22</p>
+	 <p class="date">This org file is last modified: 2023-12-19 Tue 19:25</p>
+	 <p class="date">This org file is exported to HTML: 2023-12-19 Tue 21:03</p>
+	 <div class="generated">
+	Created with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.1 (<a href="https://orgmode.org">Org</a> mode 9.6.6) on <a href="https://www.gnu.org">GNU</a>/<a href="https://www.kernel.org/">Linux</a>
+	</div>
+	</footer>
+	 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	 <script src="../static/js/generic.js"></script>
+	 <script src="../static/js/scroll-to-top.js"></script>
+	 <script src="../static/js/lightbox.js"></script>
+</div>
+</body>
+</html>

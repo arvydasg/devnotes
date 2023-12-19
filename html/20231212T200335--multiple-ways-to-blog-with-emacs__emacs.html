@@ -1,59 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<link rel="alternate"
-      type="application/rss+xml"
-      href="https://arvydasg.github.io/devnotes/html/rss.xml"
-      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<!-- 2023-12-19 Tue 21:03 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>multiple ways to blog with emacs</title>
-<meta name="author" content="Arvydas Gasparavicius">
-<meta name="referrer" content="no-referrer">
-<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
-<link rel="stylesheet" href="../static/style.css"/>
-<link rel="icon" href="../static/ag.ico">
-<script src="../static/lightbox.js"></script>
-<script src="static/auto-render.min.js"></script></head>
+<meta name="author" content="Arvydas Gasparavicius" />
+<meta name="description" content="welcome to my site" />
+<meta name="keywords" content="emacs antanas geles" />
+<meta name="generator" content="Org Mode" />
+
+<link rel="stylesheet" href="../static/css/org-html-style-default.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/generic.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/taingram.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/lightbox.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/scroll-to-top.css" type="text/css"/>
+</head>
 <body>
-<div id="preamble" class="status"><br>preamble here yo</br></div>
-<div id="content">
-<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231212T200335--multiple-ways-to-blog-with-emacs__emacs.html">multiple ways to blog with emacs</a></h1>
-<nav id="table-of-contents" role="doc-toc">
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="sitemap.html">NOTES </a>
+ 
+ <a accesskey="H" href="index.html"> HOME </a>
+</div><div id="preamble" class="status">
+<div id="updated">Updated: 2023-12-15 Fri 19:03</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">multiple ways to blog with emacs</h1>
+</header><nav id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org87ce426">two blog examples</a></li>
-<li><a href="#org2d49002">multiple ways to blog with emacs</a>
+<li><a href="#org7a53f9c">two blog examples</a></li>
+<li><a href="#orgdb6127c">multiple ways to blog with emacs</a>
 <ul>
-<li><a href="#org5712b5e">simple export with C-c C-e h o</a>
+<li><a href="#org33b6eae">simple export with C-c C-e h o</a>
 <ul>
-<li><a href="#orgbdda2ce">PROS</a></li>
-<li><a href="#org9f3f759">CONS</a></li>
+<li><a href="#org1938046">PROS</a></li>
+<li><a href="#org5b63b79">CONS</a></li>
 </ul>
 </li>
-<li><a href="#org73eb2a6">ox-publish C-c C-e P p</a>
+<li><a href="#org5768f25">ox-publish C-c C-e P p</a>
 <ul>
-<li><a href="#orgec03632">PROS</a></li>
-<li><a href="#org75cc8a0">CONS</a></li>
+<li><a href="#org42279ea">PROS</a></li>
+<li><a href="#org114f5cf">CONS</a></li>
 </ul>
 </li>
-<li><a href="#org0751e02">org-static-blog-publish</a>
+<li><a href="#org9e8408d">org-static-blog-publish</a>
 <ul>
-<li><a href="#org7b6eab0">PROS</a></li>
-<li><a href="#orge318cf7">CONS</a></li>
+<li><a href="#org4b7e5f1">PROS</a></li>
+<li><a href="#orgaee94b4">CONS</a></li>
 </ul>
 </li>
-<li><a href="#org0772536">weblorg?</a></li>
+<li><a href="#org67d8f14">weblorg?</a></li>
 </ul>
 </li>
-<li><a href="#org742bc6c">Checkout</a>
+<li><a href="#org6c48ed8">Checkout</a>
 <ul>
-<li><a href="#org07eb23f"><span class="todo TODO">TODO</span> Cool check this out!</a></li>
-<li><a href="#org7db7835"><span class="todo TODO">TODO</span> bro what??? automatic to github?</a></li>
-<li><a href="#orgf92e846"><span class="todo TODO">TODO</span> check his postamble/preamble things</a></li>
+<li><a href="#orgb79dcd8"><span class="todo TODO">TODO</span> Cool check this out!</a></li>
+<li><a href="#org42d64b6"><span class="todo TODO">TODO</span> bro what??? automatic to github?</a></li>
+<li><a href="#org609dc3e"><span class="todo TODO">TODO</span> check his postamble/preamble things</a></li>
 </ul>
 </li>
-<li><a href="#orgbd834d8">How I am using denote</a></li>
+<li><a href="#org7390c15">How I am using denote</a></li>
 </ul>
 </div>
 </nav>
@@ -66,9 +75,9 @@ blog setup. So it&rsquo;s just brainstorming.. did not want to lose it, so keepi
 Explains how to build a blog wiht org mode - <a href="https://taingram.org/blog/org-mode-blog.html">https://taingram.org/blog/org-mode-blog.html</a>
 </p>
 
-<div id="outline-container-org87ce426" class="outline-2">
-<h2 id="org87ce426">two blog examples</h2>
-<div class="outline-text-2" id="text-org87ce426">
+<div id="outline-container-org7a53f9c" class="outline-2">
+<h2 id="org7a53f9c">two blog examples</h2>
+<div class="outline-text-2" id="text-org7a53f9c">
 <p>
 This way of creating a blog, unlike
 <a href="https://github.com/arvydasg/org-static-blog">https://github.com/arvydasg/org-static-blog</a>, does not have a possibility to do
@@ -97,9 +106,9 @@ emacs html backend engine. This is how my arvydas.dev page is built.
 </div>
 </div>
 
-<div id="outline-container-org2d49002" class="outline-2">
-<h2 id="org2d49002">multiple ways to blog with emacs</h2>
-<div class="outline-text-2" id="text-org2d49002">
+<div id="outline-container-orgdb6127c" class="outline-2">
+<h2 id="orgdb6127c">multiple ways to blog with emacs</h2>
+<div class="outline-text-2" id="text-orgdb6127c">
 <p>
 In all ways - to deploy to github, must have index.html in the directory! Other
 wise git will not know what to serve. Can use special symbols(bottom of the
@@ -127,13 +136,13 @@ page - <a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial
 </div>
 </div>
 
-<div id="outline-container-org5712b5e" class="outline-3">
-<h3 id="org5712b5e">simple export with C-c C-e h o</h3>
-<div class="outline-text-3" id="text-org5712b5e">
+<div id="outline-container-org33b6eae" class="outline-3">
+<h3 id="org33b6eae">simple export with C-c C-e h o</h3>
+<div class="outline-text-3" id="text-org33b6eae">
 </div>
-<div id="outline-container-orgbdda2ce" class="outline-4">
-<h4 id="orgbdda2ce">PROS</h4>
-<div class="outline-text-4" id="text-orgbdda2ce">
+<div id="outline-container-org1938046" class="outline-4">
+<h4 id="org1938046">PROS</h4>
+<div class="outline-text-4" id="text-org1938046">
 <ul class="org-ul">
 <li>no dependencies, can do anywhere</li>
 <li>built in</li>
@@ -141,9 +150,9 @@ page - <a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial
 </div>
 </div>
 
-<div id="outline-container-org9f3f759" class="outline-4">
-<h4 id="org9f3f759">CONS</h4>
-<div class="outline-text-4" id="text-org9f3f759">
+<div id="outline-container-org5b63b79" class="outline-4">
+<h4 id="org5b63b79">CONS</h4>
+<div class="outline-text-4" id="text-org5b63b79">
 <ul class="org-ul">
 <li>can&rsquo;t export more than one file</li>
 <li>unclear about links, have not tried, but probs dont work</li>
@@ -152,9 +161,9 @@ page - <a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial
 </div>
 </div>
 
-<div id="outline-container-org73eb2a6" class="outline-3">
-<h3 id="org73eb2a6">ox-publish C-c C-e P p</h3>
-<div class="outline-text-3" id="text-org73eb2a6">
+<div id="outline-container-org5768f25" class="outline-3">
+<h3 id="org5768f25">ox-publish C-c C-e P p</h3>
+<div class="outline-text-3" id="text-org5768f25">
 <p>
 Can do basic batch export with header, footer, no need to use additional package.
 </p>
@@ -219,9 +228,9 @@ Check the docs for more options here -
 </p>
 </div>
 
-<div id="outline-container-orgec03632" class="outline-4">
-<h4 id="orgec03632">PROS</h4>
-<div class="outline-text-4" id="text-orgec03632">
+<div id="outline-container-org42279ea" class="outline-4">
+<h4 id="org42279ea">PROS</h4>
+<div class="outline-text-4" id="text-org42279ea">
 <ul class="org-ul">
 <li>can work with multiple projects</li>
 <li>each project can be specified in a separate config</li>
@@ -232,9 +241,9 @@ Check the docs for more options here -
 </div>
 </div>
 
-<div id="outline-container-org75cc8a0" class="outline-4">
-<h4 id="org75cc8a0">CONS</h4>
-<div class="outline-text-4" id="text-org75cc8a0">
+<div id="outline-container-org114f5cf" class="outline-4">
+<h4 id="org114f5cf">CONS</h4>
+<div class="outline-text-4" id="text-org114f5cf">
 <ul class="org-ul">
 <li>links don&rsquo;t work</li>
 </ul>
@@ -242,13 +251,13 @@ Check the docs for more options here -
 </div>
 </div>
 
-<div id="outline-container-org0751e02" class="outline-3">
-<h3 id="org0751e02">org-static-blog-publish</h3>
-<div class="outline-text-3" id="text-org0751e02">
+<div id="outline-container-org9e8408d" class="outline-3">
+<h3 id="org9e8408d">org-static-blog-publish</h3>
+<div class="outline-text-3" id="text-org9e8408d">
 </div>
-<div id="outline-container-org7b6eab0" class="outline-4">
-<h4 id="org7b6eab0">PROS</h4>
-<div class="outline-text-4" id="text-org7b6eab0">
+<div id="outline-container-org4b7e5f1" class="outline-4">
+<h4 id="org4b7e5f1">PROS</h4>
+<div class="outline-text-4" id="text-org4b7e5f1">
 <ul class="org-ul">
 <li>does everything for you</li>
 <li>tags</li>
@@ -259,9 +268,9 @@ Check the docs for more options here -
 </div>
 </div>
 
-<div id="outline-container-orge318cf7" class="outline-4">
-<h4 id="orge318cf7">CONS</h4>
-<div class="outline-text-4" id="text-orge318cf7">
+<div id="outline-container-orgaee94b4" class="outline-4">
+<h4 id="orgaee94b4">CONS</h4>
+<div class="outline-text-4" id="text-orgaee94b4">
 <ul class="org-ul">
 <li>big program(installable package, not built in)</li>
 <li>links don&rsquo;t work</li>
@@ -270,9 +279,9 @@ Check the docs for more options here -
 </div>
 </div>
 </div>
-<div id="outline-container-org0772536" class="outline-3">
-<h3 id="org0772536">weblorg?</h3>
-<div class="outline-text-3" id="text-org0772536">
+<div id="outline-container-org67d8f14" class="outline-3">
+<h3 id="org67d8f14">weblorg?</h3>
+<div class="outline-text-3" id="text-org67d8f14">
 <p>
 David tried -
 <a href="https://www.youtube.com/watch?v=5R7ad5xz5wo&amp;t=5746s&amp;ab_channel=SystemCrafters">https://www.youtube.com/watch?v=5R7ad5xz5wo&amp;t=5746s&amp;ab_channel=SystemCrafters</a>
@@ -280,13 +289,13 @@ David tried -
 </div>
 </div>
 </div>
-<div id="outline-container-org742bc6c" class="outline-2">
-<h2 id="org742bc6c">Checkout</h2>
-<div class="outline-text-2" id="text-org742bc6c">
+<div id="outline-container-org6c48ed8" class="outline-2">
+<h2 id="org6c48ed8">Checkout</h2>
+<div class="outline-text-2" id="text-org6c48ed8">
 </div>
-<div id="outline-container-org07eb23f" class="outline-3">
-<h3 id="org07eb23f"><span class="todo TODO">TODO</span> Cool check this out!</h3>
-<div class="outline-text-3" id="text-org07eb23f">
+<div id="outline-container-orgb79dcd8" class="outline-3">
+<h3 id="orgb79dcd8"><span class="todo TODO">TODO</span> Cool check this out!</h3>
+<div class="outline-text-3" id="text-orgb79dcd8">
 <p>
 <a href="https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html">https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html</a>
 </p>
@@ -302,9 +311,9 @@ naudoja?
 </div>
 </div>
 
-<div id="outline-container-org7db7835" class="outline-3">
-<h3 id="org7db7835"><span class="todo TODO">TODO</span> bro what??? automatic to github?</h3>
-<div class="outline-text-3" id="text-org7db7835">
+<div id="outline-container-org42d64b6" class="outline-3">
+<h3 id="org42d64b6"><span class="todo TODO">TODO</span> bro what??? automatic to github?</h3>
+<div class="outline-text-3" id="text-org42d64b6">
 <p>
 <a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/">https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/</a>
 </p>
@@ -316,18 +325,18 @@ website to Git hosting services like GitHub Pages and Sourcehut Pages!
 </div>
 </div>
 
-<div id="outline-container-orgf92e846" class="outline-3">
-<h3 id="orgf92e846"><span class="todo TODO">TODO</span> check his postamble/preamble things</h3>
-<div class="outline-text-3" id="text-orgf92e846">
+<div id="outline-container-org609dc3e" class="outline-3">
+<h3 id="org609dc3e"><span class="todo TODO">TODO</span> check his postamble/preamble things</h3>
+<div class="outline-text-3" id="text-org609dc3e">
 <p>
 <a href="https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html">https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html</a>
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgbd834d8" class="outline-2">
-<h2 id="orgbd834d8">How I am using denote</h2>
-<div class="outline-text-2" id="text-orgbd834d8">
+<div id="outline-container-org7390c15" class="outline-2">
+<h2 id="org7390c15">How I am using denote</h2>
+<div class="outline-text-2" id="text-org7390c15">
 <p>
 Denote allows me to generate blog files quick and easy. They are all in the
 same structure, do not require databse. I can link between them.
@@ -368,7 +377,26 @@ which contains all my personal files.
 </p>
 </div>
 </div>
-<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> </div></div>
-<div id="postamble" class="status"><br>postamble in he house</br></div>
+</div>
+<div id="postamble" class="status">
+<hr/>
+	 <footer>
+	 <div class="copyright-container">
+	 <div class="copyright">
+	 Copyright &copy; 2023-2023 Arvydas Gasparavicius
+	 </div>
+	 </div>
+	 <p class="date">This org file is created: 2023-12-12 Tue 20:03</p>
+	 <p class="date">This org file is last modified: 2023-12-15 Fri 19:03</p>
+	 <p class="date">This org file is exported to HTML: 2023-12-19 Tue 21:03</p>
+	 <div class="generated">
+	Created with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.1 (<a href="https://orgmode.org">Org</a> mode 9.6.6) on <a href="https://www.gnu.org">GNU</a>/<a href="https://www.kernel.org/">Linux</a>
+	</div>
+	</footer>
+	 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	 <script src="../static/js/generic.js"></script>
+	 <script src="../static/js/scroll-to-top.js"></script>
+	 <script src="../static/js/lightbox.js"></script>
+</div>
 </body>
 </html>

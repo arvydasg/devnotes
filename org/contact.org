@@ -1,0 +1,8 @@
+#+title: contact
+#+date: <2023-12-19 Tue>
+#+options: num:nil toc:nil title:nil
+
+* Contact Me
+
+Please contact me over email <arvydas.gaspa@gmail..com>. I will generally
+respond within a week assuming your message is not spam.

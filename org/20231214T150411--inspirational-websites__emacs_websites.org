@@ -20,6 +20,7 @@
 - https://taingram.org/blog/org-mode-blog.html
 - https://taingram.org/
 - https://justin.abrah.ms/
+- https://ddavis.io/
 
 * Other
 - Artsy - https://kathie.io/

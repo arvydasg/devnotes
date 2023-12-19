@@ -1,0 +1,28 @@
+#+title:      using org-download package in WSL
+#+date:       [2023-12-19 Tue 09:09]
+#+filetags:   :emacs:nixos:windows:wsl:
+#+identifier: 20231219T090909
+#+STARTUP:    overview
+
+[2023-12-19 Tue], when I was setting up [[file:20231215T182523--building-development-notes-website-with-emacs__emacs_websites.org][building development notes website with
+Emacs]], I wanted to use =org-download= package and it's functionalities. I
+later realized, that as long as I am on WSL, this won't work out of the box for
+me.
+
+Simply documenting what I have found below.
+
+Package itself - https://github.com/abo-abo/org-download
+Great demo by the author of the package -
+https://www.youtube.com/watch?v=dAojpHR-6Uo&ab_channel=abo-abo
+
+since I am on wsl and not ubuntu, but nixos, there seems not to be a software
+that can take those screenshots. The tool for that is mentioned in
+=org-download-screenshot-method=. Will try to install =scrot=.
+
+After installing =scrot= and =xclicp= on my nixos WSL distro, I still was not
+able to make the package work.
+
+This could be a potential workaround -
+https://github.com/abo-abo/org-download/issues/178.
+
+I think I will live without it.

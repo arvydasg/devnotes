@@ -27,16 +27,11 @@ the yasnippet template:
   [[./static/images/.png]]
 #+end_src
 
-Simply modify the path of the image and it will display it.
+Don't forget to modify the path of the image and it will display it.
 
-* If you don't have an image and want to insert a screenshot
-
-Use ~org-download~ package. After you install it, run =M-x
-org-download-screenshot=.
-
-Then make sure in init file you have specified the directory. If not, it will
-save images in your current org file directory. It is good if you want to
-export the file to html later and then maybe even send to someone.
+This - #+attr_html: - tells how wide the image should look *in the browser*.
+This - +ATTR_ORG - tells how wide the image should look *in the org file inside
+emacs* when you do =org-toggle-inline-images=.
 
 * Resizing images in emacs and html
 
@@ -56,3 +51,24 @@ Then, above EACH and EVERY image add such lines:
 
 and now after C-c C-x C-v - images will display nicely, as per your request.
 Beautiful.
+
+And then make sure to add this to your css so the image would not spill out of
+the container borders:
+
+#+begin_src css
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+#+end_src
+
+* If you don't have an image and want to insert a screenshot
+
+Use ~org-download~ package. After you install it, run =M-x
+org-download-screenshot=.
+
+Then make sure in init file you have specified the directory. If not, it will
+save images in your current org file directory. It is good if you want to
+export the file to html later and then maybe even send to someone.
+
+Important - [[file:20231219T090909--using-org-download-package-in-wsl__emacs_nixos_windows_wsl.org][using org-download package in WSL]]

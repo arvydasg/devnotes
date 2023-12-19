@@ -1,5 +1,5 @@
 #+title:      vim
-#+date:       [2023-11-25 Sat 18:09]
+#+date:       [2022-12-03 Sat 18:09]
 #+filetags:   :vim:
 #+identifier: 20231125T180911
 

@@ -1,0 +1,287 @@
+#+title:      build a website with emacs and org-static-blog
+#+date:       [2023-12-19 Tue 05:19]
+#+filetags:   :emacs:websites:
+#+identifier: 20231219T051943
+#+STARTUP:    overview
+
+* Docs
+Official docs - https://github.com/bastibe/org-static-blog
+
+* Installation
+#+begin_src emacs-lisp :tangle no
+  (use-package org-static-blog
+    :ensure t)
+#+end_src
+
+* Try using the minimal config
+
+Taken from the docs.
+
+#+begin_src emacs-lisp
+  (setq org-static-blog-publish-title "My Static Org Blog")
+  (setq org-static-blog-publish-url "https://staticblog.org/")
+  (setq org-static-blog-publish-directory "~/projects/blog/")
+  (setq org-static-blog-posts-directory "~/projects/blog/posts/")
+  (setq org-static-blog-drafts-directory "~/projects/blog/drafts/")
+  (setq org-static-blog-enable-tags t)
+  (setq org-export-with-toc nil)
+  (setq org-export-with-section-numbers nil)
+
+  ;; This header is inserted into the <head> section of every page:
+  ;;   (you will need to create the style sheet at
+  ;;    ~/projects/blog/static/style.css
+  ;;    and the favicon at
+  ;;    ~/projects/blog/static/favicon.ico)
+  (setq org-static-blog-page-header
+        "<meta name=\"author\" content=\"John Dow\">
+  <meta name=\"referrer\" content=\"no-referrer\">
+  <meta name=\"viewport\" content=\"initial-scale=1,width=device-width,minimum-scale=1\">
+  <link href= \"static/style.css\" rel=\"stylesheet\" type=\"text/css\" />
+  <link rel=\"icon\" href=\"static/favicon.ico\">")
+
+  ;; This preamble is inserted at the beginning of the <body> of every page:
+  ;;   This particular HTML creates a <div> with a simple linked headline
+  (setq org-static-blog-page-preamble
+        "<div class=\"header\">
+    <a href=\"https://staticblog.org\">My Static Org Blog</a>
+  </div>")
+
+  ;; This postamble is inserted at the end of the <body> of every page:
+  ;;   This particular HTML creates a <div> with a link to the archive page
+  ;;   and a licensing stub.
+  (setq org-static-blog-page-postamble
+        "<div id=\"archive\">
+    <a href=\"https://staticblog.org/archive.html\">Other posts</a>
+  </div>
+  <center><a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-sa/3.0/88x31.png\" /></a><br /><span xmlns:dct=\"https://purl.org/dc/terms/\" href=\"https://purl.org/dc/dcmitype/Text\" property=\"dct:title\" rel=\"dct:type\">bastibe.de</span> by <a xmlns:cc=\"https://creativecommons.org/ns#\" href=\"https://bastibe.de\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">Bastian Bechtold</a> is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</center>")
+
+  ;; This HTML code is inserted into the index page between the preamble and
+  ;;   the blog posts
+  (setq org-static-blog-index-front-matter
+        "<h1> Welcome to my blog </h1>\n")
+#+end_src
+
+Now do =org-static-blog-publish= to generate html pages from your publish
+directory to your posts directory.
+
+As you can see you can customize the html-head, preamble(that's navigation part
+for me) and postamble(that's footer for me). That's all you need in a static
+site not to write repetitive code for each! Great!
+* Decide where to place the configuration
+
+Now the configuration above might get large if you start modifying the head,
+preamble, postamble.. Also if you have multiple blogs/websites that you want to
+publish this way, you need to have two separate configurations.
+
+Eventually you realize that you can't store multiple configurations in your
+emacs config file.
+
+So the solution to this is to create a "build" folder and in it have such
+files:
+
+#+begin_src bash
+devnotes/build/
+├── build.sh
+└── build-site.el
+#+end_src
+
+build.sh should be made to be executable =chmo o+x build.sh= and it's contents
+are:
+#+begin_src bash
+  #!/bin/sh
+  emacs -Q --script build-site.el
+#+end_src
+
+and build-site.el content would contain your org-static-blog configuration(we
+will remove the configuration from our emacs config and place it in this file
+with a couple of additions):
+
+#+begin_src emacs-lisp
+
+  ;; NEW START ------------------------------------------------------------------------
+
+  ;; Set the package installation directory so that packages aren't stored in the
+  ;; ~/.emacs.d/elpa path.
+  (require 'package)
+  (setq package-user-dir (expand-file-name "./.packages"))
+  (setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                           ("elpa" . "https://elpa.gnu.org/packages/")))
+
+  ;; Initialize the package system
+  (package-initialize)
+  (unless package-archive-contents
+    (package-refresh-contents))
+
+  (message "Package refresh complete!")
+
+  ;; Install dependencies inside the ./packages directory
+  ;; should install ONLY org-static-blog
+  (package-install 'org-static-blog)
+  (message "Package installation complete!")
+
+  ;; NEW END ------------------------------------------------------------------------
+
+  (setq org-static-blog-publish-title "My Static Org Blog")
+  (setq org-static-blog-publish-url "https://staticblog.org/")
+  (setq org-static-blog-publish-directory "~/projects/blog/")
+  (setq org-static-blog-posts-directory "~/projects/blog/posts/")
+  (setq org-static-blog-drafts-directory "~/projects/blog/drafts/")
+  (setq org-static-blog-enable-tags t)
+  (setq org-export-with-toc nil)
+  (setq org-export-with-section-numbers nil)
+
+  ;; This header is inserted into the <head> section of every page:
+  ;;   (you will need to create the style sheet at
+  ;;    ~/projects/blog/static/style.css
+  ;;    and the favicon at
+  ;;    ~/projects/blog/static/favicon.ico)
+  (setq org-static-blog-page-header
+        "<meta name=\"author\" content=\"John Dow\">
+      <meta name=\"referrer\" content=\"no-referrer\">
+      <meta name=\"viewport\" content=\"initial-scale=1,width=device-width,minimum-scale=1\">
+      <link href= \"static/style.css\" rel=\"stylesheet\" type=\"text/css\" />
+      <link rel=\"icon\" href=\"static/favicon.ico\">")
+
+  ;; This preamble is inserted at the beginning of the <body> of every page:
+  ;;   This particular HTML creates a <div> with a simple linked headline
+  (setq org-static-blog-page-preamble
+        "<div class=\"header\">
+        <a href=\"https://staticblog.org\">My Static Org Blog</a>
+      </div>")
+
+  ;; This postamble is inserted at the end of the <body> of every page:
+  ;;   This particular HTML creates a <div> with a link to the archive page
+  ;;   and a licensing stub.
+  (setq org-static-blog-page-postamble
+        "<div id=\"archive\">
+        <a href=\"https://staticblog.org/archive.html\">Other posts</a>
+      </div>
+      <center><a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-sa/3.0/88x31.png\" /></a><br /><span xmlns:dct=\"https://purl.org/dc/terms/\" href=\"https://purl.org/dc/dcmitype/Text\" property=\"dct:title\" rel=\"dct:type\">bastibe.de</span> by <a xmlns:cc=\"https://creativecommons.org/ns#\" href=\"https://bastibe.de\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">Bastian Bechtold</a> is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</center>")
+
+  ;; This HTML code is inserted into the index page between the preamble and
+  ;;   the blog posts
+  (setq org-static-blog-index-front-matter
+        "<h1> Welcome to my blog </h1>\n")
+
+  ;; NEW START ------------------------------------------------------------------------
+
+  (org-static-blog-publish t)
+
+  (message "Build complete!")
+
+  ;; NEW END ------------------------------------------------------------------------
+#+end_src
+
+That's it. Now when we will run the bash script (=./build.sh=), it will install
+org-static-blog package into the /build directory if it does not already exist.
+It will then do the html conversion from org files as you have specified and at
+the end it will print out "Build complete!"
+
+* My configuration as of [2023-12-19 Tue]
+
+Stopped using it before I went to build devnotes site with ox-publish -
+[[file:20231215T182523--building-development-notes-website-with-emacs__emacs_websites.org][building development notes website with Emacs]]
+
+#+begin_src emacs-lisp
+;; Set the package installation directory so that packages aren't stored in the
+;; ~/.emacs.d/elpa path.
+(require 'package)
+(setq package-user-dir (expand-file-name "./.packages"))
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("elpa" . "https://elpa.gnu.org/packages/")))
+
+;; Initialize the package system
+(package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
+
+(message "Package refresh complete!")
+
+;; Install dependencies inside the ./packages directory
+;; should install ONLY org-static-blog
+(package-install 'org-static-blog)
+(message "Package installation complete!")
+
+;; stop making ~ files
+(setq make-backup-files nil)
+
+;; directories and urls
+(setq org-static-blog-publish-title "arvydasg.github.io")
+(setq org-static-blog-publish-url "https://arvydasg.github.io/devnotes/html")
+(setq org-static-blog-publish-directory "~/GIT/devnotes/html")
+(setq org-static-blog-posts-directory "~/GIT/devnotes/org")
+(setq org-static-blog-drafts-directory "~/GIT/devnotes/drafts")
+(setq org-static-blog-index-length 3)
+(setq org-static-blog-preview-date-first-p nil)
+(setq org-static-blog-use-preview t)
+(setq org-static-blog-langcode "en")
+(setq org-static-blog-enable-tags t)
+(setq org-static-blog-no-post-tag "NONPOST")
+(setq org-static-blog-enable-deprecation-warning nil)
+(setq org-static-blog-page-header
+"<meta name=\"author\" content=\"Arvydas Gasparavicius\">
+<meta name=\"referrer\" content=\"no-referrer\">
+<meta name=\"viewport\" content=\"initial-scale=1,width=device-width,minimum-scale=1\">
+<link rel=\"stylesheet\" href=\"../static/style.css\"/>
+<link rel=\"icon\" href=\"../static/ag.ico\">
+<script src=\"../static/lightbox.js\"></script>
+<script src=\"static/auto-render.min.js\"></script>")
+
+(setq org-static-blog-page-preamble "<br>preamble here yo</br>")
+(setq org-static-blog-page-postamble
+"<div id=\"footer\">
+<hr>
+<p>2021-2023 Arvydas Gasparavicius</p>
+<script src=\"static/script.js\"></script>
+</div>")
+
+(setq org-static-blog-index-front-matter
+"<h1> Hello there!</h1>
+<hr>
+<div id=\"intro\">
+<p> My name is Arvydas. <a class=\"no-link\" href=\"https://github.com/arvydasg\">My Github</a>.</p>
+<p> If you are interested in some of my writings, here are some of my latest posts:</p>
+</div>
+\n\n\n")
+
+(org-static-blog-publish t)
+
+(message "Build complete!")
+#+end_src
+* CSS
+** use CSS built in css from ox-html
+
+We can customize =org-static-blog-page-header= and add your custom css
+stylesheet, or we can try to use the built in ox-html stylesheet(provides nice
+code block styling)
+
+Adding this to your configuration:
+#+begin_src emacs-lisp
+  (require 'ox-html)                    ;or (require 'ox-publish)
+  (setq org-static-blog-page-header org-html-style-default)
+#+end_src
+
+You will be able to use the default style sheets of ox-html or ox-publish in
+your org-static-blog project.
+
+But still, you might prefer to have full control of your stylesheets, so better
+keep the first option that I have suggested with style.css file.
+** org-html-themes
+ORRR last thing that you can try when it comes to styling your website, try
+using one of these, [[https://github.com/fniessen/org-html-themes][org-html-themes]].
+
+You can point to one of these themes like such, by placing this code at the top
+of your.org file:
+#+begin_src org :tangle no
+  #+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-NAME.setup
+#+end_src
+
+Or if you have downloaded the code(more future proof solution), add such line
+at the top of your .org file.
+#+begin_src org :tangle no
+  #+SETUPFILE: PATH/TO/GIT/REPO/org/theme-NAME-local.setup
+#+end_src
+
+Of course we can also modify our =setq org-static-blog-page-header= to contain
+the =org-html-themes=, but I won't do that this time since I know I will be
+using my own custom stylesheet.

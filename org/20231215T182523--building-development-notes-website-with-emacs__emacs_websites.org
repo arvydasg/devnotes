@@ -135,7 +135,8 @@ flexibility if needed.
 These were my thoughts AFTER I have read the ChatGPT response:
 
 #+begin_quote
-Of course after readings this I leaned toward ox-publish instead of
+
+Of course after reading this I leaned toward =ox-publish= instead of
 org-static-blog. True, I have noticed that it lacks configuration options and
 is kind of restraining. I read other people's tutorials on how they use
 ox-publish and all the settings they have and I can not try to reuse them with
@@ -148,82 +149,52 @@ I just hope that tag feature works in ox-publish(it should) - then I am all
 good. Let's dive in.
 #+end_quote
 
-Unfortunately, the tags don't work in ox-publish way of making a website, so I
-will have to stick with org-static-blog. Not complaining. It will force me to
-read thought the source code more often and and see how I can use pieces of
-ox-publish in org-static-blog configuration.
+[2023-12-16 Sat] Unfortunately, the tags don't work in ox-publish way of making
+a website, so I will have to stick with org-static-blog. Not complaining. It
+will force me to read thought the source code more often and and see how I can
+use pieces of ox-publish in org-static-blog configuration.
+
+[2023-12-19 Tue] The issue I have mentioned above still bugs me. I can use tags in my website,
+BUT I can not compile it from the comfortable place of a custom script(instead
+of having the config in my main config), it is not native Emacs, stuff is built
+on top of it.. I once again decided to switch my mind and build my website with
+built in tools - [[file:20231217T064942--build-a-website-with-emacs-and-ox-publish__emacs_websites.org][Build a website with emacs and ox-publish]]. I will have ALL the
+features of org mode and standard publishing tools, exports will be clean, I
+will also be able to have multiple configs for each blog/website and. I will
+simply not have the tags.. which I will build on top by myself with the
+inspiration of =org-static-blog=(someday in the future). The notes will not be
+rendered into html that often, they won't be categorized by tags, but that's
+not a big deal. Primary audience for these notes is still - me. I need to be
+able to search through them and find the information in them. If it's not as
+easy to do that on the web - so be it. I will work on that later.
 
 * Implementation
-** Read the official documentation
+** Get to know to =ox-publish=
 
-First things first ofc - https://github.com/bastibe/org-static-blog
-** Install the package
+First things first of course:
 
-#+begin_src emacs-lisp
-  (use-package org-static-blog
-    :ensure t)
-#+end_src
+- Publishing Org-mode files to HTML - https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html
+- HTML specific export settings - https://orgmode.org/manual/HTML-Export.html#HTML-export
+- My personal notes about building websites with =ox-publish= - [[file:20231217T064942--build-a-website-with-emacs-and-ox-publish__emacs_websites.org][Build a website
+  with emacs and ox-publish]]
+- I recommend to get to know to the source code if you like:
+  #+begin_src bash
+    /org/ox-html.el.gz
+    /org/ox-publish.el.gz
+  #+end_src
+- =C-c C-e #= (org-export-dispatch) plus "template" - ALL possible in-file options
+- =org-html-preamble-format= some useful %a %c %T functions
 
-** Try using the minimal installation
+** Installation
+*** Install the package
 
-Taken from the docs.
+It is already installed with Emacs by default.
 
-#+begin_src emacs-lisp
-  (setq org-static-blog-publish-title "My Static Org Blog")
-  (setq org-static-blog-publish-url "https://staticblog.org/")
-  (setq org-static-blog-publish-directory "~/projects/blog/")
-  (setq org-static-blog-posts-directory "~/projects/blog/posts/")
-  (setq org-static-blog-drafts-directory "~/projects/blog/drafts/")
-  (setq org-static-blog-enable-tags t)
-  (setq org-export-with-toc nil)
-  (setq org-export-with-section-numbers nil)
+*** Decide where to place the configuration
 
-  ;; This header is inserted into the <head> section of every page:
-  ;;   (you will need to create the style sheet at
-  ;;    ~/projects/blog/static/style.css
-  ;;    and the favicon at
-  ;;    ~/projects/blog/static/favicon.ico)
-  (setq org-static-blog-page-header
-        "<meta name=\"author\" content=\"John Dow\">
-  <meta name=\"referrer\" content=\"no-referrer\">
-  <meta name=\"viewport\" content=\"initial-scale=1,width=device-width,minimum-scale=1\">
-  <link href= \"static/style.css\" rel=\"stylesheet\" type=\"text/css\" />
-  <link rel=\"icon\" href=\"static/favicon.ico\">")
-
-  ;; This preamble is inserted at the beginning of the <body> of every page:
-  ;;   This particular HTML creates a <div> with a simple linked headline
-  (setq org-static-blog-page-preamble
-        "<div class=\"header\">
-    <a href=\"https://staticblog.org\">My Static Org Blog</a>
-  </div>")
-
-  ;; This postamble is inserted at the end of the <body> of every page:
-  ;;   This particular HTML creates a <div> with a link to the archive page
-  ;;   and a licensing stub.
-  (setq org-static-blog-page-postamble
-        "<div id=\"archive\">
-    <a href=\"https://staticblog.org/archive.html\">Other posts</a>
-  </div>
-  <center><a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-sa/3.0/88x31.png\" /></a><br /><span xmlns:dct=\"https://purl.org/dc/terms/\" href=\"https://purl.org/dc/dcmitype/Text\" property=\"dct:title\" rel=\"dct:type\">bastibe.de</span> by <a xmlns:cc=\"https://creativecommons.org/ns#\" href=\"https://bastibe.de\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">Bastian Bechtold</a> is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</center>")
-
-  ;; This HTML code is inserted into the index page between the preamble and
-  ;;   the blog posts
-  (setq org-static-blog-index-front-matter
-        "<h1> Welcome to my blog </h1>\n")
-#+end_src
-
-Now do =org-static-blog-publish= to generate html pages from your publish
-directory to your posts directory.
-
-As you can see you can customize the html-head, preamble(that's navigation part
-for me) and postamble(that's footer for me). That's all you need in a static
-site not to write repetitive code for each! Great!
-
-** Decide where to place the configuration
-
-Now the configuration above might get large if you start modifying the head,
+Ox-publish configuration might get large if you start modifying the head,
 preamble, postamble.. Also if you have multiple blogs/websites that you want to
-publish this way,  you need to have two separate configurations.
+publish this way, you need to have two separate configurations.
 
 Eventually you realize that you can't store multiple configurations in your
 emacs config file.
@@ -244,103 +215,88 @@ are:
   emacs -Q --script build-site.el
 #+end_src
 
-and build-site.el content would contain your org-static-blog configuration(we
-will remove the configuration from our emacs config and place it in this file
-with a couple of additions):
+and =build-site.el= content would contain your ox-publish configuration(we will
+remove the configuration from our emacs config and place it in this file with a
+couple of additions).
 
 #+begin_src emacs-lisp
-
-  ;; NEW START ------------------------------------------------------------------------
-
-  ;; Set the package installation directory so that packages aren't stored in the
-  ;; ~/.emacs.d/elpa path.
-  (require 'package)
-  (setq package-user-dir (expand-file-name "./.packages"))
-  (setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                           ("elpa" . "https://elpa.gnu.org/packages/")))
-
-  ;; Initialize the package system
-  (package-initialize)
-  (unless package-archive-contents
-    (package-refresh-contents))
-
-  (message "Package refresh complete!")
-
-  ;; Install dependencies inside the ./packages directory
-  ;; should install ONLY org-static-blog
-  (package-install 'org-static-blog)
-  (message "Package installation complete!")
-
-  ;; NEW END ------------------------------------------------------------------------
-
-  (setq org-static-blog-publish-title "My Static Org Blog")
-  (setq org-static-blog-publish-url "https://staticblog.org/")
-  (setq org-static-blog-publish-directory "~/projects/blog/")
-  (setq org-static-blog-posts-directory "~/projects/blog/posts/")
-  (setq org-static-blog-drafts-directory "~/projects/blog/drafts/")
-  (setq org-static-blog-enable-tags t)
-  (setq org-export-with-toc nil)
-  (setq org-export-with-section-numbers nil)
-
-  ;; This header is inserted into the <head> section of every page:
-  ;;   (you will need to create the style sheet at
-  ;;    ~/projects/blog/static/style.css
-  ;;    and the favicon at
-  ;;    ~/projects/blog/static/favicon.ico)
-  (setq org-static-blog-page-header
-        "<meta name=\"author\" content=\"John Dow\">
-      <meta name=\"referrer\" content=\"no-referrer\">
-      <meta name=\"viewport\" content=\"initial-scale=1,width=device-width,minimum-scale=1\">
-      <link href= \"static/style.css\" rel=\"stylesheet\" type=\"text/css\" />
-      <link rel=\"icon\" href=\"static/favicon.ico\">")
-
-  ;; This preamble is inserted at the beginning of the <body> of every page:
-  ;;   This particular HTML creates a <div> with a simple linked headline
-  (setq org-static-blog-page-preamble
-        "<div class=\"header\">
-        <a href=\"https://staticblog.org\">My Static Org Blog</a>
-      </div>")
-
-  ;; This postamble is inserted at the end of the <body> of every page:
-  ;;   This particular HTML creates a <div> with a link to the archive page
-  ;;   and a licensing stub.
-  (setq org-static-blog-page-postamble
-        "<div id=\"archive\">
-        <a href=\"https://staticblog.org/archive.html\">Other posts</a>
-      </div>
-      <center><a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\"><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by-sa/3.0/88x31.png\" /></a><br /><span xmlns:dct=\"https://purl.org/dc/terms/\" href=\"https://purl.org/dc/dcmitype/Text\" property=\"dct:title\" rel=\"dct:type\">bastibe.de</span> by <a xmlns:cc=\"https://creativecommons.org/ns#\" href=\"https://bastibe.de\" property=\"cc:attributionName\" rel=\"cc:attributionURL\">Bastian Bechtold</a> is licensed under a <a rel=\"license\" href=\"https://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</center>")
-
-  ;; This HTML code is inserted into the index page between the preamble and
-  ;;   the blog posts
-  (setq org-static-blog-index-front-matter
-        "<h1> Welcome to my blog </h1>\n")
-
-  ;; NEW START ------------------------------------------------------------------------
-
-  (org-static-blog-publish t)
-
-  (message "Build complete!")
-
-  ;; NEW END ------------------------------------------------------------------------
+  TODO ADD CONFIG
 #+end_src
 
-That's it. Now when we will run the bash script (=./build.sh=), it will install
-org-static-blog package into the /build directory if it does not already exist.
-It will then do the html conversion from org files as you have specified and at
-the end it will print out "Build complete!"
+That's it. Now when we will run the bash script (=./build.sh=), it will fetch
+the dependencies into the /build directory. It will then do the html conversion
+from org files as you have specified and at the end it will print out "Build
+complete!"
 
-** Creating new notes
+** Creating .org files to be rendered
 
-You can use =org-static-blog-create-new-post= function to create new blog post.
+You can simply create a .org file and then render it or:
 
-Or, if you are using Denote package, you can use it's functionality to create a
-new entry. That's what I am doing and what I am using for this website. Here
-are some [[file:20231125T212326--denote-features__emacs.org][denote features]].
+*** Creating new notes with Denote
+
+I am using Denote package, so I can use it's functionality to create a new
+entry. Here are some [[file:20231125T212326--denote-features__emacs.org][denote features]].
 
 I use Denote for my personal note taking, now I will also use it for
 development note taking. Win win.
 
-** Linking between files
+*** Creating a HTML page with my .emacs configuration
+
+Simply made a symlink to my .org configuration file and it renders it together
+with the rest of the .org files.
+
+#+begin_src bash
+   [nixos@nixos:~/GIT/devnotes/build]$ ln -s ../../dotfiles/.emacs.d/init.org init.org
+#+end_src
+
+*** You can also include other content from other files!
+
+Like such - https://orgmode.org/manual/Include-Files.html
+
+I have done this to include recent posts into index.org page.
+
+*** Adding date to post title in sitemap
+
+Inspiration here - https://taingram.org/blog/org-mode-blog.html
+
+We can customize the entry format with a =sitemap-format-entry= function. In my
+case I wanted to show the date inline with the blog post listings:
+
+#+begin_src emacs-lisp
+  (defun ag/org-sitemap-date-entry-format (entry style project)
+    "Format ENTRY in org-publish PROJECT Sitemap format ENTRY ENTRY STYLE format that includes date."
+    (let ((filename (org-publish-find-title entry project)))
+      (if (= (length filename) 0)
+          (format "*%s*" entry)
+        (format "{{{timestamp(%s)}}} [[file:%s][%s]]"
+                (format-time-string "%Y-%m-%d"
+                                    (org-publish-find-date entry project))
+                entry
+                filename))))
+#+end_src
+
+Notice above we insert an [[https://orgmode.org/manual/Macro-Replacement.html][Org macro]] called timestamp, it is defined as follows:
+
+#+begin_src emacs-lisp
+  (setq org-export-global-macros
+        '(("timestamp" . "@@html:<span class=\"timestamp\">[$1]</span>@@")))
+#+end_src
+
+We then also must inform =org-static-project-alist= about this change by using
+our custom function in:
+
+#+begin_src emacs-lisp
+  :sitemap-format-entry ag/org-sitemap-date-entry-format
+#+end_src
+
+Re-render your .org files.
+
+This macro adds some HTML around the timestamp for CSS styling, it has to be
+done as a macro as otherwise Org escapes the HTML tags. The results are:
+
+#+INCLUDE: "sitemap.org" :lines "-6"
+
+** Linking
 
 As of [2023-12-17 Sun] denote links do not work with exporting to html. Talked
 with Prod about it, there is no fix for it now. So what I do now is I create
@@ -361,12 +317,22 @@ broken links during the html compilation, so I don't put the code above in my co
 [BROKEN LINK: denote:20231125T212326]
 #+end_quote
 
+Naming the links:
+
+Example taken from here - https://orgmode.org/manual/Links-in-HTML-export.html
+
+#+begin_src org
+#+ATTR_HTML: :title The Org mode website :style color:red;
+[[https://orgmode.org]]
+#+end_src
+
 ** Previewing the generated site
 
 Now that we have a few .org file notes in our directory and we have exported
 them into html, we can preview them. Open the .html file and it will open in
 the browser.
 
+*** Preview the html file in the browser
 If the file on my wsl lies here:
 
 file://wsl.localhost/NixOS/home/nixos/GIT/devnotes/html/index.html, I would
@@ -378,6 +344,7 @@ want and see what has changed.
 how to implement - here
 https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/
 
+*** Preview with simple-httpd
 Or you can use =simple-httpd=. It's a package that can host your files as a
 website on your local machine so that you can pull it up in your browser.
 
@@ -402,43 +369,54 @@ Any time you regenerate the site files, you can just reload the page to see the
 result of changes you made! (if you need to do a refresh, then it's the same as
 opening in the browser...). That's why I don't bother with simple-httpd.
 
-** Customize CSS
+** CSS support in HTML export
+
+Official docs for css support in HTML export - https://orgmode.org/manual/CSS-support.html
 
 There are a few options when it comes to custom CSS on your website generated
 with Emacs.
 
+*** Use the default styles from ox-html
+
+You have to do nothing, =ox-html= - =org-html-style-default= got you covered.
+And it looks pretty good already by default.
+
+But you can do like I did, went to =org-html-style-default= and copied the CSS
+from there, placed in my own stylesheet. I can customize the look myself now a
+little. Don't have to rewrite everything - just the parts that I want.
+
+Also it's good to have the default styles as a reference close to me rather
+than somewhere deep in the emacs docs.
+
+*** Add custom classes to blocks of text/code
+
+https://orgmode.org/manual/HTML-doctypes.html
+
 *** import custom css
-Default html export engine already has us covered with basic css, but you might
-want to change it. Best bet is to do something like this:
+Default html export engine already has us covered with basic css, you can
+enable/disable it like so:
 
 #+begin_src emacs-lisp
-  (setq org-static-blog-page-header
-  <meta name=\"viewport\" content=\"initial-scale=1,width=device-width,minimum-scale=1\">
-  <link rel=\"stylesheet\" href=\"../static/style.css\"/>
-  <link rel=\"icon\" href=\"../static/ag.ico\">)
+  :html-head-include-default-style t/nil
 #+end_src
 
-Create a header. Basically whatever you put in =org-static-blog-page-header=
-will end up in every html page of yours. We can add any information you like
-there. But for now I am concerned about css and favicon. This will link to my
-own style.css file, but you can also use CDN's or bootstrap or whatever else.
+But you might want to change the default css. Best bet is to do something like
+this:
 
-*** use built in css from ox-html
-
-Or we can try to use the built in ox-html(or ox-publish, I am not sure) styles.
-Afread reading source code of both, I have noticed that they use =
-
-So adding this to your configuration:
 #+begin_src emacs-lisp
-  (require 'ox-html)                    ;or (require 'ox-publish)
-  (setq org-static-blog-page-header org-html-style-default)
+  :html-head "<link rel=\"stylesheet\" href=\"../static/style.css\" type=\"text/css\"/>"
 #+end_src
 
-You will be able to use the default style sheets of ox-html or ox-publish in
-your org-static-blog project.
+Basically whatever you put in =style.css= now will end up in every html page of
+yours. We can add any information you like there. But for now I am concerned
+about css and favicon. This will link to my own style.css file, but you can
+also use CDN's or bootstrap or whatever else.
 
-But still, you might prefer to have full control of your stylesheets, so better
-keep the first option that I have suggested with style.css file.
+Use your own config from another website/blog for example:
+
+#+begin_src emacs-lisp
+  :html-head-extra "<link rel=\"stylesheet\" href=\"https://arvydas.dev/static/style.css\" type=\"text/css\"/>"
+#+end_src
 
 *** org-html-themes
 ORRR last thing that you can try when it comes to styling your website, try
@@ -460,50 +438,133 @@ Of course we can also modify our =setq org-static-blog-page-header= to contain
 the =org-html-themes=, but I won't do that this time since I know I will be
 using my own custom stylesheet.
 
-
 *** Note to self
 
 Some css examples here(built with ox-publish though) -
 https://github.com/arvydasg/emacs_blog/blob/master/css/style.css
+** Javascript support in HTML export
 
-** index/Preamble/postamble
+Official docs - https://orgmode.org/manual/JavaScript-support.html
+
+Add the .js files the same way as you would add .css file.
+
+** Images in HTML export
+
+*** Display images
+
+Official docs - https://orgmode.org/manual/Images-in-HTML-export.html
+My docs - [[file:20231126T003746--images-in-org-files__emacs.org][images in org files]]
+
+*** One option is to add images as plain html
+
+But then you can not change the size of it in lightbox.
+
+#+BEGIN_EXPORT html
+<figure>
+  <img src="../media/Screenshot 2023-11-17 163344 - very quaint.png" alt="1.png" width="300px">
+</figure>
+#+END_EXPORT
+
+*** Another option is to include a link to a file(the usual way)
+
+To toggle the images(show/hide), use =org-toggle-inline-images=.
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/water.jpg]]
+
+Okay, so no now we know that we can create a yasnippet for this(I have mine
+bound to =img=) and then I can drop images wherever.
+
+*** Org download package for inserting images in org files
+
+Optional, does not really work if in WSL - [[file:20231219T090909--using-org-download-package-in-wsl__emacs_windows_wsl.org][using org download package in WSL]]
+
+*** Add a lightbox effect on the images
+
+Follow - [[file:20231219T091704--add-a-lightbox-effect-for-images-in-html__javascript_websites.org][add a lightbox effect for images in html]]
+
+** Preamble(nav) and postamble(footer)
+
+Docs about them -  https://orgmode.org/manual/HTML-preamble-and-postamble.html
+
+Postamble - https://taingram.org/blog/org-mode-blog.html
+Postamble - nice footer and more? -
+https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html
+
+Check other [[file:20231214T150411--inspirational-websites__emacs_websites.org][inspirational websites]] that are build with Emacs for some
+inspiration.
+
+Then simply modify - :html-preamble and :html-postamble in your config.
+
+** Publishing
+
+*** Free method with github
+First, Github pages - [[file:20231212T123552--deploy-a-static-website-with-github-pages__git_websites.org][deploy a static website with github pages]]
+
+Second, custom domain name - [[file:20231214T094426--setup-custom-domain-for-github-pages__git_websites.org][setup custom domain for github pages]]
+
+*** Possibly non-free with a server(have not tried)
+
+Also possible to server your html files over apache. And then simply push your
+them over tramp with rsync - https://taingram.org/blog/org-mode-blog.html
+
+*** Automatically publish your pages?(have not tried)
+
+Automatically like so - https://ravi.pro/blog/blogging-with-emacs-org-mode.html
+
+Or like so - https://systemcrafters.net/publishing-websites-with-org-mode/automated-site-publishing/
+
+** Extra's
+
+*** Add scroll to top button
+
+Follow - [[file:20231219T172622--scroll-to-top-button__javascript_websites.org][scroll to top button]]
+
+*** Adding analytics
+
+**** Plausible
+
+Follow - [[file:20231219T153629--add-website-analytics-with-plausible__websites.org][add website analytics with plausible]]
+
+**** Google tag analytics
+
+Follow - [[file:20231219T153712--add-website-analytics-with-google-tag-manager__websites.org][add website analytics with google tag manager]]
+
+*** Table of contents at the side - inspiration
+
+https://ckeditor.com/docs/ckeditor4/latest/features/codesnippet.html#hooking-a-custom-syntax-highlighter
+
+*** short and clean links like here
+
+https://diego.codes/post/blogging-with-org/
+
+*** Print out proper underscore
 
 add #+OPTIONS: ^:nil to all files
 
 and write a post about it how it looks wiht and without
 
 https://emacs.stackexchange.com/questions/10549/org-mode-how-to-export-underscore-as-underscore-instead-of-highlight-in-html
+*** Tables in HTML export
 
-*** TODO create a proper footer and put github link there
+https://orgmode.org/manual/Tables-in-HTML-export.html
+*** Create editable text areas
 
+Docs - https://orgmode.org/manual/Text-areas-in-HTML-export.html
 
-geras wording ka kas ka reiskai is cia, copy:
+If you ever want to try using this feature, here is an example:
 
-https://taingram.org/blog/org-mode-blog.html
+#+ATTR_HTML: :textarea t :width 40
+#+BEGIN_EXAMPLE
+  (defun org-xor (a b)
+     "Exclusive or."
+     (if a (not b) b))
+#+END_EXAMPLE
 
-nice footer and more? - https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html
+*** Tags solution
 
-** Modifications to the current one
-
-make archive page to be index page? (can add intro with the index page code
-block offered by org-static-blog)
-
-what I would do and why
-
-last modfied, etc - https://taingram.org/blog/org-mode-blog.html
-
-date on the left of the post instead
-
-check other notes what can be done
-
-*** TODO pridek emacs config i bloga
-
-O daryti tai gali taip manau - symlink i configa ir tiek. Check other guys
-configs to remember what it means to have literate config ir pan.
-
-
-
-*** TODO tags on the sidebar kaip cia:
+**** tags in the sidebar with JS
 
 https://manateelazycat.github.io/tags.html
 
@@ -513,64 +574,12 @@ https://github.com/bastibe/org-static-blog/issues/125
 
 use some js? Mobile content atrodo labai nice taip pat.
 
-** Org download for images
+**** TODO create this functionality
 
-org download inkomponuok kad naudotumei bloge images
+build a tagging functionalitylike org static blog
 
-#+BEGIN_EXPORT html
-<figure>
-  <img src="./static/images/1.png" alt="1.png" width="600px">
-</figure>
-#+END_EXPORT
+*** presentation mode?
 
-** add lightbox
-
-kaip jau esi dares, kaip images ikelti, kokie settingsai, kaip graziai kad
-atsivaizduotu, ir pan.
-
-SEPARATE page!
-
-https://github.com/arvydasg/arvydasg.github.io/blob/master/static/style.css +
-js code
-
-** how to add google tag manager
-
-google analytics gali buti playsible! - add analytics with [[https://plausible.io/privacy-focused-web-analytics][plausible]] like [[https://systemcrafters.net/privacy-policy/][David
-example ]] choose one. probs plausible
-
-add google tag manageri kad matyti aktyvuma, jau buvai dares cia:
-
-https://github.com/arvydasg/dotfiles/blob/20231124-Before-denote/my-init.org#org-static-blog
-
-
-
-also separate page
-
-add google tag manager also -
-https://github.com/arvydasg/dotfiles/blob/20231124-Before-denote/my-init.org#org-static-blog
-
-** paziurek kaip dar gali pritempti prie sito:
-
-mainly inspired by this - http://tips.defun.work/blog.html
-
-** publishing possibilities
-
-- [[file:20231214T094426--setup-custom-domain-for-github-pages__git_websites.org][setup custom domain for github pages]]
-- [[file:20231212T123552--deploy-a-static-website-with-github-pages__git_websites.org][deploy a static website with github pages]]
-
-with tramp etc rsync - https://taingram.org/blog/org-mode-blog.html
-
-or manually with git - add link i savo not
-
-automatically wiht git kaip cia - https://ravi.pro/blog/blogging-with-emacs-org-mode.html
-
-** Extras
-
-*** short and clean links like here
-
-https://diego.codes/post/blogging-with-org/
-
-*** TODO presentation mode?
 https://orgmode.org/worg/code/org-info-js/index.html#undefined
 
 this guy uses it -
@@ -579,25 +588,6 @@ https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html
 "As I use org-info.js and track Worg git, I use "inherit-org-info-js" in all my
 org projects:"
 
-*** TODO check this? automatic publishing?
+*** search function with agolia like Bozhidar
 
-separate post!
-
-https://systemcrafters.net/publishing-websites-with-org-mode/automated-site-publishing/
-
-https://systemcrafters.net/publishing-websites-with-org-mode/building-the-site/
-
-In the next video I’ll show you how to automatically publish an Org-based
-website to Git hosting services like GitHub Pages and Sourcehut Pages!
-
-*** TODO add your own website into readme of org-static-blog, make a commit
-
-so you get recognized you know
-
-*** TODO search function like [[https://docs.projectile.mx/projectile/installation.html][here ]]
-
-*** TODO go over TODO keywords in blog notes
-
-see what has to be done, added, etc
-** Known bugs/limitations
-*** [[https://github.com/bastibe/org-static-blog/issues/126][HTML pages get re rendered when they should not]].
+https://docs.projectile.mx/projectile/installation.html

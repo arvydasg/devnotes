@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<link rel="alternate"
-      type="application/rss+xml"
-      href="https://arvydasg.github.io/devnotes/html/rss.xml"
-      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<!-- 2023-12-19 Tue 21:03 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>images in org files</title>
-<meta name="author" content="Arvydas Gasparavicius">
-<meta name="referrer" content="no-referrer">
-<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
-<link rel="stylesheet" href="../static/style.css"/>
-<link rel="icon" href="../static/ag.ico">
-<script src="../static/lightbox.js"></script>
-<script src="static/auto-render.min.js"></script></head>
+<meta name="author" content="Arvydas Gasparavicius" />
+<meta name="description" content="welcome to my site" />
+<meta name="keywords" content="emacs antanas geles" />
+<meta name="generator" content="Org Mode" />
+
+<link rel="stylesheet" href="../static/css/org-html-style-default.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/generic.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/taingram.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/lightbox.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/scroll-to-top.css" type="text/css"/>
+</head>
 <body>
-<div id="preamble" class="status"><br>preamble here yo</br></div>
-<div id="content">
-<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231126T003746--images-in-org-files__emacs.html">images in org files</a></h1>
-<nav id="table-of-contents" role="doc-toc">
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="sitemap.html">NOTES </a>
+ 
+ <a accesskey="H" href="index.html"> HOME </a>
+</div><div id="preamble" class="status">
+<div id="updated">Updated: 2023-12-19 Tue 15:08</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">images in org files</h1>
+</header><nav id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org2c99f22">1. Display images in org files</a></li>
-<li><a href="#org871ff2a">2. If you have the image with you</a></li>
-<li><a href="#orga3f74a9">3. If you don't have an image and want to insert a screenshot</a></li>
-<li><a href="#org2f50ff9">4. Resizing images in emacs and html</a></li>
+<li><a href="#orgc0e91fd">1. Display images in org files</a></li>
+<li><a href="#org071dc88">2. If you have the image with you</a></li>
+<li><a href="#org0af210c">3. Resizing images in emacs and html</a></li>
+<li><a href="#org2112cad">4. If you don't have an image and want to insert a screenshot</a></li>
 </ul>
 </div>
 </nav>
 
-<figure id="org37aa5c6">
+<figure id="org8ee88e8">
 <img src="../media/water.jpg" alt="water.jpg" width="800px">
 
 </figure>
 
-<div id="outline-container-org2c99f22" class="outline-2">
-<h2 id="org2c99f22"><span class="section-number-2">1.</span> Display images in org files</h2>
+<div id="outline-container-orgc0e91fd" class="outline-2">
+<h2 id="orgc0e91fd"><span class="section-number-2">1.</span> Display images in org files</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 To display inline images in org buffer after you have placed some, click <code>C-c
@@ -45,8 +54,8 @@ C-x C-v</code>.
 </div>
 </div>
 
-<div id="outline-container-org871ff2a" class="outline-2">
-<h2 id="org871ff2a"><span class="section-number-2">2.</span> If you have the image with you</h2>
+<div id="outline-container-org071dc88" class="outline-2">
+<h2 id="org071dc88"><span class="section-number-2">2.</span> If you have the image with you</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 To insert an image, do C-u then C-c C-l. easy. if you add a
@@ -67,30 +76,20 @@ the yasnippet template:
 </div>
 
 <p>
-Simply modify the path of the image and it will display it.
+Don't forget to modify the path of the image and it will display it.
+</p>
+
+<p>
+This - #+attr_html: - tells how wide the image should look <b>in the browser</b>.
+This - +ATTR_ORG - tells how wide the image should look <b>in the org file inside
+emacs</b> when you do <code>org-toggle-inline-images</code>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga3f74a9" class="outline-2">
-<h2 id="orga3f74a9"><span class="section-number-2">3.</span> If you don't have an image and want to insert a screenshot</h2>
+<div id="outline-container-org0af210c" class="outline-2">
+<h2 id="org0af210c"><span class="section-number-2">3.</span> Resizing images in emacs and html</h2>
 <div class="outline-text-2" id="text-3">
-<p>
-Use <code>org-download</code> package. After you install it, run <code>M-x
-org-download-screenshot</code>.
-</p>
-
-<p>
-Then make sure in init file you have specified the directory. If not, it will
-save images in your current org file directory. It is good if you want to
-export the file to html later and then maybe even send to someone.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org2f50ff9" class="outline-2">
-<h2 id="org2f50ff9"><span class="section-number-2">4.</span> Resizing images in emacs and html</h2>
-<div class="outline-text-2" id="text-4">
 <p>
 To resize an image, add this to your init:
 </p>
@@ -115,9 +114,61 @@ Then, above EACH and EVERY image add such lines:
 and now after C-c C-x C-v - images will display nicely, as per your request.
 Beautiful.
 </p>
+
+<p>
+And then make sure to add this to your css so the image would not spill out of
+the container borders:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css">img {
+  max-width: 100%;
+  height: auto;
+}
+</pre>
 </div>
 </div>
-<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> </div></div>
-<div id="postamble" class="status"><br>postamble in he house</br></div>
+</div>
+
+<div id="outline-container-org2112cad" class="outline-2">
+<h2 id="org2112cad"><span class="section-number-2">4.</span> If you don't have an image and want to insert a screenshot</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Use <code>org-download</code> package. After you install it, run <code>M-x
+org-download-screenshot</code>.
+</p>
+
+<p>
+Then make sure in init file you have specified the directory. If not, it will
+save images in your current org file directory. It is good if you want to
+export the file to html later and then maybe even send to someone.
+</p>
+
+<p>
+Important - <a href="20231219T090909--using-org-download-package-in-wsl__emacs_nixos_windows_wsl.html">using org-download package in WSL</a>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<hr/>
+	 <footer>
+	 <div class="copyright-container">
+	 <div class="copyright">
+	 Copyright &copy; 2023-2023 Arvydas Gasparavicius
+	 </div>
+	 </div>
+	 <p class="date">This org file is created: 2023-11-26 Sun 00:37</p>
+	 <p class="date">This org file is last modified: 2023-12-19 Tue 15:08</p>
+	 <p class="date">This org file is exported to HTML: 2023-12-19 Tue 21:03</p>
+	 <div class="generated">
+	Created with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.1 (<a href="https://orgmode.org">Org</a> mode 9.6.6) on <a href="https://www.gnu.org">GNU</a>/<a href="https://www.kernel.org/">Linux</a>
+	</div>
+	</footer>
+	 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	 <script src="../static/js/generic.js"></script>
+	 <script src="../static/js/scroll-to-top.js"></script>
+	 <script src="../static/js/lightbox.js"></script>
+</div>
 </body>
 </html>

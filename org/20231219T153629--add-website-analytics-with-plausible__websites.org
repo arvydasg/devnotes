@@ -1,0 +1,13 @@
+#+title:      add website analytics with plausible
+#+date:       [2023-12-19 Tue 15:36]
+#+filetags:   :websites:
+#+identifier: 20231219T153629
+#+STARTUP:    overview
+
+
+google analytics gali buti playsible! - add analytics with [[https://plausible.io/privacy-focused-web-analytics][plausible]] like [[https://systemcrafters.net/privacy-policy/][David
+example ]]  choose one. probs plausible
+
+Do it as transparent as this guy!!! - https://diego.codes/about/
+
+https://diego.codes/post/web-analytics/

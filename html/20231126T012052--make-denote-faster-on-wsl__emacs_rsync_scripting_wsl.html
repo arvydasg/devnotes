@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<link rel="alternate"
-      type="application/rss+xml"
-      href="https://arvydasg.github.io/devnotes/html/rss.xml"
-      title="RSS feed for https://arvydasg.github.io/devnotes/html">
+<!-- 2023-12-19 Tue 21:03 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>make denote faster on wsl</title>
-<meta name="author" content="Arvydas Gasparavicius">
-<meta name="referrer" content="no-referrer">
-<meta name="viewport" content="initial-scale=1,width=device-width,minimum-scale=1">
-<link rel="stylesheet" href="../static/style.css"/>
-<link rel="icon" href="../static/ag.ico">
-<script src="../static/lightbox.js"></script>
-<script src="static/auto-render.min.js"></script></head>
+<meta name="author" content="Arvydas Gasparavicius" />
+<meta name="description" content="welcome to my site" />
+<meta name="keywords" content="emacs antanas geles" />
+<meta name="generator" content="Org Mode" />
+
+<link rel="stylesheet" href="../static/css/org-html-style-default.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/generic.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/taingram.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/lightbox.css" type="text/css"/>
+<link rel="stylesheet" href="../static/css/scroll-to-top.css" type="text/css"/>
+</head>
 <body>
-<div id="preamble" class="status"><br>preamble here yo</br></div>
-<div id="content">
-<div class="post-date">16 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/devnotes/html/20231126T012052--make-denote-faster-on-wsl__emacs_rsync_scripting_wsl.html">make denote faster on wsl</a></h1>
-<nav id="table-of-contents" role="doc-toc">
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="sitemap.html">NOTES </a>
+ 
+ <a accesskey="H" href="index.html"> HOME </a>
+</div><div id="preamble" class="status">
+<div id="updated">Updated: 2023-12-14 Thu 18:06</div>
+</div>
+<div id="content" class="content">
+<header>
+<h1 class="title">make denote faster on wsl</h1>
+</header><nav id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgf9c1ad8">1. My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</a></li>
-<li><a href="#org687a535">2. Solution not worth considering</a></li>
-<li><a href="#org587ef66">3. Temporary working solution</a></li>
-<li><a href="#orgedaf2be">4. Permanent working solution</a>
+<li><a href="#org2cf2780">1. My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</a></li>
+<li><a href="#org57b5788">2. Solution not worth considering</a></li>
+<li><a href="#org6faaa8c">3. Temporary working solution</a></li>
+<li><a href="#orgb3688e9">4. Permanent working solution</a>
 <ul>
-<li><a href="#org9a6a49f">4.1. Option 1 - use <code>cp</code> command to copy</a></li>
-<li><a href="#org8940807">4.2. Option 2(final) - Use <code>rsync</code> command</a></li>
-<li><a href="#org2cd4968">4.3. Update <code>.bashrc</code> file to copy automatically</a></li>
+<li><a href="#org526ee6d">4.1. Option 1 - use <code>cp</code> command to copy</a></li>
+<li><a href="#orgf5fa39b">4.2. Option 2(final) - Use <code>rsync</code> command</a></li>
+<li><a href="#org73c07d0">4.3. Update <code>.bashrc</code> file to copy automatically</a></li>
 </ul>
 </li>
 </ul>
@@ -50,8 +59,8 @@ I forget to commit my notes to git and my machine dies. I will still have a
 quite recent copy of the notes in OneDrive.
 </p>
 
-<div id="outline-container-orgf9c1ad8" class="outline-2">
-<h2 id="orgf9c1ad8"><span class="section-number-2">1.</span> My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</h2>
+<div id="outline-container-org2cf2780" class="outline-2">
+<h2 id="org2cf2780"><span class="section-number-2">1.</span> My question to chatgpt <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-11-26 Sun&gt;</span></span>.</h2>
 <div class="outline-text-2" id="text-1">
 <blockquote>
 <p>
@@ -78,8 +87,8 @@ wsl AND have those files in google cloud?
 </div>
 </div>
 
-<div id="outline-container-org687a535" class="outline-2">
-<h2 id="org687a535"><span class="section-number-2">2.</span> Solution not worth considering</h2>
+<div id="outline-container-org57b5788" class="outline-2">
+<h2 id="org57b5788"><span class="section-number-2">2.</span> Solution not worth considering</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 I heard that you can create a symlink from windows to wsl. I tried doing that:
@@ -100,8 +109,8 @@ will point to nowhere. Not good. Ditched this idea.
 </div>
 </div>
 
-<div id="outline-container-org587ef66" class="outline-2">
-<h2 id="org587ef66"><span class="section-number-2">3.</span> Temporary working solution</h2>
+<div id="outline-container-org6faaa8c" class="outline-2">
+<h2 id="org6faaa8c"><span class="section-number-2">3.</span> Temporary working solution</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Create a symbolic link within WSL that points directly to your
@@ -124,8 +133,8 @@ Yes, I think it is faster. Notes are created and opened faster.
 </div>
 </div>
 
-<div id="outline-container-orgedaf2be" class="outline-2">
-<h2 id="orgedaf2be"><span class="section-number-2">4.</span> Permanent working solution</h2>
+<div id="outline-container-orgb3688e9" class="outline-2">
+<h2 id="orgb3688e9"><span class="section-number-2">4.</span> Permanent working solution</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 What I will do is create a shell script that will automatically run on each wsl
@@ -137,8 +146,8 @@ commit - 2ba4f55
 </p>
 </div>
 
-<div id="outline-container-org9a6a49f" class="outline-3">
-<h3 id="org9a6a49f"><span class="section-number-3">4.1.</span> Option 1 - use <code>cp</code> command to copy</h3>
+<div id="outline-container-org526ee6d" class="outline-3">
+<h3 id="org526ee6d"><span class="section-number-3">4.1.</span> Option 1 - use <code>cp</code> command to copy</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Shell script lies in:
@@ -167,8 +176,8 @@ Can use a simple copy method to copy the files:
 </div>
 </div>
 
-<div id="outline-container-org8940807" class="outline-3">
-<h3 id="org8940807"><span class="section-number-3">4.2.</span> Option 2(final) - Use <code>rsync</code> command</h3>
+<div id="outline-container-orgf5fa39b" class="outline-3">
+<h3 id="orgf5fa39b"><span class="section-number-3">4.2.</span> Option 2(final) - Use <code>rsync</code> command</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Or can use <code>Rsycn</code> - it performs synchronization between source and
@@ -193,8 +202,8 @@ Then make this file executable:
 </div>
 </div>
 
-<div id="outline-container-org2cd4968" class="outline-3">
-<h3 id="org2cd4968"><span class="section-number-3">4.3.</span> Update <code>.bashrc</code> file to copy automatically</h3>
+<div id="outline-container-org73c07d0" class="outline-3">
+<h3 id="org73c07d0"><span class="section-number-3">4.3.</span> Update <code>.bashrc</code> file to copy automatically</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 Add the script execution to your .bashrc
@@ -217,7 +226,26 @@ procedure.
 </div>
 </div>
 </div>
-<div class="taglist"><a href="https://arvydasg.github.io/devnotes/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/devnotes/html/tag-emacs.html">emacs</a> <a href="https://arvydasg.github.io/devnotes/html/tag-rsync.html">rsync</a> <a href="https://arvydasg.github.io/devnotes/html/tag-scripting.html">scripting</a> <a href="https://arvydasg.github.io/devnotes/html/tag-wsl.html">wsl</a> </div></div>
-<div id="postamble" class="status"><br>postamble in he house</br></div>
+</div>
+<div id="postamble" class="status">
+<hr/>
+	 <footer>
+	 <div class="copyright-container">
+	 <div class="copyright">
+	 Copyright &copy; 2023-2023 Arvydas Gasparavicius
+	 </div>
+	 </div>
+	 <p class="date">This org file is created: 2023-11-26 Sun 01:20</p>
+	 <p class="date">This org file is last modified: 2023-12-14 Thu 18:06</p>
+	 <p class="date">This org file is exported to HTML: 2023-12-19 Tue 21:03</p>
+	 <div class="generated">
+	Created with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.1 (<a href="https://orgmode.org">Org</a> mode 9.6.6) on <a href="https://www.gnu.org">GNU</a>/<a href="https://www.kernel.org/">Linux</a>
+	</div>
+	</footer>
+	 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	 <script src="../static/js/generic.js"></script>
+	 <script src="../static/js/scroll-to-top.js"></script>
+	 <script src="../static/js/lightbox.js"></script>
+</div>
 </body>
 </html>

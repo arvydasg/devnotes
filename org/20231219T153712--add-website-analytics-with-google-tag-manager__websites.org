@@ -1,0 +1,12 @@
+#+title:      add website analytics with google tag manager
+#+date:       [2023-12-19 Tue 15:37]
+#+filetags:   :websites:
+#+identifier: 20231219T153712
+#+STARTUP:    overview
+
+add google tag manageri kad matyti aktyvuma, jau buvai dares cia:
+
+https://github.com/arvydasg/dotfiles/blob/20231124-Before-denote/my-init.org#org-static-blog
+
+add google tag manager also -
+https://github.com/arvydasg/dotfiles/blob/20231124-Before-denote/my-init.org#org-static-blog
