@@ -219,10 +219,6 @@ and =build-site.el= content would contain your ox-publish configuration(we will
 remove the configuration from our emacs config and place it in this file with a
 couple of additions).
 
-#+begin_src emacs-lisp
-  TODO ADD CONFIG
-#+end_src
-
 That's it. Now when we will run the bash script (=./build.sh=), it will fetch
 the dependencies into the /build directory. It will then do the html conversion
 from org files as you have specified and at the end it will print out "Build
@@ -584,9 +580,10 @@ https://github.com/bastibe/org-static-blog/issues/125
 
 use some js? Mobile content atrodo labai nice taip pat.
 
-**** TODO create this functionality
+**** create this functionality
 
-build a tagging functionalitylike org static blog
+build a tagging functionality like in org static blog(inspiration from it's
+source code)
 
 *** presentation mode?
 

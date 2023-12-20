@@ -6,10 +6,10 @@
 Ok so at <2023-11-26 Sun> I was very much getting to know to wsl and how to
 install it properly.
 
-First reason - I finally decided to use emacs more so I could use denote TODO -
-add a link. For that of course I did not want to override my already custom
-emacs config and notes file structure, wanted to create a NEW WSL UBUNTU
-instance where I could experiment.
+First reason - I finally decided to use emacs more so I could [[file:20231125T211812--why-i-use-denote__emacs.org][use denote]]. For
+that of course I did not want to override my already custom emacs config and
+notes file structure, wanted to create a NEW WSL UBUNTU instance where I could
+experiment.
 
 Second reason - I was [[file:20231128T164359--wsl-glitches-in-gui-applications__wsl.org][getting gliches in my wsl]].
 
@@ -55,4 +55,4 @@ the ubuntu terminal.
 After the installation ubuntu wsl make ubuntu profile in cmd -> settings ->
 profiles - > new profile -> duplicate ubuntu profile
 
-to install emacs now, follow - TODO
+To install emacs now -[[file:20231128T131156--install-emacs-on-linux__emacs_linux.org][install emacs on linux]].
