@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-12-20 Wed 08:50 -->
+<!-- 2023-12-20 Wed 09:12 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Build a website with emacs and ox-publish</title>
@@ -22,14 +22,46 @@
  
  <a accesskey="H" href="index.html"> HOME </a>
 </div><div id="preamble" class="status">
-<div id="updated">Updated: 2023-12-17 Sun 09:10</div>
+<div id="updated">Updated: 2023-12-20 Wed 09:06</div>
 </div>
 <div id="content" class="content">
 <header>
 <h1 class="title">Build a website with emacs and ox-publish</h1>
-</header><p>
+</header><nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org6c153cb">1. pros/cons</a>
+<ul>
+<li>
+<ul>
+<li><a href="#orge5fa879">1.0.1. PROS</a></li>
+<li><a href="#org7d8365d">1.0.2. CONS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<p>
 Here is my <a href="https://github.com/arvydasg/org-publish-project-blog">attempt to build a site with ox-publish</a>. But here I will not write
 much about it.
+</p>
+
+<p>
+This way of creating a blog, unlike <a href="20231219T051943--build-a-website-with-emacs-and-org-static-blog__emacs_websites.html">build a website with emacs and
+org-static-blog</a>, does not have a possibility to do anything with tags. It does
+not generate separate pages for tags. In theory it could be custom made with
+html/javascript, but if org-static-blog is there and you need tags, use it
+instead.
+</p>
+
+<p>
+This is good if you have a few org files that contain ALL the information a
+bout a certain topic. For example - about Emacs, you have one file called
+"emacs.org" and in it you have tens or hundreds of subheadings. You open one
+file - search - find what you need. This is how I built codeacademy page.
 </p>
 
 <p>
@@ -48,6 +80,96 @@ ChatGPT was right on this one here - <a href="20231215T182523--building-developm
 <li>System crafters example -<a href="https://systemcrafters.net/publishing-websites-with-org-mode/building-the">https://systemcrafters.net/publishing-websites-with-org-mode/building-the</a>-</li>
 <li>Footnotes are possible</li>
 </ul>
+
+<div id="outline-container-org6c153cb" class="outline-2">
+<h2 id="org6c153cb"><span class="section-number-2">1.</span> pros/cons</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Can do basic batch export with header, footer, no need to use additional package.
+</p>
+
+<p>
+More info here how it could be built from PKC times -
+<a href="https://github.com/arvydasg/PKC_AFK/tree/main/AFK/src/pkcwiki">https://github.com/arvydasg/PKC_AFK/tree/main/AFK/src/pkcwiki</a>
+</p>
+
+<p>
+and from this guy's video -
+<a href="https://www.youtube.com/watch?v=Elynmb3kTE4&amp;ab_channel=ChrisMaiorana">https://www.youtube.com/watch?v=Elynmb3kTE4&amp;ab_channel=ChrisMaiorana</a>
+</p>
+
+<p>
+and official docs -
+<a href="https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html">https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html</a>
+</p>
+
+<p>
+if the org file has not changed and you have deleted the html file and you try
+to publish project again - it will say that the file is unmodified and will not
+export to html. What we do then, we can forcefully publish it by setting a
+prefix in org dispacher:
+</p>
+
+<blockquote>
+<p>
+The export dispatcher, which you can summon with C-c C-e in the Org mode,
+provides the relevant "Force publishing" option under C-f. Thus, to
+force-publish the current file, type C-c C-e C-f P f.
+</p>
+</blockquote>
+
+<p>
+It will then publish ALL the files once again?
+</p>
+
+<p>
+note(look for prefix) - <a href="https://orgmode.org/guide/Publishing.html#Publishing">https://orgmode.org/guide/Publishing.html#Publishing</a>,
+similar here also -
+<a href="https://stackoverflow.com/questions/21258769/using-emacs-org-mode-how-to-publish-the-unchanged-files-in-a-project">https://stackoverflow.com/questions/21258769/using-emacs-org-mode-how-to-publish-the-unchanged-files-in-a-project</a>
+</p>
+
+<p>
+can actually make links with C-c C-l to file, that's good.
+</p>
+
+<p>
+you can also create a script instead of going the default way. explain why its
+good and how to do  both ways.
+</p>
+
+<p>
+script - dont export when link problems, nicer preview, logs, see what has been
+done. no need to use the menus etc.
+</p>
+
+<p>
+Check the docs for more options here -
+<a href="org-publish-project-alist">org-publish-project-alist</a> docs
+</p>
+</div>
+
+<div id="outline-container-orge5fa879" class="outline-4">
+<h4 id="orge5fa879"><span class="section-number-4">1.0.1.</span> PROS</h4>
+<div class="outline-text-4" id="text-1-0-1">
+<ul class="org-ul">
+<li>can work with multiple projects</li>
+<li>each project can be specified in a separate config</li>
+<li>built in</li>
+<li>many options to customise the site</li>
+<li>worked in pkc, should work for me now also</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7d8365d" class="outline-4">
+<h4 id="org7d8365d"><span class="section-number-4">1.0.2.</span> CONS</h4>
+<div class="outline-text-4" id="text-1-0-2">
+<ul class="org-ul">
+<li>links don't work</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <hr/>
@@ -58,8 +180,8 @@ ChatGPT was right on this one here - <a href="20231215T182523--building-developm
 	 </div>
 	 </div>
 	 <p class="date">This org file is created: 2023-12-17 Sun 06:49</p>
-	 <p class="date">This org file is last modified: 2023-12-17 Sun 09:10</p>
-	 <p class="date">This org file is exported to HTML: 2023-12-20 Wed 08:50</p>
+	 <p class="date">This org file is last modified: 2023-12-20 Wed 09:06</p>
+	 <p class="date">This org file is exported to HTML: 2023-12-20 Wed 09:12</p>
 	 <div class="generated">
 	Created with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.1 (<a href="https://orgmode.org">Org</a> mode 9.6.6) on <a href="https://www.gnu.org">GNU</a>/<a href="https://www.kernel.org/">Linux</a>
 	</div>

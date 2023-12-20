@@ -28,7 +28,6 @@
 - {{{timestamp(2023-12-14)}}} [[file:20231214T061312--authenticate-to-git-with-gpg-key__git_gpg.org][authenticate to git with gpg key]]
 - {{{timestamp(2023-12-14)}}} [[file:20231214T060637--authenticate-to-git-with-personal-access-token__git.org][authenticate to git with personal access token]]
 - {{{timestamp(2023-12-14)}}} [[file:20231214T060558--authenticate-to-git-with-ssh__git_ssh.org][authenticate to git with ssh]]
-- {{{timestamp(2023-12-12)}}} [[file:20231212T200335--multiple-ways-to-blog-with-emacs__emacs.org][multiple ways to blog with emacs]]
 - {{{timestamp(2023-12-12)}}} [[file:20231212T123552--deploy-a-static-website-with-github-pages__git_websites.org][deploy a static website with github pages]]
 - {{{timestamp(2023-12-11)}}} [[file:20231211T161252--introduce-yourself-to-git__git.org][introduce yourself to git]]
 - {{{timestamp(2023-12-11)}}} [[file:20231211T151427--first-nixos-installation__nixos.org][first nixos installation]]

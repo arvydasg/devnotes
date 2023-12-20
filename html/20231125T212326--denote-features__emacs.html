@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2023-12-20 Wed 08:50 -->
+<!-- 2023-12-20 Wed 09:12 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>denote features</title>
@@ -22,7 +22,7 @@
  
  <a accesskey="H" href="index.html"> HOME </a>
 </div><div id="preamble" class="status">
-<div id="updated">Updated: 2023-12-14 Thu 19:02</div>
+<div id="updated">Updated: 2023-12-20 Wed 09:01</div>
 </div>
 <div id="content" class="content">
 <header>
@@ -32,6 +32,7 @@
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
 <li><a href="#org009430d">1. Some features not to forget.</a></li>
+<li><a href="#orgaebac51">2. Silos</a></li>
 </ul>
 </div>
 </nav>
@@ -69,6 +70,45 @@ q - quit
 </ul>
 </div>
 </div>
+<div id="outline-container-orgaebac51" class="outline-2">
+<h2 id="orgaebac51"><span class="section-number-2">2.</span> Silos</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Denote allows me to generate blog files quick and easy. They are all in the
+same structure, do not require databse. I can link between them.
+</p>
+
+<p>
+Default denote dir is Documents/org, but my denote dir is ~/GIT/notes. This is
+where ALL my notes used to lie. When I decided to move the programming/work
+related notes to a different directory, I had to make a "silo" in denote
+terms - as described in <a href="https://protesilaos.com/emacs/denote">https://protesilaos.com/emacs/denote</a>.
+</p>
+
+<p>
+instead of denote looking at my default denote dir when I create and manage
+denote files, I had to specify another directory. I could do that by simply
+creating a <code>.dir-locals.el</code> file in my new directory and add such content to
+it:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">;;; Directory Local Variables.  For more information evaluate:
+;;;
+;;;     (info "(emacs) Directory Variables")
+
+((nil . ((denote-directory . default-directory))))
+</pre>
+</div>
+
+<p>
+so now when denote is launched from THAT particular folder in which there is
+this dir-locals.el file, it will know that It has to create notes in that
+directory and not the default directory which I have specified in my init file,
+which contains all my personal files.
+</p>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <hr/>
@@ -79,8 +119,8 @@ q - quit
 	 </div>
 	 </div>
 	 <p class="date">This org file is created: 2023-11-25 Sat 21:23</p>
-	 <p class="date">This org file is last modified: 2023-12-14 Thu 19:02</p>
-	 <p class="date">This org file is exported to HTML: 2023-12-20 Wed 08:50</p>
+	 <p class="date">This org file is last modified: 2023-12-20 Wed 09:01</p>
+	 <p class="date">This org file is exported to HTML: 2023-12-20 Wed 09:12</p>
 	 <div class="generated">
 	Created with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 29.1 (<a href="https://orgmode.org">Org</a> mode 9.6.6) on <a href="https://www.gnu.org">GNU</a>/<a href="https://www.kernel.org/">Linux</a>
 	</div>
