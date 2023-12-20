@@ -32,3 +32,9 @@ contents of your teddybears repo under
 
 I have codeacademy setup this way - https://github.com/arvydasg/codeacademy
 Also devnotes - https://arvydas.dev/devnotes/html
+
+* Additional notes
+
+Had a problem with Jekyll when using symlinks and deploying them to github
+pages. More about that here(deployment section) - [[file:20231215T182523--building-development-notes-website-with-emacs__emacs_websites.org][building development notes
+website with Emacs]].
