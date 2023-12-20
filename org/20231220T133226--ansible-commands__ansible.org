@@ -1,0 +1,22 @@
+#+title:      ansible commands
+#+date:       [2023-12-20 Wed 13:32]
+#+filetags:   :ansible:
+#+identifier: 20231220T133226
+#+STARTUP:    overview
+
+* ansible
+
+ansible-galaxy collection list
+
+# install default version
+ansible-galaxy collection install community.general
+
+# install specific version:
+ansible-galaxy collection install geerlingguy.apache,v1.0.0
+
+7.0.1
+
+# uninstall a package
+to delete a package - delete it's folder here:
+for example I deleted community.general by doing rm -rf community_old/
+in /home/instaluser/.ansible/collections/ansible_collections

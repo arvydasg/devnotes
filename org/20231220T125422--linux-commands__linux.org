@@ -1,0 +1,257 @@
+#+title:      linux commands
+#+date:       [2023-12-20 Wed 12:54]
+#+filetags:   :linux:
+#+identifier: 20231220T125422
+#+STARTUP:    overview
+
+* LDAP
+# Retrieve entries from administrative databases such as passwd and group
+getent
+# list members of a group
+getent group group_name
+# check if user belongs to ldap group
+getent group yg-nas-quant-z | grep "s4X9Xf"
+# Display the current user ID and group ID, and all associated groups
+id username
+# Display all groups a user belongs to
+groups username
+# check if multiple users belong to a server
+getent netgroup LSP7077A | grep -E "S2XXF|S30XX|s7XXc|s8XXf"
+# check if user belongs to a server
+getent netgroup servername | grep username
+
+* Access management
+
+# Show last logged in users
+last
+# display bad login attempts of specified user
+lastb username
+# shows logged-in users and their activities
+w
+
+cat /etc/sudoers
+
+# Edit the sudoers configuration file safely
+visudo
+
+chown
+chmod
+
+# my tip is use setgid on parent directory, that is inherited and then
+# use setfacl on the group, that would give them the access needed.
+# attempt with Pitkänen, Arto, but it still does not work
+
+setfacl -Rm g:quant:rwX -m d:g:quant:rwX -m m:rwx /[directory of choice]
+
+* Server information
+
+# display kernel ring buffer messages
+dmesgn
+# server uptime
+uptime
+# check server ram
+free -g -h -t
+# detailed ram info
+cat /proc/meminfo
+# same like above just summarized and in GB
+cat /proc/meminfo | grep -E 'MemTotal|MemFree|MemAvailable|Buffers|Cached' | awk '{print $1 ": " $2/1024/1024 " GB"}'
+# check server cores
+lscpu
+# to see which pkg:s that was updated during the last patch round. I think that
+# is the best way. good after tsw's
+rpm -qa -last | more
+
+* Search
+
+# look for a word "mas" in ALL files(their content)
+grep -r "mas" .
+# search on the whole server by supressing error messages
+find / -type f -name "viya-services-status.yml" 2>/dev/null
+
+* File
+
+# creates a symbolic link(symlink) named "html" in the current directory that points to the "/opt/app/html" directory.
+ln -s /opt/app/html html
+# find out how big are the folders
+du -sh /opt/app/*
+# show disk usage statistics
+df -h
+# estimate file space usage
+du
+# size of the folder/file
+du -sh filename/foldername
+# see when file was created, modified last time and etc
+stat filename.txt
+# cd into dir, shows how much each item in it takes space
+du -skh *
+# shows files
+sudo lsof +L1
+# ask for confirmation deleting each folder/file
+rm -rri /opt/app/R/*
+# list ALL the folders of the current folder
+find retail_modelling -type d > test_output.txt
+# count how many things in the dir
+ls -la | wc -l
+# Check when file was created and stuff
+stat /opt/app/retail_modelling/users/s5743b/fi_kort_rc_ttc.tsv
+# check top 10 biggest files in home dir
+du -h /home | sort -rh | head -n 10
+
+* Processes
+
+fuser -c /opt/app/
+
+ps -ef | grep 2666631
+
+ps -ef | grep rstudio
+
+ps aux | grep -i rstudio
+
+ps aux | grep -i jupyter
+
+kill -9 <processname form the previous command>
+
+ps - show running processes
+
+ps aux | grep SXXXB | grep rstudio
+
+pkill -u sxxxxxf - NEVEIKIA
+killall -u sxxxxxf rsession - NEVEIKIA
+pkill -9 -u sxxxxxf rsession - SUVEIKE
+
+kill all rstudio sessions
+sudo killall -9 rserver
+
+Check if any services remaining
+pgrep rserver
+
+# check all services by name
+systemctl list-units --type=service | grep sas-viya
+ps aux | grep sas-viya
+
+# kill all services by name
+sudo systemctl stop sas-viya-*
+
+** htop
+
+shortcuts - https://spin.atomicobject.com/2020/02/10/htop-guide/
+
+~VIRT~ stands for "Virtual Memory." It represents the total virtual
+memory used by a process. Virtual memory includes both physical RAM
+and swap space on disk.
+
+~RES~ stands for "Resident Set Size." It represents the portion of a
+process's virtual memory that is currently held in physical RAM. In
+other words, it shows how much actual physical memory a process is
+using.
+
+~SHR~ stands for "Shared Memory." It represents the portion of the RES
+(resident set size) that is shared among multiple processes. This can
+be a space-saving feature because shared libraries and code can be
+loaded into memory once and used by multiple processes.
+
+* Network
+
+# show the IP routing table
+route
+# find all aliases/DNS of a Linux server that are assigned or being used
+nslookup <IP address or hostname>
+# same as above
+dig -x <IP address>
+# show you a list of all active network connections and their associated ports
+netstat -tlnp
+
+# find if port 80 is being used
+netstat -tuln | grep :80
+# check what ports are running on the servers
+nmap -T4 -Pn -p 1-65535 lxxx123a
+# telnet
+telnet servername 8301
+telnet serername.ad1.net 1433
+
+
+Labas, cia reiktu pasigilinti i konkreciu serveriu internal firewall nustatymus
+ir esant poreikiui juos persikonfiguruoti. Panasu, kad dauguma portu ant pvz:
+xxxx1, xxxx2 serveriu yra isjungti/uzblokuoti. Is networko puses mes galima
+pagelbet su firewallu taisyklem (srautai tarp skirtingu environmentu,
+potinkliu), bet vidiniu serveriu portu nustatymu nepriziurim. Jei reikalinga
+turet connectiona abi sitos vietos turi buti atidarytos (serveris klauso x
+portu ) + turi buti taisykle firewalle, jei kazkas is 'tolimo' tinklo nori
+connectintis i serveri tuo x portu.
+
+skirtingi rulsetai ir praleidimai galioja skirtingiems environmentams ir
+enclave'ams, del to prode ir appvery esantys serveriai nebutinai tures tas
+pacias taisykles.
+
+* Logs
+
+journalctl -u jupyterhub -f
+
+journalctl -u rstudio-server.service -f
+
+logs to file
+#+begin_src bash
+  ansible-playbook viya-ark-master/playbooks/viya-mmsu/viya-services-status.yml -vvv 2>&1 | tee -a viya_services_status_logs_20230727.txt
+  ansible-playbook viya-ark-master/playbooks/viya-mmsu/viya-services-stop.yml -e "enable_stray_cleanup=true" -vvv 2>&1 | tee -a viya_services_stop_logs_20230727.txt
+  ansible-playbook viya-ark-master/playbooks/viya-mmsu/viya-services-start.yml -vvv 2>&1 | tee -a viya_services_start_logs_20230727.txt
+
+  # sas installation logs to file
+
+  ansible-playbook site.yml -vvv 2>&1 | tee -a install_20230809_1500.txt
+#+end_src
+
+* Yum
+
+rpm official repo(yum, RHEL) commands - https://www.rpmfind.net/linux/RPM/ByName.html
+
+yum history
+yum list installed | grep devel
+yum remove <reponame>
+yum erase <reponame>
+yum repolist all
+yum repolist enabled
+yum search 'udunit*' --enablerepo=hello_Extra_Packages_for_Enterprise_Linux_epel8
+yum search 'R-*' --disablerepo='*' --enablerepo=hello_Extra_Packages_for_Enterprise_Linux_epel8
+yum info 'R-devel' --disablerepo='*' --enablerepo=hello_Extra_Packages_for_Enterprise_Linux_epel8
+sudo yum install 'udunits2-devel' --enablerepo=hello_Extra_Packages_for_Enterprise_Linux_epel8 --enablerepo=codeready-builder-for-rhel-8-x86_64-rpms
+# list all available red hat repos
+yum repolist all
+# search for package in all repos + EPEL8 repo
+yum search 'R-*' --disablerepo='*' --enablerepo=hello_Extra_Packages_for_Enterprise_Linux_epel8
+# search EPEL8 repo
+yum info 'R-devel' --disablerepo='*' --enablerepo=hello_Extra_Packages_for_Enterprise_Linux_epel8
+# install from EPEL8 repo
+sudo yum install 'R-devel' --enablerepo=hello_Extra_Packages_for_Enterprise_Linux_epel8 --enablerepo=codeready-builder-for-rhel-8-x86_64-rpms
+
+* zip
+
+tar -cvf archive_name.tar files_or_directories_to_archive
+tar -cvf labas.tar .
+
+* NAS
+
+# list all drives?
+cat /etc/fstab
+# get mount name
+mount -l |grep sas-store
+
+* odbc
+
+ODBC
+
+For setting up ODBC connection you need temp root user. Add temp root
+user - Model Validation Home - SEB Confluence (sebank.se)
+
+NOTE. You can determine the location of the configuration files on
+your system by entering the following command into a terminal:
+"odbcinst -j".
+
+Check what ODBC drivers are installed for required DB in
+"/etc/odbcinst.ini" (or use command "odbcinst -q -d").
+
+After you have your file you need to create global variable to point
+to that file location for ODBC to pic up needed information. "export
+ODBCINI=/etc/odbc.ini" (only for the first time).
+
+You can list the data sources on your system with the following
+command: "odbcinst -q -s"

@@ -1,0 +1,156 @@
+#+title:      sas commands
+#+date:       [2023-12-20 Wed 11:07]
+#+filetags:   :sas:
+#+identifier: 20231220T110716
+#+STARTUP:    overview
+
+* SAS oracle conenction string(libname)
+
+#+begin_src sas
+  libname TESTS oracle path="BIXXXP1" schema="XXX_DST"
+  user="XXX_BATCH[XXX_DST]" pw="password" DB_LENGTH_SEMANTICS_BYTE=NO
+  DBCLIENT_MAX_BYTES=1 encoding='utf-8';
+#+end_src
+
+* Map library
+
+No second quotes!
+
+#+begin_src sas
+  libname out '/home/s2753g;
+#+end_src
+
+* Find current user name
+
+#+begin_src sas
+  %put &SYSUSERID;
+#+end_src
+
+* Check SAS Viya license
+
+#+begin_src sas
+  proc setinit;
+#+end_src
+
+* Find ALL information about a library
+# writes username, db, libref - PERFECT!! run this in enterprise guide over
+# TMAP, right click libref and you will get the info.
+
+List the library path for a specific library.
+
+#+begin_src sas
+  proc contents data=SEB_RDD._all_;
+  run;
+#+end_src
+
+* Compare contents of the table
+
+Library.Table
+
+#+begin_src sas
+  proc compare
+          base=Scratch.H_XXX_1
+          compare=Back_L.H_XXX_1
+          novalues;
+  run;
+#+end_src
+
+# compare keeping a period in mind
+
+#+begin_src sas
+  data XXX_TEST;
+  set SEB_RDD.XXX_TEST (where=(TIME_PERDIOD = 202310));
+  run;
+
+  data XXX_TEST2;
+  set SEB_RDD2.XXX_TEST (where=(TIME_PERDIOD = 202310));
+  run;
+
+  proc compare
+      base=XXX_TEST
+      compare=XXX_TEST2;
+  run;
+#+end_src
+
+* Compare two tables from different schemas
+
+#+begin_src bash
+  proc compare base=YOUR_BANK.POSTAL compare=YOUR_BANK2.POSTAL out=comparison_result outnoequal;
+  id POSTNUMMER;  /* Specify a common key to match rows */
+  run;
+#+end_src
+
+* Copy table from one schema to another
+
+#+begin_src sas
+  data work.POSTAL;
+  set your_bank.POSTAL;
+  run;
+
+  data 2.POSTAL;
+  set your_bank.POSTAL;
+  run;
+#+end_src
+
+* Check lengths and encoding
+
+[2023-10-19 Thu] meeting with A and SAS Support.
+
+#+begin_src bash
+  data x;
+  length a $3;
+  a="abc";
+  output;
+  a="sjö";
+  output;
+  a="åöä";
+  output;
+  run;
+#+end_src
+
+* Include external file
+
+Physical on the server
+
+#+begin_src bash
+  %macro test_weight_control;
+     %put Hello, World;
+     %let x = 5;
+  %mend;
+#+end_src
+
+#+begin_src bash
+  %include 'test_weight_control.sas';
+
+  %test_load_control;
+
+  %put The value of x is &x;
+#+end_src
+
+* Include internal file
+
+In SAS Viya
+
+#+begin_src bash
+  filename sasFile filesrvc folderPath = '/Jobs/YES' name='test_work_control.sas';
+  %include sasFile / source2;
+  filename sasFile clear;
+
+  %test_work_control;
+#+end_src
+
+* Encode a password
+
+#+begin_src bash
+  proc pwencode in='my password';
+  run;
+#+end_src
+
+* count all rows in a table
+
+#+begin_src bash
+  proc sql;
+      select count(*) as TotalRows
+      from SCHEMA.POINTS_D_XXX;
+  quit;
+#+end_src

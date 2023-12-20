@@ -1,0 +1,30 @@
+#+title:      windows commands
+#+date:       [2023-11-28 Tue 13:29]
+#+filetags:   :windows:
+#+identifier: 20231128T132920
+
+Alot of commands described here -
+https://www.cnet.com/tech/computing/windows-11-keyboard-combos-that-will-save-you-time/
+
+Lots of shortcuts already in my head, but some that are new are:
+
+- win + ctrl + t - always on top window
+- alt + space - look for programs
+- win + shift + / - ALL SHORTCUTS
+- win+shift+T - TEXT EXTRACTOR WTF??!!
+- win + alt + n ---- new quick note in onenote
+
+Install =powertoys= app in windows for rebinding various keys, especially caps
+-> ctrl
+
+# see members of the AD group
+net group AD-GROUP-NAME /domain
+
+# check your own group membership
+net user usernamexx /domain
+
+# find computer name
+echo %computername%
+
+# find computer's serial number
+wmic bios get serialnumber

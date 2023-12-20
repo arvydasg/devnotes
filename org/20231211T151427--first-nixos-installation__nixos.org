@@ -32,7 +32,19 @@ Steps described here:
 
 https://github.com/nix-community/NixOS-WSL
 
-But basically download nixos-wsl.tar.gz into your windows /Download folder
+** Check if NixOS is not already installed
+
+#+begin_src bash
+  wsl --status
+  wsl --version
+  wsl --help
+  wsl --list --verbose
+#+end_src
+
+** Install
+
+If it does not exist, then basically download =nixos-wsl.tar.gz= into your
+windows =/Downloads= folder.
 
 Then in CMD run(while in /Downloads folder):
 #+begin_src bash

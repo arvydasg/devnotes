@@ -1,0 +1,14 @@
+#+title:      oracle sql commands
+#+date:       [2023-12-20 Wed 13:35]
+#+filetags:   :oracle:
+#+identifier: 20231220T133502
+#+STARTUP:    overview
+
+
+# find which schema you are in
+# useful when you have conenction to a DB, but don't know which schema
+# it can access
+SELECT sys_context('USERENV', 'CURRENT_SCHEMA') FROM dual;
+
+# list all tables in current schema
+SELECT table_name FROM all_tables;

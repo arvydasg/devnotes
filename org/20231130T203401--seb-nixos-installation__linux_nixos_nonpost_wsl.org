@@ -4,8 +4,6 @@
 #+identifier: 20231130T203401
 #+STARTUP:    overview
 
-* TODO do smth about this
-
 * seb nixos installation                                             :NONPOST:
 
 <2023-11-30 Thu> While trying to figure out how sebwsl works, I was chatting

@@ -1,0 +1,17 @@
+#+title:      vim commands
+#+date:       [2023-12-20 Wed 13:31]
+#+filetags:   :vim:
+#+identifier: 20231220T133156
+#+STARTUP:    overview
+
+* vim
+
+:set paste
+:set nopaste
+
+:set nonu
+:set nu
+
+no highlighting:
+
+:noh

@@ -9,6 +9,22 @@ shortcuts.
 Now I know where to look for what I am looking for even if I don't remember
 what keybinding it is assigned to :) C-h f basically and M-x.
 
+* Emacs commands (from work)
+** C-c C-e m M (org-md-export-as-markdown)
+** mx truncate lines - wrap long lines
+** unfill paragraph - unfill paragraph :)
+** Naudok sparse trees su C-c /
+** C-x 4 c - clone current buffer
+** C-h m - current mode commands n stuff?
+** org-change-tag-in-region - batch apply tags
+** org-md-export-to/as-markdown - export org to markdown
+** ctrl+c+/ in org file for filtering - org sparse tree!!!
+** clear sparse tree ctrl+c+/ ctrl+c+'
+** in org agenda press / and find ANYHTING you need!!!
+not necessarily by tag or todokwd
+
+
+
 * Shortcuts
 
 | Key Binding               | Function                                                                     | Mode       |
