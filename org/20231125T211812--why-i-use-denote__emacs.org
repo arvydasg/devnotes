@@ -1,23 +1,52 @@
-#+title:      Why I use denote
+#+title:      Why I use Denote
 #+date:       [2023-11-25 Sat 21:18]
 #+filetags:   :emacs:
 #+identifier: 20231125T211812
 
+* Why Denote
 So last week I have decided to get to know to Denote package. Having lots of
 free time, I realized that I do not like my notes structure. Maybe Denote will
 help with that.
 
-This whole Denote setup has taken way more time and effort than I expected.
-Reinstalling Emacs to a newer version, fixing wsl, [[file:20231128T164359--wsl-glitches-in-gui-applications__wsl.org][reporting bugs to
-Microsoft's wslg team]], [[file:20231211T151427--first-nixos-installation__nixos.org][remaking my emacs configuration with nixos]], [[file:20231126T012052--make-denote-faster-on-wsl__emacs_rsync_scripting_wsl.org][making
-denote run quick]], transporting all my notes to denote style notes(is what I
-am doing right now, for the last couple of days)... TODO - pridek ir kaip
-daryti website ir kad as ji darau lol.
-
 I can say that the best introduction to Denote is here -
-https://protesilaos.com/codelog/2022-06-18-denote-demo/
+https://protesilaos.com/codelog/2022-06-18-denote-demo/. By the Denote package
+author himself. It is nice to use the tool that was created by the person I
+"know". Also the great docs here - https://protesilaos.com/emacs/denote
 
-By the author himself. It is nice to use the tool that was created by the
-person I "know".
+* Process of transferring my life to Denote
 
-So yeah, intro above, docs here - https://protesilaos.com/emacs/denote
+This whole Denote setup has taken way more time and effort than I expected.
+Reinstalling Emacs to a newer version, then fixing wsl - [[file:20231128T164359--wsl-glitches-in-gui-applications__wsl.org][reporting bugs to
+Microsoft's wslg team]], [[file:20231211T151427--first-nixos-installation__nixos.org][remaking my linux/emacs configuration with nixos]],
+[[file:20231126T012052--make-denote-faster-on-wsl__emacs_rsync_scripting_wsl.org][making denote run quickier]], transporting all my notes to denote style notes(is
+what I am doing right now, for the last couple of days)... Okay, my notes are
+quite valuable to me, so let's try to create a website out of them with Emacs.
+Now I just have to figure out how which website creation method is the best for
+me:
+- Must use emacs, right? [[file:20231215T140448--why-build-a-website-with-emacs-and-not-with-something-else__emacs_websites.org][why build a website with emacs and not with something else]]
+- Checking my previous blogs I have created with Emacs, their configs, content
+- Looking for inspiration in other places - [[file:20231214T150411--inspirational-websites__emacs_websites.org][inspirational websites]]
+- Try easy hugo maybe? [[file:20231215T101410--create-a-blog-with-emacs-easy-hugo__emacs_hugo_websites.org][create a blog with emacs-easy-hugo]]
+- Ox_hugo maybe? [[file:20231215T203400--create-a-website-with-ox-hugo__emacs_hugo_websites.org][create a website with ox hugo]]
+- Org static blog maybe? [[file:20231219T051943--build-a-website-with-emacs-and-org-static-blog__emacs_websites.org][build a website with emacs and org-static-blog]]
+- Px-publish maybe? [[file:20231217T064942--build-a-website-with-emacs-and-ox-publish__emacs_websites.org][Build a website with emacs and ox-publish]]
+- Finally decided how I will build it - [[file:20231215T182523--building-development-notes-website-with-emacs__emacs_websites.org][building development notes website with
+  Emacs]]
+
+I of course had to write down all the steps I took into separate denote pages,
+so that we work on that knowledge base you know.
+
+Then I also have to transfer all of my notes from various places(previous
+blogs, my work notes, etc..) to denote to have them all in one place,
+everywhere :)
+
+* Finally done
+
+So to simply use Denote I had to go over many many steps as you can see :D It's
+funny. Many Yaks have been shaved during this process.
+
+#+attr_html: :width 800px
+#+ATTR_ORG: :width 600
+[[../media/yak-shaving.jpg]]
+
+Overall, I am happy with the result.
