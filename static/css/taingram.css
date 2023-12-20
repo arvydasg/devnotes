@@ -114,11 +114,11 @@ figure {
     align-items: center;
 }
 
-#content img {
-    /* border: var(--border-width) solid var(--color-text);  */
-    max-width: 95vw;
-    max-height: auto;
-}
+/* #content img { */
+/*     /\* border: var(--border-width) solid var(--color-text);  *\/ */
+/*     max-width: 95vw; */
+/*     max-height: auto; */
+/* } */
 
 figcaption {
     font-family: monospace;
