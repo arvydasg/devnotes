@@ -1,14 +1,14 @@
-#+title:      my dev environment
+#+title:      My Dev Environment
 #+date:       [2023-12-14 Thu 10:56]
 #+filetags:   :git:scripting:wsl:
 #+identifier: 20231214T105653
 #+STARTUP:    overview
 
-TODO
+Little bit about the tools I use almost daily:
 
-- Windows
-- WSL with NixOS distro - [[file:20231211T151427--first-nixos-installation__nixos.org][first nixos installation]]
-- [[file:20231130T065309--fetch-and-pull-changes-automatically__git_wsl.org][kokie scriptai runina automatically]]
-- Devnotes - [[file:20231215T182523--building-development-notes-website-with-emacs__emacs_websites.org][building development notes website with Emacs]]
-- Note taking - [[file:20231125T211812--why-i-use-denote__emacs.org][Why I use denote]]
-- Emacs - code editor
+- Windows as main OS(Revit and Lightroom are the main reasons I am using
+  windows and not Linux)
+- [[https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux][WSL]] with [[https://nixos.org/][NixOS]] distribution - [[file:20231211T151427--first-nixos-installation__nixos.org][first nixos installation]], [[https://github.com/arvydasg/dotfiles/blob/master/nixos/configuration.nix][my NixOS config]]
+- Emacs as a text/code editor - [[https://github.com/arvydasg/dotfiles/tree/master/.emacs.d][my Emacs config]]
+- Note taking with Emacs and Denote - [[file:20231125T211812--why-i-use-denote__emacs.org][Why I use denote]]
+- Development notes/tips/shortcuts/docs - https://arvydas.dev/devnotes/html/, [[file:20231215T182523--building-development-notes-website-with-emacs__emacs_websites.org][building development notes website with Emacs]]
