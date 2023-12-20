@@ -5,7 +5,8 @@
 * Arvydas Gasparavicius Devnotes
 
 - [[file:contact.org][Contact Me]]
-- [[file:init.org][My Emacs Config]]
+- [[https://github.com/arvydasg/dotfiles/tree/master/.emacs.d][My Emacs Config]]
+- [[https://github.com/arvydasg/dotfiles/blob/master/nixos/configuration.nix][My NixOS Config]]
 
 More about WHY and HOW I built this website - [[file:20231215T182523--building-development-notes-website-with-emacs__emacs_websites.org][building development notes
 website with Emacs]](Why build a website for development notes anyway).

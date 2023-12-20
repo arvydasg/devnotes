@@ -1,7 +1,6 @@
 #+TITLE: Notes
 
 - {{{timestamp(2023-12-19)}}} [[file:20231219T172622--scroll-to-top-button__javascript_websites.org][scroll to top button]]
-- {{{timestamp(2023-12-19)}}} [[file:init.org][Emacs configuration file]]
 - {{{timestamp(2023-12-19)}}} [[file:20231219T153712--add-website-analytics-with-google-tag-manager__websites.org][add website analytics with google tag manager]]
 - {{{timestamp(2023-12-19)}}} [[file:20231219T153629--add-website-analytics-with-plausible__websites.org][add website analytics with plausible]]
 - {{{timestamp(2023-12-19)}}} [[file:20231219T091704--add-a-lightbox-effect-for-images-in-html__javascript_websites.org][add a lightbox effect for images in html]]

@@ -249,6 +249,16 @@ with the rest of the .org files.
    [nixos@nixos:~/GIT/devnotes/build]$ ln -s ../../dotfiles/.emacs.d/init.org init.org
 #+end_src
 
+UNFORTUNATELY - if you will chose to deploy to github pages, it will not
+understand the symlink, the build will fail with such message:
+
+#+begin_quote
+Error: No such file or directory @ rb_check_realpath_internal - /github/workspace/org/init.org
+#+end_quote
+
+So I ditched this idea of having a symlink to my init.org. IF I will ever host
+this site on another platform - I might try this workaround again.
+
 *** You can also include other content from other files!
 
 Like such - https://orgmode.org/manual/Include-Files.html
