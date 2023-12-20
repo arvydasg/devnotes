@@ -33,7 +33,3 @@ to find which one has failed.
   :config
   (message "Org-roam got loaded!")
 #+end_src
-
-* TODO now these message are not needed anymore, since I compile emacs at each config change
-
-link to a post where I describe that

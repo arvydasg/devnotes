@@ -285,3 +285,17 @@ at the top of your .org file.
 Of course we can also modify our =setq org-static-blog-page-header= to contain
 the =org-html-themes=, but I won't do that this time since I know I will be
 using my own custom stylesheet.
+
+*  pros/cons
+
+*** PROS
+- does everything for you
+- tags
+- archives
+- rss feed
+- especially good for blogs, but for other things - overkill?
+
+*** CONS
+- big program(installable package, not built in)
+- links don't work
+- can't handle multiple projects

@@ -523,6 +523,9 @@ Or like so - https://systemcrafters.net/publishing-websites-with-org-mode/automa
 
 ** Extra's
 
+*** TODO Linking HTML pages and their org mode sources
+Inspiration - https://ict4g.net/adolfo/notes/emacs/linking-my-html-pages-to-source-code.html
+
 *** Add scroll to top button
 
 Follow - [[file:20231219T172622--scroll-to-top-button__javascript_websites.org][scroll to top button]]

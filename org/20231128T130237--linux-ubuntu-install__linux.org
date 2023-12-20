@@ -6,8 +6,7 @@
 Back in the days when I used to install Linux as a main OS and had to install
 all the packages one by one.
 
-Before I knew that I can create scripts that do that for me with one click.
-TODO add freshsetup things and scripts.
+Before I knew that I can create scripts that do that for me with one click - [[file:20231209T093750--freshsetup__emacs.org][freshsetup]].
 
 Before I knew about [[file:20231211T151427--first-nixos-installation__nixos.org][nixos]].
 

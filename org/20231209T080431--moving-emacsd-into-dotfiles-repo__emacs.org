@@ -28,7 +28,3 @@ and now when I launch emacs from anywhere inside my wsl, it looks into
 =GIT/dotfiles/.emacs.d/= for my .emacs.d config files. Great.
 
 Now in that =dotfiles= folder I can start putting other config files.
-
-[2023-12-09 Sat 09:40] I have also created a (new machine setup)TODO file in
-dotfiles folder which will automatically allow you to configure the new
-machine. Great! xoxo

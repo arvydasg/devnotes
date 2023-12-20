@@ -33,6 +33,11 @@ contents of your teddybears repo under
 I have codeacademy setup this way - https://github.com/arvydasg/codeacademy
 Also devnotes - https://arvydas.dev/devnotes/html
 
+* Have an index.html page
+
+To deploy to github, must have =index.html= in the directory! Otherwise git
+will not know what to serve.
+
 * Additional notes
 
 Had a problem with Jekyll when using symlinks and deploying them to github

@@ -4,13 +4,17 @@
 #+identifier: 20231211T151427
 #+STARTUP:    overview
 
-* TODO Why NixOS
+* Why NixOS
 
-AFTER you reinstall your computer - to install the DEV environment, all you
+AFTER you reinstall your machine - to install the DEV environment, all you
 have to take with you is =/etc/nixos/configuration.nix= file, everything is
 described in it. Amazing!
 
-Avoid long reinstall & config process
+When previously you would have to check your notes for step by step
+instruction(similar like [[file:20231128T130237--linux-ubuntu-install__linux.org][linux ubuntu install]]), to configure your new
+environment same as it was before, then run different scripts from different
+places, make sure you got them all.. with nix you will never have that pain
+again.
 
 * Why NixOS by others
 

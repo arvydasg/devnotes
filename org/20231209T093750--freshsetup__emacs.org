@@ -8,8 +8,7 @@ After creating a new [[file:20231209T080431--moving-emacsd-into-dotfiles-repo__e
 everything automatically on the new machine IF the user so desires.
 
 For that I have created a script called "freshsetup.sh" in dotfiles directory.
-When it is launched, it does everything I need. TODO write a bit about
-freshsetup ir ar jis vapse needed, since using nix now.
+When it is launched, it does everything I need.
 
 Everyting regarding =freshsetup= topic(tag):
 
@@ -18,4 +17,4 @@ Everyting regarding =freshsetup= topic(tag):
 - [[file:20231209T200922--wsl-clock-is-out-of-sync-with-windows__windows_wsl.org][wsl clock is out of sync]]
 
 All of the steps above are described for when using an Ubuntu distro on wsl on
-windows. But If I am using nixos... stuff will change. :) More on that later.
+windows. [[file:20231211T151427--first-nixos-installation__nixos.org][But If I am using nixos]]... stuff will change. :) More on that later.

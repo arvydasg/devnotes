@@ -7,6 +7,17 @@
 Here is my [[https://github.com/arvydasg/org-publish-project-blog][attempt to build a site with ox-publish]]. But here I will not write
 much about it.
 
+This way of creating a blog, unlike [[file:20231219T051943--build-a-website-with-emacs-and-org-static-blog__emacs_websites.org][build a website with emacs and
+org-static-blog]], does not have a possibility to do anything with tags. It does
+not generate separate pages for tags. In theory it could be custom made with
+html/javascript, but if org-static-blog is there and you need tags, use it
+instead.
+
+This is good if you have a few org files that contain ALL the information a
+bout a certain topic. For example - about Emacs, you have one file called
+"emacs.org" and in it you have tens or hundreds of subheadings. You open one
+file - search - find what you need. This is how I built codeacademy page.
+
 Just keeping some notes for reference:
 
 - [[https://github.com/arvydasg/org-publish-project-blog][my example]] contains ALL the possible settings you can set in it. Clearly
@@ -19,3 +30,54 @@ Just keeping some notes for reference:
 - full example of the config - https://ogbe.net/blog/blogging_with_org
 - System crafters example -https://systemcrafters.net/publishing-websites-with-org-mode/building-the-
 - Footnotes are possible
+
+* pros/cons
+
+Can do basic batch export with header, footer, no need to use additional package.
+
+More info here how it could be built from PKC times -
+https://github.com/arvydasg/PKC_AFK/tree/main/AFK/src/pkcwiki
+
+and from this guy's video -
+https://www.youtube.com/watch?v=Elynmb3kTE4&ab_channel=ChrisMaiorana
+
+and official docs -
+https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html
+
+if the org file has not changed and you have deleted the html file and you try
+to publish project again - it will say that the file is unmodified and will not
+export to html. What we do then, we can forcefully publish it by setting a
+prefix in org dispacher:
+
+#+begin_quote
+The export dispatcher, which you can summon with C-c C-e in the Org mode,
+provides the relevant "Force publishing" option under C-f. Thus, to
+force-publish the current file, type C-c C-e C-f P f.
+#+end_quote
+
+It will then publish ALL the files once again?
+
+note(look for prefix) - https://orgmode.org/guide/Publishing.html#Publishing,
+similar here also -
+https://stackoverflow.com/questions/21258769/using-emacs-org-mode-how-to-publish-the-unchanged-files-in-a-project
+
+can actually make links with C-c C-l to file, that's good.
+
+you can also create a script instead of going the default way. explain why its
+good and how to do  both ways.
+
+script - dont export when link problems, nicer preview, logs, see what has been
+done. no need to use the menus etc.
+
+Check the docs for more options here -
+[[help:org-publish-project-alist][org-publish-project-alist]] docs
+
+*** PROS
+- can work with multiple projects
+- each project can be specified in a separate config
+- built in
+- many options to customise the site
+- worked in pkc, should work for me now also
+
+*** CONS
+- links don't work
