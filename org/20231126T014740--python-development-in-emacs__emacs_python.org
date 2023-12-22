@@ -3,6 +3,9 @@
 #+filetags:   :emacs:python:
 #+identifier: 20231126T014740
 
+
+* [2023-12-22 Fri] nixos at work
+
 * Dependencies
 
 Simple python dev environment that does the job(without lsp)
