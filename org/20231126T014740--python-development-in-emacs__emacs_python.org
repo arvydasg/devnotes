@@ -6,6 +6,38 @@
 
 * [2023-12-22 Fri] nixos at work
 
+Kind of complicated procedure because of - ~exited abnormally with code 1~
+error. As described here - https://github.com/jorgenschaefer/elpy/issues/1936
+
+Solution:
+
+- add python3 in nixos home config
+- install elpy on emacs
+- pyvenv-create and name the environment "duona". It should appear in
+  =/home/s2753g/.virtualenvs/duona=
+- configure where emacs will look like for a BASE(duona) virtualenv. That
+  virtualenv must have all the python packages like jedi, autopep, yapf, black,
+  flake8, usual stuff that you see when you do =elpy-config=
+- Add the line below to your elpy configuration in emacs
+- (setq elpy-rpc-virtualenv-path "/home/s2753g/.virtualenvs/duona/")
+- Now if you restart emacs, then do =elpy-config=, you will be asked if it
+  should install the dependencies(basically all of the packages mentioned
+  above). if you say yes - then it will say the procedure failed, because it
+  can not download packages over work network
+- We then must =source /home/s2753g/.virtualenvs/duona= to activate our newly
+  created virtualenv
+- pip install jedi autopep8 yapf black flake8  --index-url https://secret.xxxx.se/artifactory/api/pypi/pypi/simple
+- Then restart emacs and try to do =elpy-config= again
+- You will see that all the packages are recognized and the error will no longer be thrown
+
+Now when we open any python file in emacs, emacs will open up with the correct
+virtual environment that will have all the necessary packages for us not to get errors.
+
+If we want to create additional environments, we can do so by
+"pyvenv-create/workon", BUT they will not override the RPC environment, it will
+always stay there as a base for us not to get errors and not to uztersti our
+new project venv with all those yapf, flake8 and etc pakges. Great!!!
+
 * Dependencies
 
 Simple python dev environment that does the job(without lsp)
