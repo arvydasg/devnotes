@@ -4,6 +4,13 @@
 #+identifier: 20231130T065309
 #+STARTUP:    overview
 
+
+* [2023-12-24 Sun] Update
+
+[[file:20231224T082240--the-less-mess-with-notes-the-better__denote_git_notes.org][the less mess with notes the better]]
+
+* [2023-12-14 Thu] fetch and pull changes automatically solution
+
 This is mainly important when you are working ont he same repo on two different
 machines. You make changes on one, then login to another one - you must always
 rememebr to pull those changes, otherwise if you make your own - you will get

@@ -1,0 +1,36 @@
+#+title:      the less mess with notes the better
+#+date:       [2023-12-24 Sun 08:22]
+#+filetags:   :denote:git:notes:
+#+identifier: 20231224T082240
+#+STARTUP:    overview
+
+Very happy to have finally setup the dev environment how I imagined:
+
+- [[file:20231209T093750--freshsetup__emacs.org][freshsetup]]
+- [[file:20231211T151427--first-nixos-installation__nixos.org][first nixos installation]]
+
+Then also happy to have my notes jazz setup with a new tool - Denote:
+- [[file:20231125T211812--why-i-use-denote__emacs.org][Why I use Denote]]
+
+Then also happy to have found a way to sync notes quickly between my wsl and
+onedrive and ALSO have them under version control in git.
+- [[file:20231130T065309--fetch-and-pull-changes-automatically__git_wsl.org][fetch and pull changes automatically]]
+- [[file:20231126T012052--make-denote-faster-on-wsl__emacs_rsync_scripting_wsl.org][make denote faster on wsl]]
+
+The last part is what this post is about.
+
+* It is just too much of hassle
+
+Those scripts mentioned above are only on my ubuntu wsl, not on nixos(don't
+know how to put scripts into .bahrc on nixos build yet), but I am using the
+notes on nixos, not on ubuntu... then I have think about where and at what
+stage are my notes between wsl's, then if they are on onedrive, then what about
+notes at work.. dude, too much! Better go back to the old and trusted
+solution - put the notes on onedrive, symlink to wsl and that's it. Yes, it
+will be slower to fetch, but the headache it will save..
+
+#+begin_src bash
+  ln -s /mnt/c/Users/arvydas/OneDrive/Documents/GIT/notes/ notes
+#+end_src
+
+Thank you bye.

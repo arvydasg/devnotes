@@ -15,6 +15,11 @@ to be synced to my onedrive cloud. This will act as a security measure in case
 I forget to commit my notes to git and my machine dies. I will still have a
 quite recent copy of the notes in OneDrive.
 
+
+* [2023-12-24 Sun] Update
+
+[[file:20231224T082240--the-less-mess-with-notes-the-better__denote_git_notes.org][the less mess with notes the better]]
+
 * My question to chatgpt <2023-11-26 Sun>.
 
 #+begin_quote
