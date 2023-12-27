@@ -36,3 +36,4 @@ Way's to fix/improve:
    delete the repo
 5. reuse https://github.com/arvydasg/arvydasg.github.io repo to store all html
    in one place(first make sure that )
+6. review all the commits and write the steps you took here
