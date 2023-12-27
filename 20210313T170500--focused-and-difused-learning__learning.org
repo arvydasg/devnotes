@@ -6,7 +6,7 @@
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/focused-diffuse.png]]
+[[./media/focused-diffuse.png]]
 
 The diffuse mode could be thought of as a flashlight set so that it
 casts its light very broadly, but not very strongly in any one area.
