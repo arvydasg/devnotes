@@ -85,7 +85,7 @@ app.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/docker10.png]]
+[[./media/docker10.png]]
 
 ** Create a Docker ~container~
 
@@ -100,14 +100,14 @@ A single command will do it.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/docker11.png]]
+[[./media/docker11.png]]
 
 Open up Django Desktop - you will see the container we have just created in
 "Container tab".
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/docker12.png]]
+[[./media/docker12.png]]
 
 So now we are running a django application in a docker container. Go
 to a browser, ~127.0.0.1:8000~ to see your django app running.
@@ -185,7 +185,7 @@ browser.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/docker7.png]]
+[[./media/docker7.png]]
 
 #+begin_quote
 That container not only has all the cpu, memory etc, but also all the settings

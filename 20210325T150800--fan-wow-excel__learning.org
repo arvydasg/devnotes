@@ -7,7 +7,7 @@
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/fan.png]]
+[[./media/fan.png]]
 
 Alright, hi. Two weeks of my learning excel and statistics are nearly
 over, and what I am doing? Installing windows so I could play video
@@ -57,11 +57,11 @@ clean install.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/htop.png]]
+[[./media/htop.png]]
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/sensors.png]]
+[[./media/sensors.png]]
 
 Also, I can see this as a good learning opportunity. I have never
 tried to dual boot anything on my or someone else's computer. I just

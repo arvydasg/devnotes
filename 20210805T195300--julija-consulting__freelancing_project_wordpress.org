@@ -6,7 +6,7 @@
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/julijaconsulting.gif]]
+[[./media/julijaconsulting.gif]]
 
 A custom webpage build for a food production consultancy firm. A client wanted
 a quick/cheap and easily maintainable solution, therefore Wordpress together

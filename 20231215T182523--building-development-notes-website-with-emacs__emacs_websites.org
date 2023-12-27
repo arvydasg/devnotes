@@ -467,7 +467,7 @@ But then you can not change the size of it in lightbox.
 
 #+BEGIN_EXPORT html
 <figure>
-  <img src="../media/Screenshot 2023-11-17 163344 - very quaint.png" alt="1.png" width="300px">
+  <img src="./media/Screenshot 2023-11-17 163344 - very quaint.png" alt="1.png" width="300px">
 </figure>
 #+END_EXPORT
 
@@ -477,7 +477,7 @@ To toggle the images(show/hide), use =org-toggle-inline-images=.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/water.jpg]]
+[[./media/water.jpg]]
 
 Okay, so no now we know that we can create a yasnippet for this(I have mine
 bound to =img=) and then I can drop images wherever.

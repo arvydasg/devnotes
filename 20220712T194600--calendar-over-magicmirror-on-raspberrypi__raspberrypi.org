@@ -6,7 +6,7 @@
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/magicmirror.png]]
+[[./media/magicmirror.png]]
 
 * The idea
 
@@ -36,7 +36,7 @@ on it.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/magicmirror-calendar.png]]
+[[./media/magicmirror-calendar.png]]
 
 Currently displaying google calendar and some other relevant
 information. Displaying one google calendar that I use together with

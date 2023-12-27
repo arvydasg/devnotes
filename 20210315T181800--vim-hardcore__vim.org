@@ -6,7 +6,7 @@
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/vim-html.png]]
+[[./media/vim-html.png]]
 
 Some random vim - okay I can not Not share [[https://www.youtube.com/watch?v=c68MkeMBjhE][this]]. During my long pomodoro break
 I found this vim shortcut tutorial. Learned a bunch. You can use numbers in the

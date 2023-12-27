@@ -17,7 +17,7 @@ models and vice versa.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/decision-tree.png]]
+[[./media/decision-tree.png]]
 
 Decision tree builds classification or regression models in the form
 of a tree structure. It utilizes an if-then rule set. The rules are
@@ -49,7 +49,7 @@ conditionally independent.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/naive-bayes-formula.png]]
+[[./media/naive-bayes-formula.png]]
 
 Naive Bayes is a very simple algorithm to implement and good results
 have obtained in most cases. It can be easily scalable to larger
@@ -99,7 +99,7 @@ prediction later.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/k-nearest-neighbors.png]]
+[[./media/k-nearest-neighbors.png]]
 
 k-Nearest Neighbor is a lazy learning algorithm which stores all
 instances correspond to training data points in n-dimensional space.
@@ -112,7 +112,7 @@ nice
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/k-nearest-formula.png]]
+[[./media/k-nearest-formula.png]]
 
 * Evaluating a classifier
 
@@ -149,7 +149,7 @@ relevance.Hmmm...
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/roc-curve.png]]
+[[./media/roc-curve.png]]
 
 ROC curve is used for visual comparison of classification models which
 shows the trade-off between the true positive rate and the false
@@ -176,11 +176,11 @@ distinctly classifies the data points.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/hyperplanes.png]]
+[[./media/hyperplanes.png]]
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/hyperplanes2.png]]
+[[./media/hyperplanes2.png]]
 
 To separate the two classes of data points, there are many possible
 hyperplanes that could be chosen. Our objective is to find a plane
@@ -193,7 +193,7 @@ confidence.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/hyperplane3d.png]]
+[[./media/hyperplane3d.png]]
 
 Hyperplanes are decision boundaries that help classify the data
 points. Data points falling on either side of the hyperplane can be
@@ -205,7 +205,7 @@ becomes difficult to imagine when the number of features exceeds 3.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/support-vectors.png]]
+[[./media/support-vectors.png]]
 
 Support vectors are data points that are closer to the hyperplane and
 influence the position and orientation of the hyperplane. Using these
@@ -215,7 +215,7 @@ are the points that help us build our SVM.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/batman-thinking.gif]]
+[[./media/batman-thinking.gif]]
 
 Cool, that's a first gif on this website. As easy to put it in as an
 image, cool. Don't really use them, but why not, I might start to
@@ -224,7 +224,7 @@ image, cool. Don't really use them, but why not, I might start to
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/logistic-regression.png]]
+[[./media/logistic-regression.png]]
 
 Logistic Regression was used in the biological sciences in early
 twentieth century. It was then used in many social science
@@ -242,7 +242,7 @@ regression model for classification problems
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/k-means-clustering.png]]
+[[./media/k-means-clustering.png]]
 
 K-means clustering is one of the simplest and popular unsupervised
 machine learning algorithms.
@@ -263,7 +263,7 @@ the in-cluster sum of squares? Hm?
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/k-fold-cross-validation.png]]
+[[./media/k-fold-cross-validation.png]]
 
 Lots of k's here
 

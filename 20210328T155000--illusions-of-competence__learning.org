@@ -21,7 +21,7 @@ piece to help you fit it to other pieces.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/octupus-of-attention.png]]
+[[./media/octupus-of-attention.png]]
 
 Four slots of working memory appear to hang out in the part of your
 brain right behind your forehead known as the *prefrontal cortex*. When
@@ -52,7 +52,7 @@ using up some of the limited slots in your working memory.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/tentacles.png]]
+[[./media/tentacles.png]]
 
 Allow the focused and diffused modes of thinking to take turns in
 helping them figure out what's going on.
@@ -101,11 +101,11 @@ big picture.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/fill-in-the-details.png]]
+[[./media/fill-in-the-details.png]]
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/lol-question.png]]
+[[./media/lol-question.png]]
 
 * Illusions of Competence
 
@@ -130,14 +130,14 @@ connections between the four slots of working memory.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/mad-connections1.png]]
+[[./media/mad-connections1.png]]
 
 As you begin to chunk the concept, you will feel it connecting more
 easily and smoothly in your mind.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/mad-connections2.png]]
+[[./media/mad-connections2.png]]
 
 Once the concept is chunked, it takes up only one slot in working
 memory. It simultaneously becomes one smooth strand that's easy to
@@ -149,7 +149,7 @@ that's been connected to a great big web page.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/mad-connections3.png]]
+[[./media/mad-connections3.png]]
 
 Now, you understand, why it is key that you are the one doing the
 problem solving or mastering the concept. Not whoever wrote the solution manual, or book, on whatever subject

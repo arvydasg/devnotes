@@ -46,11 +46,11 @@ For [[https://arvydas.dev/2023-02-06-run-multiple-flask-applications-from-the-sa
 
 #+attr_html: :width 800px
 #+ATTR_ORG: :width 600
-[[../media/discoveries1.png]]
+[[./media/discoveries1.png]]
 
 #+attr_html: :width 600px
 #+ATTR_ORG: :width 600
-[[../media/discoveries2.png]]
+[[./media/discoveries2.png]]
 
 even though the data.py is in basically the same location as main.py -
 I still had to import all the modules from root.. ~from II.web_app.data
@@ -75,7 +75,7 @@ Amazing, thanks to Karina.
 
 #+attr_html: :width 800px
 #+ATTR_ORG: :width 600
-[[../media/discoveries3.png]]
+[[./media/discoveries3.png]]
 
 * listdir vs chdir
 

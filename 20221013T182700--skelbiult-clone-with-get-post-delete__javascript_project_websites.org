@@ -6,7 +6,7 @@
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/clone-skelbiu.png]]
+[[./media/clone-skelbiu.png]]
 
 * Introduction
 
@@ -18,7 +18,7 @@ The goal was not to use any javascript frameworks. I have also used as much
 pure html/css as possible, although for the form, I have decided to use
 Bootstrap.
 
-Here is a live codeacademy task itself - [[../media/Baigiamoji_uzduotis.pdf][Baigiamoji uzduotis]].
+Here is a live codeacademy task itself - [[./media/Baigiamoji_uzduotis.pdf][Baigiamoji uzduotis]].
 
 * The Process
 

@@ -31,7 +31,7 @@ put my own code - it doesn't execute.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/pythonexecute.png]]
+[[./media/pythonexecute.png]]
 
 So, if w3schools cant make it work properly, like.. I am thinking now.. make a
 browser have all the functions that python has...? Is it even possible? Well,

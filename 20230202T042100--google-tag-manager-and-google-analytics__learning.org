@@ -64,7 +64,7 @@ managing and debugging.
 
   #+attr_html: :width 1200px
   #+ATTR_ORG: :width 600
-  [[../media/google-analytics.png]]
+  [[./media/google-analytics.png]]
 
   p.s.
 

@@ -257,12 +257,12 @@ If you would like to add an image to your org file, try this:
 #+begin_src emacs-lisp
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/org-static-blog.png]]
+[[./media/org-static-blog.png]]
 #+end_src
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/org-static-blog.png]]
+[[./media/org-static-blog.png]]
 
 lightbox.js that you can see in this page source helps with the lightbox effect that you get when clicking on
 the image.

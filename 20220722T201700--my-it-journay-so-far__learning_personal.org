@@ -6,7 +6,7 @@
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/bali.png]]
+[[./media/bali.png]]
 
 * June 23rd 2022 - Promotion
 

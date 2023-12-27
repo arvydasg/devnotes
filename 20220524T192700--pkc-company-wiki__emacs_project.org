@@ -6,7 +6,7 @@
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/pkcwiki.png]]
+[[./media/pkcwiki.png]]
 
 * What is it for
 

@@ -8,7 +8,7 @@
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/lebowski.png]]
+[[./media/lebowski.png]]
 
 #+begin_quote
 Everybody has some issues with procrastination. Because if
@@ -32,7 +32,7 @@ relaxation.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/learn-pomodoro.png]]
+[[./media/learn-pomodoro.png]]
 
 
 Arvydas default option, all the time - 3. Building mental stamina...
@@ -57,7 +57,7 @@ build (neurons) are real.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/neural-structure.png]]
+[[./media/neural-structure.png]]
 
 All at once, learning by cramming, your knowledge base will look more
 like this me before this course ffs. All in a jumble with everything
@@ -82,7 +82,7 @@ ended. Very important.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/neural-paths.png]]
+[[./media/neural-paths.png]]
 
 Working memory - like not very good blackboard - what you immediately
 focus on fits into one of 4 chunks/slots. Things can fall out of those
@@ -117,10 +117,10 @@ processes -- don't suck the memories away.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/mortar.png]]
+[[./media/mortar.png]]
 
 Option 2 used to be the default all these years.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/learn-switch.png]]
+[[./media/learn-switch.png]]

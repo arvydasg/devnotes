@@ -6,7 +6,7 @@
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/first-javascript-test.png]]
+[[./media/first-javascript-test.png]]
 
 * 2022-09-19
 Today, our codeacademy group has received our first TASK.
@@ -17,7 +17,7 @@ JavaScript.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/first-javascript-test2.png]]
+[[./media/first-javascript-test2.png]]
 
 * Looking up EVERYTHING
 Honestly, I had to google/look for examples from my own [[https://arvydas.dev/codeacademy/javascript/index.html][sources]] for

@@ -5,7 +5,7 @@
 
 #+attr_html: :width 800px
 #+ATTR_ORG: :width 600
-[[../media/water.jpg]]
+[[./media/water.jpg]]
 
 * Display images in org files
 

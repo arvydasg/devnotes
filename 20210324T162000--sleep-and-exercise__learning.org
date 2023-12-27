@@ -8,7 +8,7 @@
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/brain-cleanse.png]]
+[[./media/brain-cleanse.png]]
 
 Being awake - creates toxic products. Sleep - washes out of toxins.
 Brains way to keep it clean and healthy.
@@ -35,7 +35,7 @@ to think with POISON on the brain. NOOOOOO.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/exercise.png]]
+[[./media/exercise.png]]
 
 And just as importantly, exercise is surprisingly valuable in helping
 to improve both our memory and our ability to learn.
@@ -58,7 +58,7 @@ well).
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/learn-isolating.png]]
+[[./media/learn-isolating.png]]
 
 "Isolating ourselves…” BUT - For many years the scientific view of the
 brain was that once our brain was mature the neurons we had could be

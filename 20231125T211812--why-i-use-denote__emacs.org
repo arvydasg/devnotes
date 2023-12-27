@@ -47,6 +47,6 @@ funny. Many Yaks have been shaved during this process.
 
 #+attr_html: :width 800px
 #+ATTR_ORG: :width 600
-[[../media/yak-shaving.jpg]]
+[[./media/yak-shaving.jpg]]
 
 Overall, I am happy with the result.

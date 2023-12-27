@@ -35,17 +35,17 @@ forget to introduce myself to each and every one of them :)
 
 #+attr_html: :width 600px
 #+ATTR_ORG: :width 300
-[[../media/labor-market-overview/companies.png]]
+[[./media/labor-market-overview/companies.png]]
 
 #+attr_html: :width 600px
 #+ATTR_ORG: :width 300
-[[../media/labor-market-overview/possibilities.png]]
+[[./media/labor-market-overview/possibilities.png]]
 
 ** Salary expectations for Junior python developers
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/labor-market-overview/salaries.png]]
+[[./media/labor-market-overview/salaries.png]]
 
 According to Laura, biggest salaries with python come from Big Data(should look
 into in in the future, but first, let's get a foot inside programming role).
@@ -116,7 +116,7 @@ jobs will be looking for you :)
 
 #+attr_html: :width 600px
 #+ATTR_ORG: :width 300
-[[../media/labor-market-overview/linkedin.png]]
+[[./media/labor-market-overview/linkedin.png]]
 
 ** Hackathons
 
@@ -133,7 +133,7 @@ Kind of best way if I want freedom in my life.
 
 #+attr_html: :width 600px
 #+ATTR_ORG: :width 300
-[[../media/labor-market-overview/freelance.png]]
+[[./media/labor-market-overview/freelance.png]]
 
 ** Responding to job ads
 
@@ -160,7 +160,7 @@ A few main things I took is:
 
 #+attr_html: :width 600px
 #+ATTR_ORG: :width 300
-[[../media/labor-market-overview/linkedin.png]]
+[[./media/labor-market-overview/linkedin.png]]
 
 ** Github hygiene
 

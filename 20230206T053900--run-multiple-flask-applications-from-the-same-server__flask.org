@@ -9,7 +9,7 @@ different URL paths.
 
 #+attr_html: :width 600px
 #+ATTR_ORG: :width 600
-[[../media/matrioshka.jpg]]
+[[./media/matrioshka.jpg]]
 
 I had multiple flask applications that I wanted to run from the same
 domain. Also I wanted them to be accessible by using a URL prefix
@@ -109,11 +109,11 @@ python3 run.py
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/flask_multiple1.png]]
+[[./media/flask_multiple1.png]]
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/flask_multiple2.png]]
+[[./media/flask_multiple2.png]]
 
 * Conclusion
 As stated before, this is a simple setup that only requires a modular approach

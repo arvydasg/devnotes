@@ -17,7 +17,7 @@ something new.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/learning-flashlight.jpeg]]
+[[./media/learning-flashlight.jpeg]]
 
 * Focused mode
 
@@ -63,7 +63,7 @@ modes. Either one or the other type of thinking.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/salvador-sleep.jpg]]
+[[./media/salvador-sleep.jpg]]
 
 *Salvador Dali* - Relaxing in the chair, vaguely thinking what he was
 previously focusing on, holding keys, falling asleep, then when the
@@ -80,7 +80,7 @@ Craftsmanship'(1948)
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/thomas-edison.png]]
+[[./media/thomas-edison.png]]
 
 *Thomas Edison* did something similar.
 
@@ -113,10 +113,10 @@ lady for making me change my mind about learning and being productive.
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/focused-diffuse1.png]]
+[[./media/focused-diffuse1.png]]
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/learn-quiz.png]]
+[[./media/learn-quiz.png]]
 
 What a brilliant quiz.

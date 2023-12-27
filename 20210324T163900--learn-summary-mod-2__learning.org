@@ -8,7 +8,7 @@
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/it-all-makes-sense.png]]
+[[./media/it-all-makes-sense.png]]
 
 Didn't sort the thoughts here, takes too much time.. Idk let's say these are the notes and I will clean them later as I review.
 
@@ -150,7 +150,7 @@ Can be..
 
 #+attr_html: :width 1200px
 #+ATTR_ORG: :width 600
-[[../media/lady-luck.png]]
+[[./media/lady-luck.png]]
 
 Learning by solving solved problems.
 
