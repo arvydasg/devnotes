@@ -1,0 +1,104 @@
+#+title:      Python Discoveries
+#+date:       [2023-02-09 Thu 05:09]
+#+filetags:   :learning:python:
+#+identifier: 20230209T050900
+#+STARTUP:    overview
+
+Here, whenever I will remember, I will be writing what I have
+discovered about Python when creating one project or the other.
+
+Functionalities that took me a long time to discover and when I
+finally did - it helped me a lot.
+
+First of all I don't want to forget about these functions, second of
+all - I would like to share them with you.
+
+* Scope
+
+You can assign a returned value from functions to a variable
+
+I was returning a value from function, wanted to use it another
+function. I had to assign the returned value to a function first and
+only then I could use it. SCOPE is the important word here.
+
+Thanks to Karina
+* f"" string > templates
+
+Qrcode pkc
+
+I had to recreate a QR code template that is created with batch to a
+program in python(more controls, better gui, etc).
+
+So I have chosen something like [[https://docs.python.org/2/library/string.html?highlight=safe_substitute#string.Template.safe_substitute][this]] for this task. Had a massive
+template with certain strings that had to be replaced. All is good,
+managed to make it work, but whenever I would have a: ~9999$A99999~ my
+delimiter and value that $A surrounded with other symbols - the
+delimiter would not be replaced with what I have described.
+
+~f"99999{A}99999"~ has no problem doing that, this is why I have chosen
+it for this project.
+
+* flask dispachermiddleware
+
+Module and imports. Running multiple flask apps
+
+For [[https://arvydas.dev/2023-02-06-run-multiple-flask-applications-from-the-same-server.html][this]] project [[https://github.com/arvydasg/flask_projects/tree/master/II][here]].
+
+#+attr_html: :width 800px
+#+ATTR_ORG: :width 600
+[[../media/discoveries1.png]]
+
+#+attr_html: :width 600px
+#+ATTR_ORG: :width 600
+[[../media/discoveries2.png]]
+
+even though the data.py is in basically the same location as main.py -
+I still had to import all the modules from root.. ~from II.web_app.data
+import data~. This was strange.
+
+* Python set()
+
+The set() function creates a set. No repeating values.
+
+#+begin_src python
+  list_numbers = [1,2,3,4,2,5,5,1]
+
+  # create set from list
+  numbers_set = set(list_numbers)
+
+  print(numbers_set)
+#+end_src
+
+Useful when I wanted to extract all authors in a list ONCE.
+
+Amazing, thanks to Karina.
+
+#+attr_html: :width 800px
+#+ATTR_ORG: :width 600
+[[../media/discoveries3.png]]
+
+* listdir vs chdir
+
+This one confused me. I ran a for loop similar to this:
+
+#+begin_src python
+  x = ./Dropbox
+  dir = os.listdir(x)
+  print(dir)
+
+  for file in dir:
+      # do this and that
+#+end_src
+
+and I kept wondering why my for loops runs IN THE directory where this
+script is placed(I printed it out, it knows the dir I want) and not in
+the directory that I specified in x.
+
+Now it seems obvious, but I simply should have changed the director to
+the specified one before running the for loop.
+
+something similar to this:
+
+#+begin_src python
+  for file in os.listdir(os.chdir(x)):
+#+end_src

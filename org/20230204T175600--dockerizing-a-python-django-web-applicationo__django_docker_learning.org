@@ -1,0 +1,217 @@
+#+title:      Dockerizing a Python Django Web Application
+#+date:       [2023-02-04 Sat 17:56]
+#+filetags:   :django:docker:learning:
+#+identifier: 20230204T175600
+#+STARTUP:    overview
+
+Having many Django applications under my belt, either client or personal
+projects - I would like to publish them to the web to display to my future
+clients or employers. Not a coincidence that I learned [[https://arvydas.dev/2023-01-31-what-is-docker.html][Docker]] the other day, it
+will come in handy.
+
+* Create and Dockerize a Django Application
+** ~Install~ Docker and Docker Desktop
+
+Follow [[https://www.youtube.com/watch?v=Vplj9b0L_1Y&ab_channel=Abstractprogrammer][this]] tutorial or [[https://docs.docker.com/get-docker/][the docs]].
+
+** Create a Django ~app~
+
+If you don't want to setup basic Django app together - clone mine from [[https://github.com/arvydasg/django-docker-starter][here]].
+
+#+begin_src bash
+  cd Documents
+  mkdir djangodocker
+  cd djangodocker
+  django-admin startproject djangodocker
+  cd djangodocker
+  python3 manage.py runserver
+  # visit http://127.0.0.1:8000/
+  # C-c C-c to kill the running process
+  cd ..
+  python3 -m venv venv
+  source env/bin/activate
+  cd djangodocker
+  pip list
+  pip install django
+  pip freeze > requirements.txt
+#+end_src
+
+** Create a Docker ~image~
+Create ~Dockerfile~ (without any file extensions, and with the D being capital)
+close to your manage.py file. This file will contain commands and instructions
+to assemble our ~IMAGE~.
+
+Whatever we put in it - docker will run through each of these commands and run
+through each them.
+
+~Result will be an image prepared and ready to be run on a Docker Container.~
+
+Dockerfile contents:
+
+#+begin_src dockerfile
+  # remove ALL the comments if you want to use the code below.
+
+  FROM python:3.8-slim-buster     # OS from docker hub
+
+  WORKDIR /app                    #working directory of the OS created above
+
+  COPY requirements.txt requirements.txt #copy across from our local dir over to the image
+  RUN pip3 install -r requirements.txt
+
+  COPY . .                        #copy everything from current dir to working dir (/app)
+
+  CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"] #m0000 making our app externally visible from outside of the container
+#+end_src
+
+Create ~.dockerignore~ file to exclude any folders you want. .venv for
+example.
+
+.dockerignore contents:
+
+#+begin_src dockerfile
+*/venv
+#+end_src
+
+To build an image, run this command while inside of the folder in which
+manage.py and Dockerfile is present. --tag basically give a name to the image.
+Don't forget the . at the end.
+
+#+begin_src bash
+  docker build --tag python-django .
+#+end_src
+
+It will take up to ~30 seconds. The image will be visible in "Docker Desktop"
+app.
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/docker10.png]]
+
+** Create a Docker ~container~
+
+A single command will do it.
+
+#+begin_src bash
+  docker run --publish 8000:8000 python-django
+
+  # or to run in detached(run in the background without occupying the terminal) mode
+  docker run -d --publish 8000:8000 python-django
+#+end_src
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/docker11.png]]
+
+Open up Django Desktop - you will see the container we have just created in
+"Container tab".
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/docker12.png]]
+
+So now we are running a django application in a docker container. Go
+to a browser, ~127.0.0.1:8000~ to see your django app running.
+* Upload Docker Image to Docker Hub
+
+- Go to [[https://hub.docker.com/][Docker hub]] and create an account there.
+- Setup the authentication on your own. Setting up gpg, password store manager
+  and etc is the most tricky part for me now. Somehow I made it work for
+  myself. Attaching some error messages and useful links.
+  - Login to docker in your terminal [[https://github.com/docker/docker-credential-helpers/issues/102#issuecomment-388974092][like so]].
+  - Then do [[https://github.com/docker/docker-credential-helpers/issues/140#issuecomment-1149610603][this]].
+  - fix is this - https://www.biostars.org/p/9531985/ try logout, delete stuff,
+    generate new gpg key, dont login through browser - login in terminal
+
+Authentication should be ready and you should have cloned my
+django-docker-starter repository
+
+First, after your login you have to tag your image before pushing:
+#+begin_src bash
+  docker tag image_name YOUR_DOCKERHUB_NAME/image_name
+#+end_src
+
+Then, you have to push it.
+
+#+begin_src bash
+  docker push YOUR_DOCKERHUB_NAME/image_name
+#+end_src
+
+For example:
+
+#+begin_src bash
+  docker tag django-docker-starter arvydasg/django-docker-starter
+  docker push arvydasg/django-docker-starter
+#+end_src
+
+* Deploy with Docker on Linode
+
+** Creating a platform to work on
+
+Create the machine.
+
+- Create a simple [[https://cloud.linode.com/][Linode]] node(choosing linode just because I have free credits
+  for it, choose any other provider you want). In my case I have chosen Linode
+  2GB plan and a Docker image. ($10/month)
+- When your Docker node is running, connect to it through SSH in it.
+
+** Run the container
+
+Let's pull the [[https://hub.docker.com/r/arvydasg/django-docker-starter/tags][container]] we have created and pushed to Docker Hub in
+the previous steps.
+
+#+begin_src bash
+  docker pull arvydasg/django-docker-starter:latest
+#+end_src
+
+Adding :latest tag at the end. It is basically a version. It's useful
+to be able to choose a different version.
+
+To run this container(a web app), we do this.
+
+#+begin_src bash
+  docker run -t -d -p 9999:8000 arvydasg/django-docker-starter:latest
+#+end_src
+
+We have specified additional switch ~-p~ which stands for ~ports~.
+9999:8000.
+
+- 8000 is the port of the django app (specified in Dockerfile)
+- 9999 is the port on which we want to reach the
+
+Basically saying match port 80 with port 80.
+
+Now grab your IP address from your linode dashboard, enter it in the
+browser.
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/docker7.png]]
+
+#+begin_quote
+That container not only has all the cpu, memory etc, but also all the settings
+the creator has applied(debian, nginx, website files, etc), web configuration,
+all prerequisites, all dependencies.. packaged together in a neat little
+package. And you can run it on any linux machine.
+#+end_quote
+
+** Some other Docker commands
+
+#+begin_src bash
+  docker ps -a
+  docker images -a
+  docker start <name of the image or the ID>
+  docker stop <name of the image or the ID>
+  curl localhost:9999 -v
+  docker rm -f <name of the image or the ID>
+  docker rmi <name of the image>
+  docker stats
+  docker port <name of the container>
+
+  # access the docker container's bash
+  docker exec -it mycontainer bash
+
+  # delete or remove all docker data like containers, images and volumes
+  docker rm --force `docker ps -qa`
+  docker rmi --force `docker images -aq`
+  docker volume prune
+#+end_src

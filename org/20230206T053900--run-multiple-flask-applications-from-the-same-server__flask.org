@@ -1,0 +1,125 @@
+#+title:      Run Multiple Flask Applications from the same server
+#+date:       [2023-02-06 Mon 05:39]
+#+filetags:   :flask:
+#+identifier: 20230206T053900
+#+STARTUP:    overview
+
+Route to multiple [[https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface][WSGI]](Web Server Gateway Interface) applications at
+different URL paths.
+
+#+attr_html: :width 600px
+#+ATTR_ORG: :width 600
+[[../media/matrioshka.jpg]]
+
+I had multiple flask applications that I wanted to run from the same
+domain. Also I wanted them to be accessible by using a URL prefix
+instead of by accessing a different port. Application dispatching
+seems to be a solution.
+
+* Why I Wanted to Run Multiple Flask Applications
+
+As a part of my [[https://arvydas.dev/codeacademy/][CodeAcademy]] Python journey I decided to set up a
+portfolio site for my flask projects.
+
+Since I was developing the applications at separate times in separate
+environments, I wanted to be able to keep them separate in deployment
+instead of cobbling them into the same large application. Several of
+the potential solutions I found just ended up placing the different
+applications on different ports. I wanted a solution that allowed for
+a modular website that could be accessed through paths on the same
+domain.
+
+[[https://flask.palletsprojects.com/en/2.2.x/patterns/appdispatch/][Application dispatching]]. With this you can combine multiple Flask
+applications at the WSGI level. This also allows you to combine any
+WSGI application. So if you have separate Flask, Django applications
+you can run them in the same interpreter side by side if you want.
+
+* How to Configure Flask Application Dispatching
+
+Setting this up is relatively straightforward when you take a modular
+approach.
+
+- Set up the separate applications
+- Combine the applications
+- Invoke a development server
+
+* Set up the Separate Applications
+
+Here are 2 Flask applications:
+
+flask_app_1
+
+#+begin_src python
+# /flask_1/__init__.py
+from flask import Flask
+app = Flask(__name__)
+app.debug = True
+@app.route('/')
+def hello_world():
+    return '<h1>Hello, World! I am Flask App 1.</h1> \
+        Please go visit <a href="/flask_app_2">Flask App 2</a>'
+#+end_src
+
+flask_app_1
+
+#+begin_src python
+# /flask_2/__init__.py
+from flask import Flask
+app = Flask(__name__)
+app.debug = True
+@app.route('/')
+def hello_world():
+    return '<h1>Hello, World! I am Flask App 2.</h1> \
+        Please go visit <a href="/">Flask App 1</a>'
+#+end_src
+
+* Combine the Applications
+
+You will utilize the Werkzeug [[https://werkzeug.palletsprojects.com/en/2.2.x/middleware/dispatcher/][Dispatcher Middleware]]. flask_app_1 will
+run on “/” and flask_app_2 will run on “/flask_app_2”.
+
+#+begin_src python
+# app.py
+from werkzeug.middleware.dispatcher import DispatcherMiddleware # use to combine each Flask app into a larger one that is dispatched based on prefix
+from flask_1 import app as flask_app_1
+from flask_2 import app as flask_app_2
+application = DispatcherMiddleware(flask_app_1, {
+    '/flask_app_2': flask_app_2
+})
+#+end_src
+
+* Invoke a Development Server
+Here is a small file that calls the [[https://werkzeug.palletsprojects.com/en/2.2.x/serving/#werkzeug.serving.run_simple][Werkzeug Run Simple]] server that is
+suitable for development. ~For deployment~, you’ll need to configure a
+[[https://flask.palletsprojects.com/en/2.2.x/deploying/#deployment][suitable WSGI server]] and remove the debug options from the app files.
+
+#+begin_src python
+# run.py
+from werkzeug.serving import run_simple # werkzeug development server
+from app import application
+if __name__ == '__main__':
+    run_simple('localhost', 5000, application, use_reloader=True, use_debugger=True, use_evalex=True)
+#+end_src
+
+* Running both apps
+
+#+begin_src python
+python3 run.py
+#+end_src
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/flask_multiple1.png]]
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/flask_multiple2.png]]
+
+* Conclusion
+As stated before, this is a simple setup that only requires a modular approach
+and a few lines of code. I wanted to figure out how to set up this framework
+first before I built my site and then had to restructure files and folders to
+get it to work.
+
+You can find the complete code for this on [[https://github.com/arvydasg/run_multiple_flask_apps][my github]]. You’re welcome to fork it
+and clone it to get a working example.

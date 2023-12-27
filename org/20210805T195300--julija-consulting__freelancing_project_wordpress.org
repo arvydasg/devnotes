@@ -1,0 +1,26 @@
+#+title:      Julija Consulting
+#+date:       [2021-08-05 Thu 19:53]
+#+filetags:   :freelancing:project:wordpress:
+#+identifier: 20210805T195300
+#+STARTUP:    overview
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/julijaconsulting.gif]]
+
+A custom webpage build for a food production consultancy firm. A client wanted
+a quick/cheap and easily maintainable solution, therefore Wordpress together
+with Oxygen builder.
+
+Done by me:
+- Communication with the client
+- Site design
+- Building the site from scratch according to the needs
+- Setting up the payment solution
+- Hosting the site to the live environment
+- Maintaining the site on a monthly basis
+
+Link to site - https://julija.consulting/
+
+Link to a the first version of the site -
+https://arvydas.dev/julija.consulting/

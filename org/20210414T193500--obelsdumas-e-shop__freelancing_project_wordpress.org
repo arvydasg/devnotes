@@ -1,0 +1,25 @@
+#+title:      Obelsdumas E-shop
+#+date:       [2021-04-14 Wed 19:35]
+#+filetags:   :freelancing:project:wordpress:
+#+identifier: 20210414T193500
+#+STARTUP:    overview
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/obelsdumas.png]]
+
+E-shop for home-made Lithuanian meat products in Birzai. A client
+wanted a quick/cheap and easily maintainable solution, therefore
+Wordpress was chosen for this job.
+
+Done by me:
+- Communication with the client
+- Site design
+- Building the site from scratch according to the needs
+- Setting up the payment solution
+- Hosting the site to the live environment
+- Maintaining the site on a monthly basis
+
+Link to e-shop - https://obelsdumas.lt/
+
+My very first client.

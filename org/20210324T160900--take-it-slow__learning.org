@@ -1,0 +1,126 @@
+#+title:      Take it Slow
+#+date:       [2021-03-24 Wed 16:09]
+#+filetags:   :learning:
+#+identifier: 20210324T160900
+#+STARTUP:    overview
+
+* A Procrastination Preview
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/lebowski.png]]
+
+#+begin_quote
+Everybody has some issues with procrastination. Because if
+you're working on something, it means you're not working on a
+lot of other things.
+#+end_quote
+
+Zombie tube - you are happier.
+
+*Difficult things - pain..* When you think about something you would
+rather not do - you activate the areas of your brain that are
+associated wiht pain. Your brain, naturally enough looks for ways to
+stop that stimulation by switching your attention to something else.
+Oh poor little brain is in pain :( . Neural discomfort disappears when
+you start working on the actual task. Poor little baby brain gets
+tricked and starts to like the activity.
+
+*Reward* when you are done pomodoro - allow the brain to change its
+focus for a little bit. Mental workout followed with a mental
+relaxation.
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/learn-pomodoro.png]]
+
+
+Arvydas default option, all the time - 3. Building mental stamina...
+
+* Practice Makes Permanent
+
+Girl hated math her whole young life through school - now she is an
+engineering professor. Started studying math at 26 when he got out of
+the military! You go girl!!!! At first it was reaaaaly hard. Would
+take a break and go work on some russian project stuff, then would get
+back and get a better job opportunity because of her new
+
+*Wasn't natural in maths and science.*
+
+Math and terms are more abstract. That's why it's trickier to grasp
+it. IMPORTANT TO PRACTICE strengthen the neural connections.
+
+Neurons are linked together through repeated use. The more abstract
+the subject is, the more important it is to practice it to bring those
+ideas into reality. Even if the ideas are abstract, the things you
+build (neurons) are real.
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/neural-structure.png]]
+
+All at once, learning by cramming, your knowledge base will look more
+like this me before this course ffs. All in a jumble with everything
+confused, a poor foundation.
+
+Study hard, take a break, look at smth else, change your
+
+Your neural mortar will have a chance to dry. Brains diffuse mode has
+a chance to work in the background.
+
+First the pathways are not as strong, then a bit stronger and as you
+practice, you don't need help to solve a particular problem, you did
+some projects and all yourselfl - you will make a strong pattern.
+
+BLEM. 10min learn - 10min study.
+
+Pomodoro - building neural patterns you need to be more successful in
+learning more challenging materials. Prevents tasks becoming OPEN
+ended. Very important.
+
+* Introduction to Memory
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/neural-paths.png]]
+
+Working memory - like not very good blackboard - what you immediately
+focus on fits into one of 4 chunks/slots. Things can fall out of those
+slots unless we keep repeating them to hold them in mind. Grouping the
+
+Keep repeating something to keep it in your memory.
+
+Nice Just like the phone number. Shutting your eyes to close other
+types of information to disturb you.
+
+Long term memory - storage warehouse. info stored into different parts
+of the brain. Repeat so it's easier to get to
+
+Make a path like a road.
+
+Working to long term memory spaced repetition. Space the info over a
+certain day. 20 times one evening - not effective. 20 times over a
+week - better pathways, easier to recall the information. Like trying
+to build muscles all in one day.
+
+There is no time for solid structures to grow.
+
+Research has swon that if you try to glue things into your memory by
+repeating something twenty times in one evening, for example, it won't
+stick nearly as well as if you practice it the same number of times
+over several days.
+
+Repetition is needed so your metabolic vampires -- Natural dissipating
+processes -- don't suck the memories away.
+
+* Time for the mortar to dry
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/mortar.png]]
+
+Option 2 used to be the default all these years.
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/learn-switch.png]]

@@ -1,0 +1,23 @@
+#+title:      PKC company Wiki
+#+date:       [2022-05-24 Tue 19:27]
+#+filetags:   :emacs:project:
+#+identifier: 20220524T192700
+#+STARTUP:    overview
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/pkcwiki.png]]
+
+* What is it for
+
+When I came to PKC - there was very little documentation about IT processes. It
+had to be documented.
+
+As I was already using Emacs for documenting my work with [[https://www.orgroam.com/][Org-roam]], I simply
+had to make a website for it. The website itself was generated thanks to [[https://github.com/arvydasg/pkc_wiki][this
+piece of code]].
+
+I then put this website(html files) on server that is accessible to colleagues
+so they can get inspiration whenever needed.
+
+This project was mainly focused to my future colleagues.

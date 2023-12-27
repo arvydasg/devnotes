@@ -1,0 +1,168 @@
+#+title:      A switch from linux to windows
+#+date:       [2023-05-01 Mon 20:32]
+#+filetags:   :linux:windows:
+#+identifier: 20230501T203200
+#+STARTUP:    overview
+
+After a bit more than a year in a tech industry I noticed the tools that are
+being widely used. I have decided to adjust my workflow to using them as well.
+
+Also, after +10 years of using the same Acer Aspire v3-771g laptop that I
+puchased before finishing the highscool I have decided to buy a new one that is
+lighter and one that I can carry around when going abroad with work or just the
+one I can travel with. Will have windows installed on it from the beginning,
+not planning to install linux.
+
+Even though I am breezing through this text while writing it, editing it, I can
+feel that my journey to Emacs/Linux(at home environment) coming to an end.
+
+Here are a few reasons why.
+
+I want to be as close to a regular developer as possible. To a developer that
+would work in one of these big tech companies. Most of the developers in those
+companies use Windows(are forced to do so), most of them use regular text/code
+editors, most of them use the standard tools for time planning/writing
+documentation. If I get a grasp of those tools, I will become a more valuable
+professional.
+
+Basically - I can not FULLY use Emacs in any of the workplaces together with my
+team members, so I will better learn the tools they are using.
+
+* OS and programs
+
+** Magit vs GitHub Desktop
+
+Currently I am using Magit in Emacs. It's amazing. I can do all the
+committing/pushing/pulling, creation/switching of branches and any other git
+related task 5 times faster than someone would in Github Desktop.
+
+BUT, because everyone is using this and it's kind of a standard - I want to get
+used to using it as well.
+
+Yes, when working by myself, freelancing and such, I could use Magit, but if I
+switch to Windows - this becomes trickier since Magit is quite slow on Windows.
+Another reason to try our Github Desktop.
+
+** Linux
+
+Good news - I will continue to use Linux in everyday work when administering
+services, hosting and launching my freelance products, etc. So that skill will
+remain.
+
+I have also noticed that I did not really get a valuable experience from using
+Linux on a daily basis, since nothing breaks and when I find a setup that I
+like(which took a lot of time and probably is where the experience really came
+from) - I rarely tweak anything.
+
+So having a linux machine at home was cool just at the beginning, when I
+decided to switch from Windows to Linux thinking I will learn a lot. I did
+learn a lot, that was a good move during my first days of learning to
+program/getting into tech, but now I can without any worries switch back to
+Windows.
+
+** Putty
+
+I get used to working in one type of terminal while in on my Linux machine at
+home, it works different when I am on Windows machine connected through putty..
+Since I am already using putty at work daily, I better use it in my free time
+when doing personal projects as well.. Putty it is. Learn the ins and outs,
+advantages/disadvantages/quirks of it.
+
+** Docker
+
+I want to get to know to docker better. Putting my few attempts to make a
+project with it aside, I am not a docker professional in any way. But since I
+can see myself working in Windows ecosystem for the next few or more years, I
+would like to learn docker in a windows environment, using Docker desktop and
+so on and not a linux version of it.
+
+My plan is o dockerise everything on my Windows machine.
+
+** Emacs vs vim bindings
+
+After working with Linux servers in my current job I have noticed that it's
+quite useful if you know some vim commands.. Instead of using the arrow keys -
+you can navigate through text with the keyboard - quite rewarding to know them.
+
+So this switch to Windows will most likely mean that I will be using Emacs
+less. Perhaps I will not use it at all at the beginning, to get to used to vim
+bindings in my future code editors (VsCode, Pycharm?).
+
+Learning Emacs bindings also pays off since you can use the same bindings in
+Linux terminals. So that knowledge will not go to waste.
+
+* Time planning
+
+** Org-agenda vs Jira
+
+When I will be a freelancer - I ~for sure will~? come back to using Emacs for
+time planning. Org-agenda has a huge potential and is great for managing your
+tasks in GTD manner. Using Orgzly app on android even helps to do that on your
+mobile phone.
+
+BUT.
+
+For the sake of learning the tools that everyone uses in this industry, let's
+learn Jira and the Agile way of working. For the last few months in my current
+workplace I have been admiring the way our Scrum master arranges the meetings,
+reviews, sprint/PI plannings, daily reviews, retro sessions and so on.. It
+feels really great to work in a TEAM with agile rather than by yourself in
+org-agenda.
+
+Of course you can your tasks well planned in org-agenda, but it's only for
+you..
+
+I keep putting everything in it, form notes, to reminders to dailies to tasks..
+It becomes quite a mess and hard to focus/know what to do next. With Agile, I
+feel that I am learning good practices of planning ptech related tasks.
+
+When I will be working a my own team, possibly of few people or close
+programmer friends - knowing Jira and agile will come in handy way more than
+knowing how to use org-agenda..
+
+* Note taking
+
+** Org-mode vs confluence
+
+Again, I have been taking notes in org-mode for almost a few years now. I know
+how/when I should use org-roam, plain-org-wiki, how to archive notes and so
+on... but again, they are for me only. These notes are quick to write and
+probably will last FOREVER, since these are simply text files, but whenever I
+need to add images to them, whenever I need to share them with others(yes, they
+are exportable, but..) or whenever a TEAM needs to collaborate on your notes -
+that is where the problems begin.
+
+Emacs and org is kind of for one person army.. for one developer.. not for a
+team to use.. and since I want to learn/be part of a team, I must use the tools
+that are used by teams. In this case - confluence.
+
+Not going to lie, I miss Emacs bindings when writing a confluence document, but
+that is a small price to pay, an inconvenience I have to go through in order to
+blend with the masses that use confluence for documenting all sort of
+tutorials, writing tech documentation and so on. At the end of the way it's not
+THAT bad of a tool.
+
+* Other
+
+** Freelancing
+
+As I mentioned earlier. A time will come when I will be freelancing, building
+tech solutions for clients from all around the world from my home cabin in the
+forest, next to a mountains and a river. At that time I will already have time
+planning/documentation/speaking my client/other programmer/developer language
+and using their tools. That is much better in my opinion than using a software
+that is 20 years older than me and.
+
+** o365 package
+
+I want to use more of that. Now have a membership of it that me and my family
+uses - but I am not using to the full potential, since I am on a Linux machine.
+I used Dropbox instead. Will voluntarily give my money to Microsoft on this one
+just because everyone does..
+
+** Newly forming habits
+
+As I am working on Windows machine daily - I get used to a certain way of
+working. Then I come back home to a linux machine - slightly another way of
+working. Takes time to adjust. Better make the both environments as similar as
+possible.

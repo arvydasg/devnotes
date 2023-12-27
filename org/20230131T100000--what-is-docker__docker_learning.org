@@ -1,0 +1,91 @@
+#+title:      What is Docker?
+#+date:       [2023-01-31 Tue 10:00]
+#+filetags:   :docker:learning:
+#+identifier: 20230131T100000
+#+STARTUP:    overview
+
+In almost every [[https://djangochat.com/][Django chat]] podcast I hear about [[https://www.docker.com/][Docker]]. For me it seems like a
+DevOps'ish kind of tool, but it must be useful to learn for a freelance Django
+developer like myself. It sounds like an efficient and easy way to deploy
+Django applications.
+
+* In the beginning
+
+If you wanted a server to store your applications onto, it had to be a physical
+server in a data center. It could run ONE operating system(OS). If you wanted
+another OS - you had to have another physical center! Quite inefficient and
+most likely expensive.
+
+* Then came the virtual machines.
+
+- you would have a server hardware
+- then on the server hardware you install a hypervisor(vmware esxi)
+- inside this hypervisor you then create as many virtual machines as you like,
+  assigning CPU, ram, storage by yourself. Can increase all of these in the
+  future if you need to.
+
+Now you have one physical server and many virtual machines on it. Already way
+more efficient than the first option.
+
+* Now what is the docker about?
+
+You still have the hardware, but on top of that you install one OS. Ubuntu for
+example.
+
+Now you install docker as any other application. It will run as daemon. Docker
+will virtualize portions of our operation system. In this case - Ubuntu to
+create ~containers~. These containers also can run a different OS's.
+
+- own OS
+- own CPU
+- own memory
+- own network
+
+#+begin_quote
+all of it is isolated - secure. From their(container) point of view - they are
+their own thing. They might as well be installed on bare metal servers.
+#+end_quote
+
+* Benefits of Docker
+
+Why is Docker so fast?
+
+All the OS's, like Ubuntu, Alpine, Arch Linux, CentOS - all of them using the
+SAME Linux kernel JUST LIKE the Ubuntu does ON WHICH you have installed Docker
+daemon.
+
+And with virtual machines - every time you deploy a virtual machine - that is
+another linux kernel.. it also involves the hypervisor, which is kinda heavy,
+so overall it's just heavy. There are more parts and pieces that have to be
+running.
+
+#+begin_quote
+~Container~ - much more simple, lightweight, fast.
+#+end_quote
+
+You can not mix and match windows and linux OS containers on one machine. If
+you want to run windows docker machine - you must have an underlying windows OS
+to run it on. Because they share the underlying os or kernel.
+
+* Why docker?
+
+As developers - we write our app - it works great on our machines. Then we want
+to either deploy it or run on other machines or give it to a tester - something
+breaks, does not work.. Having a docker container prevents this mess.
+
+#+begin_quote
+Hey, it worked on my machine!
+#+end_quote
+
+No more of that junk. If you deploy in a docker container - everything the app
+needs is contained in the container, it's isolated.
+
+** Microservices
+
+Usually you deploy the WHOLE app inside one container or a VM. For example
+WordPress. You install WordPress server and MySQL database on the same machine.
+But what you can do with docker is install wordpress server on one container
+and mysql database on another. So whenever you want to update wordpress
+server - you update only just that. Nothing is in a way, nothing is
+conflicting, mysql database remains untouched. Sounds good, I must try
+experiment with that.

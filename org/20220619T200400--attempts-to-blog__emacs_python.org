@@ -1,0 +1,44 @@
+#+title:      Attempts to Blog
+#+date:       [2022-06-19 Sun 20:04]
+#+filetags:   :emacs:python:
+#+identifier: 20220619T200400
+#+STARTUP:    overview
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[./static/images/emacsblog.png]]
+
+* Intro
+
+* Body
+
+** First attempts
+
+I was trying to do the same with my journey to programming. It started a bit
+more than a year ago and since them I was trying to create personal
+blog/website.
+
+- First with php - [[https://github.com/arvydasg/gvazdikelis][gvazdikelis]]
+- Then with hugo - [[https://github.com/arvydasg/arvydas.dev_hugo][arvydas.dev_hugo]]
+- Finally with django - [[https://github.com/arvydasg/django_blog][django_blog]]
+
+* Current setup
+
+[2022-04-17 Sk] I discovered a way to make a website with emacs. [[https://systemcrafters.net/publishing-websites-with-org-mode/][Systemcrafters
+channel]] has a lot of great material covering just that.
+
+I knew that this is the right way for me to blog, because:
+
+- I can use my emacs shortcuts to write and edit
+- I don’t need to reformat text to make it readable for something like CKEditor
+  in python [[https://github.com/arvydasg/emacs_blog][django]]. I can just straight up use emacs source blocks, headings,
+  text blocks and so on and everything just works,
+- I can publish my blog just as easily wit [[https://magit.vc/][Magit]], push straight to Github and
+  the changes will be visible immediately in my website,
+
+* Summary
+
+For me, this is the fastest way to blog. I will be using it in the future and
+hopefully improve my workflow as I go along.
+
+P.S. Update 2022-08-29. I am creating a hugo blog - AGAIN. Read why - [[https://github.com/arvydasg/emacs_blog][here]].

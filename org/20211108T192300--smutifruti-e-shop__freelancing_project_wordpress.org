@@ -1,0 +1,24 @@
+#+title:      SmutiFruti E-shop
+#+date:       [2021-11-08 Mon 19:23]
+#+filetags:   :freelancing:project:wordpress:
+#+identifier: 20211108T192300
+#+STARTUP:    overview
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/smutifruti.png]]
+
+* Powdered smoothies E-shop
+
+E-shop for powdered smoothies. A client wanted a quick/cheap and easily
+maintainable solution, therefore Wordpress together with Oxygen builder.
+
+Done by me:
+- Communication with the client
+- Site design
+- Building the site from scratch according to the needs
+- Setting up the payment solution
+- Hosting the site to the live environment
+- Maintaining the site on a monthly basis
+
+Link to e-shop - [[https://smutifruti.lt/][Smutifruti.lt]]

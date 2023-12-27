@@ -1,0 +1,244 @@
+#+title:      Deploying Flask Application on Ubuntu VPS using Nginx
+#+date:       [2023-03-03 Fri 16:40]
+#+filetags:   :flask:python:
+#+identifier: 20230303T164000
+#+STARTUP:    overview
+
+In my free time between my work, my python course, dev job search,
+etc, I was building a flask application for quotes that I have
+gathered during the years. I wanted this project to be finished, to be
+live. For that I need to host it.
+
+Will share with you how I did it.
+
+* Apache vs nginx
+
+Will just leave it here.
+
+#+begin_quote
+Also, one thing I would like you to know is that Apache is a threaded
+server, which means it is prone to [[https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/#:~:text=Insights-,What%20is%20a%20DDoS%20attack%3F,a%20flood%20of%20Internet%20traffic.][DDOS]] and DOS attacks. But Nginx on
+the other hand is an asynchronous web server and [[https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/#:~:text=A%20reverse%20proxy%20is%20a,security%2C%20performance%2C%20and%20reliability.][reverse proxy]], so it
+is not as vulnerable as Apache, and it is also very easy to set up.
+#+end_quote
+
+* Get yourself a virtual private server(VPS)
+
+This time I was using Linode, since I got some free credits with it,
+but every provider is basically the same.
+
+Create new linode:
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[./static/images/linode.png]]
+
+Wait for it to be provisioned(2-3min).
+
+Connect to it over ssh.
+
+#+begin_src bash
+ssh root@139.xx.xx.xx
+#+end_src
+
+replace xx with your server ip address. Enter the credentials that you
+have set up for it. And you should now be inside your server!
+
+#+begin_src bash
+sudo apt update
+#+end_src
+
+* Install nginx
+
+#+begin_src bash
+sudo apt install nginx
+#+end_src
+
+Create a configuration for nginx web server
+
+#+begin_src bash
+cd /etc/nginx/sites-enabled/flask_app
+#+end_src
+
+This should be the content of this file:
+
+#+begin_src bash
+  server {
+      listen 80;
+
+      location / {
+          proxy_pass http://127.0.0.1:8000;
+          proxy_set_header Host $host;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      }
+  }
+#+end_src
+
+If you got to your server's ip now - you will see nginx default
+config, we need to unlink it so it uses our config.
+
+#+begin_src bash
+  sudo unlink /etc/nginx/sites-enabled/default
+  # if previous step succeeds, do this:
+  sudo nginx -t
+  sudo nginx -s reload
+#+end_src
+
+Refresh the webpage(will get "bad gateway", because nginx is trying to
+connect to localhost port 8000, because we don't have a webserver
+running there. That is why we will user [[https://gunicorn.org/#quickstart][Gunicorn]].
+
+* Let's run project
+
+#+begin_src bash
+  sudo apt install python3-pip
+  # go to the source folder of your project
+  pip3 install -r requirements.txt
+#+end_src
+
+At this point you can do ~python3 run.py~ and go to the port 5000 or w/e
+you set up.
+
+If you still can not see your webpage - make sure that ~host="0.0.0.0",~
+is written next to ~debug=True~.
+
+0.0.0.0 adapts to any ip address where this app is being hosted.
+
+Now it works! Your application is live! Magic!
+
+* Gunicorn
+
+"This is currently a development server and not good for production
+since if multiple users try to connect to the server, they will not be
+able to do it." (actually works, I just checked on my phone.)
+
+#+begin_src bash
+sudo apt install gunicorn3
+#+end_src
+
+Set workers and tell which files contain flask app
+
+#+begin_src bash
+# (run - name of the file, app - app object?)
+gunicorn3 --workers=3 run:app
+#+end_src
+
+Now go to the server's ip, port 8000, as the gunicorn is listening -
+NOTHING
+
+Go to IP itself only - TADAA, serving through nginx(setting
+reverse proxy to localhost 8000)!
+
+It's better to run your server as a daemon, so it runs in the
+background and you can user your terminal for other things:
+
+#+begin_src bash
+  # to run the daemon process(must run this from the run.py dir)
+  gunicorn3 --workers=3 run:app --daemon
+  # to kill the daemon process
+  sudo pkill -f gunicorn3
+#+end_src
+
+* Dealing with secret files
+** config.json method
+
+We will try to hide the:
+- db name
+- secret key
+- static folder name (silly, yes, but anyway.. for practice)
+
+let's create a config.json file next to our run.py
+
+#+begin_src bash
+  {
+      "SECRET_KEY": "1x1x1x11x1x1x2",
+      "SQLALCHEMY_DATABASE_URI": "dbname.db",
+      "UPLOAD_FOLDER": "static/images"
+  }
+#+end_src
+
+update your .gitignore to ignore this file. We don't want to push it
+to public repository. It would defeat the whole purpose of keeping
+these secrets secret.
+
+#+begin_src python
+  # if you don't have it already
+  pip install urlib3
+#+end_src
+
+In your ~__init__.py~ import these:
+
+#+begin_src python
+import json
+import urllib3
+#+end_src
+
+Then let's make our config.json file accessible:
+
+#+begin_src python
+with open("./config.json") as config_file:
+    config = json.load(config_file)
+#+end_src
+
+Now we can replace all the information that was previously in plain
+text, for example:
+
+#+begin_src python
+  # replace this
+  app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(
+      basedir, "db.db"
+  )
+  # with this
+
+  app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(
+      basedir, config.get("SQLALCHEMY_DATABASE_URI")
+  )
+#+end_src
+
+#+begin_src python
+  # this
+  app.config["UPLOAD_FOLDER"] = "static/images"
+  # with this
+  app.config["UPLOAD_FOLDER"] = config.get("UPLOAD_FOLDER")
+#+end_src
+
+#+begin_src python
+  # this
+  SECRET_KEY = os.urandom(32)
+  app.config["SECRET_KEY"] = SECRET_KEY
+
+  # with this
+  app.config["SECRET_KEY"] = config.get("SECRET_KEY")
+#+end_src
+
+Push this change to your github repo, and pull it on your server.
+
+When trying to launch the server - it says there is no config.json
+file. That's correct, because it is not in our github repo.
+
+Let's add config.json to our server using SCP([[https://www.google.com/search?q=scp+linux+what+is+it&ei=Z9QCZNmsI8yA9u8PzZiQqA4&ved=0ahUKEwiZ_KXswsH9AhVMgP0HHU0MBOUQ4dUDCA8&uact=5&oq=scp+linux+what+is+it&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIICCEQFhAeEB06CggAEEcQ1gQQsAM6BwgAELADEEM6BQgAEIAEOgUILhCABDoGCAAQFhAeOggIABAWEB4QCjoLCAAQFhAeEA8Q8QQ6BQgAEIYDOgUIIRCgAToECCEQFToLCCEQFhAeEPEEEB1KBAhBGABQOViPEmD2EmgCcAF4AIABfYgBiAmSAQQxMC4ymAEAoAEByAEKwAEB&sclient=gws-wiz-serp][what is SCP]]):
+
+#+begin_src bash
+  # copy files FROM the server
+  scp remote_username@remote_host:/path/to/remote/file /path/to/local/file
+#+end_src
+
+#+begin_src bash
+  # copy files TO the server
+  scp /path/to/local/file remote_username@remote_host:/path/to/remote/file
+
+  # copy FOLDER's and their content  TO the server
+  scp -rp static remote_username@139.xxx.xx.xxx:/root/citatos_flask/web_site
+#+end_src
+
+We use the latter option to copy files TO the server, same folder
+where run.py sits on our server.
+
+In my case it was:
+
+#+begin_src bash
+scp ./config.json bla@139.xxx.xx.xxx:/bla/citatos_flask
+#+end_src
+
+The config.json file is now on the server, you can run your server, it
+should find config.json file.

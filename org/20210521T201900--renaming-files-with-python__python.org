@@ -1,0 +1,15 @@
+#+title:      Renaming Files With Python
+#+date:       [2021-05-21 Fri 20:19]
+#+filetags:   :python:
+#+identifier: 20210521T201900
+#+STARTUP:    overview
+
+Dude, I just renamed like 30 files wiht a single button click. Python is
+amazing. Programming is amazing. This is exactly why I started learning how to
+program.. to first of all aid me wiht tasks in my everyday life, then help me
+financially in the future and allow me the freedom to travel.
+
+This is great, my first simple, but useful task completed :)
+
+NOTE: Looking at this note on [2023-12-27 Wed], it would have been nice If I
+have provided a code snippet that I was so excited about :)

@@ -1,0 +1,172 @@
+#+title:      Labor market overview
+#+date:       [2023-01-28 Sat 05:41]
+#+filetags:   :personal:
+#+identifier: 20230128T054100
+#+STARTUP:    overview
+#+OPTIONS: toc:1
+#+OPTIONS: num:t
+
+* Intro
+
+Had a meeting with Laura from CodeAcademy. It is finally time to get for my
+dream job, I am ready!
+
+* Python in Lithuania
+
+Python in Lithuania is not that widely used, perhaps in Big Data or
+Automation.
+
+** Positions after this course for me could be as:
+  - Data Engineer/Scientist
+  - Automation Specialist
+  - Robotics Process Automation / RPA Specialist
+  - Testing/QA
+  - ~DEVOPS ENGINEER~ (junior/entry level). (I think this would suite
+    me best, since I have experience as IT technician where I was
+    involved with deploying and managing various solutions. I could be
+    a better candidate instead of anyone from the street with no IT
+    experience. Automatization, making systems work, that's what I do
+    on a daily basis and this is what I enjoy)
+
+** Biggest Python companies in Lithuania
+
+Here is a list of biggest python companies in Lithuania. Should not
+forget to introduce myself to each and every one of them :)
+
+#+attr_html: :width 600px
+#+ATTR_ORG: :width 300
+[[./static/images/labor-market-overview/companies.png]]
+
+#+attr_html: :width 600px
+#+ATTR_ORG: :width 300
+[[./static/images/labor-market-overview/possibilities.png]]
+
+** Salary expectations for Junior python developers
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[./static/images/labor-market-overview/salaries.png]]
+
+According to Laura, biggest salaries with python come from Big Data(should look
+into in in the future, but first, let's get a foot inside programming role).
+
+* Job search
+
+There options are endless.
+
+** What is junior anyway?
+
+Hire people with a lot of potential, that will be and grow with you in
+a long run and not just take someone Super Senior, burn them out in 6
+months and get another one.
+
+** I should first of all mention, that I am self taught
+
+I got an advice from a friend to mention that I am a self taught
+developer first. It will show that I have initiative, discipline,
+motivation, that I am curious about learning new things, I can work
+without anyone forcing.
+
+And only then mention that I took CodeAcademy courses to deepen my
+knowledge and fill all the knowledge gaps that I might have missed
+while learning programming by myself.
+
+o apie mokyklą kai pasakosi, rodys, kad išsamiai įsigilinai į Python,
+tikriausiai nebus spragų žiniose ir t.t.
+
+Paziurek cv karinos
+Paziurek skelbimus karinos
+
+** Don't get scared if you see something unfamiliar in a job ad
+
+IMPORTANT: Apply to jobs that you aren’t qualified for!
+
+When a hiring manager creates a job listing, they put down everything
+under the sun that they can think of that would be a “nice to have”.
+In fact, companies are rarely EVER able to find a candidate that has
+all the requirements.
+
+But it is a good idea nevertheless to at least google the technologies
+listed so you are aware why/where/for what purpose they are used.
+
+Believe it or not it is a very bad idea for you to take a job that you
+are fully qualified for because there will be no room for growth.
+Hiring managers know this as well.
+
+You will be hired based on if you match most or some of the job
+requirements and how well you do in the interview as far as
+friendliness, punctuality, enthusiasm, confidence, communication
+skills, and ability to convince them that you are a good fit for the
+team.
+
+** Instead of new job - agree with current workplace
+
+One option that CodeAcademy agrees upon is for me to work
+as an IT Technician for 50% of the time and the rest 50% of the time
+as a programmer. But that also has to be agreed upon with my
+workplace.
+
+Not sure if the workplace would agree, since I was strictly told there
+is no "Programming" position.
+
+** LinkedIn
+
+Use LinkedIn well and after a while you won't be looking for jobs but
+jobs will be looking for you :)
+
+#+attr_html: :width 600px
+#+ATTR_ORG: :width 300
+[[./static/images/labor-market-overview/linkedin.png]]
+
+** Hackathons
+
+Hackathons - business problem, programmer teams, creating solutions. A
+good way to network and test your knowledge over a weekend in Vilnius.
+
+** Freelancing
+
+Could freelance.. I thought about it, yes, even tried in the past, but
+this area seemed so THICK and full of competition(in my WordPress
+times). Can be a good introduction to programming jobs or keep this
+extra source of income and interesting jobs in the future as well.
+Kind of best way if I want freedom in my life.
+
+#+attr_html: :width 600px
+#+ATTR_ORG: :width 300
+[[./static/images/labor-market-overview/freelance.png]]
+
+** Responding to job ads
+
+A few main things I took is:
+- if there is a job ad on job ad site - it's already too late, the
+  company desperately needs a person.
+- It is better to send the CV/Introduction/get in touch with HR BEFORE
+  they create any jobs ads. They will get a chance to LOOK at your CV,
+  and that is huge. If you are one in 50 candidates, your cv more
+  often than not will not be viewed at all.
+- HR knows about current positions and FUTURE positions, so if you
+  present yourself in advance, they might not need you now, but might
+  remember you in the future.. and they will already know you :)
+  Instead of doing all the dirty job of creating a job ad - looking
+  for candidates and so on - they might ping you on LinkedIn.
+- Try to contact the manager of the department. If I was a manager and
+  someone would write to me personally wanting to fill a position, I
+  would gladly read this person's CV.
+- Write to HR recruiters - "Hello, I want to change a sphere I am
+  working on, perhaps you got something for me?". Tell a bit about
+  yourself also.
+
+** Agencies
+
+#+attr_html: :width 600px
+#+ATTR_ORG: :width 300
+[[./static/images/labor-market-overview/linkedin.png]]
+
+** Github hygiene
+
+I should definitely clean up my Github account:
+
+- Remove smaller projects
+- Check comments/readmes for inappropriate words, etc.
+- Half lithuanian, half english? - no good.
+- Overall "hygiene" of the profile?

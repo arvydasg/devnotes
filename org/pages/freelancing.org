@@ -1,0 +1,24 @@
+#+title: Freelancing
+#+date: <2020-01-01 Sun 01:01>
+#+description:
+#+filetags:
+#+OPTIONS: toc:nil
+#+OPTIONS: num:nil
+
+Over the past few years I've worked as a freelance software developer.
+I've worked with individuals and small businesses.
+
+My tech stack is usually Python, Django, HTML/CSS, JavaScript,
+sometimes WordPress.
+
+[[https://arvydas.dev/tag-freelancing.html][Some of my projects]].
+
+[[https://github.com/arvydasg][My Github profile]].
+
+* Why hire me?
+I have many great relationships with all of my clients. I prioritise
+maintaining open and clear communication, and offer not only technical
+expertise but also a business oriented mindset. Every decision is made
+through a lens of achieving results that impact the business.
+
+If you'd like to work with me, please [[mailto:arvydas.gaspa@gmail.com][get in touch]].

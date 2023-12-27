@@ -1,0 +1,88 @@
+#+title:      Black Box Statistics
+#+date:       [2021-03-30 Tue 07:13]
+#+filetags:   :learning:
+#+identifier: 20210330T071300
+#+STARTUP:    overview
+
+Excited about starting to learn python on April 1st, so thought I will
+try to look into something I should have looked into during this whole
+month of March... Last day huh. Like always. Hm.. anyway, some black
+boxing of some statistics terms.
+
+*MEAN* - the average of the numbeers. Add up all numbers, divide by how
+many numbesr there are.
+
+*MEDIAN* - middle of a sorted list of numbers. If can't find the middle
+number, add the 2 close ones and divide them by two.
+
+*MODE* - Numbers in order, count how many of each number, which appears
+most often is the mode. Two modes - bimodal. Grouping is useful also.
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/variance.png]]
+
+*VARIANCE* + (standard deviation) - the average of the squared
+differences from the Mean. [[https://www.mathsisfun.com/data/standard-deviation.html][Dogs]].
+
+*IQR* - interquartile range - numbers in order, find median. Take from
+both sides medians again and then minus one from the other, you get
+the IQR.
+
+*CORRELATION and CAUSALITY* - [[https://www.youtube.com/watch?v=ROpbdO-gRUo][explanation Khan]].
+
+MAXIMUM LIKELIHOOD - looks cool. Finding the best fit
+[[https://www.youtube.com/watch?v=XepXtl9YKwc][first stat quest video]].
+
+2021-04-08 10:24
+
+Was learning more statistics, feeling bad that I left it behind. Have
+some time before the python course that I registered for, so will
+catch up with stats.
+
+Was looking at Khan accademy statistics course and found some things
+that I struggle with. The first paragraph presented the two way table
+and it was so confusing for me. The second day I crcked it.
+
+Okay back to the business. Since I dont have a proper notebook that I
+dream about, I will just write my notes here and improve my vim and
+html skils at the same time.
+
+[[https://www.khanacademy.org/math/statistics-probability/displaying-describing-data/comparing-features-distributions/v/shapes-of-distributions?modal=1"target][Currently I am here]].
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/skewerdtoleft.png]]
+
+Point means one or more value is there, then other side the same, then
+the meat of the distribution is where the box is. Line is the median -
+the middle number. Distribution is skewed to the left. more values on
+the left.
+
+*Outlier* - data point is way off from all the other data points.
+
+*Cluster* - group of data. 0-2 days is a cluster for example.
+
+2021-04-09 15:08
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/interquartile.png]]
+
+*Standard deviation* - how far on average we are form the mean. Cool,
+makes sense in the last sentence of [[https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/variance-standard-deviation-population/v/range-variance-and-standard-deviation-as-measures-of-dispersion?modal=1][This video]]
+
+Few notes on variance and how to find it. From the video above as
+well. Just wannah have those here.
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/variance1.png]]
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/variance2.png]]
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/variance3.png]]

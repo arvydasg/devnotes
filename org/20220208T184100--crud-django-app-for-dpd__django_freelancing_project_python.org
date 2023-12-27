@@ -1,0 +1,62 @@
+#+title:      CRUD Django app for DPD
+#+date:       [2022-02-08 Tue 18:41]
+#+filetags:   :django:freelancing:project:python:
+#+identifier: 20220208T184100
+#+STARTUP:    overview
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/dpd.png]]
+
+* Intro
+
+This Django app was created for me and my colleagues at [[https://www.dpd.com/lt/lt][DPD]]. Instead of writing
+delivered packages/stops/pickups on a piece of paper - do it inside this app. A
+perfect way to compare your salary slip to the actual work that you have done.
+
+* What is it for
+
+The couriers are not happy with their salaries, they are not sure if they are
+calculated properly according to many factors that DPD tells about. This leads
+to couriers writing down numbers of packages they have delivered, collected,
+kilometers they have driven and so on.. Every day, after each shift. And all
+this additional work and accounting because they can not trust their employers.
+I thought I will create this app so it can be used by couriers to track their
+data easier and in one place.
+
+* How it works
+
+A user logs in, gets a posibility to add a daily record with all the needed
+options for a courier. When he is done, a record is saved. It can also be
+edited if needed right on the website, no need to go to the django admin.
+
+This is a django app that is hosted on github and heroku.
+
+* Docs
+
+Learned a lot during this tutorial -
+https://www.youtube.com/watch?v=llbtoQTt4qw
+
+GitHub link to the tutorial project -
+https://github.com/divanov11/Django-To-Do-list-with-user-authentication
+
+Classy Class-Based Views. - http://ccbv.co.uk/
+
+Built-in class-based views API -
+https://docs.djangoproject.com/en/3.1/ref/class-based-views/
+
+Class based views? Users
+
+Applied this tutorial for my own project.
+
+* Deploy
+
+Excellent explanation of how to deploy django app with Heroku -
+https://www.youtube.com/watch?v=6DI_7Zja8Zc
+
+Live website - https://dpd2022.herokuapp.com
+
+* Summary
+
+Nice and useful little app. Would still be using it if I was working in DPD
+still.

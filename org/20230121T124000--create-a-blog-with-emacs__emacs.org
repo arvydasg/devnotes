@@ -1,0 +1,274 @@
+#+title:      Create a Blog with Emacs
+#+date:       [2023-01-21 Sat 12:40]
+#+filetags:   :emacs:
+#+identifier: 20230121T124000
+#+STARTUP:    overview
+
+* Intro
+
+If you are using Emacs and org mode as much as me, you must have come
+up to org-publish feature that allows you to convert org files to html files.
+
+When you have a lot of org files - means you can have a lot of html
+files. When you have a lot of html files - you can have your own
+static website ;)
+
+* Create Emacs blog the "System Crafters" way
+Best description in a video format is [[https://www.youtube.com/watch?v=AfkrzFodoNw&t=1612s&ab_channel=SystemCrafters][here]]. To later publish it
+automaticall,y video [[https://www.youtube.com/watch?v=za99DwdZEyg&t=996s&ab_channel=SystemCrafters][here]].
+** Choose a directory
+
+You will place your org files inside content/ directory.
+
+#+begin_src emacs-lisp
+/home/arvydas/Dropbox/src/sites/my-org-site/content/
+#+end_src
+
+** Creating the build script
+*** build-site.el
+Inside of this directory:
+
+#+begin_src emacs-lisp
+/home/arvydas/Dropbox/src/sites/my-org-site/
+#+end_src
+
+Create a file called ~build-site.el~ with this inside of it.
+
+#+begin_src emacs-lisp
+  ;; Load the publishing system
+  (require 'ox-publish)
+
+  (message "Build complete!")
+
+  ;; Define the publishing project
+  (setq org-publish-project-alist
+        (list
+         (list "my-org-site"
+               :recursive t
+               :base-directory "./content"
+               :publishing-directory "./public"
+               :publishing-function 'org-html-publish-to-html)))
+
+  ;; Generate the site output
+  (org-publish-all t)
+#+end_src
+
+This configures the /org-publish-project-alist/ variable to define a
+publishing project for our site. Read the documentation of this
+variable using M-x describe-variable for a lot more information!
+
+*** build.sh
+
+We also need a shell script that can run our Emacs Lisp script. We'll call that build.sh:
+
+#+begin_src emacs-lisp
+#!/bin/sh
+emacs -Q --script build-site.el
+#+end_src
+
+Don't forget to use ~chmod +x build.sh~ to make the script executable!
+
+NOTE: If you're on Windows, you can create a ~build.cmd~ file that
+invokes Emacs the same way.
+
+The -Q parameter prevents Emacs from loading your own Emacs
+configuration which will help ensure that this same script can be
+executed cleanly on other machines once we get ready to start
+publishing this site.
+
+Create one org file, in the content dir, run the shell script, see the
+html in public folder, open it in the browser.
+
+** Improving the HTML output
+
+There are a few things about the page we just looked at that I'd like
+to change to make the output look a bit cleaner:
+
+- Section numbers
+- Author name
+- Publish timestamp
+- Validate link
+
+Luckily the publish system is very customizable so I'll show you how
+we can disable a few things in the project configuration to get a
+better result.
+
+#+begin_src emacs-lisp
+  ;; Define the publishing project
+  (setq org-publish-project-alist
+        (list
+         (list "org-site:main"
+               :recursive t
+               :base-directory "./content"
+               :publishing-function 'org-html-publish-to-html
+               :publishing-directory "./public"
+               :with-author nil           ;; Don't include author name
+               :with-creator t            ;; Include Emacs and Org versions in footer
+               :with-toc t                ;; Include a table of contents
+               :section-numbers nil       ;; Don't include section numbers
+               :time-stamp-file nil)))    ;; Don't include time stamp in file
+#+end_src
+** Improving the page styling
+At this point have a decent basic output for our website, but what if we want to make it look a little bit nicer?
+
+By setting a few more variables, we can use a nice stylesheet to give our site a more polished look:
+
+#+begin_src emacs-lisp
+  ;; Customize the HTML output
+  (setq org-html-validation-link nil            ;; Don't show validation link
+        org-html-head-include-scripts nil       ;; Use our own scripts
+        org-html-head-include-default-style nil ;; Use our own styles
+        org-html-head "<link rel=\"stylesheet\" href=\"simple.min.css\" />" ;place your own stylesheet in public folder
+        org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />" ;use cdn stylesheet
+        )
+#+end_src
+** Generating pages with code blocks
+So far we've been looking at a very simple example page that doesn't really have much on it. What happens when we try to generate a more elaborate Org file containing code blocks?
+
+Let's try it out with another file, a version of my literate Emacs configuration called Emacs.org!
+
+If you're generating a site that features code blocks like a coding blog or a literate Emacs configuration, you'll probably see an error like this when you generate the site:
+
+
+Cannot fontify source block (htmlize.el >= 1.34 required)
+
+To resolve this issue, you will need to install the htmlize package from MELPA. We can automate the process of installing this package by adding the following snippet to our build-site.el file:
+
+#+begin_src emacs-lisp
+;; Set the package installation directory so that packages aren't stored in the
+;; ~/.emacs.d/elpa path.
+(require 'package)
+(setq package-user-dir (expand-file-name "./.packages"))
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("elpa" . "https://elpa.gnu.org/packages/")))
+
+;; Initialize the package system
+(package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
+
+;; Install dependencies
+(package-install 'htmlize)
+#+end_src
+
+In this snippet, we load Emacs' package manager and configure the package-user-dir to be a sub-directory of our project folder. This allows you to install packages for the script without mixing them up with the packages of your personal Emacs configuration!
+
+The next thing we do is add MELPA to the package archive list and refresh the package archive so that htmlize can be found. Finally, we call package-install to install it!
+
+In a future video I'll show you how to convert your Emacs color theme to a CSS file that you can use to colorize source blocks with exactly the same colors used in the theme!
+
+** Linking between pages
+One last thing I want to show you is how you can create links between
+pages on your site. Let's open up index.org and create a link to the
+Emacs.org file.
+
+Inside index.org, we can press ~C-c C-l (org-insert-link)~, enter the
+path of the Org file we want to link to (./Emacs.org), press Enter,
+then enter the text for the link ("My Emacs configuration").
+
+When you generate the site again, you should be able to follow the
+link between pages because Org's publishing system will convert the
+link to the proper output extension.
+
+It will also complain when a linked file can't be found!
+
+
+#+begin_src emacs-lisp
+Debugger entered--Lisp error: (user-error "Unable to resolve link: \"Emacs2.org\"")
+#+end_src
+
+** The final build script
+
+Here is the final form of our ~build-site.el~ script:
+
+
+#+begin_src emacs-lisp
+;; Set the package installation directory so that packages aren't stored in the
+;; ~/.emacs.d/elpa path.
+(require 'package)
+(setq package-user-dir (expand-file-name "./.packages"))
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("elpa" . "https://elpa.gnu.org/packages/")))
+
+;; Initialize the package system
+(package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
+
+;; Install dependencies
+(package-install 'htmlize)
+
+;; Load the publishing system
+(require 'ox-publish)
+
+;; Customize the HTML output
+(setq org-html-validation-link nil            ;; Don't show validation link
+      org-html-head-include-scripts nil       ;; Use our own scripts
+      org-html-head-include-default-style nil ;; Use our own styles
+      org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
+
+;; Define the publishing project
+(setq org-publish-project-alist
+      (list
+       (list "org-site:main"
+             :recursive t
+             :base-directory "./content"
+             :publishing-function 'org-html-publish-to-html
+             :publishing-directory "./public"
+             :with-author nil           ;; Don't include author name
+             :with-creator t            ;; Include Emacs and Org versions in footer
+             :with-toc t                ;; Include a table of contents
+             :section-numbers nil       ;; Don't include section numbers
+             :time-stamp-file nil)))    ;; Don't include time stamp in file
+
+;; Generate the site output
+(org-publish-all t)
+
+(message "Build complete!")
+
+#+end_src
+
+* Create Emacs blog with "org-static-blog" package
+"[[https://github.com/bastibe/org-static-blog][org-static-blog]]" is a package written by [[https://github.com/bastibe][Bastian Bechtold]] is a static site
+generator. I believe it started [[https://bastibe.de/2013-11-13-blogging-with-emacs.html][here]].
+
+My current Emacs configuration for "[[https://github.com/arvydasg/.emacs.d/blob/master/recipes/org-static-blog.el][org-static-blog]]" is here.
+
+Install the plugin, you get all it's functions. They are
+clearly documented within the plugin, it's super easy to read the
+instructions and understand what it does. One command
+~org-static-blog-create-new-post~ creates new post, then
+~org-static-blog-publish~ converts all your .org files to html files in
+your chosen location. You push them to github and that's all! Your
+site is live.
+
+I have just discovered it [2023-01-21 Sat], but already like it.
+Mainly because it is a simple program that I am able to wrap my head
+around and I know it will remain simple and I will be able to use for
+a long time in the future, it won't go anywhere. I can also make some
+pull requests to it by adding Lithuanian language and some features.
+It automatically generates archive file where all the posts are
+stored, it also automatically generates tag's file and then in the
+browser I can filter my posts.. It is easy to generate header and
+footer. Yes, I like it more than the first method.
+
+If you would like to add an image to your org file, try this:
+
+#+begin_src emacs-lisp
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/org-static-blog.png]]
+#+end_src
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/org-static-blog.png]]
+
+lightbox.js that you can see in this page source helps with the lightbox effect that you get when clicking on
+the image.
+
+* Conclusion
+Now the only thing is left - I have to blog. :) I am thinking why
+don't I whenever learning a new thing write such little summary about
+it OR imagine that I am teaching someone this topic. "The best way to
+learn it is to teach it" they say.

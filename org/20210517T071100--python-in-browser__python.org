@@ -1,0 +1,67 @@
+#+title:      Python In Browser
+#+date:       [2021-05-17 Mon 07:11]
+#+filetags:   :python:
+#+identifier: 20210517T071100
+#+STARTUP:    overview
+
+Ok let me think out real quick. I have got around 10 python scripts that I
+would like to share to my website for people to interract. Part of the scrips
+will require only to enter a number and view the result. Others will require to
+upload files for the script to be ran.. There will be some sort of
+communication between the user and the python program in the website.
+
+I think it would be cool to do that so I could show my projets to friends and
+family members.
+
+So far I have seen many tools for simialr tasks. Something that starts with B..
+django and flask were mentioned I think, some other frameworks or how to call
+them.
+
+Just have to see which one works with the most basic code in my now php website
+and then upload the rest.
+
+09:30
+
+Been doing some python exercises form Code in Place and I came up to [[https://www.w3schools.com/python/][w3schools]]
+with a hope to find an explanation how to work with functions inside other
+functions, reuse their returned information and so on. (that would be really
+useful for me when working wiht images). So I came up to this python
+interpreter I can say? It runs the code that w3schools asks us to run, BUT if I
+put my own code - it doesn't execute.
+
+#+attr_html: :width 1200px
+#+ATTR_ORG: :width 600
+[[../media/pythonexecute.png]]
+
+So, if w3schools cant make it work properly, like.. I am thinking now.. make a
+browser have all the functions that python has...? Is it even possible? Well,
+definitely not for me, not for now. I will stick to making a blog wiht all the
+cool functions that I learned so I can execute them anywhere, from anyones
+computer just by looking up on my website.
+
+19:19
+
+Wrote the same question again - running python script in the browser. Opened
+like 10-15 links, will watch them all and see if I find something suitable for
+myself. If not - I will just upload the code and that's it.
+
+    - Brython - aims to replace Javascript for web scripting. It allows you to
+      directly use Python Scripts on a webpage to handle DOM (Document Object
+      Model) elements and events, all using our favorite language Python.
+    - Flask - deploying python script as a flash app to google app engine.
+      Looks promising, user gets to put his input, then getting the result in
+      an html page. Sounds good to me, but is it free tho? But first let me
+      finish checking the other 15 opened solutions.
+    - Python anywhere - not free
+    - Anvil - seems free
+    - cgitb" library?
+    - Trinket is a python interpreter for a website. Also an option? Works when
+      chaning inches to feet, but when I tried to run an image editing script,
+      it told me that SimpleImage can not be imported. Upsy daisy.
+
+Okay, most likely I will not try to get any interpreters or apps to run my
+scripts on my website. Placing just the code itself will suffice for now and
+when I learn little bit more about python django, flask and stuff like this, I
+will come back to this post and use the methods tht I found to host and use my
+scripts online. By that time I will probably have some coool scripts :p Looking
+forward to that. Okay, bye for now. Going to do some web dev stuff :)

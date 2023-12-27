@@ -1,0 +1,74 @@
+#+title: Uses
+#+date: <2020-01-01 Sun 01:01>
+#+description:
+#+filetags:
+
+This page is an overview of tools I like to use, and technologies I
+enjoy.
+
+* Core Technologies
+- *Personal Operating System: Ubuntu Linux*
+
+  I use Windows daily at work, and know it intimately, and have used
+  macOS in the past. They all work; they all break. But Linux gives me
+  a fighting chance to fix the most annoying problems myself, which is
+  why it is my operating system of choice at the moment (but these
+  things tend to change frequently).
+
+- *Browser: Chrome*
+
+  At this point, mostly my choice out of inertia, due to a number of
+  extensions I like and use.
+
+- *Code Editor: Emacs*
+
+  I do most of my work in a text editor. My emacs is my own, it is a
+  custom-built tool for my particular way of working, mostly
+  keyboard-driven. I am under no illusions that this way of working is
+  “more efficient” than other ways, but it sure gives me joy. I like
+  the soothing simplicity of this.
+
+- *Image Editor: Lightroom*
+
+  I photograph less and less these days, but when I do, I need to
+  retouch the images - I find a windows machine and do image editing
+  on it with Lightroom. Been using it for many years. Helped other use
+  it as well.
+
+* Programming
+Less stuff in a program is usually better.
+
+- *Python*
+
+  When I need to automate or script, or when I want to explore, Python
+  is a pragmatic choice. Fast enough for most tasks, with libraries
+  for everything imaginable.
+
+* Blogging
+- *Org-Static-Blog*
+
+  It serves the purpose, I can blog without leaving Emacs.
+
+* Hardware
+- *Camera: Nikon and Mamiya and FED*
+
+  - [[https://www.youtube.com/watch?v=oV1CLlgVGCM&ab_channel=ArvydasGasparaviciusPhotography][Nikon D3300]] - my first and only digital camera. Did most of my
+    work on it. Especially like to photograph landscapes and
+    nighscapes with it. Currently borrowed to a friend.
+  - [[https://www.youtube.com/watch?v=yvhoMG8ZVbs&t=781s&ab_channel=ArvydasGasparaviciusPhotography][Mamiya RB67]] - my first medium format film camera.
+  - [[https://www.google.com/search?q=fed+5b&oq=fed+5b&aqs=chrome..69i57j0i512l4j0i22i30l5.1082j0j7&sourceid=chrome&ie=UTF-8][FED 5]] - my fathers 35mm camera. Perfect to take with you when out
+    and about.
+
+- *Laptop*
+  #+begin_src shell
+  sudo dmidecode | grep Version
+  #+end_src
+
+  [[https://www.acer.com/ph-en/support?filter=productdetails&search=NXM7REL012311035927200;NX.M7REL.012;V3-771G][Acer Aspire V3-771]]. Bought it in 12th grade for my studies in Denmark.
+  10 years ago. Still using it today. Well invested weekend/summer job
+  money.
+
+
+- *Smartphone: Android*
+
+  [[https://en.wikipedia.org/wiki/OnePlus_5][OnePlus 5]]. Bought it in 2017 years ago. Still works great.
