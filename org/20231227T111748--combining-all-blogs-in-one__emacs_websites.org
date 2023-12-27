@@ -1,0 +1,38 @@
+#+title:      combining all blogs in one
+#+date:       [2023-12-27 Wed 11:17]
+#+filetags:   :emacs:websites:
+#+identifier: 20231227T111748
+#+STARTUP:    overview
+
+Currently, [2023-12-27 Wed] everything works as it should.
+
+- one place to store denotes devnotes - "org" folder
+- one place to store build scripts - "build" folder
+- one place to store exported html files - "html" folder
+
+A few annoying things about this way of working:
+
+- html files are in the same repo, I never need them when looking for files,
+  but they are always in a way. During simple or rg searches.
+- Also when I make a change to an org file and re-export - bunch of html files
+  get changed too(id's of headings), so I when I want to commit a change of an
+  org file - I have to make sure I don't accidentally commit html files as well
+- This repo does not contain other blog attempts and their org
+  files(arvydas.dev, gvazdikelis, emacs_blog, etc). I want everything to be in
+  one place
+
+Way's to fix/improve:
+
+1. Create a new branch for "devnotes" repo called
+   =2023_12_27_before_all_blog_merge=, this will hold the current
+   [2023-12-27 Wed] state of the devnotes repo
+2. move all the files from
+   https://github.com/arvydasg/arvydasg.github.io_blog_content to devnotes,
+   delete the repo
+3. move all the content from https://github.com/arvydasg/codeacademy to
+   devnotes, delete the repo
+4. move certain/needed(if something can be shows that I worked on, idk) files
+   from https://github.com/arvydasg/pkc_wiki/tree/master/CONTENT/pkc, don't
+   delete the repo
+5. reuse https://github.com/arvydasg/arvydasg.github.io repo to store all html
+   in one place(first make sure that )
