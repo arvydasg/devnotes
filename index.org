@@ -4,7 +4,7 @@
 
 * Arvydas Gasparavicius Devnotes 👋
 
-My name is Arvydas I am self-taught Python/Django developer. My Github.
+My name is Arvydas I am self-taught Python/Django developer. [[https://github.com/arvydasg][My Github]].
 
 I am currently immersing myself in a comprehensive 9-month web development and
 Python course led by CodeAcademy, with the goal of expanding my programming
