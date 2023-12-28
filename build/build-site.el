@@ -113,6 +113,7 @@
 <link rel=\"stylesheet\" href=\"./static/css/taingram.css\" type=\"text/css\"/>
 <link rel=\"stylesheet\" href=\"./static/css/lightbox.css\" type=\"text/css\"/>
 <link rel=\"stylesheet\" href=\"./static/css/scroll-to-top.css\" type=\"text/css\"/>
+<link rel=\"icon\" href=\"./static/ag.ico\">
 "
 	 ;; :html-head-extra "<link rel=\"stylesheet\" href=\"https://arvydas.dev/static/style.css\" type=\"text/css\"/>"
 	 ;; :html-head-extra "<link rel=\"stylesheet\" href=\"./static/style.css\" type=\"text/css\"/>"
