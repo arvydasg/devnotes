@@ -2,14 +2,15 @@
 
 (setq org-publish-project-alist
       '(
-	("my-org-site"
-	 :base-directory "../org"
+	("notes"
+	 :base-directory "../"
 	 :base-extension "org"
-	 :publishing-directory "../html"
+	 :publishing-directory "../../arvydasg.github.io"
 	 :recursive t
+	 ;; use :noexport: tag if you want headings that have it not to be exported
 	 ;; :exclude
 	 ;; :include
-	 :publishing-function org-html-publish-to-html
+	 :publishing-function org-html-publish-to-html ;converts org files to HTML
 	 ;; :preparation-function
 	 ;; :completion-function
 	 ;; -----------------------------------------------------------------------------------
@@ -92,29 +93,29 @@
 	 Copyright &copy; 2023-2023 Arvydas Gasparavicius
 	 </div>
 	 </div>
-	 <p class=\"date\">This org file is created: %d</p>
-	 <p class=\"date\">This org file is last modified: %C</p>
-	 <p class=\"date\">This org file is exported to HTML: %T</p>
+	 <p class=\"date\">This org file is <u>exported</u> to HTML: %T</p>
+	 <p class=\"date\">This org file is last <u>modified</u>: %C</p>
+	 <p class=\"date\">This org file is <u>created</u>: %d</p>
 	 <div class=\"generated\">
 	Created with %c on <a href=\"https://www.gnu.org\">GNU</a>/<a href=\"https://www.kernel.org/\">Linux</a>
 	</div>
 	</footer>
 	 <button onclick=\"topFunction()\" id=\"myBtn\" title=\"Go to top\">Top</button>
-	 <script src=\"../static/js/generic.js\"></script>
-	 <script src=\"../static/js/scroll-to-top.js\"></script>
-	 <script src=\"../static/js/lightbox.js\"></script>"
+	 <script src=\"./static/js/generic.js\"></script>
+	 <script src=\"./static/js/scroll-to-top.js\"></script>
+	 <script src=\"./static/js/lightbox.js\"></script>"
 	 ;; :html-preamble t                 ;insert a default one, which in none
 	 :html-preamble  "<div id=\"updated\">Updated: %C</div>"
 	 ;; :html-head
 	 :html-head "
-<link rel=\"stylesheet\" href=\"../static/css/org-html-style-default.css\" type=\"text/css\"/>
-<link rel=\"stylesheet\" href=\"../static/css/generic.css\" type=\"text/css\"/>
-<link rel=\"stylesheet\" href=\"../static/css/taingram.css\" type=\"text/css\"/>
-<link rel=\"stylesheet\" href=\"../static/css/lightbox.css\" type=\"text/css\"/>
-<link rel=\"stylesheet\" href=\"../static/css/scroll-to-top.css\" type=\"text/css\"/>
+<link rel=\"stylesheet\" href=\"./static/css/org-html-style-default.css\" type=\"text/css\"/>
+<link rel=\"stylesheet\" href=\"./static/css/generic.css\" type=\"text/css\"/>
+<link rel=\"stylesheet\" href=\"./static/css/taingram.css\" type=\"text/css\"/>
+<link rel=\"stylesheet\" href=\"./static/css/lightbox.css\" type=\"text/css\"/>
+<link rel=\"stylesheet\" href=\"./static/css/scroll-to-top.css\" type=\"text/css\"/>
 "
 	 ;; :html-head-extra "<link rel=\"stylesheet\" href=\"https://arvydas.dev/static/style.css\" type=\"text/css\"/>"
-	 ;; :html-head-extra "<link rel=\"stylesheet\" href=\"../static/style.css\" type=\"text/css\"/>"
+	 ;; :html-head-extra "<link rel=\"stylesheet\" href=\"./static/style.css\" type=\"text/css\"/>"
 	 ;; :subtitle "this is a subtitle"
 	 :html-head-include-default-style nil         ;turning them off, but adding in a separate file called org-html-style-default.css
 	 :html-head-include-scripts nil
@@ -182,7 +183,23 @@
 	 ;; :latex-header
 	 )
 
-	("build-site.el" :components ("my-org-site"))))
+	("static"
+	 :base-directory "../static"
+	 :publishing-directory "../../arvydasg.github.io/static"
+	 :base-extension "css\\|js\\|ico\\|svg"
+	 :recursive t
+	 :publishing-function org-publish-attachment ;copies the files verbatim
+	 )
+
+	("media"
+	 :base-directory "../media"
+	 :publishing-directory "../../arvydasg.github.io/media"
+	 :base-extension "png\\|jpg\\|pdf"
+	 :recursive t
+	 :publishing-function org-publish-attachment ;copies the files verbatim
+	 )
+
+	("build-site.el" :components ("notes" "static" "media"))))
 
 (defun ag/org-sitemap-date-entry-format (entry style project)
   "Format ENTRY in org-publish PROJECT Sitemap format ENTRY ENTRY
@@ -199,12 +216,12 @@
 (setq org-export-global-macros
       '(("timestamp" . "@@html:<span class=\"timestamp\">[$1]</span>@@")))
 
-;; publish all the projects
-;; (org-publish-all t)
+;; publish all the projects described in this file :components part
+(org-publish-all t)
+
 ;; publish only specific project
-(org-publish "my-org-site" t)		;The t parameter tells it to regenerate
-					;all files regardless of when they were
-					;last generated)so no need to add the
-					;force prefix with C-c C-e C-f
+;; The t parameter tells it to regenerate all ;; files regardless of when they
+;; were last generated)so no need to add the ;; force prefix with C-c C-e C-f
+(org-publish "my-org-site" t)
 
 (message "Build complete!")

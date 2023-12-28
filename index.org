@@ -1,0 +1,32 @@
+#+title: index
+#+date: <2023-12-19 Tue>
+#+options: num:nil toc:nil title:nil
+
+* Arvydas Gasparavicius Devnotes 👋
+
+My name is Arvydas I am self-taught Python/Django developer. My Github.
+
+I am currently immersing myself in a comprehensive 9-month web development and
+Python course led by CodeAcademy, with the goal of expanding my programming
+skills and knowledge.
+
+I also work as a freelance developer. Read more about my work.
+
+- [[file:contact.org][Contact Me]]
+- [[file:20231214T105653--my-dev-environment__git_scripting_wsl.org][My Dev Environment]]
+- [[file:20231215T182523--building-development-notes-website-with-emacs__emacs_websites.org][Why and How I built this site]]
+- [[file:about.org][About]]
+- [[file:contact.org][Contact]]
+- [[file:uses.org][Uses]]
+- [[file:freelancing.org][Freelancing]]
+- [[file:projects.org][Projects]]
+- Status updates!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+- images work?
+- css/js works?
+- project list works?
+
+* Recent notes
+
+If you are interested in some of my writings, here are some of my latest posts:
+
+#+INCLUDE: "sitemap.org" :lines "-10"

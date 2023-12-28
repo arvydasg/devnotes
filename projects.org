@@ -1,0 +1,13 @@
+#+title: Projects
+#+date: <2020-01-01 Sun 01:01>
+#+description:
+#+filetags:
+
+Some of my projects here with github links.
+
+Add them here manually? All projects one by one in org headings?
+
+Maybe could work.
+
+Or populate this with files links that contain filetag Project in here. YES
+YES please.

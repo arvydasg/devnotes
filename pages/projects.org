@@ -1,7 +1,0 @@
-#+title: Projects
-#+date: <2020-01-01 Sun 01:01>
-#+description:
-#+filetags:
-
-
-Some of my projects here with github links.

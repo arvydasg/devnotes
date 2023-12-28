@@ -13,7 +13,7 @@
   Lithuania in 2021.
 - Started to learn programming so I could work remotely.
 
-* Linux :nonpost:
+* Linux                                                            :noexport:
 
 stuff from gvazdikelis about page
 
