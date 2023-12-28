@@ -195,7 +195,7 @@
 	("media"
 	 :base-directory "../media"
 	 :publishing-directory "../../arvydasg.github.io/media"
-	 :base-extension "png\\|jpg\\|pdf"
+	 :base-extension "png\\|jpg\\|jpeg\\|pdf"
 	 :recursive t
 	 :publishing-function org-publish-attachment ;copies the files verbatim
 	 )
