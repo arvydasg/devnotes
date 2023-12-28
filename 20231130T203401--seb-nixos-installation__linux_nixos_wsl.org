@@ -4,7 +4,7 @@
 #+identifier: 20231130T203401
 #+STARTUP:    overview
 
-* seb nixos installation                                             :NONPOST:
+* seb nixos installation                                             :noexport:
 
 <2023-11-30 Thu> While trying to figure out how sebwsl works, I was chatting
 with the Swedish guy, master linux guy, master computers guy, master
