@@ -1,0 +1,20 @@
+#+title:      connect to a remote server over vscode
+#+date:       [2024-01-02 Tue 09:05]
+#+filetags:   :ssh:vscode:
+#+identifier: 20240102T090513
+#+STARTUP:    overview
+
+Official docs here - https://code.visualstudio.com/docs/remote/ssh
+
+- get the hostname of the server
+- Configure proxy if needed (wss proxy(find which by "echo %http_proxy%" in
+  cmd), ssl ticked off, for extensions - off)
+- Select =Remote-SSH: Connect to Host...= from the Command Palette
+  =(Ctrl+Shift+P)= and use your username and hostname/ip =user@hostname/ip=
+- choose linux server
+- Stuff will get downloaded, might have to enter the password once again
+- After all is done, bottom left corner you should see that you are connected
+  to the remote server.
+- Check terminal to make sure
+- Once you select a platform, it will be stored in VS Code settings under the
+  =remote.SSH.remotePlatform= property so you can change it at any time.
