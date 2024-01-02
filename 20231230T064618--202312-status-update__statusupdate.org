@@ -1,0 +1,61 @@
+#+title:      202312 status update
+#+date:       [2023-12-30 Sat 06:46]
+#+filetags:   :statusupdate:
+#+identifier: 20231230T064618
+#+STARTUP:    overview
+
+Was inspired to write status updates by https://bitfehler.srht.site/. This is
+one of the last days of 2023, thought I would write about the whole year
+instead of the December only. I did not have any status update or anything
+written about my new workplace([[file:20220703T191800--first-month-as-it-technician__statusupdate.org][like I did with the last workplace]]), so here we
+go.
+
+* 2023-04 - Now at SEB
+
+- Migrated the whole working environment (including ~5 services) of +20 people
+  from RHEL7 to RHEL8
+- Installed SAS Viya
+- Got a change to work with SAS code
+- Integrating Github in SAS Viya
+- Realizing what the corporate workflow looks like, nothing goes fast here
+- Professionals on every corner, just need to know who the right person is to
+  solve the problem
+- Deadlines are not really deadlines, don't stress over them
+- Chill way of workng, no rush
+- Working in Linux terminal practically for almost a year - I feel very
+  confident in it
+- Using Tmux at work, extremely beneficial
+- Able to install and use Emacs at work
+- Practically no python work. Sad, since I was applying to a "Python full stack
+  developer" position
+- Had to found ways to use python at work by myself. Found a few opportunities
+  to automate some tasks and make my life easier anyway
+- "Access rights app" is one of such tasks. Got tired of manually granting
+  various access rights to users, so created a Django app that let's to make
+  this process easier for myself and my colleagues developers.
+- Got a chance to present this app to a large audience, was comfortable doing
+  so, since I did everything myself and I felt that I could answer any question
+- By trying to set up WSL the proper way according to work tutorials, just
+  because it was not working properly, I kept digging and found another person
+  that had a solution he built himself. It involved [[file:20231211T151427--first-nixos-installation__nixos.org][NixOS]]. I tried it, I liked
+  it, now it's my main development OS. Ofc it's config [[https://github.com/arvydasg/dotfiles/blob/f2917f144ea2f2735002f3fac8f18230422ffad3/nixos/configuration.nix][is not large now]], but
+  still.
+- Met an Emacs user in SEB! So know I know we are 2!
+- Realized how a strong team leader is very important
+- I can see how excited and full of motivation and drive I was at the beginning
+  of joining SEB and how drained I am now, perfect time to join a new team
+- December has been the worst this year in terms of performance and growth. Not
+  getting proper tasks during sprint plannings, migration that we focused so
+  much to finish, deadline got postponed for another year... got back to SAS
+  installation, fixing bugs left and right, not sure if I will be able to
+  continue working on the rights app, stuck with AD automation tasks due to
+  holiday period
+- More free time during my last month in the current team, able to do my own
+  thing more, configuring emacs, getting ready for real development work in my
+  favorite environment at the new team
+
+* What is up next at SEB
+
+- 2024-01 - Meeting/working in a new team, new challenges, new
+  technologies(building Frontend), learning a lot from an all knowing new tech
+  lead!
