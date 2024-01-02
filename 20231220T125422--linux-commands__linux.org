@@ -255,3 +255,13 @@ ODBCINI=/etc/odbc.ini" (only for the first time).
 
 You can list the data sources on your system with the following
 command: "odbcinst -q -s"
+
+* Credentials
+
+Temporarily store a password into environment variable, just to not have my
+password in =.bash_history=:
+
+#+begin_src bash
+  read -s PASSWORD
+  echo $PASSWORD
+#+end_src
