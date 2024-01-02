@@ -103,7 +103,8 @@
 	 <button onclick=\"topFunction()\" id=\"myBtn\" title=\"Go to top\">Top</button>
 	 <script src=\"./static/js/generic.js\"></script>
 	 <script src=\"./static/js/scroll-to-top.js\"></script>
-	 <script src=\"./static/js/lightbox.js\"></script>"
+	 <script src=\"./static/js/lightbox.js\"></script>
+	 <script src=\"./static/js/test.js\"></script>"
 	 ;; :html-preamble t                 ;insert a default one, which in none
 	 :html-preamble  "<div id=\"updated\">Updated: %C</div>"
 	 ;; :html-head
