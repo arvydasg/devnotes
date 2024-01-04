@@ -1,0 +1,47 @@
+#+title:      cronjob test job
+#+date:       [2024-01-04 Thu 08:25]
+#+filetags:   :crontab:linux:
+#+identifier: 20240104T082517
+#+STARTUP:    overview
+
+Read info about cron: =vim /etc/crontab=
+
+cron helper - =Crontab.guru= - The cron schedule expression editor
+
+* fix serve time
+
+[[file:~/GIT/devnotes/20240104T082156--set-the-correct-server-time__linux.org][set the correct server time]]
+
+* create a python file
+
+#+begin_src python
+  import datetime
+
+  # Get the current timestamp
+  current_time = datetime.datetime.now()
+
+  # Create a formatted message
+  message = f"This is a test cron job. Current time: {current_time}"
+
+  print(message)
+#+end_src
+
+Make it executable
+
+#+begin_src bash
+  chmod o+x my_script.py
+#+end_src
+
+* create a cronjob
+
+#+begin_src bash
+  crontab -e
+  # this runs python code every minute and outputs the print message to the file
+   ,* * * * * /usr/bin/python3 /home/arvy/src/cronjobs/my_script.py >> /home/arvy/src/cronjobs/output_my_script.log 2>&1
+#+end_src
+
+Log file looks like this after running for a few minutes:
+
+This is a test cron job. Current time: 2023-07-11 12:32:01.462375
+This is a test cron job. Current time: 2023-07-11 12:33:01.501960
+This is a test cron job. Current time: 2023-07-11 12:34:01.576551

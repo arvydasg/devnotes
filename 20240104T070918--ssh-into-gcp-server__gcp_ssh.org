@@ -1,0 +1,110 @@
+#+title:      ssh into gcp server
+#+date:       [2024-01-04 Thu 07:09]
+#+filetags:   :gcp:ssh:
+#+identifier: 20240104T070918
+#+STARTUP:    overview
+
+This video explains it well - https://www.youtube.com/watch?v=fmh94mNQHQc&ab_channel=storagefreak
+
+When you have your instance running, first thing is make sure firewall rules accept the traffic.
+
+* Networking -> VPC network -> Firewall Rules
+
+If you did not create any rules yet, there should be one named "default-allow-ssh". Port 22 on protocol tcp is open to the internet.
+
+* Compute Engine -> Virtual Machines -> VM instances
+
+Get the external ip and try to connect via putty.
+
+If you see the login screen, the "login as:" - thats a first good sign
+indicating that nothing is wrong from my or gcp side in terms of firewall.
+
+But if you try to enter any username, you get a warning, which basically means
+that username/password authentication is disabled and we must use ssh key to
+authenticate.
+
+* Generate public/private key pair
+
+** over PuTTYgen
+Open =PuTTY Key Generator= or =PuTTYgen= to generate one RSA ket 2048 bits.
+
+Key comment - this is your USERNAME! you want to use to connect to your machine
+
+** Over wsl
+
+#+begin_quote
+Creating a new SSH key specifically for connecting to your GCP VM and
+storing it in GCP is a good approach. This way, you can generate a new key pair
+within WSL and configure GCP to use the public key for authentication.
+#+end_quote
+
+Open your WSL terminal:
+#+begin_src bash
+  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+  cat ~/.ssh/mykey.pub
+#+end_src
+
+Copy the entire contents of the public key that is displayed in the terminal.
+
+* Add the ~public~ key to your GCP project:
+
+- Go to the GCP Console
+- Navigate to the project containing your VM instance.
+- Open the VM instances page and select your target VM.
+- Click the "Edit" button at the top of the page.
+- Scroll down to the "SSH Keys" section.
+- Click "Add item".
+- Paste the copied public key into the "Enter entire key data" field.
+- Click the "Save" button to add the key.
+
+GCP will login to the machine, create a user with your chosen username and add the ssh key. (can check this in logs, the same ssh page)
+
+* Connect to the GCP VM using the new SSH key
+
+** Over putty
+
+- Take the external api, put it into the Host Name field in putty, port 22.
+- Then go to SSH -> Auth -> Credentials to authenticate with
+- Choose the private key, in my case itś on my desktop
+- try to login
+- enter your username
+- you should be logged in
+- sudo su - to login as root
+
+** Over wsl
+
+In your WSL terminal, use the ssh command followed by the username and IP
+address or hostname of your GCP VM:
+
+user is a first user gcp created for me, which is arvydas.gaspa(saw it
+in logs). host is - 34.88.9.236
+
+test if it works - ~ssh -T git@github.com~
+
+#+begin_src bash
+  ssh -i ~/.ssh/mykey user@host
+#+end_src
+
+for example:
+
+#+begin_src bash
+  ssh -i ~/.ssh/arvydas_gcp_20230709 arvydas.gaspa@34.88.9.236
+#+end_src
+
+Replace mykey with the name you provided
+for the PRIVATE key pair, user with the appropriate username, and host
+with the IP address or hostname of your GCP VM.
+
+Erm I am still not able to paste into vim :confused:
+
+At least can now paste with ctrl+v and such.
+
+Can change wsl terminal options, but no option to select right click for paste.
+
+but then I right click paste into the wsl terminal.. krc..
+
+tai geriau jau naudoti putty ir rasyti rankyte viska i vim.
+
+In nano it works.
+
+Adding set mouse=a might have helped for vim also. cool.

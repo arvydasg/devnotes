@@ -1,0 +1,19 @@
+#+title:      set the correct server time
+#+date:       [2024-01-04 Thu 08:21]
+#+filetags:   :linux:
+#+identifier: 20240104T082156
+#+STARTUP:    overview
+
+Useful for cronjobs
+
+#+begin_src bash
+  sudo su -
+  date
+  # you should see the local time of the server. It might be different from yours (Lithuanian time)
+  # run this command:
+  timedatectl set-timezone Europe/Vilnius
+  # restart cron
+  systemctl restart cron
+  # check cron status
+  systemctl status cron
+#+end_src
