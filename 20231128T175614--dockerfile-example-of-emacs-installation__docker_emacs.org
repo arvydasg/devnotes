@@ -3,12 +3,6 @@
 #+filetags:   :docker:emacs:
 #+identifier: 20231128T175614
 
-PERFECT DOCS/REFERECE -
-https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index
-
-Dockerfile best practices -
-https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
-
 Dockerfile example used to generate emacs image:
 
 #+begin_src bash

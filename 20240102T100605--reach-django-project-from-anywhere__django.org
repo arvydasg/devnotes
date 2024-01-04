@@ -1,0 +1,11 @@
+#+title:      reach django project from anywhere
+#+date:       [2024-01-02 Tue 10:06]
+#+filetags:   :django:
+#+identifier: 20240102T100605
+#+STARTUP:    overview
+
+- Create a django project
+- =settings.py= - =ALLOWED_HOSTS = ['*']=
+- =python manage.py runserver 0.0.0.0:8000= (binds the server to all available
+  IPs on port 8000, allowing external access.)
+- Open =http://serverip:8000/= in the browser

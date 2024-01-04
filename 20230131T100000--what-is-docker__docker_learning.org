@@ -89,3 +89,11 @@ and mysql database on another. So whenever you want to update wordpress
 server - you update only just that. Nothing is in a way, nothing is
 conflicting, mysql database remains untouched. Sounds good, I must try
 experiment with that.
+
+* Docker docs
+
+PERFECT DOCS/REFERECE -
+https://kapeli.com/cheat_sheets/Dockerfile.docset/Contents/Resources/Documents/index
+
+Dockerfile best practices -
+https://docs.docker.com/develop/develop-images/dockerfile_best-practices/

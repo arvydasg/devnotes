@@ -1,0 +1,87 @@
+#+title:      docker test container
+#+date:       [2024-01-03 Wed 13:23]
+#+filetags:   :docker:
+#+identifier: 20240103T132335
+#+STARTUP:    overview
+
+* Dockerfile
+
+#+begin_src bash
+  FROM python:3.9-slim
+  WORKDIR /app
+  COPY server.py .
+  COPY helloworld.html .
+  EXPOSE 8082
+  CMD ["python3", "server.py"]
+#+end_src
+
+* server.py
+
+#+begin_src python
+  import http.server
+  import socketserver
+  # Define the port number
+  PORT = 8082
+  # Define the request handler class
+  class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
+      def end_headers(self):
+          self.send_header('Access-Control-Allow-Origin', '*')
+          http.server.SimpleHTTPRequestHandler.end_headers(self)
+
+      def do_GET(self):
+          # If the requested path is "/", serve helloworld.html
+          if self.path == '/':
+              self.path = '/helloworld.html'
+          elif self.path == '/favicon.ico':
+              self.send_response(204)  # No content
+              return
+          return http.server.SimpleHTTPRequestHandler.do_GET(self)
+  # Set up the server
+  with socketserver.TCPServer(("", PORT), MyRequestHandler) as httpd:
+      print(f"Serving at port {PORT}")
+      try:
+          httpd.serve_forever()
+      except KeyboardInterrupt:
+          pass
+#+end_src
+
+* helloworld.html
+
+#+begin_src html
+  <!DOCTYPE html>
+  <html>
+  <head>
+      <title>Hello World</title>
+  </head>
+  <body>
+      <h1>Hello, World!</h1>
+  </body>
+  </html>
+#+end_src
+
+* build the image
+
+while in the same directory as the previous 3 files
+
+#+begin_src bash
+  docker build . -t test
+#+end_src
+
+Check docker desktop or =docker ps= to see the newly created image called =test=
+
+* run the image
+
+#+begin_src bash
+  docker run -it - p 5009:8082 test
+#+end_src
+
+visit http://localhost:5009/
+
+#+begin_src bash
+  PS C:\Users\hello> docker run -it -p 5009:8082 test
+  Serving at port 8082
+  10.10.0.1 - - [03/Jan/2024 13:27:26] "GET / HTTP/1.1" 304 -
+  10.10.0.1 - - [03/Jan/2024 13:27:26] "GET /favicon.ico HTTP/1.1" 204 -
+  10.10.0.1 - - [03/Jan/2024 13:27:26] "GET /favicon.ico HTTP/1.1" 204 -
+  10.10.0.1 - - [03/Jan/2024 13:27:27] "GET / HTTP/1.1" 304 -
+#+end_src

@@ -1,0 +1,28 @@
+#+title:      connect to a remote server over emacs and tramp
+#+date:       [2024-01-02 Tue 09:24]
+#+filetags:   :emacs:ssh:
+#+identifier: 20240102T092438
+#+STARTUP:    overview
+
+Official docs - https://wikemacs.org/wiki/TRAMP
+
+If  you need to edit files as sudo - info how is in the docs above.
+
+First of all, try to connect to the remote machine over shell, eshell or vterm like so:
+
+#+begin_src bash
+  ssh username@remotehost
+#+end_src
+
+You will get prompted for a password. Enter it and you should be able to connect.
+
+Then open emacs and then let's try to open a file remotely, use the =C-x C-f=
+
+#+begin_src bash
+  /ssh:username@remotehost:
+  # now  you will get prompted for a password (don't forget : at the end of the remotehost name!!)
+#+end_src
+
+=.authinfo= in your home dir will contain your credentials.
+
+=tramp= file in your =.emacs.d= will contain your connection history.

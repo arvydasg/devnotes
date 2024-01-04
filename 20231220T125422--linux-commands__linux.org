@@ -204,6 +204,14 @@ logs to file
 
 rpm official repo(yum, RHEL) commands - https://www.rpmfind.net/linux/RPM/ByName.html
 
+# Use yum whatprovides to see what package provides a file.
+yum whatprovides */ldapsearch
+# Can see that ldapsearch is part of =openldap-clients=
+# before installing we can check the content:
+repoquery -lq openldap-clients
+# all is good? install
+yum install openldap-clients
+
 yum history
 yum list installed | grep devel
 yum remove <reponame>

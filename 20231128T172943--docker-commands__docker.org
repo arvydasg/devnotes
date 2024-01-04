@@ -15,13 +15,17 @@
   # list docker images available
   docker images
 
+  # pull an image from artifactory/dockerhub
+  docker pull docker-io.repo7.hello.se/python:3.10-buster
+
   # --------------------------------------------------------------------
   # BUILD/RUN
   # build an image with Dockerfile in the current dir
-  docker build .
+  docker build -t image_name .
 
   # run the docker image
   docker run <image_id/name>
+  # f.x docker run -d -p 8000:8000 rights
 
   # Run the container with --rm flag to automatically remove the container
   # that was created when the container EXITS. Good for testing.
